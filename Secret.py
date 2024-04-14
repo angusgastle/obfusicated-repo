@@ -1,40 +1,35 @@
-```python
-# Importing necessary libraries
-import random
+```coffeescript
+# Coffeescript Example: A Complex Hello World Program
 
-def display_hello_world():
-    # Create a list of "Hello World" outputs in different languages
-    languages = [
-        "System.out.print('Hello World')",               # Java style
-        "console.log('Hello World')",                    # JavaScript
-        "print('Hello World')",                          # Python
-        "echo 'Hello World';",                           # PHP
-        "cout << 'Hello World' << endl;",                # C++
-        'puts "Hello World"',                            # Ruby
-        "writeln('Hello World');",                       # D
-        "(print 'Hello World')",                         # Lisp
-        'PRINT "Hello World"',                           # BASIC
-        "System.Console.WriteLine('Hello World');",      # C#
-        "Disp 'Hello World'",                            # TI-BASIC
-        "<std><out>Hello World</out></std>",             # XML pseudo-code
-        "document.write('Hello World');",                # HTML/JavaScript
-        "Response.Write('Hello World');",                # ASP
-        "Builder.Append('Hello World');",                # Generic StringBuilder scenario
-        "set_response('Hello World');",                  # Pseudo-code for framework-based applications
-        "writeln('Hello World');",                       # Pascal
-        "write('Hello World\n');",                       # Ada
-        "say 'Hello World';",                            # Perl 6
-        "echo 'Hello World\n';",                         # shell (bash)
-        "text('Hello World')",                           # Generic pseudocode for text output in GUI applications
-    ]
+# Define a delay function using a Promise
+delay = (time) ->
+  new Promise((resolve) => setTimeout(resolve, time))
 
-    # Select a random greeting style
-    random_hello_world = random.choice(languages)
-    
-    # Return the chosen random greeting
-    return random_hello_world
+# Define a function to print a character with a pause
+printCharWithDelay = (char, delayTime) ->
+  delay(delayTime).then -> console.log(char)
 
-# Function call to display hello world in a random programming style
-hello_world_output = display_hello_world()
-print(f"Hello World displayed in a random style: {hello_world_output}")
+# Explode the string into characters and set initial delay
+explodeString = (str, initialDelay, increment) ->
+  printChar(str.split(""), initialDelay, increment, 0)
+
+# Recursive function to print each character
+printChar = (charArray, delayTime, increment, index) ->
+  if index < charArray.length
+    printCharWithDelay(charArray[index], delayTime).then ->
+      printChar(charArray, delayTime + increment, increment, index + 1)
+
+# Higher order function to generate a greeting
+generateGreeting = (name) ->
+  "Hello, #{name}!"
+
+# Main function to run the program
+main = ->
+  greeting = generateGreeting("World")
+  console.log("Starting the complex Hello World program...")
+  explodeString(greeting, 500, 250)
+  console.log("Done printing each character with delay.")
+
+# Execute the main function
+main()
 ```
