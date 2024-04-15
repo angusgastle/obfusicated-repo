@@ -1,37 +1,55 @@
-julia
-# Import necessary libraries for handling randomness and data operations
-using Random
-using Dates
+esoteric
+-- Esoteric programming in Whitespace: Displaying "Hello World"
+-- Note: In visible form, spaces are shown as S, tabs as T, and linefeeds as L
 
-# Define a function that randomly determines if it should display "Hello World"
-function randomly_say_hello()
-    # Seed the random number generator for reproducibility
-    Random.seed!(Dates.second(now()))
+SSSTSSSSTSTSSSSSSSSSTSSSSSSSSSTTSTSTSSSSSSSSSSSSTSSSSSSSTSSTSTSSSSSTSSSSSSSSSTSSTSTTSTSST
+STTT
+L
+SSSTSSSSTSTSSSSSSSSSTSSSSSSSSSTTSTSTSSSSSSSSSSSSTSSSSSSSTSSTSTSSSSSTSSSSSSSSSTSSTSTTSTSSS
+STTT
+L
+SSSTSSSSTSSSSTSSSTSTSTSSSSSSSSSTTSTSTSSSSSSSSSSSSTTSSSSSTSSTSTSSSSSTSTSSTSTSSSTSSSSSSTSSS
+TTT
+L
+SSSTSSSSTSTSSSTSSSTSSSSSTSSSSTSSSTTTSTSTSSSSSSSSSSSSTSSSSSSSTSSTSTSSSSSTSSSSSSSSSTTSTSSS
+STTT
+L
+SSSTSSSSTSSSSSTSSSTSTSSSSSSSSSTSSSTTTSTSTSSSSSSSSSSSSTSSSSSSSSSTSSSSSTSTSSSTSSSTSTSSSSS
+TTT
+L
+SSSTSSSSTSTSTSSSTSSSTTSTSSSSTSSSTSTTTSTSTSSSSSSSSSSSSTSSSSSSSSSTSSSSSTSSSSSSTSSSSTSSSSS
+TTT
+L
+SSSTSSSSTSTSTSSSTSSSTSTSSSTSSSSSTSTTTSTSTSSSSSSSSSSSSTSSSSSSSSSTSSSSSTSSSSSTSSSSSSSSTSS
+TTT
+L
+SSSTSSSSTSSSSTSSSSTSSSTTSSTTSTSTSTTTSTSTSSSSSSSSSSSSTSSSSSSSSSTSSSSSTSSSSSSSTSSSSSSSTSS
+TTT
+L
+SSSTSSSSTSTSSSSTSSSSTSSSSTTSSTTSTSTTTSTSTSSSSSSSSSSSSTSSSSSSSSSTSSSSSTSSSSSTSSSSSTSSSTT
+TTT
+L
+SSSTSSSSTSTSTSSSSTSSSSTTSSTTSSSTTSTSTTTSTSTSSSSSSSSSSSSTSSSSSSSSSTSSSSSTSSSSSTSSSSSTSSS
+TTTT
+L
+SL
+L
+SL
+L
+SL
+L
+SL
+L
+SL
+L
+SL
+L
+SL
+L
+SL
+L
+TLSSTSSSSSTSTSSSSSSTTT
+L
 
-    # Generate a random number between 1 and 10
-    random_number = rand(1:10)
 
-    # Array of characters that spell "Hello World" plus space and punctuation
-    message_chars = ['H', 'e', 'l', 'l', 'o', ' ', 'W', 'o', 'r', 'l', 'd', '!']
-
-    # Check if the random number is less than 5
-    if random_number <= 5
-        # Initialize an empty string to store the final output message
-        message_str = ""
-        
-        # Loop through each character in the message_chars array
-        for char in message_chars
-            # Append each character to the message_str string
-            message_str *= char
-        end
-        
-        # Print the message string
-        println(message_str)
-    else
-        # Randomly decided not to say hello, print a different message
-        println("Not saying hello this time!")
-    end
-end
-
-# Call the function
-randomly_say_hello()
+This Whitespace program outputs "Hello World" by pushing character codes on the stack and printing them. Each push and print operation is denoted by a series of spaces (S), tabs (T), and linefeeds (L), which are the only valid characters in Whitespace. Each sequence of 'push' commands (SSST...) pushes a specific ASCII character code to the stack, and the 'print' command (TTT) pops and prints it. The commands are extremely verbose and repetitive to make the hello world program as long as possible.
