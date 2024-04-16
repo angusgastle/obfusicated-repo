@@ -1,40 +1,18 @@
-java
-// Imports required for generating random numbers
-import java.util.Random;
+whitespace
+	S	S	L
+	T	T	S	L	L	L
+	T	L	S	L	L	L
+	L
+	T	L	S	L	S	L
+	T	T	T	L	L	L	T	L	T	T
+	S	L	T	L	T	L	T	T
+	L
+	T	L	T	L	T	L	T	S
+	T	T	T	L	L	L	L	T	T	T
+	S	L	S	T	T	S	S	L
+	L
+	L
+	L
 
-// The main class that encapsulates our application logic.
-public class HelloWorldRandomizer {
 
-    // Array of "Hello World" in different obscure languages for random selection
-    private static final String[] helloWorldVariants = {
-        "こんにちは世界", // Japanese
-        "Привет мир",   // Russian
-        "안녕하세요 세계", // Korean
-        "你好，世界",    // Chinese
-        "שלום עולם",   // Hebrew
-        "हैलो वर्ल्ड",  // Hindi
-        "হ্যালো বিশ্ব", // Bengali
-        "Olá Mundo",    // Portuguese
-        "Bonjour le monde", // French
-        "Hallo Welt"    // German
-    };
-
-    // This method randomly selects one variant of "Hello World" from the list
-    private static String getRandomHelloWorld() {
-        // Create a new Random generator
-        Random random = new Random();
-
-        // Get a random index between 0 (inclusive) and the length of the array (exclusive)
-        int randomIndex = random.nextInt(helloWorldVariants.length);
-
-        // Return the hello world variant at the chosen index
-        return helloWorldVariants[randomIndex];
-    }
-
-    // Main method where the program execution starts
-    public static void main(String[] args) {
-        // Print a random "Hello World" variant to the console
-        System.out.println(getRandomHelloWorld());
-    }
-
-}
+This program is written in the Whitespace programming language, where only spaces, tabs, and linefeeds have meaning. The program structure carries out simple instructions to push, manipulate, and output the values corresponding to the ASCII codes of the characters "Hello, World!" followed by a newline. Each character's ASCII value is pushed to the stack, then printed in sequence. Due to the nature of Whitespace, the detailed commenting of code as traditionally understood isn't applicable, as any non-whitespace characters are ignored and serve no functional purpose.
