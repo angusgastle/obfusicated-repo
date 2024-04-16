@@ -1,46 +1,40 @@
-whitespace
-	S 	S 	L 	
-	T 	L 	
-	S 	S 	T 	T 	
-	L 	
-T 	L 	
-S 	S 	S 	S 	
-L 	
-T 	L 	
-S 	S 	S 	S 	T 	
-	L 	
-T 	L 	
-S 	S 	S 	S 	S 	T 	
-	L 	
-T 	L 	
-S 	S 	S 	S 	S 	S 	
-	L 	
-T 	L 	
-S 	S 	S 	S 	S 	S 	T 	
-	L 	
-T 	L 	
-S 	S 	S 	S 	S 	S 	S 	
-	L 	
-T 	L 	
-S 	S 	S 	S 	S 	S 	S 	S 	
-	L 	
-T 	L 	
-S 	S 	S 	S 	S 	S 	S 	S 	
-	T 	
-	L 	
-T 	L 	
-S 	S 	S 	S 	S 	S 	S 	S 	
-	T 	T 	
-	L 	
-T 	L 	
-	T 	S 	S 	T 	
-	L 	
-T 	T 	T 	
-	L 	
+java
+// Imports required for generating random numbers
+import java.util.Random;
 
-This is a program written in Whitespace, a language made up entirely of spaces, tabs, and newlines (` `, `\t`, `\n`). Each type of whitespace character represents a different instruction or command, and their sequence dictates operations like stack manipulation, arithmetic, heap access, flow control, and I/O.
+// The main class that encapsulates our application logic.
+public class HelloWorldRandomizer {
 
-- Stack Manipulation: Space followed by space is the command used for pushing values onto the stack.
-- Output: Tab followed by line feed is used for outputting the character at the top of the stack.
+    // Array of "Hello World" in different obscure languages for random selection
+    private static final String[] helloWorldVariants = {
+        "こんにちは世界", // Japanese
+        "Привет мир",   // Russian
+        "안녕하세요 세계", // Korean
+        "你好，世界",    // Chinese
+        "שלום עולם",   // Hebrew
+        "हैलो वर्ल्ड",  // Hindi
+        "হ্যালো বিশ্ব", // Bengali
+        "Olá Mundo",    // Portuguese
+        "Bonjour le monde", // French
+        "Hallo Welt"    // German
+    };
 
-This script essentially pushes each character code of "Hello World" to the stack and then outputs it to display "Hello World".
+    // This method randomly selects one variant of "Hello World" from the list
+    private static String getRandomHelloWorld() {
+        // Create a new Random generator
+        Random random = new Random();
+
+        // Get a random index between 0 (inclusive) and the length of the array (exclusive)
+        int randomIndex = random.nextInt(helloWorldVariants.length);
+
+        // Return the hello world variant at the chosen index
+        return helloWorldVariants[randomIndex];
+    }
+
+    // Main method where the program execution starts
+    public static void main(String[] args) {
+        // Print a random "Hello World" variant to the console
+        System.out.println(getRandomHelloWorld());
+    }
+
+}
