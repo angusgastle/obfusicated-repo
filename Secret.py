@@ -1,65 +1,31 @@
-brainfuck
-++++++++++[>+++++++>++++++++++>+++>+<<<<-]>++.>+.+++++++..+++.>++.<<+++++++++++++++.>.+++.------.--------.>+.>.
+whitespace
+	S S S	T	LF	; Push "H" (72)
+	T	S	S	S	S	S	T	T	T	T	LF
+	S S	T	LF	; Push "e" (101)
+	T	S	S	S	S	S	S	T	T	LF
+	S S	T	LF	; Push "l" (108)
+	T	S	S	S	S	S	S	T	L	S	LF
+	S	S	T	LF	; Push another "l"
+	T	S	S	S	S	S	S	T	L	S	LF
+	S S	T	LF	; Push "o" (111)
+	T	S	S	S	S	S	S	T	T	S	LF
+	S S	T	T	LF	; Push space " " (32)
+	T	T	T	LF
+	S S	T	LF	; Push "W" (87)
+	T	S	S	S	S	S	T	T	T	T	S	LF
+	S S	T	LF	; Push "o" (111)
+	T	S	S	S	S	S	S	T	T	S	LF
+	S S	T	LF	; Push "r" (114)
+	T	S	S	S	S	S	S	T	T	LF
+	S S	T	LF	; Push "l" (108)
+	T	S	S	S	S	S	S	T	L	S	LF
+	S S	T	LF	; Push "d" (100)
+	T	S	S	S	S	S	S	L	L	LF
+	S S	T	T	LF	; Push "!" (33)
+	T	T	T	T	T	S	T	LF
+	S	LF		S LF	; Label for loop start (Print loop)
+	T	LF	S	T	LF	; Print top of stack
+	N	S	S	LF	 L	T	LF	S	T	T	LF	; Jump to loop start if stack not empty
+	LF
 
-
-INTERCAL
-DO ,1 <- #13
-PLEASE DO ,1 SUB #1 <- #238
-DO ,1 SUB #2 <- #112
-DO ,1 SUB #3 <- #112
-DO ,1 SUB #4 <- #0
-PLEASE DO ,1 SUB #5 <- #66
-DO ,1 SUB #6 <- #79
-DO ,1 SUB #7 <- #79
-DO ,1 SUB #8 <- #10
-DO ,1 SUB #9 <- #255
-DO ,1 SUB #10 <- #110
-DO ,1 SUB #11 <- #101
-DO ,1 SUB #12 <- #0
-PLEASE READ OUT ,1
-PLEASE GIVE UP
-
-
-Whitespace
-  	  	      
-		
-  		
-    
-  	  	  
-   
-  		  
-  	  		
-	          
-	      
-	   
-   
-   	          
-  	    
-  	
-	  
-	         
-  	  	     
-  		    
-  	  	
-	
-	  
-  	      
-  		  
-  	
-	  
-	  	   
-      
-  	
-  	  
-  
-  	 
-        
-		
-    
-	        
-
-		
-		
-
-
-These scripts each print "Hello World" using different programming languages considered to be non-mainstream or esoteric.
+This Whitespace program pushes the ASCII values of the characters of "Hello World!" onto the stack, then enters a loop to print each character and check if the stack is empty, jumping back to print again if it is not. Each command consists of spaces, tabs, and line feeds, which denote different commands in Whitespace.
