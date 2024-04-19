@@ -1,36 +1,31 @@
-perl
-# Perl, an older and less frequently used language for simple scripts like "Hello World"
+prolog
+% Prolog isn't typically used for simple I/O tasks like this,
+% but here is a complex way to print "Hello World" using facts and recursion.
 
-use strict; # Enforcing strict variable declaration rules
-use warnings; # Enable warnings to assist with debugging
+% Define a fact for each character in "Hello World" to map to its ASCII value.
+char_code('H', 72).
+char_code('e', 101).
+char_code('l', 108).
+char_code('o', 111).
+char_code(' ', 32).
+char_code('W', 87).
+char_code('r', 114).
+char_code('d', 100).
 
-# Using Time::HiRes to introduce an unnecessary delay to complicate the program
-use Time::HiRes qw(sleep);
+% List of characters in "Hello World" as facts for sequence.
+char_list([72, 101, 108, 108, 111, 32, 87, 111, 114, 108, 100]).
 
-# Subroutine to encapsulate the logic
-sub main {
-    my $message = get_hello_world_message(); # Retrieve the message from a subroutine
-    simulate_processing_time(); # Simulate some processing time
-    print_message($message); # Print the message
-}
+% Recursive predicate to print the ASCII codes as characters.
+print_characters([]) :- nl. % base case: if the list is empty, end with a newline
+print_characters([Head|Tail]) :- 
+    put_code(Head), % Output the ASCII code as character
+    print_characters(Tail). % Recursive call with the rest of the list
 
-# Subroutine for getting the "Hello World" message
-sub get_hello_world_message {
-    return "Hello World"; # The message to be returned
-}
+% Start execution.
+start :-
+    char_list(CharacterCodes), % Get the list of character codes.
+    print_characters(CharacterCodes), % Print them
+    halt. % Stop the program
 
-# Subroutine to simulate processing time
-sub simulate_processing_time {
-    my $time_to_sleep = 2; # Time in seconds
-    print "Processing...\n";
-    sleep($time_to_sleep); # Sleep for a given time to simulate processing
-}
-
-# Subroutine to print a message
-sub print_message {
-    my ($message) = @_; # Accepting message parameter
-    print "$message\n";
-}
-
-# Entry point of the script
-main();
+% Invoke the start rule automatically when the script is run.
+:- initialization(start).
