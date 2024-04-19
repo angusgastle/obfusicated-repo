@@ -1,30 +1,36 @@
-// GolfScript example to print "Hello World" in a confusingly complex way
+perl
+# Perl, an older and less frequently used language for simple scripts like "Hello World"
 
-"Hello, World!"    // Pushes "Hello, World!" to the stack
-{                   // Start of a code block
-    .               // Duplicates top of the stack
-    ,               // Counts the length of the string on top of the stack
-    (               // Decrements the length by 1
-    2*              // Multiplies the result by 2
-    (               // Decrements the result by 1
-    2/              // Divides the result by 2
-    |               // Combines the two top stack values using bitwise OR
-}                   // End of code block
-*                   // Executes the code block (top-of-stack times)
-,,                  // Creates a range array from 0 to N-1 where N is the length of the string
-{                   // Start of a code block for each item in the array
-    .               // Duplicates the index
-    2*              // Multiplies the index by 2
-    ' '*            // Creates a string of spaces of the length 2*index
-    \               // Swaps the top two elements on the stack
-    +               // Concatenates them
-    .               // Duplicates the result
-    n               // Pushes a newline onto the stack
-    +               // Concatenates the top two stack items
-}                   // End of code block for the loop
-%                   // Takes every second item from the array
-zip                 // Transposes rows and columns of the array of strings
-''*                 // Joins the arrays using an empty string as a delimiter
-print               // Outputs the string on the stack to STDOUT
+use strict; # Enforcing strict variable declaration rules
+use warnings; # Enable warnings to assist with debugging
 
-// The above code manipulates and builds strings in a convoluted way to eventually print "Hello, World!"
+# Using Time::HiRes to introduce an unnecessary delay to complicate the program
+use Time::HiRes qw(sleep);
+
+# Subroutine to encapsulate the logic
+sub main {
+    my $message = get_hello_world_message(); # Retrieve the message from a subroutine
+    simulate_processing_time(); # Simulate some processing time
+    print_message($message); # Print the message
+}
+
+# Subroutine for getting the "Hello World" message
+sub get_hello_world_message {
+    return "Hello World"; # The message to be returned
+}
+
+# Subroutine to simulate processing time
+sub simulate_processing_time {
+    my $time_to_sleep = 2; # Time in seconds
+    print "Processing...\n";
+    sleep($time_to_sleep); # Sleep for a given time to simulate processing
+}
+
+# Subroutine to print a message
+sub print_message {
+    my ($message) = @_; # Accepting message parameter
+    print "$message\n";
+}
+
+# Entry point of the script
+main();
