@@ -1,43 +1,13 @@
-whitespace
-push 72					(Space, Tab, Space: Push 72 (ASCII value of H))
-push 101				(Space, Tab, Space: Push 101 (ASCII value of e))
-push 108				(Space, Tab, Space: Push 108 (ASCII value of l))
-push 108				(Space, Tab, Space: Push 108 (ASCII value of l))
-push 111				(Space, Tab, Space: Push 111 (ASCII value of o))
-push 32					(Space, Tab, Space: Push 32 (ASCII value of space))
-push 87					(Space, Tab, Space: Push 87 (ASCII value of W))
-push 111				(Space, Tab, Space: Push 111 (ASCII value of o))
-push 114				(Space, Tab, Space: Push 114 (ASCII value of r))
-push 108				(Space, Tab, Space: Push 108 (ASCII value of l))
-push 100				(Space, Tab, Space: Push 100 (ASCII value of d))
-slide 1				(Space, Tab, Tab: Slide stack to discard 1 value)
-printc					(Tab, LineFeed, Space: Print character on stack top)
-slide 1					(Space, Tab, Tab: Slide stack to discard 1 value)
-printc					(Tab, LineFeed, Space: Print character on stack top)
-slide 1					(Space, Tab, Tab: Slide stack to discard 1 value)
-printc					(Tab, LineFeed, Space: Print character on stack top)
-slide 1					(Space, Tab, Tab: Slide stack to discard 1 value)
-printc					(Tab, LineFeed, Space: Print character on stack top)
-slide 1					(Space, Tab, Tab: Slide stack to discard 1 value)
-printc					(Tab, LineFeed, Space: Print character on stack top)
-slide 1					(Space, Tab, Tab: Slide stack to discard 1 value)
-printc					(Tab, LineFeed, Space: Print character on stack top)
-slide 1					(Space, Tab, Tab: Slide stack to discard 1 value)
-printc					(Tab, LineFeed, Space: Print character on stack top)
-slide 1					(Space, Tab, Tab: Slide stack to discard 1 value)
-printc					(Tab, LineFeed, Space: Print character on stack top)
-slide 2					(Space, Tab, Tab: Slide stack to discard 2 values)
-printc					(Tab, LineFeed, Space: Print character on stack top)
-slide 1					(Space, Tab, Tab: Slide stack to discard 1 value)
-printc					(Tab, LineFeed, Space: Print character on stack top)
-slide 1					(Space, Tab, Tab: Slide stack to discard 1 value)
-printc					(Tab, LineFeed, Space: Print character on stack top)
-slide 1					(Space, Tab, Tab: Slide stack to discard 1 value)
-printc					(Tab, LineFeed, Space: Print character on stack top)
-slide 1					(Space, Tab, Tab: Slide stack to discard 1 value)
-printc					(Tab, LineFeed, Space: Print character on stack top)
-slide 1					(Space, Tab, Tab: Slide stack to discard 1 value)
-printc					(Tab, LineFeed, Space: Print character on stack top)
+Here's an example in Malbolge, a notorious esoteric programming language known for being difficult to program in:
+
+malbolge
+('&%:9]!~}|z2Vxwv-,POqponl$Hjig%eB@@>}=<M:9wv6WsU2T|nm-,jcL(I&%$#"
+
+`CB]V?Tx<uVtT`Rpo3NlF.Jh++FdbCBA@?]!~|4XzyTT43Qsqq(Lnmkj"Fhg${z@>
+
+|5K|4XzyTT43QsONmK$Hj!~}|z@9&&2WVqJ32WqsONLm,,K$H%eB@@>}3?LmNlF.Jh
+
+%eB@@>}=<M:9]!~}>|? $(4LV`.
 
 
-The above script is written in Whitespace, a language consisting entirely of spaces, tabs, and linefeeds. This program performs the simple task of printing "Hello World" with each character pushed to the stack and then printed in order. Each stack manipulation and print instruction is heavily annotated to explain the steps involved in the simplest program.
+In Malbolge, each character is used to operate based on memory position, execution command, and data pointer manipulation which altogether creates "Hello World" when run.
