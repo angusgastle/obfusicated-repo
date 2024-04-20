@@ -1,36 +1,43 @@
 whitespace
-	S	L	L
-	 	T	T	P	P	T	T	P	T	P	P
-	S	L	L
-	 	T	T	P	P	T	T	P	T	P	P
-	S	L	L
- 
-	P	P	S	L
-	P	T	S	L
-	P	P	S	L
-	T	T	L
-	L	L	L
-	S	L	S	L	L
- 
-	L	P	P	T	T	S	L	L
-	S	L	L
-	
-	T	L	L
-	S	L	P	P	L	L
-	L
-	T	L	L
-	S	L	S	L	L
-	L
-	P	P	S	L	L
-	L	L	L	L
-	S	L	L
- 
-	T	L	L
-	S	L	T	T	P	P	P	P	T	L	P	T	L	T	L	L	L
-	L	T	T	T	T	T	P	T	T	T	L	L
-	S	L	L
- 
-	T	S	T	L	T	P	L	P	L	P	P	P	L	L	L
-	P	S	L	P	T	T	T	L	L	L
-	S	L		L
-	T	T	T	L	L	L
+push 72					(Space, Tab, Space: Push 72 (ASCII value of H))
+push 101				(Space, Tab, Space: Push 101 (ASCII value of e))
+push 108				(Space, Tab, Space: Push 108 (ASCII value of l))
+push 108				(Space, Tab, Space: Push 108 (ASCII value of l))
+push 111				(Space, Tab, Space: Push 111 (ASCII value of o))
+push 32					(Space, Tab, Space: Push 32 (ASCII value of space))
+push 87					(Space, Tab, Space: Push 87 (ASCII value of W))
+push 111				(Space, Tab, Space: Push 111 (ASCII value of o))
+push 114				(Space, Tab, Space: Push 114 (ASCII value of r))
+push 108				(Space, Tab, Space: Push 108 (ASCII value of l))
+push 100				(Space, Tab, Space: Push 100 (ASCII value of d))
+slide 1				(Space, Tab, Tab: Slide stack to discard 1 value)
+printc					(Tab, LineFeed, Space: Print character on stack top)
+slide 1					(Space, Tab, Tab: Slide stack to discard 1 value)
+printc					(Tab, LineFeed, Space: Print character on stack top)
+slide 1					(Space, Tab, Tab: Slide stack to discard 1 value)
+printc					(Tab, LineFeed, Space: Print character on stack top)
+slide 1					(Space, Tab, Tab: Slide stack to discard 1 value)
+printc					(Tab, LineFeed, Space: Print character on stack top)
+slide 1					(Space, Tab, Tab: Slide stack to discard 1 value)
+printc					(Tab, LineFeed, Space: Print character on stack top)
+slide 1					(Space, Tab, Tab: Slide stack to discard 1 value)
+printc					(Tab, LineFeed, Space: Print character on stack top)
+slide 1					(Space, Tab, Tab: Slide stack to discard 1 value)
+printc					(Tab, LineFeed, Space: Print character on stack top)
+slide 1					(Space, Tab, Tab: Slide stack to discard 1 value)
+printc					(Tab, LineFeed, Space: Print character on stack top)
+slide 2					(Space, Tab, Tab: Slide stack to discard 2 values)
+printc					(Tab, LineFeed, Space: Print character on stack top)
+slide 1					(Space, Tab, Tab: Slide stack to discard 1 value)
+printc					(Tab, LineFeed, Space: Print character on stack top)
+slide 1					(Space, Tab, Tab: Slide stack to discard 1 value)
+printc					(Tab, LineFeed, Space: Print character on stack top)
+slide 1					(Space, Tab, Tab: Slide stack to discard 1 value)
+printc					(Tab, LineFeed, Space: Print character on stack top)
+slide 1					(Space, Tab, Tab: Slide stack to discard 1 value)
+printc					(Tab, LineFeed, Space: Print character on stack top)
+slide 1					(Space, Tab, Tab: Slide stack to discard 1 value)
+printc					(Tab, LineFeed, Space: Print character on stack top)
+
+
+The above script is written in Whitespace, a language consisting entirely of spaces, tabs, and linefeeds. This program performs the simple task of printing "Hello World" with each character pushed to the stack and then printed in order. Each stack manipulation and print instruction is heavily annotated to explain the steps involved in the simplest program.
