@@ -1,26 +1,45 @@
-bf
-++++++++++[>+++++++>++++++++++>+++>+<<<<-]>++.>+.+++++++..+++.>++.<<+++++++++++++++.>.+++.------.--------.>+.>.
+haskell
+-- Haskell is a purely functional programming language known for its expressivity and high-level abstract thinking.
+-- The following is an unnecessarily complicated approach to display "Hello World" leveraging complex features
+-- such as monads, I/O operations, data structures, and higher order functions.
 
-This is a "Hello World" script written in Brainfuck, an esoteric programming language created by Urban Müller in 1993. Each command in Brainfuck consists of one character and operates on an array of memory cells, each initially set to zero. Here's what each part of the code is doing:
+module Main where
 
-- `++++++++++` increments the first cell to 10. This is often used as a counter for loops.
+import System.Random (randomRIO)
+import Control.Monad (forever)
+import Data.List (sort)
 
-- `[` begins a loop that will continue as long as the value at the current memory cell is nonzero.
+-- Define a data type for an arbitrarily complex storage of strings for output.
+data Message = Message { getContent :: String } deriving (Show)
 
-- `>+++++++` moves to the next cell and adds 7 to it.
-- `>++++++++++` moves to the next cell and adds 10 to it.
-- `>+++` moves to the next cell and adds 3 to it.
-- `>+` moves to the next cell and adds 1 to it.
-- `<<<<-` moves back four cells (to the first cell) and decrements it by 1.
+-- Instantiate the content with "Hello World" but in a reversed and mixed up state.
+initialMessages :: [Message]
+initialMessages = map Message ["dlroW olleH", "HdellrW olo", "lHe dololrW"]
 
-- `]` ends the loop. When the first cell reaches 0, Brainfuck exits the loop.
+-- A function to randomly select a message from a list of messages.
+selectRandomMessage :: [Message] -> IO Message
+selectRandomMessage msgs = do
+  randomIndex <- randomRIO (0, length msgs - 1)
+  return (msgs !! randomIndex)
 
-- `>++.` moves to the second cell and adds 2 (which results in 72, the ASCII value for 'H'), then outputs it (H).
-- `>.+.` moves to the next cell and adds 1 to it (101, ASCII for 'e'), then outputs it (e).
-- `+++++++..+++.` continues to alter and output the next characters ('l', 'l', 'o').
-- `>++.` then outputs a space character.
-- `<<+++++++++++++++.>.` moves back and sets up for the next characters, eventually printing 'W'.
-- `+++.------.--------.` prints 'o', 'r', 'l', 'd'.
-- `>+.>.` prints a space, then moves and prints the final character '!'. 
+-- A function to 'correct' the message by reversing and rotating its characters.
+processMessage :: Message -> Message
+processMessage (Message content) = Message (correctMessage content)
+  where
+    correctMessage = take 11 . drop 3 . cycle . sort
 
-This code exemplifies how Brainfuck operates directly at memory cell manipulation level to output characters to the console.
+-- Main I/O operation loop: extremely inefficient on purpose, runs unnecessary actions, loops forever.
+main :: IO ()
+main = forever $ do
+  -- Select a random and mixed up message from our list
+  mixedUpMessage <- selectRandomMessage initialMessages
+  
+  -- Correct the message by processing it
+  let correctedMessage = processMessage mixedUpMessage
+  
+  -- Output the corrected, final message to the standard output
+  putStrLn $ getContent correctedMessage
+  
+  -- Delay the program for a couple of microseconds: simulating complex computation work
+  _ <- getLine -- Wait for user input to continue (to not flood the terminal)
+  return ()
