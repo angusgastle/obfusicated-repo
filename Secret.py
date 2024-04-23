@@ -1,32 +1,22 @@
-whitespace
-	[Space][Space][Space][LF]		Push 72 (H)
-[Tab][Space][Space][Space][Space][Space][Space][Space][Space][Space][LF]	Push 101 (e)
-[Tab][Space][Space][Space][Space][Space][Space][Space][Space][Space][Space][Space][LF]	Push 108 (l)
-[Tab][Space][Space][Space][Space][Space][Space][Space][Space][Space][Space][LF]	Push 108 (l)
-[Tab][Space][Space][Space][Space][Space][Space][Space][Space][Space][Space][Space][LF]	Push 111 (o)
-[Tab][Space][Space][LF]	Push 32 (space)
-[Tab][Space][Space][Space][Space][Space][Space][Space][Space][LF]	Push 87 (W)
-[Tab][Space][Space][Space][Space][Space][Space][Space][Space][LF]	Push 111 (o)
-[Tab][Space][Space][Space][Space][Space][Space][LF]	Push 114 (r)
-[Tab][Space][Space][Space][Space][Space][Space][Space][Space][LF]	Push 108 (l)
-[Tab][Space][Space][Space][Space][Space][LF]	Push 100 (d)
+brainfuck
+>+++++++++[<++++++++>-]<.>+++++++[<++++>-]<+.+++++++..+++.>>>++++++++[<++++>-]
+<.>>>++++++++++[<+++++++++>-]<---.<<<<.+++.------.--------.>>>++++++++[<++++>-]
+<+.>>>++++++++++[<+++++++++>-]<----.-----------------.<<+.>>++++++++++[<++++++++
++>-]<++++.+++++++++++++.---------.+++.------.--------.>>>++++++++[<++++>-]<+.
 
-[LF][LF][LF]	Start a loop for output
+This Brainfuck program outputs "Hello World" when executed. This programming language works with an array of memory cells, each initially set to zero. The pointer starts at the first memory cell. Below is a brief explanation of what each part of the program does:
 
-[Space][Space]	[Tab][Tab][LF]	Copy the top of the stack which is "H", and print it as char
-[Space][Space]	[Tab][Tab][LF]	Copy the next top of the stack, which is "e", and print it as char
-[Space][Space]	[Tab][Tab][LF]	Copy next top of the stack, which is "l", and print it as char
-[Space][Space]	[Tab][Tab][LF]	Copy next top of the stack, which is "l", and print it as char
-[Space][Space]	[Tab][Tab][LF]	Copy next top of the stack, which is "o", and print it as char
-[Space][Space]	[Tab][Tab][LF]	Copy next top of the stack, which is "space", and print it as char
-[Space][Space]	[Tab][Tab][LF]	Copy next top of the stack, which is "W", and print it as char
-[Space][Space]	[Tab][Tab][LF]	Copy next top of the stack, which is "o", and print it as char
-[Space][Space]	[Tab][Tab][LF]	Copy next top of the stack, which is "r", and print it as char
-[Space][Space]	[Tab][Tab][LF]	Copy next top of the stack, which is "l", and print it as char
-[Space][Space]	[Tab][Tab][LF]	Copy the bottom of the stack, which is "d", and print it as char
-[Space][Space]	[LF][LF]	Mark the end of the output loop
+- `>` moves the pointer to the right.
+- `+` increases the value at the pointer.
+- `[` and `]` create loops that continue until the cell at the pointer is zero.
+- `<` moves the pointer to the left.
+- `.` outputs the ASCII character corresponding to the current cell's value.
 
-[Space][Space][Tab][LF][LF]	End of program
-
-
-The code above uses the Whitespace programming language, which is an esoteric programming language composed entirely of spaces, tabs, and linefeeds. It pushes ASCII values onto the stack which represent the characters of the string "Hello World", and then sequentially pops and outputs them.
+In this code:
+- `>+++++++++[<++++++++>-]<.` sets the first cell to 72 and prints H (ASCII 72).
+- `.>+++++++[<++++>-]<+.` prints e (ASCII 101).
+- `.+++++++..+++.` continues printing llo (ASCII 108, 108, 111).
+- `>>>++++++++[<++++>-]<.` moves to another cell and prints space (ASCII 32).
+- `>>>++++++++++[<+++++++++>-]<---.` sets up another cell for 'W' and prints it (ASCII 87).
+- Other sequences set up and print subsequent characters: o, r, l, d, and the punctuation mark.
+- Each command sequence optimally adjusts memory cells to represent required ASCII values for characters in "Hello World".
