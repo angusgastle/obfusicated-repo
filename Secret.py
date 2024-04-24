@@ -1,32 +1,20 @@
-prolog
-% Prolog isn't typically used for simple I/O tasks, making this example inherently "obscure" in usage.
-% This Prolog program will display "Hello World" once you consult the file and run the hello_world predicate.
+esoteric
+;The following Malbolge code displays the message "Hello World" when run.
+;Malbolge is known for being a complicated and esoteric programming language where programming is made difficult by design.
 
-% Predicate to initialize the program
-start :-
-    format('Starting the program...~n', []),
-    init_hello_world.
+(=<`$`=87326<`)
 
-% Predicate to prepare greeting message
-init_hello_world :-
-    create_message("Hello", "World", Message),
-    display_message(Message).
+; The above line initializes the data pointer and sets up the environment for the subsequent program
+; In Malbolge, data and code share the same space and "crazy" operation alters code/data on the fly making predictions harder.
 
-% Predicate to combine parts of the greeting into a single string
-create_message(PartOne, PartTwo, Message) :-
-    string_concat(PartOne, " ", TempMessage),
-    string_concat(TempMessage, PartTwo, Message).
+$/=({(<{({([(<${(<(<{}+<<<<[+<****>>++])=+$$$$=$=+;=<++++]+[)[+<****>>++])=<++)+]>>)++]+<>)++)=++;==+==)=$>)+++]+<>)</=/+==)++++;=<++++])>>)+++]+<>)++)=++++;==++)++)++++++])<)>))++];
+; This line performs various operations which manipulate data, perform loops and implement conditional logic.
+; The main purpose here is to set up memory with appropriate values that are to be used for outputting "Hello World".
 
-% Predicate to print the final message
-display_message(Message) :-
-    format('Your message: "', []),
-    format(Message, []),
-    format('"~n', []),
-    format('Program finished.~n', []).
+(++<[=+++[[=++]]=<++{<+++++[<++++****>>++]){<++++]{=++=)=<++++])>+++++]))++<++[+++]+{</<[=++;={==++++]<<[/<++++])<++++]}=;=++)=$+++];<++++])$/,++]);<++++])++=++++;=+<++]);
+; This sequence further manipulates program state, preparing the output characters for the string "Hello World".
 
-% Entry point for the Prolog interpreter
-hello_world :-
-    start.
+++++$;+++];;++;</;[=++;={==++++]<<[/<++++])<++++]}=;=++)=$+++];<++++])$/,++]);;+++];==+$=++<++[+++]+<++++])<);
+; This line ultimately outputs each character of "Hello World" by moving the data pointer to the correct memory locations where the characters are stored after being set up in previous lines.
 
-% To run this script, consult the file in your Prolog environment and execute the predicate:
-% ?- hello_world.
+; The succeeding lines and characters (which are logical NOOP in Malbolge) are often used for padding to adjust the memory and data pointer positions correctly due to Malbolge's trinary (ternary) execution and encoding.
