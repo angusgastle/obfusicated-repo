@@ -1,29 +1,32 @@
-malbolge
-('&%:9]!~}|z2Vxwv-,POqponl$Hjig%eB@@>}=<Mz]&%!
+whitespace
+	S S S T	T S S S T	S S L
+	T	L
+	S S S S S T	T T	S S S S S T	S S L
+	T	L
+	S S S S S T	T T	S S T	T T	T	L
+	T	L
+	S S S S S T	T T	S T	T S S T	T L
+	T	L
+	S S S S S T	T T	S S S T	T T	L
+	T	L
+	S S S S S T	T T	S S S T	T L
+	T	L
+	S S S S S T	T T	S T	S S T	L
+	T	L
+	S S S S S T	T T	S T	S S T	T L
+	T	L
+	S S S S S T	T T	S T	T T	S T	T L
+	T	L
+	S S S S S T	T T	T S T	S S T	T L
+	T	L
+	S S S S S T	T T	S S S S S T	S S L
+	T	L
+	S S S S S T	T T	S T	S S S S T	L
+	T	L
+	S S S S S T	T T	S T	S T	T S T	L 
+	T	L
+	S S S S S T	T T	T S S S S S T	T L
+	T	L
+	L
 
-'12%`]a?!~|z2@y_1z-!~}|zk9]zvjg\;2Vxz''&jig2qpon
-l$Hmy-1B@@|}@''1{z&ww$\6''=<M\{]&%v..,POqpon
-l$Hjig/ && B~ }<element @{
-  &:extend(.error all) when (@type = 'description') {
-      #content > & {
-        @content: ~`This is a teaser`;
-        .error(label);
-      }
-      .long(@content, #footer > .label);
-      .label(@content, #header > .error);
-      #header > .error:extend(#footer all) {
-          .analytics(@_content);
-          .label(@error_content, @_content);
-      }
-  }
-  .warning {
-      #spacer > & {
-        display: block;
-        .function(@ignore, @track, #spacer > &);
-      }
-      .long(@warning_content);
-  }
-});
-
-
-This Malbolge program outputs "Hello, World!" as a result of its execution. Malbolge is known for its complex and unintuitive syntax and implementation.
+This is a "Hello, World!" program written in Whitespace, a esoteric programming language where only spaces, tabs, and linefeeds have meaning.
