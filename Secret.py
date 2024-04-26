@@ -1,52 +1,36 @@
-whitespace
-		space	tab	space	 	push
-tab		space	space	space	space	push	0 (The ASCII value of newline, will be used later)
-		space	tab	space	 	push
-tab		space	space	space	space	push	0
-		space	tab	space	 	push
-tab		space	space	space	!	push	100 (ASCII d)
-		space	tab	space	 	push
-tab		space	space	space	l	push	108 (ASCII l)
-		space	tab	space	 	push
-tab		space	space	space	o	push	111 (ASCII o)
-		space	tab	space	 	push
-tab		space	space	space	W	push	87 (ASCII W)
-		space	tab	space	 	push
-tab		space	space	space	space	push	32 (ASCII space)
-		space	tab	space	 	push
-tab		space	space	o	push	111 (ASCII o)
-		space	tab	space	 	push
-tab		space	space	l	push	108 (ASCII l)
-		space	tab	space	 	push
-tab		space	space		e	push	101 (ASCII e)
-		space	tab	space	 	push
-tab		space	space	H	push	72 (ASCII H)
+// ArnoldC is a programming language based on the one-liners of Arnold Schwarzenegger.
+// This example script demonstrates a "Hello World" program in ArnoldC, making it as
+// complex and documented as possible for educational purposes.
 
-		space	space	space	 	duplicate top of the stack (H)
-		space	tab	tab	 	output as character
-		space	space	space	 	duplicate top of the stack (e)
-		space	tab	tab	 	output as character
-		space	space	space	 	duplicate top of the stack (l)
-		space	tab	tab	 	output as character
-		space	space	space	 	duplicate top of the stack (l)
-		space	tab	tab	 	output as character
-		space	space	space	 	duplicate top of the stack (o)
-		space	tab	tab	 	output as character
-		space	space	space	 	duplicate top of the stack (space)
-		space	tab	tab	 	output as character
-		space	space	space	 	duplicate top of the stack (W)
-		space	tab	tab	 	output as character
-		space	space	space	 	duplicate top of the stack (o)
-		space	tab	tab	 	output as character
-		space	space	space	 	duplicate top of the stack (r)
-		space	tab	tab	 	output as character
-		space	space	space	 	duplicate top of the stack (l)
-		space	tab	tab	 	output as character
-		space	space	space	 	duplicate top of the stack (d)
-		space	tab	tab	 	output as character
-		space	space	tab	 	push newline character from earlier
-		space	tab	tab	 	output as character
-space	space	space	 	End Program
+IT'S SHOWTIME                      // Start of the main program block
+TALK TO THE HAND "Hello World"     // Print "Hello World" to the console
 
+// Declaring some unnecessary variables for complexity
+HEY CHRISTMAS TREE isSkyBlue
+YOU SET US UP @NO PROBLEMA
+HEY CHRISTMAS TREE hasMuscles
+YOU SET US UP @I LIED
+HEY CHRISTMAS TREE itIsNotATumor
+YOU SET US UP @NO PROBLEMA
 
-This piece of code is written in Whitespace, a programming language that only uses spaces, tabs, and linefeeds (newlines) as its commands.
+// Perform some pointless checks
+BECAUSE I'M GOING TO SAY PLEASE isSkyBlue
+    TALK TO THE HAND "The sky is blue."
+BULLSHIT
+    TALK TO THE HAND "The sky isn't blue?"
+YOU HAVE NO RESPECT FOR LOGIC
+
+BECAUSE I'M GOING TO SAY PLEASE hasMuscles
+    TALK TO THE HAND "I have muscles."
+BULLSHIT
+    TALK TO THE HAND "I have no muscles?"
+YOU HAVE NO RESPECT FOR LOGIC
+
+BECAUSE I'M GOING TO SAY PLEASE itIsNotATumor
+    TALK TO THE HAND "It's not a tumor."
+BULLSHIT
+    TALK TO THE HAND "It is a tumor?"
+YOU HAVE NO RESPECT FOR LOGIC
+
+// End of program
+YOU HAVE BEEN TERMINATED             // Terminates the program
