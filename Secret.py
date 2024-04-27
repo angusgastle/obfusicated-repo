@@ -1,5 +1,11 @@
-malbolge
-(<`#`<{({<%<{``#'<<`<<'#'`'<`<{`#{`<'#>#}>[#]>}}#<}>>[[[{[[[{[{[{<[{[{[{[{[[[[[{[{[{[{[{[{[[<[[[[[{[[
->>]}[>>]}[>)}[>)}[>>]}[>>)}[}[[}[}[[}[}[}[}[}[}[>[}}[[}[}[>[}}[[}[}[}[}[>)}[>>]}[[[[[[[[[[[}[
->[}}[[}[}[}[}[}[>)}[>>[}}[[}[}[}[>[}[>[[[[[[[[[[[}[[}}[[}[}[>[[[}[}[>[}}[[[[[[[[[[[[[[[}[
-d
+whitespace
+	S  S S	T	T	T	LF
+S	S S	S	LF
+T	LF
+S	S S	S	S	S	LF
+N	LF
+S	LF
+L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	LL	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	LL	L	L	L	L	L	L	L	LL	L LL	L	L	LL	LL	L	L	L	L	L	L	L	L	L	L	LL	L	L	LL	L	L	L	L	L	L	LL	LL	L	L	L	L	L	L	L	L	L	LL	L	L	LL	LL	L	L	LL	L	L	L	L	L	L	L	LL	L	L	L	L	L	L	L	LL   L	L	L	L	L	L	LL	LL	L	L   L	L	L	L	L	L	L	L	L	LL	L	L   L	L	L	L	L	L	L	L	LL	L	L   L	LL	L	L	L L	L	L	L	L	L	L	LL	L	L   L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	LL	LL	L	L   L	L	L	L	L	L	L	L	L	L	L	L	L	LL	L	L   L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	LL	L	LL	L	L   L	L	L	L	L	L	L	L	L	L	L	LL	L	L   L	L	L	L	L	L	L	L	L	LL	L	L	LL	LL	LL	LL	L	L	L	LL	LL	L	L L	L LL LL LL LL L	LL L	LL	L	L   L	L	L	L	L	L	L	LL	L	LLL	L	L	L	L	L	L	LL	LL	L	LKL	L L L L LL LL LL L L L L L LL L L L LL L LL  L L L L L L L L L LL L LL L L L L L L L L L LL L L LL L LL L L L L LL L L L L LL L  L L L L L L L L L L L L L LL L L L L L L L LL L L L L L L L L L LL L L L L L L L L LL L L L L L L L	LL LL LL LL LL LL L	LL L	LL L	LL L L LL LL LL LL LL LL  L LL  LL 	T	LF
+	
+	L	TLL	LL	LL	LL	L	L	L	L	L	L	L	L	L	LL	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	LL	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	
+	L	L	L	L
