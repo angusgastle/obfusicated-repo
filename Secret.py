@@ -1,18 +1,32 @@
-// INTERCAL script to print "Hello World"
+whitespace
+	S S S T	S T	S L
+	T	L
+	S S S T	T	S T	S S L
+	T	L
+	S S S T	T	S T	T   L
+	T	L
+	S S S T	T	S S T	S L
+	T	L
+	S S S T	T	T	T L
+	T	L
+	S S S S S L
+	T	L
+	S S S S S S L
+	T	L
+	S S S T	T	T	S L
+	T	L
+	S S S T	T	S S T	L
+	T	L
+	S S S T	S T	T L
+	T	L
+	S S S T	T	T	T S L
+	T	L
+	S S S S S T	L
+	T	L
+	S S S S S S S L
+	T	L
+	S S S L
+	L
+	L
 
-DO ,1 <- #13        // Assign the ordinal value of a carriage return to variable 1
-PLEASE ,1 SUB #1 <- #238
-DO ,1 SUB #2 <- #108
-DO ,1 SUB #3 <- #214
-PLEASE DO ,1 SUB #4 <- #194
-PLEASE DO ,1 SUB #5 <- #172
-DO ,1 SUB #6 <- #218
-PLEASE DO ,1 SUB #7 <- #98
-DO ,1 SUB #8 <- #194
-PLEASE DO ,1 SUB #9 <- #188
-DO ,1 SUB #10 <- #168
-DO ,1 SUB #11 <- #98
-DO ,1 SUB #12 <- #184
-PLEASE DO ,1 SUB #13 <- ,1            // Put the original carriage return value into the final part of the array
-DO READ OUT ,1                       // Output the full string as ASCII characters
-PLEASE GIVE UP                       // End the program
+This is an example of the "Hello, World!" program written in Whitespace, a esoteric (obscure) programming language where only spaces, tabs, and linefeeds have meaning. The long and complex nature of this seemingly blank text serves as a coding exercise, subtly representing the words "Hello, World!" in a visually invisible manner through the careful placement of whitespaces.
