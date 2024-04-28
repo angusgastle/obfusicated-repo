@@ -1,11 +1,4 @@
-whitespace
-	S  S S	T	T	T	LF
-S	S S	S	LF
-T	LF
-S	S S	S	S	S	LF
-N	LF
-S	LF
-L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	LL	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	LL	L	L	L	L	L	L	L	LL	L LL	L	L	LL	LL	L	L	L	L	L	L	L	L	L	L	LL	L	L	LL	L	L	L	L	L	L	LL	LL	L	L	L	L	L	L	L	L	L	LL	L	L	LL	LL	L	L	LL	L	L	L	L	L	L	L	LL	L	L	L	L	L	L	L	LL   L	L	L	L	L	L	LL	LL	L	L   L	L	L	L	L	L	L	L	L	LL	L	L   L	L	L	L	L	L	L	L	LL	L	L   L	LL	L	L	L L	L	L	L	L	L	L	LL	L	L   L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	LL	LL	L	L   L	L	L	L	L	L	L	L	L	L	L	L	L	LL	L	L   L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	LL	L	LL	L	L   L	L	L	L	L	L	L	L	L	L	L	LL	L	L   L	L	L	L	L	L	L	L	L	LL	L	L	LL	LL	LL	LL	L	L	L	LL	LL	L	L L	L LL LL LL LL L	LL L	LL	L	L   L	L	L	L	L	L	L	LL	L	LLL	L	L	L	L	L	L	LL	LL	L	LKL	L L L L LL LL LL L L L L L LL L L L LL L LL  L L L L L L L L L LL L LL L L L L L L L L L LL L L LL L LL L L L L LL L L L L LL L  L L L L L L L L L L L L L LL L L L L L L L LL L L L L L L L L L LL L L L L L L L L LL L L L L L L L	LL LL LL LL LL LL L	LL L	LL L	LL L L LL LL LL LL LL LL  L LL  LL 	T	LF
-	
-	L	TLL	LL	LL	LL	L	L	L	L	L	L	L	L	L	LL	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	LL	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	L	
-	L	L	L	L
+malbolge
+('&%:9]!~}|z2Vxwq-,POqponl$Hj!~}|z,C$r5K(Mg=<*[9Alichen@(=Zvfp64oNChl~H%)T45Lc~M?|]&gq,Z<Y#/RKRn,5SM='D%9MGXzcz(E,9tKrMb-!t]*+JBl7e-%PzHhAEiSD?6+m,FK|(BRqP<~Rpo3RMAbo=D~AGK=qun@>t=6vCWe^r4O>EYfir6>A5=N)Vz1`wPD>,l@+*V+#OG+*( config=4G)5YC)1de]&%()){3%J#>$ynMME-lB4KM5MmMk7e\&dH0lLlSq@mtKR'5HFq4<R5d~(50qZk;6<_l3!Age]]
+& !F(] <<ShellM~<MGA_YSFehI}\|DRI'
+|'MhR~}R]=6OFHK[M}(A%NemJs(`H0%|_/J9V5`')!+R6=q%CQ^>M=_F(TXC@o`?Rg}F{
