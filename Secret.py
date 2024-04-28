@@ -1,4 +1,31 @@
-malbolge
-('&%:9]!~}|z2Vxwq-,POqponl$Hj!~}|z,C$r5K(Mg=<*[9Alichen@(=Zvfp64oNChl~H%)T45Lc~M?|]&gq,Z<Y#/RKRn,5SM='D%9MGXzcz(E,9tKrMb-!t]*+JBl7e-%PzHhAEiSD?6+m,FK|(BRqP<~Rpo3RMAbo=D~AGK=qun@>t=6vCWe^r4O>EYfir6>A5=N)Vz1`wPD>,l@+*V+#OG+*( config=4G)5YC)1de]&%()){3%J#>$ynMME-lB4KM5MmMk7e\&dH0lLlSq@mtKR'5HFq4<R5d~(50qZk;6<_l3!Age]]
-& !F(] <<ShellM~<MGA_YSFehI}\|DRI'
-|'MhR~}R]=6OFHK[M}(A%NemJs(`H0%|_/J9V5`')!+R6=q%CQ^>M=_F(TXC@o`?Rg}F{
+// Importing header for console input/output.
+#include <stdio.h>
+
+// Function prototype for printing "Hello World" in a fancy way.
+void printHelloWorld();
+
+// Entry point of the program.
+int main() {
+    printHelloWorld();  // Calling the function to print "Hello World".
+    return 0;
+}
+
+// Definition of printHelloWorld function.
+void printHelloWorld() {
+    // Using an array of characters to store the message "Hello World".
+    char message[12] = "Hello World";
+
+    // Enhanced visualization: printing each character on a new line with a delay.
+    for (int i = 0; message[i] != '\0'; i++) { // Loop until the end of the string.
+        printf("%c", message[i]); // Print one character at a time.
+        printf("\n"); // Move to the next line.
+        
+        // Implementing a simple delay (platform-dependent).
+        for (long j = 0; j < 100000000; j++) {
+            // Delay loop does nothing but consume time.
+        }
+    }
+
+    // Concluding the function with a simple call to print a new line.
+    printf("\n");
+}
