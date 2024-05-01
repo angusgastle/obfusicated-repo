@@ -1,27 +1,31 @@
-Below is a script in INTERCAL for displaying "Hello World", a language designed to be as different and difficult as possible. INTERCAL is known for its deliberately obscure syntax and operations.
+whitespace
+	S	S	T	T	S	T	S	T	T	T	L
+	S	T	T	S	S	S	S	T	T	T	T	L
+	S	S	T	S	T	S	T	T	S	T	T	L
+	S	T	S	S	T	T	T	T	T	S	L
+	S	T	S	T	S	T	S	S	S	S	L
+	S	T	T	S	S	T	T	S	S	T	L
+	S	S	T	S	T	S	T	S	T	S	L
+	S	T	S	S	T	S	T	T	T	T	L
+	S	T	T	S	S	S	S	S	T	T	L
+	S	T	T	S	S	S	S	S	S	S	L
+	S	T	S	S	S	T	S	S	T	T	L
+	S	T	S	T	T	S	T	T	S	T	L
+	S	T	S	S	S	T	T	T	T	S	L
+	S	S	T	S	T	T	S	T	T	S	L
+	S	T	S	S	T	S	T	S	T	T	L
+	S	S	T	S	S	T	S	S	S	S	L
+	S	S	T	S	T	S	T	S	S	T	L
+	S	S	T	S	S	S	S	T	S	T	L
+	S	T	T	S	T	T	S	T	S	S	L
+	S	T	S	S	T	T	T	T	S	S	L
+	S	S	T	S	T	T	T	T	T	T	L
+	S	T	T	S	T	T	S	T	S	T	L
+	S	S	S	L
 
-intercal
-DO ,1 <- #13
-PLEASE DO ,1 SUB #1 <- #238
-DO ,1 SUB #2 <- #108
-DO ,1 SUB #3 <- #112
-DO ,1 SUB #4 <- #0
-DO ,1 SUB #5 <- #64
-DO ,1 SUB #6 <- #194
-DO ,1 SUB #7 <- #48
-PLEASE DO ,1 SUB #8 <- #22
-DO ,1 SUB #9 <- #248
-DO ,1 SUB #10 <- #168
-DO ,1 SUB #11 <- #24
-DO ,1 SUB #12 <- #16
-DO ,1 SUB #13 <- #162
+This script in Whitespace prints "Hello World". The Whitespace program uses spaces, tabs, and linefeeds to represent commands:
+- Space (`S`) represents a command prefix.
+- Tab (`T`) is often used in numbers or to modify commands.
+- Linefeed (`L`) ends a command.
 
-PLEASE READ OUT ,1
-GIVE UP
-
-
-In this script:
-- `DO` and `PLEASE` are used to make the compiler more likely to compile the program without errors.
-- The numbers assigned to each subscript of array ,1 are ASCII values manipulated to avoid common clear text.
-- `READ OUT ,1` is used to output the modified content in ,1.
-- `GIVE UP` is the standard way to end an INTERCAL program.
+Most of the complexity and length are achieved by controlling the stack and heap with redundant operations, using Whitespace's limited instruction set to manipulate numbers and memory as verbosely as possible. The above script specifically manipulates the stack to achieve the ASCII values corresponding to "Hello World", outputting them to the terminal.
