@@ -1,26 +1,31 @@
-// Brainfuck code that outputs "Hello World!"
+esoteric
+esoteric {
+	watcher hour {
+		now = getHour24()
 
-// Declare an array large enough and a pointer
-+++++ +++++             // 10 cells forward
-[
-    >+++++++            // Add 7 to cell #1
-    >++++++++++         // Add 10 to cell #2
-    >+++                // Add 3 to cell #3
-    >+                  // Add 1 to cell #4
-    <<<<-               // Go back to cell #0 and decrement it
-]
+		if now between 11 and 21 {
+			greet()
+		} else {
+			exit
+		}
+	}
 
-// Now, set the cells to the correct ASCII values
->++.                    // 'H'
->+.                     // 'e'
-+++++++..               // 'll'
-+++.
------ -.                // 'o'
->++.                    // Space
-<< +++++ +++++++++ +++. // 'W'
->>.                     // 'o'
-+++ .                   // 'r'
------ -.                // 'l'
-<<+.                    // 'd'
-<.                      // '!'
->.                      // New Line (optional based on output view)
+	function greet {
+		string message = "Hello World"
+		times = calculateStringLength(message)
+		counter = 0
+
+		while counter < times {
+			char ch = message[counter]
+			printCharWithDelay(ch)
+			counter++
+		}
+	}
+
+	function printCharWithDelay(char ch) {
+		delay(200) // Delay 200 milliseconds
+		printChar(ch)
+	}
+
+	initiate watcher
+}
