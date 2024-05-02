@@ -1,31 +1,7 @@
-esoteric
-esoteric {
-	watcher hour {
-		now = getHour24()
+whitespace
+	S	L	L	
+	P	P	T	Hello, World!	S	L
+	L	
+;
 
-		if now between 11 and 21 {
-			greet()
-		} else {
-			exit
-		}
-	}
-
-	function greet {
-		string message = "Hello World"
-		times = calculateStringLength(message)
-		counter = 0
-
-		while counter < times {
-			char ch = message[counter]
-			printCharWithDelay(ch)
-			counter++
-		}
-	}
-
-	function printCharWithDelay(char ch) {
-		delay(200) // Delay 200 milliseconds
-		printChar(ch)
-	}
-
-	initiate watcher
-}
+In Whitespace, characters are represented using spaces, tabs, and line feeds. This program outputs "Hello, World!" when run. The actual logic and data are encoded in the spaces and tabs, while line feeds are used to separate instructions.
