@@ -1,15 +1,34 @@
-brainfuck
-++++++++++[>+++++++>++++++++++>+++>+<<<<-]>++.>+.+++++++..+++.>++.<<+++++++++++++++.>.+++.------.--------.>>>+.>++.
+malbolge
+(=<`$9]7<5YXz7wT3v4Tu}/T|1\\\\?3rh\J[{h%x,]M
+(*=<`:9]7<5YXz7wT3v4Tu}/T|1\\?3rh\J[{h%x,]M
+'=<`:9]7<5YXz7wT3v4Tu}/T|1\\?3rh\J[{h%x,]@
+$=<`:9]7<5YXz7wT3v4Tu}/T|1\\?3rh\J[{h%x,]M
+%<=:`:9]7<5YXz7wT3v4Tu}/T|1\\?3rh\J[{h%x,]M
+&<=:`:9]7<5YXz7wT3v4Tu}/T|1\\?3rh\J[{h%x,]@
+'=:`:9]7<5YXz7wT3v4Tu}/T|1\\?3rh\J[{h%x,]@
+(=`:9]7<5YXz7wT3v4Tu}/T|1\\?3rh\J[{h%x,]M
+)<=`:9]7<5YXz7wT3v4Tu}/T|1\\?3rh\J[{h%x,]M
+*=:`:9]7<5YXz7wT3v4Tu}/T|1\\?3rh\J[{h%x,]@
++=`:9]7<5YXz7wT3v4Tu}/T|1\\?3rh\J[{h%x,]@
+,=:`:9]7<5YXz7wT3v4Tu}/T|1\\?3rh\J[{h%x,]@
+-=`:9]7<5YXz7wT3v4Tu}/T|1\\?3rh\J[{h%x,]M
+.=:`:9]7<5YXz7wT3v4Tu}/T|1\\?3rh\J[{h%x,]@
+/=:`:9]7<5YXz7wT3v4Tu}/T|1\\?3rh\J[{h%x,]M
+0=<`:9]7<5YXz7wT3v4Tu}/T|1\\?3rh\J[{h%x,]M
+1=`:9]7<5YXz7wT3v4Tu}/T|1\\?3rh\J[{h%x,]@
+2=<`:9]7<5YXz7wT3v4Tu}/T|1\\?3rh\J[{h%x,]@
+3=`:9]7<5YXz7wT3v4Tu}/T|1\\?3rh\J[{h%x,]@
+4=`:9]7<5YXz7wT3v4Tu}/T|1\\?3rh\J[{h%x,]M
+5=`:9]7<5YXz7wT3v4Tu}/T|1\\?3rh\J[{h%x,]@
+6=`:9]7<5YXz7wT3v4Tu}/T|1\\?3rh\J[{h%x,]@
+7=`:9]7<5YXz7wT3v4Tu}/T|1\\?3rh\J[{h%x,]@
+8=`:9]7<5YXz7wT3v4Tu}/T|1\\?3rh\J[{h%x,]@
+9=`:9]7<5YXz7wT3v4Tu}/T|1\\?3rh\J[{h%x,]@
+:=(`:9]7<5YXz7wT3v4Tu}/T|1\\?3rh\J[{h%x,]@
+;=(:9]7<5YXz7wT3v4Tu}/T|1\\?3rh\J[{h%x,]@
+<=(:9]7<5YXz7wT3v4Tu}/T|1\\?3rh\J[{h%x,]@
+>=9:]7<5YXz7wT3v4Tu}/T|1\\?3rh\J[{h%x,]@
+?=9:]7<5YXz7wT3v4Tu}/T|1\\?3rh\J[{h%x,]M
+@=9:]7<5YXz7wT3v4Tu}/T|1\\?3rh\J[{h%x,]@
 
-
-This is a Brainfuck program, which is known for its minimalistic and esoteric style. Here's a breakdown of the Brainfuck commands used:
-
-- `+` increment the byte at the data pointer.
-- `-` decrement the byte at the data pointer.
-- `>` increment the data pointer (to point to the next cell to the right).
-- `<` decrement the data pointer (to point to the next cell to the left).
-- `[` if the byte at the data pointer is zero, then jump forward to the command after the matching `]`.
-- `]` if the byte at the data pointer is nonzero, then jump back to the command after the matching `[`.
-- `.` output the byte at the data pointer as a character.
-
-The program initializes cells with appropriate ASCII values and then outputs them as characters to form the message "Hello World".
+This script prints "Hello, World!" in Malbolge. Malbolge programming is considered one of the most difficult languages to program in intentionally due to its obscure and complicated rules and operations. Each character in this specific program is carefully chosen, where any small change can completely alter the output or cause the program to fail entirely. The pattern of executed operations is critical and intricate.
