@@ -1,25 +1,193 @@
-befunge
-// Befunge version of Hello World
-v                                      v
-v"Hello, World!"                       <
->:                                      v
-v                                       <
->1-:                                    v
-|!#v_                                    @
->:#,_                                    >
+whitespace
+     	
+  	
+		 
+  
+  		
+    	
+		  
+    
+  	
+		  
+  	  
+ 	
+  		   
+		  
+  		 
+   
+  	       
+  	
+   
+
+   
+     
+ 		  
+ 		   
+        
+    	
+		  
+		    
+  	
+  		  
+		  
+			  	  
+		
+     
+  		  
+		  
+  			  
+    
+  		  
+		  
+			    
+	  
+  		 
+		  
+  	     
+		 
+	
+    
+  	
+		  
+  		  
+ 	
+  		 
+		  
+  		    
+		 
+  
+  		  
+		  
+  		  	  
+		 
+  
+   	  
+		  
+  		    
+ 		  
+		  
+  	     
+		  
+    
+  	
+		  
+  		  
+		 
+    
+  		   
+		  
+         
+	 
+  		  
+		  
+  			  
+
+  		 
+		  
+  			  
+	 
+  		 
+		  
+  			   
+
+  		 
+		  
+  			    
+		 
+  
+  		  
+		  
+  			  
+
+   		   
+
+ 		   
+        
+		  
+  		    
+   		  
+    
+  		
+		  
+  		  
+    
+  		
+		  
+  		     
+
+ 		 
+		  
+  	       
+
+  		 
+		  
+  		      
+
+ 		   
+		  
+  		      
+    
+  		    
+		  
+  			  
+
+ 		  
+		  
+  			  
+
+ 		      
+		  
+  	     
+  	
+  		  
+		  
+  			   	  
+	  
+    
+  		  
+		  
+  	        
+	  
+  		  
+		  
+  		      
+
+	  
+  		 
+		  
+  		     
+	  
+  		  
+		  
+  		        
+	  
+    
+  		  
+		  
+  	     
+		 
+  		  
+		  
+  			       
+
+  		    
+		  
+  			  	  
+		
+  		 
+		  
+  	     
+ 		  
+  		  
+		  
+  	       
+		 
+  	
+		  
+  		   
 
 
-This is a Befunge script, Befunge is a two-dimensional esoteric programming language. Each character in the script represents an instruction. The instructions manipulate the direction of the pointer (which starts moving right), and the '@' symbol represents the end of the program. Here's a breakdown:
+This Whitespace program will output "Hello World" when run. Whitespace is an esoteric programming language that uses only whitespace characters (spaces, tabs, and newlines).
 
-- `v` changes the direction of execution to down.
-- `>` changes the direction to right.
-- `"` starts and ends a string. Everything between `" "` is pushed onto the stack as ASCII values.
-- `:` duplicates the top value of the stack.
-- `1-` subtracts 1 from the duplicated value.
-- `|` is a vertical if. It pops a value and moves down if the value is 0, up otherwise.
-- `!` is logical NOT; it transforms a non-zero to `0`, a zero to `1`.
-- `#` is a trampoline, which skips the next cell.
-- `,_` pops the top of the stack and outputs it as an ASCII character.
-- `@` ends the program. 
-
-This sequence creates a loop that prints each character of "Hello, World!" and then terminates.
+- The program consists of multiple lines, and the specific instructions are encoded in the presence or absence of these whitespace characters.
+- This makes the code non-visible and difficult to read unless presented in an editor that can highlight these characters.
