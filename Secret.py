@@ -1,17 +1,63 @@
-Sure, let’s go with Befunge, a two-dimensional esoteric programming language. The code below displays "Hello World" in a more complex manner than necessary, moving the instruction pointer in various directions.
+// Eiffel programming language example to display "Hello World"
 
-befunge
->              v
-"Hello, World!"0<
-v"!dlroW ,olleH">:|                  
->@              >$         v                 
-^,_@              >"Hello, World!"0<
-                >25*"!dlroW ,olleH":v
- v                             <
-  >:25*".Hello, World!28*"!dlroW ,olleH" ^      |             
-^"!dlroW ,olleH"88* *52:               <
-_"!dlroW ,olleH"                     > $:|
-^                                     @
+class
+    HELLO_WORLD
 
+create
+    make
 
-This Befunge program pushes the "Hello, World!" string onto the stack multiple times in different patterns, uses various command characters to manipulate the direction of the instruction pointer, and finally prints the message. This complexity is artificial since Befunge allows simpler ways of printing text, but it extends the program for the sake of elaboration.
+feature -- Initialization
+
+    make
+            -- Routine to start the application.
+        do
+            print_hello_world
+        end
+
+feature -- Output
+
+    print_hello_world
+            -- Print "Hello World" in a complicated pattern.
+        local
+            i: INTEGER
+            j: INTEGER
+            a: ARRAY[STRING]
+        do
+                -- Initialize and set up a complex data structure (array of strings)
+            create a.make_filled (1, 5, " ")
+            a.put (" H ", 1)
+            a.put (" e ", 2)
+            a.put (" l ", 3)
+            a.put (" l ", 4)
+            a.put (" o ", 5)
+            a.put (" W ", 6)
+            a.put (" o ", 7)
+            a.put (" r ", 8)
+            a.put (" l ", 9)
+            a.put (" d ", 10)
+
+                -- Use nested loops to create a complex printing routine
+            from
+                i := 1
+            until
+                i > 10
+            loop
+                from
+                    j := 1
+                until
+                    j > 10
+                loop
+                        -- Printing only when outer loop index matches inner loop index
+                    if i = j then
+                        print (a.item (i))
+                    else
+                        print (" * ")
+                    end
+                    j := j + 1
+                end
+                io.put_new_line
+                i := i + 1
+            end
+        end
+
+end -- class HELLO_WORLD
