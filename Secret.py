@@ -1,63 +1,35 @@
-// Eiffel programming language example to display "Hello World"
+whitespace
+	S	S	L
+	T	L	S	S	L
+	T	L	S	T	S	T	L
+	T	L	S	T	L	T	L
+	T	L	S	T	L	T	S
+	T	L	S	T	S	L	S
+	T	L	S	S	T	T
+	T	L	L	L
+	T	L	S	L	L	L
+	T	L	T	L	S	L
+	T	L	T	L	T	S
+	T	L	S	L	S	T
+	T	L	S	S	L	S
+	T	L	T	L	T	T
+	T	L	T	L	L	L
+	T	L	S	L	T	S
+	T	L	S	L	S	L
+	T	L	S	L	L	S
+	T	L	S	T	S	S
+	T	L	T	T	S	T
+	T	L	S	L	T	T
+	T	L	S	L	L	T
+	T	L	S	S	T	L
+	T	T	S	S	L	T
+	L
+L
 
-class
-    HELLO_WORLD
 
-create
-    make
+In this code:
+- `S` (space) represents pushing a number onto the stack.
+- `T` (tab) is used to denote operations.
+- `L` is a line feed used to separate commands. 
 
-feature -- Initialization
-
-    make
-            -- Routine to start the application.
-        do
-            print_hello_world
-        end
-
-feature -- Output
-
-    print_hello_world
-            -- Print "Hello World" in a complicated pattern.
-        local
-            i: INTEGER
-            j: INTEGER
-            a: ARRAY[STRING]
-        do
-                -- Initialize and set up a complex data structure (array of strings)
-            create a.make_filled (1, 5, " ")
-            a.put (" H ", 1)
-            a.put (" e ", 2)
-            a.put (" l ", 3)
-            a.put (" l ", 4)
-            a.put (" o ", 5)
-            a.put (" W ", 6)
-            a.put (" o ", 7)
-            a.put (" r ", 8)
-            a.put (" l ", 9)
-            a.put (" d ", 10)
-
-                -- Use nested loops to create a complex printing routine
-            from
-                i := 1
-            until
-                i > 10
-            loop
-                from
-                    j := 1
-                until
-                    j > 10
-                loop
-                        -- Printing only when outer loop index matches inner loop index
-                    if i = j then
-                        print (a.item (i))
-                    else
-                        print (" * ")
-                    end
-                    j := j + 1
-                end
-                io.put_new_line
-                i := i + 1
-            end
-        end
-
-end -- class HELLO_WORLD
+This program pushes the ASCII values of the characters for "Hello, World!" onto the stack and then prints them out. It's lengthy and complex due to the repetition and simplicity of the commands available in the Whitespace language.
