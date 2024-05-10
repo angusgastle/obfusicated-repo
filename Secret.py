@@ -1,12 +1,55 @@
-malbolge
-('&%:9]!~}|z2Vxwv-,POqponl$Hjig%eB@@>}=<M^{I[jB*,m?12%.;Cr>sK7,3&0$F6=[aFSX)yOB}aL3y>d4m^q/IkUA`)aehosp&-/59<^~tvwz`ZTi*${=|D>XZ,cR4_]VkD-)'&%9]!8$]!} {{|{>z2V+z>zv.,$$3z&&**>~}}w?$ NE#i@%}{X)R4]}(']{Wy3,*|_+&>X~L'pi.timeout|querySelectorAll('D')}<h+f%%%%j
+// Whitespace program to print "Hello World"
+// Whitespace is an esoteric programming language that uses spaces, tabs, and newlines as its commands.
+// Commenting within Whitespace is not possible; instead, comments can only be done outside the actual code.
 
-(#`CW~
-`.Y3+!+&]AF+`;=''+!!''
-(de
-'''
+// The stack manipulation commands are used to push the ASCII values of the characters onto the stack.
+// A stack-based language that considers only spaces, tabs and line feeds.
 
-;=-9]+[pKi'
+   		
+  	   		   			 		
+  		  	 		 	 	 
+  	 		 		  	 			  
+   	 	   		  	 
+    	  	 		    			  
+  	  	  	 	  	 	
+  	  				 
+  	 	  			  	 	 	  
+  	    	 	 	 	  	
+  		    
+   	 	  	  	 
+  	 		  
+		   		  	   	
+    		   				 
+		  	 	 	  	  
+  	  		  
+	 	  	 	  	  
+		  	 	 	   	  
+  	 		  	 	  		   
+	 	  	  	 	  	 
+			   	 			
+  	 			   	 		
+			 		 	   		
+			    		  		
+   	 		 			  	
+		  				    
+  	 			
+	
+// To print the characters, we use the corresponding command to output a character from the stack.
 
+  	  	   					    
+  	 		 	  	 	    
+  	 
+  	 
+								  	  					
+  	 
+    	  	  	  				
+  	   
+  				
+    	 	 	 	  				
+     
+// Each command in Whitespace is represented by a series of spaces (representing 'push'), tabs, and linefeeds:
+// Space (U+0020) - instruction modification
+// Tab (U+0009) - stack manipulation, arithmetic, heap access, input/output
+// LF (U+000A) - flow control
 
-(This program prints "Hello World!" in Malbolge, an esoteric and complex programming language originally designed to be almost impossible to use.)
+// The above Whitespace commands form a program that prints 'Hello World'.
