@@ -1,55 +1,23 @@
-// Whitespace program to print "Hello World"
-// Whitespace is an esoteric programming language that uses spaces, tabs, and newlines as its commands.
-// Commenting within Whitespace is not possible; instead, comments can only be done outside the actual code.
+racket
+#lang racket
 
-// The stack manipulation commands are used to push the ASCII values of the characters onto the stack.
-// A stack-based language that considers only spaces, tabs and line feeds.
+; Define a function to output a string based on a list of character codes
+(define (output-message char-codes)
+  ; Use map to convert each character code in the list to the corresponding character
+  (let ((message (list->string (map integer->char char-codes))))
+    ; Display the constructed message so that it prints out to the console
+    (display message)))
 
-   		
-  	   		   			 		
-  		  	 		 	 	 
-  	 		 		  	 			  
-   	 	   		  	 
-    	  	 		    			  
-  	  	  	 	  	 	
-  	  				 
-  	 	  			  	 	 	  
-  	    	 	 	 	  	
-  		    
-   	 	  	  	 
-  	 		  
-		   		  	   	
-    		   				 
-		  	 	 	  	  
-  	  		  
-	 	  	 	  	  
-		  	 	 	   	  
-  	 		  	 	  		   
-	 	  	  	 	  	 
-			   	 			
-  	 			   	 		
-			 		 	   		
-			    		  		
-   	 		 			  	
-		  				    
-  	 			
-	
-// To print the characters, we use the corresponding command to output a character from the stack.
+; A main procedure to execute our specific task
+(define (main)
+  ; Define the list of character codes that represent "Hello World"
+  (define hello-world-codes '(72 101 108 108 111 32 87 111 114 108 100))
+  
+  ; Call the output-message function with the character codes
+  (output-message hello-world-codes)
+  
+  ; Output a newline to ensure clean formatting in the console
+  (newline))
 
-  	  	   					    
-  	 		 	  	 	    
-  	 
-  	 
-								  	  					
-  	 
-    	  	  	  				
-  	   
-  				
-    	 	 	 	  				
-     
-// Each command in Whitespace is represented by a series of spaces (representing 'push'), tabs, and linefeeds:
-// Space (U+0020) - instruction modification
-// Tab (U+0009) - stack manipulation, arithmetic, heap access, input/output
-// LF (U+000A) - flow control
-
-// The above Whitespace commands form a program that prints 'Hello World'.
+; Call the main function to execute our program
+(main)
