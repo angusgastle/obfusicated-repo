@@ -1,27 +1,28 @@
-// Using Whitespace, an esoteric programming language where only spaces, tabs, and linefeeds have meaning
+racket
+#lang racket
 
-// The Whitespace program to print "Hello World"
+;; Define a function to obfuscate the splitting, rearranging, and joining of the input string
+(define (obfuscate-string str)
+  ;; Convert string to list of characters
+  (define char-list (string->list str))
+  ;; Define a list of indices related to random positions; manually chosen
+  (define indices '(0 1 2))
+  ;; Scramble the characters based on indices
+  (define scrambled-list (map (lambda (i) (list-ref char-list i)) indices))
+  ;; Join the list back into a string
+  (list->string scrambled-list))
 
-// Push the ASCII codes of "Hello, World!" reversed because the stack is LIFO
+;; Define a function to get the appropriately ordered "Hello World" message
+(define (get-hello-world)
+  ;; Start with a scrambled string
+  (define initial-scramble "rdlloWo Hel")
+  ;; Split and rearrange the string back to its original ordering
+  (string-append (substring initial-scramble 7) " " (substring initial-scramble 0 7)))
 
-  	  	   																																									// Push 33 (!)
-		_tab 	  	  	 																																				// Push 100 (d)
- 	 	  	 	 	  																																				// Push 108 (l)
- 	 	 	  	 	  																																				// Push 114 (r)
-	  	 	 	  	 	 																																			// Push 111 (o)
-	 	  	 	 	  																																				// Push 87 (W)
-_tab 	 	 	 	 																																				// Push 32 (Space)
-	  	  	 	 	  	 																																			// Push 111 (o)
-	 	  	 	  	 	 																																			// Push 108 (l)
-  	 	 	  	 	 	 																																		// Push 108 (l)
-  	 	 	 	 	  																																			// Push 101 (e)
-	  	 	  	  	  	 																																		// Push 72 (H)
-  		 	 	 																																					// Output the characters
-_tab   																																						    // [Label: output_loop]
-	  	 																																						// Retrieve character from top of the stack
-	 	 	 	 	 																																			// Duplicate top of the stack (value)
-	   	 	 	 																																				// Output as character
-	 	  	 	 	 	 		   																																// Jump if value is not zero
- 	 	 	 space		 	 	 	 																													    
+;; Main execution function
+(define (main)
+  ;; Get the correctly ordered string through a convoluted function call
+  (display (get-hello-world)))
 
-// Add an extra Whitespace character to ensure the file doesn't end oddly
+;; Call main function to execute the program
+(main)
