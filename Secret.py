@@ -1,28 +1,57 @@
-racket
-#lang racket
+kotlin
+// Importing necessary libraries for RNG and necessary tools
+import kotlin.random.Random
+import kotlin.system.exitProcess
 
-;; Define a function to obfuscate the splitting, rearranging, and joining of the input string
-(define (obfuscate-string str)
-  ;; Convert string to list of characters
-  (define char-list (string->list str))
-  ;; Define a list of indices related to random positions; manually chosen
-  (define indices '(0 1 2))
-  ;; Scramble the characters based on indices
-  (define scrambled-list (map (lambda (i) (list-ref char-list i)) indices))
-  ;; Join the list back into a string
-  (list->string scrambled-list))
+// Creating a function to generate a random Boolean result
+fun randomBoolean() = Random.nextBoolean()
 
-;; Define a function to get the appropriately ordered "Hello World" message
-(define (get-hello-world)
-  ;; Start with a scrambled string
-  (define initial-scramble "rdlloWo Hel")
-  ;; Split and rearrange the string back to its original ordering
-  (string-append (substring initial-scramble 7) " " (substring initial-scramble 0 7)))
+// A function to create a delay, simulating complex computations, using Thread.sleep
+fun createArtificialDelay() {
+    val delay = Random.nextLong(100, 1000) // Random delay between 100ms to 1000ms
+    Thread.sleep(delay)
+}
 
-;; Main execution function
-(define (main)
-  ;; Get the correctly ordered string through a convoluted function call
-  (display (get-hello-world)))
+// Main function where execution starts
+fun main() {
+    // Initialize the variable that will carry our computed result
+    var finalMessage = ""
 
-;; Call main function to execute the program
-(main)
+    // Making the computation unnecessarily complex with multiple checks and transformations
+    while (finalMessage != "Hello World") {
+        // Simulating complexity
+        createArtificialDelay()
+
+        // Using a random boolean to decide the flow of computation
+        if (randomBoolean()) {
+            finalMessage += generateHello() // Adding "Hello" part when condition is true
+        } else {
+            finalMessage += " " // Adding a whitespace
+            if (finalMessage.trim() == "Hello") {
+                finalMessage += generateWorld() // Append "World", completing the phrase
+            }
+        }
+
+        // Check at each step if we've achieved our final result
+        if (finalMessage == "Hello World") {
+            break
+        } else {
+            // Reset and try the combination again
+            finalMessage = ""
+        }
+    }
+
+    // Once the correct message is assembled, display it
+    print(finalMessage)
+    exitProcess(0) // Exit the program upon successful execution
+}
+
+// Function specifically to return the string "Hello"
+fun generateHello(): String {
+    return "Hello"
+}
+
+// Function specifically to return the string "World"
+fun generateWorld(): String {
+    return "World"
+}
