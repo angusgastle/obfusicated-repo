@@ -1,28 +1,58 @@
-brainfuck
-++++++++++[>+++++++>++++++++++>+++>+<<<<-]>++.>+.+++++++..+++.>++.<<+++++++++++++++.>.+++.------.--------.>+.>.
+// INTERCAL program to output "Hello World"
+// INTERCAL stands for Compiler Language With No Pronounceable Acronym
 
-This program is written in Brainfuck, an esoteric programming language.
+INCLUDE "libc.i"          // Pull in the standard INTERCAL library
 
-- `++++++++++` sets the cell #0 to 10, which is used as a loop counter.
-- `[` begins a loop that continues as long as the cell at the pointer (cell #0) is not 0.
-- `>+++++++` increments seven times in cell #1 (70 when loop ends).
-- `>++++++++++` increments ten times in cell #2 (100 when loop ends).
-- `>+++` increments three times in cell #3 (30 when loop ends).
-- `>+` increments once in cell #4 (10 when loop ends).
-- `<<<<-` move back to cell #0 and decrement by 1. This moves back to the beginning of the loop and starts again until cell #0 reaches 0.
-- `>` Move to cell #1, which now holds the ASCII value of 'H'.
-- `.` Output 'H' (cell #1).
-- `>+. ` Increment cell #2 once (101, ASCII for 'e') and output it.
-- `+++++++. ` Increment cell #2 seven times and output 'l' (108).
-- `.` Output 'l' again (the cell value hasn't changed).
-- `+++. ` Increment cell #2 three times and output 'o' (111).
-- `>++. ` Move to cell #3 and increment twice, then output ' ' (space, 32).
-- `<<+++++++++++++++. ` Move to cell #1, increment it to 87 and output 'W'.
-- `>. ` Move to cell #2 and output 'o'.
-- `+++. ` Increment cell #2 three times and output 'r' (114).
-- `------. ` Decrement cell #2 six times and output 'l' (108).
-- `--------.` Decrement cell #2 eight times and output 'd' (100).
-- `>+. ` Move to cell #3 and increment once, then output '!' (33).
-- `>` Move to cell #4.
+DO 1 <- #13               // Initial setup: taking a constant from trinary (13)
+DO 2 <- #21845            // Likewise, another constant (21845 decimal in trinary)
+DO 3 <- #2718             // Another constant for later use
 
-This code efficiently manipulates the few cells it uses to generate the string "Hello World!" by adjusting the ASCII values directly through increments and decrements. It's a great demonstration of programming using very low-level operations in an esoteric language.
+// We will use the following variables:
+// DO 4 to DO 12 for storing character values
+
+// Initialize the DO 1722 variable (tape location 1722) for storing
+// output string 13 characters long
+PLEASE DO 1722 <- #13
+
+// The following lines calculate the ASCII values for "Hello World!" one by one
+DO 4 <- 'H'
+DO 5 <- 'e'
+DO 6 <- 'l'
+DO 7 <- 'l'
+DO 8 <- 'o'
+DO 9 <- ','
+DO 10 <- ' '
+DO 11 <- 'W'
+DO 12 <- 'o'
+DO 13 <- 'r'
+DO 14 <- 'l'
+DO 15 <- 'd'
+DO 16 <- '!'
+
+// The .2 specifies we are referring the 2nd index, which in this case starts with 0, 1, 2...
+PLEASE STASH .2              // Store the cursor position with the STASH operation
+
+// Get ready for output by pointing at the beginning of the array
+PLEASE RETRIEVE .1           // Retrieve into the current position
+
+// Setting up looping through each character using TAIL and RABBIT
+DO 1730 <- #1                // Start of loop marker with value 1
+PLEASE DO 1731 <- #1         // End of loop marker
+
+DO 1732 <- #1                // Initialize loop counter
+PLEASE DO 1733 <- #12        // Set end limit for loop
+
+DO 1722 <- .4                // Point at the first letter to print
+PLEASE COMPUTE #39204        // Dummy computation for legal INTERCAL structure
+
+(1722) NEXT:                 // Begin loop for printing characters
+	PLEASE DO 1723 <- .7822     // Move to the next character
+	PLEASE WRITE IN ,1         // Output the character at DO 1722
+	PLEASE DO 1722 SUB #1 <- #1 // Increase address for next character
+	PLEASE .2 ~ DO 1732          // Increment loop counter
+	PLEASE RESUME .2            // Check loop count
+
+PLEASE FORGET #1              // Clean up by forgetting literal 1
+
+// Finally, output the result
+PLEASE GIVE UP               // Standard termination of an INTERCAL program
