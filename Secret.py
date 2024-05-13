@@ -1,41 +1,27 @@
-prolog
-% Prolog - a logic programming language associated with artificial intelligence and computational linguistics.
+brainfuck
+++++++++++[>+++++++>++++++++++>+++>+<<<<-]>++.>+.+++++++..+++.>++.<<+++++++++++++++.>.+++.------.--------.>+.>.
 
-% Generate hello world in a deliberately obscure and verbose way.
 
-% Define 'atom_char' fact stating individual characters
-atom_char(a, 'a').
-atom_char(l, 'l').
-atom_char(e, 'e').
-atom_char(h, 'h').
-atom_char(o, 'o').
-atom_char(w, 'w').
-atom_char(r, 'r').
-atom_char(d, 'd').
-atom_char(space, ' ').
+This Brainfuck program prints "Hello World" to the console. Brainfuck operates on an array of memory cells, each initially set to zero. It uses a pointer to move between cells and various commands to manipulate the values and control the flow of execution. Here’s a command-by-command breakdown:
 
-% Arrange the characters into a list to form "Hello World"
-hello_world_chars([h, e, l, l, o, space, w, o, r, l, d]).
-
-% Map characters to their corresponding atoms
-map_chars_to_atoms([], []).
-map_chars_to_atoms([Head|Tail], [MappedHead|MappedTail]):-
-    atom_char(Head, MappedHead),
-    map_chars_to_atoms(Tail, MappedTail).
-
-% Convert list of atoms to single concatenated atom (string)
-list_to_string([], '').
-list_to_string([Head|Tail], String):-
-    list_to_string(Tail, TailString),
-    atom_concat(Head, TailString, String).
-
-% Main goal to print "Hello World" to the console in a complex way
-print_hello_world :-
-    hello_world_chars(Chars),               % Assign the characters of "Hello World" to a list
-    map_chars_to_atoms(Chars, AtomList),    % Map list of symbolics to their corresponding atom representations
-    list_to_string(AtomList, String),       % Convert list of atoms to a single atom (string representation)
-    write(String),                          % Standard Prolog predicate to output the converted string to the console
-    nl.                                     % New line to tidy up the output.
-
-% Assertion to ensure the hello world procedure is run on querying the file itself
-:- print_hello_world.
+1. `++++++++++`: Increment the value at the current memory cell to 10. This cell will be used to set up loops.
+2. `[`: Start of the loop.
+   - `>+++++++`: Move to the second cell and add 7 to it.
+   - `>++++++++++`: Move to the third cell and add 10 to it.
+   - `>+++`: Move to the fourth cell and add 3 to it.
+   - `>+`: Move to the fifth cell and add 1 to it.
+   - `<<<<-`: Go back to the first cell and decrement it by 1.
+3. `]`: End of loop, repeat until the first cell is 0.
+   - By now, cells are set as: [0, 70, 100, 30, 10]
+4. `>++.`: Move to the second cell (70) and increment by 2 (72), print 'H' (ASCII 72).
+5. `>+.`: Move to the third cell (100), increment by 1 (101) and print 'e' (ASCII 101).
+6. `+++++++..`: Add 7 to third cell (108), print 'l' twice (ASCII 108).
+7. `+++.`: Add 3 to third cell (111), print 'o' (ASCII 111).
+8. `>++.`: Move to the fourth cell (30), add 2 (32, ASCII space), print space ' '.
+9. `<<+++++++++++++++.`: Go to the second cell (72) and add 15 (87), print 'W' (ASCII 87).
+10. `>.`: Move to the third cell (111), print 'o'.
+11. `+++.`: Add 3 to third cell (114), print 'r' (ASCII 114).
+12. `------.`: Subtract 6 (108), print 'l' (ASCII 108).
+13. `--------.`: Subtract 8 (100), print 'd' (ASCII 100).
+14. `>+.`: Move to the fourth cell (32), increment by 1 (33), print '!' (ASCII 33).
+15. `>.`: Move to the fifth cell (incremented earlier by loops), print the final character (ASCII 10, newline theoretically in some interpreters).
