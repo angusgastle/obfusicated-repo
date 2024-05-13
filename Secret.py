@@ -1,20 +1,41 @@
-bf
-++++++++++[>+++++++>++++++++++>+++>+<<<<-]>++.>+.+++++++..+++.>++.<<+++++++++++++++.>.+++.------.--------.>+.
+prolog
+% Prolog - a logic programming language associated with artificial intelligence and computational linguistics.
 
-This Brainfuck code prints "Hello World" to the console. Here's a breakdown of the code:
+% Generate hello world in a deliberately obscure and verbose way.
 
-- `++++++++++` increments the first memory cell to 10. This is used as a loop counter.
-- `[>+++++++>++++++++++>+++>+<<<<-]` is a loop that initializes several cells:
-  - The second cell gets incremented by 70 (7 * 10, because of the outside loop) to store ASCII of 'H'.
-  - The third cell gets incremented by 100 (10 * 10) to store ASCII of 'e'.
-  - The fourth cell gets incremented by 30 (3 * 10) to assist in printing 'l'.
-  - The fifth cell is set to 10 to assist in newline and space calculations.
-  - The pointer is then returned to the first cell and decremented.
-- `>++.` moves to the second cell and prints 'H' (incremented twice to 72, the ASCII for 'H').
-- `>+.+++++++..+++.` moves to the third cell and prints 'e' (incremented once to 101, the ASCII for 'e'), then prints 'l' and 'l' by using the fourth cell.
-- `>++.` increases the fourth cell twice more and prints 'o' (112 ASCII, incremented from previous value).
-- `<<+++++++++++++++.>.` moves back to print a space (cell incremented to 32 ASCII), then prints 'W' by setting third cell correctly.
-- `+++.------.--------.>+.` prints 'o', 'r', 'l', 'd'.
-- This sequence effectively completes the memorable phrase with each character encoded based on the ASCII table and the innovative usage of the Brainfuck's minimal commands.
+% Define 'atom_char' fact stating individual characters
+atom_char(a, 'a').
+atom_char(l, 'l').
+atom_char(e, 'e').
+atom_char(h, 'h').
+atom_char(o, 'o').
+atom_char(w, 'w').
+atom_char(r, 'r').
+atom_char(d, 'd').
+atom_char(space, ' ').
 
-This script uses Brainfuck's very limited instruction set, comprising only eight characters (., [, ], <, >, +, -, and ,) to manipulate the array data and move the data pointer, thereby producing complex logic in a very compact form.
+% Arrange the characters into a list to form "Hello World"
+hello_world_chars([h, e, l, l, o, space, w, o, r, l, d]).
+
+% Map characters to their corresponding atoms
+map_chars_to_atoms([], []).
+map_chars_to_atoms([Head|Tail], [MappedHead|MappedTail]):-
+    atom_char(Head, MappedHead),
+    map_chars_to_atoms(Tail, MappedTail).
+
+% Convert list of atoms to single concatenated atom (string)
+list_to_string([], '').
+list_to_string([Head|Tail], String):-
+    list_to_string(Tail, TailString),
+    atom_concat(Head, TailString, String).
+
+% Main goal to print "Hello World" to the console in a complex way
+print_hello_world :-
+    hello_world_chars(Chars),               % Assign the characters of "Hello World" to a list
+    map_chars_to_atoms(Chars, AtomList),    % Map list of symbolics to their corresponding atom representations
+    list_to_string(AtomList, String),       % Convert list of atoms to a single atom (string representation)
+    write(String),                          % Standard Prolog predicate to output the converted string to the console
+    nl.                                     % New line to tidy up the output.
+
+% Assertion to ensure the hello world procedure is run on querying the file itself
+:- print_hello_world.
