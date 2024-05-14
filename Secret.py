@@ -1,33 +1,46 @@
-whitespace
-	S S S T	T	S S S T	T	S S S T	T	S S S T	T	T	T
-	T	T	L
-S S S T	T	S S S T	S T	S S S T	T	T	T	L
-S S S T	T	S S S T	T	S S S T	T	T	T	L
-S S S T	S S S S L
-S S S S T	T	T	S T	S T	S T	S S S T	T	S S S T	S S S T	T	T	L
-S S S S T	T	T	S T	S T	S L
-S S S S T	S T	S L
-S S S S T	T	S T	T	L
-S S S S T	T	T	T	S T	L
-S S S S L
-S S S S S T	S S S T	S T	T	L
-S S S S S T	S S S T	S T	L
-S S S S S T	S S S T	S T	S T	L
-S S S S S T	S S S T	S T	S T	S T	L
-S S S S S T	S S S T	S T	S T	S T	T	L
-S S S S S T	S S S T	S T	T	L
-S S S S S T	S S S T	T	L
-S S S S S T	T	T	L
-S S S S S T	T	T	S S T	L
-S S S S S T	T	T	T	S L
-S S S S S T	T	T	T	T	S T	L
-S S S S S T	T	L
-S S S S L
-	N
-	N
-	N
+prolog
+% Prolog is a logic programming language associated with artificial intelligence and computational linguistics.
 
+% Define a module named hello_world.
+:- module(hello_world, [display_hello_world/0]).
 
-This snippet of code is an example of Whitespace programming. Whitespace is an esoteric language that uses only whitespace characters such as space, tab, and newline. The code is complex as it constructs the phrase "Hello World" through a series of stack manipulations and character outputs. Each character's ASCII value is pushed onto the stack and then printed. This code consists of push (S), duplicate top stack item (T), output as character (L), and end of the program (N) operations.
+% Import the required library for generating random numbers.
+:- use_module(library(random)).
 
-In Whitespace, non-whitespace characters are considered comments, making the code hard to read and obscure as intended. The tabs and spaces before non-whitespace characters (like 'T', 'L', and 'N') are the actual commands, while other characters serve merely as visual aid here for understanding the structure.
+% Define a predicate that encapsulates multiple ways to say "Hello World".
+% Each key in the dictionary corresponds to a unique method of expressing "Hello World".
+hello_world_messages_dict(Dict) :-
+    Dict = _{
+        method1: "Hello World",
+        method2: "Hola Mundo",
+        method3: "Hallo Welt",
+        method4: "Bonjour Monde",
+        method5: "Ciao Mondo",
+        method6: "Olá Mundo",
+        method7: "Привет, мир",
+        method8: "こんにちは、世界",
+        method9: "안녕하세요, 세계",
+        method10: "你好，世界"
+    }.
+
+% Define a predicate to select a random greeting from the dictionary.
+select_random_greeting(RandomGreeting) :-
+    hello_world_messages_dict(Messages),
+    dict_keys(Messages, Keys),
+    random_member(RandomKey, Keys),
+    get_dict(RandomKey, Messages, RandomGreeting).
+
+% Define a helper predicate to repeat the display of "Hello World".
+repeat_display(0).
+repeat_display(N) :-
+    N > 0,
+    select_random_greeting(Greeting),
+    format("~w~n", [Greeting]),
+    N1 is N - 1,
+    repeat_display(N1).
+
+% Define a main predicate to kick off the "Hello World" display.
+% It randomly prints "Hello World" in different languages 5 times, ensuring diversity in output translation.
+display_hello_world :-
+    writeln("Displaying 'Hello World' in different languages:"),
+    repeat_display(5).
