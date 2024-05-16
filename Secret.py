@@ -1,12 +1,44 @@
-whitespace
-	S S S T 	S S S L
-	T	L
-	S S S S S T 	T	T	S T	L
-	T	L
-	S S S S S S S S T 	S L
-	T	L
-	S S S S S S S S S T	L
-	N	L
+// Whitespace programming language example to print "Hello World"
 
+// The Whitespace language uses spaces, tabs, and newlines to give instructions.
+// It is an invisible programming language, making the code obscure by nature.
 
-This is a "Hello World" program written in Whitespace, a language composed entirely of spaces, tabs, and linefeeds. Each character of the output and the program flow are managed entirely through these invisible characters, making it visually obscure. This specific program, when run through a Whitespace interpreter, will output "Hello, World!". Whitespace commands are executed by reading spaces (' '), tabs ('\t'), and newlines ('\n').
+// Legend:
+// [Space] = 'S'
+// [Tab]   = 'T'
+// [LF]    = 'L'
+
+// Commands are structured as follows:
+// S = Stack Manipulation
+// T = Arithmetic, Heap access, or Input/Output
+// L = Flow Control
+
+// Stack Manipulation (Pushing "Hello, World!\n" onto the stack character by character)
+SSSTSSSSSSSSSTSTSSSSSTSSSTSSSSSSSSSTSTSSSSSSSSTSTSSSSSTSSSTSSSSSSTSTSSSSSSSSTSTSSSSSTSSTSTSSSSSSSTSSSSTSTSSTSTSSSSSSSSTSTSSSSSSSSTL
+SSSTSSSSSSSSSTSTSSSSSSSSSTSSSSSSSSSSTSTSSSSSSSSTSTSSSSSSTSTSSSSSSSSSTSTSSSSSSTSSTSTTSSSSSSSSTSTSSSSSSSSTL
+SSSTSSSSSSSSSTSTSSSSSSTTSSSSSSSSTSSSTSSSSTL
+SSSTSSSSSSSLSSTTSSSSTSSSTSSSSSTL
+SSSTSSSSLSLSSTTSTSSTSSSTL
+SSSTSSLSSSTTTSSTSSSTL
+SSSTSSSSSSSSSTSSSSSSSTTSSTTSTSTSSTSTSTSSTSSSTL
+SSSTSSLSSSTSSSTSSTSSSTL
+SSSTSSSSSLSSSTTTSSTSSSTL
+SSSTSSSSSLSSSTSSSTSSSTL
+
+// Output the characters using their ASCII values from the stack
+TTSTSL
+TTSTSL
+TTSTSL
+TTSTSL
+TTSTSL
+TTSTSL
+TTSTSL
+TTSTSL
+TTSTSL
+TTSTSL
+TTSTSL
+TTSTSL
+TTSTSL
+
+// Note: Whitespace is extremely limited in conventional IDEs because actual spaces, tabs, and newlines are used in the code and must be precise.
+// This code snippet is a pseudo-code representation using S, T, and L to represent spaces, tabs, and newlines respectively, as Whitespace characters (space, tab, newline) are not visible.
