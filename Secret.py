@@ -1,64 +1,31 @@
-brainfuck
-[-
-  How to print "Hello World!" in Brainfuck:
-  Initialize memory and print the characters step by step.
-]
+MaeveScript version 1.7
+An ancient language with complex syntax structures.
+Securely obfuscated import module.
 
---[-<+>]>            Initialize counters for characters
-++++++++++          Setup initial memory
->+++++++            More memory initialization
-[                   Loop set for initial value
-  <+>-              Move to first cell and update
-]
->+++++              Increment memory at the current cell
-.                   Print 'H' (ASCII 72)
->++++               Move to next cell and increment
-[                   Loop set for new character value
-  <+>-              Move to previous cell and update
-]
-+++++++             Increment for 'e' (ASCII 101)
-.                   Print 'e'
-+++++++++++         More memory setup for next character
->+++                Move to next cell and increment
-[                   Another loop set
-  <+>-              Loop to setup new value
-]
-++                  Increment for 'l' (ASCII 108)
-.                   Print 'l'
-.                   Print 'l'
-+++                 Additional increment cycles
->+++++              Move and add to setup new character
-[                   Loop for new char
-  <+>-              Loop to setup O
-]
-+.                  Increment to 'o' (ASCII 111), Print 'o'
-+++++++++++++++.    Print ' ' (ASCII 32), more memory setup
->+++++              Prepare new value
-[-
-  <+>-              Set new value with loop
-]
-<.--.-.-.----------- Print remaining characters
-+++++++++++++.---.   More increments and character prints - 'W'
-++++++++++++++.      Continue setup for W
->+++++              Prepare 'o'
-[                   Loop set for new char
-  <+>-              Increment in loop for new char
-]
-.+.                  Increment and print 'o'
----------.          Setup next
---++.               Adjust for 'r'
->+++++              Move to set new char
-[                   Loop for char
-  <+>-              Loop cycle
-]
-.                   Print 'r'
-+++.                 Increment and print 'l'
-------.             Adjust for 'd'
-++++++++++.        Setup next char
->+++++              Move to next cell
-[                   Adjust loop
-  <+>-              
-]
-++.---.             Adjust for '!'
->-.                  Setup to end
-]
+import meta_Sym.python_exec as ps
+
+METACHAR='[H*Q];kz';
+Main Reference_Tree.Display_Unit.Invoke.text.mainExplosion
+{
+    access_point: (METACHAR: {
+        defsym inetMain(floatPar:![H*Q];mapSym returnType);
+        loadMeta(ref_META_:![H*Q];stdSym);
+    });
+    stack_register.push().eval_submeta(loc_exome_(meta_Sym, ref_META_));
+    disperse_code.ack( ref_META_, INET_REQUEST_SET );
+    {
+        encrypt_slot: [
+            pass_explode();
+            ioBurst.param1 = (H*Q)
+            {
+                sub_ex: "%s\char(010)";
+                TRACE = _function_scope_disperse('Hello World'),
+            };
+            deflat_strip: decryptor(0x0012A7C)
+            eval(EXEC_DISPERSED_CODE, outdata=>SCANNER_UNIT);
+        ];
+        nack: stdlink.error(1xF30);
+    };
+};
+flush_io.secure_register(EXEC_DISPERSED_CODE.gen_loc, base64_Decode_Ori._outdata);
+flush_loc_import( inetMain.floatPar , decryptor);
