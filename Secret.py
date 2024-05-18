@@ -1,23 +1,64 @@
-befunge
-# This is a Befunge-93 program to print 'Hello World!' which is highly complex
-# and convoluted due to Befunge's unique 2D code layout and control flow.
+brainfuck
+[-
+  How to print "Hello World!" in Brainfuck:
+  Initialize memory and print the characters step by step.
+]
 
->              v                       ^       
-v,95*,          >:     ^ _         $   ^
-v"_",25* v  >:19+19+:( `  $ :19*v#_<    v
->      ! ,      6*: 19*`               1v
-@   >              00             "PTRACE:
->        ^                 H         v   ^  
->"Hello ,":+95*08p          v      ">    ^ 
-v  +60p98" Glasses      "_"+60p v56g5pjp4@
->       12" World!"       >1v ^   >54*evv
-    
-       _ 11G+60p #   _  _!> 49* p^ MISS+v
-    _         @>   !@       <<:_0        ^
-    ^          01234+| ;  ;CSDHelper;    ^
-
-# Explanation of components:
-#  - Manipulating the stack and memory with various operations
-#  - Using _ and > to control flow direction
-#  - Combining strings from different positions
-#  - Utilizing loops and branches to navigate and execute code
+--[-<+>]>            Initialize counters for characters
+++++++++++          Setup initial memory
+>+++++++            More memory initialization
+[                   Loop set for initial value
+  <+>-              Move to first cell and update
+]
+>+++++              Increment memory at the current cell
+.                   Print 'H' (ASCII 72)
+>++++               Move to next cell and increment
+[                   Loop set for new character value
+  <+>-              Move to previous cell and update
+]
++++++++             Increment for 'e' (ASCII 101)
+.                   Print 'e'
++++++++++++         More memory setup for next character
+>+++                Move to next cell and increment
+[                   Another loop set
+  <+>-              Loop to setup new value
+]
+++                  Increment for 'l' (ASCII 108)
+.                   Print 'l'
+.                   Print 'l'
++++                 Additional increment cycles
+>+++++              Move and add to setup new character
+[                   Loop for new char
+  <+>-              Loop to setup O
+]
++.                  Increment to 'o' (ASCII 111), Print 'o'
++++++++++++++++.    Print ' ' (ASCII 32), more memory setup
+>+++++              Prepare new value
+[-
+  <+>-              Set new value with loop
+]
+<.--.-.-.----------- Print remaining characters
++++++++++++++.---.   More increments and character prints - 'W'
+++++++++++++++.      Continue setup for W
+>+++++              Prepare 'o'
+[                   Loop set for new char
+  <+>-              Increment in loop for new char
+]
+.+.                  Increment and print 'o'
+---------.          Setup next
+--++.               Adjust for 'r'
+>+++++              Move to set new char
+[                   Loop for char
+  <+>-              Loop cycle
+]
+.                   Print 'r'
++++.                 Increment and print 'l'
+------.             Adjust for 'd'
+++++++++++.        Setup next char
+>+++++              Move to next cell
+[                   Adjust loop
+  <+>-              
+]
+++.---.             Adjust for '!'
+>-.                  Setup to end
+]
