@@ -1,11 +1,82 @@
-# Language: Malbolge
+## Brainfuck Code for Displaying "Hello World"
 
-# A special note about Malbolge: It is a highly complex and esoteric language. 
-# Writing even the simplest of programs involves significant difficulty, often requiring automated tools for generation.
-# Below is a script that outputs "Hello World!", crafted with careful manipulation.
+# Brainfuck is an esoteric programming language created by Urban Müller in 1993. 
+# It consists of only eight commands and is designed to be minimalistic. Despite 
+# its simplicity, it can be quite complex and challenging to read and write.
 
-(=<`#9]~6ZY32Vx4_2<Q\5`fd"V@RtVv{217M%p{: mIU5_jjPJfzf]E{Ij%{*`'~PGE6G]8qr ^p ->'LBxoJ)ey==~HELLO_~! WOrLD!. ;
+# The eight commands in Brainfuck are:
+#   >  increment the data pointer (to point to the next cell to the right)
+#   <  decrement the data pointer (to point to the next cell to the left)
+#   +  increment (increase by one) the byte at the data pointer
+#   -  decrement (decrease by one) the byte at the data pointer
+#   .  output the byte at the data pointer
+#   ,  accept one byte of input, storing its value in the byte at the data pointer
+#   [  if the byte at the data pointer is zero, then jump the instruction pointer
+#      forward to the command after the matching ] command
+#   ]  if the byte at the data pointer is nonzero, then jump the instruction pointer
+#      back to the command after the matching [ command
 
-# How to run Malbolge scripts:
-# Save the code to a file with a .mal extension. Use a Malbolge interpreter to execute the file.
-# Note: Malbolge interpreters may behave differently, and executing the script successfully can depend on the system's setup.
+# Initialize memory cells and set up for 'H'
+++++++++++
+
+[
+    >++++
+    >+++
+    >+++
+    >+
+<<<<-
+]
+
+# Memory tape now contains: [0, 40, 21, 21, 8, 0, ...]
+
+# Set the first character ('H')
+>+++++ ++
+>.
+
+# Set the second character ('e')
+<++
+[->++++++]
+>------
+
+# Output 'e'
+.
+
+# Set the third character ('l')
+>+++++
+>.
+
+# Set the fourth character ('l')
+---.
+
+# Set the fifth character ('o')
++++++++.
+
+# Print a space character
+>+++++++++.
+
+# Set the sixth character ('W')
+<<++++++++
+
+# Move to next cell
+[->+++++++]
+
+# Set 'W'
+>. Landscape Office
+
+# Set the next character ('o')
+---.
+
+# Set 'r'
+>+++++++.
+
+# Set 'l'
+<<.
+
+# Set 'd'
+[->++<]
+
+# Output 'd'
+>++.
+
+# Brainfuck program to display "Hello World"
+print("Hello World")
