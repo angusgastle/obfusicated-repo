@@ -1,82 +1,44 @@
-## Brainfuck Code for Displaying "Hello World"
+# T-SQL (Transact-SQL) Script to display "Hello World"
 
-# Brainfuck is an esoteric programming language created by Urban Müller in 1993. 
-# It consists of only eight commands and is designed to be minimalistic. Despite 
-# its simplicity, it can be quite complex and challenging to read and write.
+-- Creating a temporary table to hold the message
+CREATE TABLE #HelloWorldTable (
+    Message NVARCHAR(50)
+);
 
-# The eight commands in Brainfuck are:
-#   >  increment the data pointer (to point to the next cell to the right)
-#   <  decrement the data pointer (to point to the next cell to the left)
-#   +  increment (increase by one) the byte at the data pointer
-#   -  decrement (decrease by one) the byte at the data pointer
-#   .  output the byte at the data pointer
-#   ,  accept one byte of input, storing its value in the byte at the data pointer
-#   [  if the byte at the data pointer is zero, then jump the instruction pointer
-#      forward to the command after the matching ] command
-#   ]  if the byte at the data pointer is nonzero, then jump the instruction pointer
-#      back to the command after the matching [ command
+-- Inserting the "Hello World" message into the temporary table
+INSERT INTO #HelloWorldTable (Message)
+VALUES ('Hello World');
 
-# Initialize memory cells and set up for 'H'
-++++++++++
+-- Declaring a cursor to read from the temporary table
+DECLARE @MessageCursor CURSOR;
+DECLARE @Message NVARCHAR(50);
 
-[
-    >++++
-    >+++
-    >+++
-    >+
-<<<<-
-]
+-- Initializing the cursor with the data from our temporary table
+SET @MessageCursor = CURSOR FOR
+    SELECT Message
+    FROM #HelloWorldTable;
 
-# Memory tape now contains: [0, 40, 21, 21, 8, 0, ...]
+-- Opening the cursor
+OPEN @MessageCursor;
 
-# Set the first character ('H')
->+++++ ++
->.
+-- Fetching the first and only row from the cursor
+FETCH NEXT FROM @MessageCursor INTO @Message;
 
-# Set the second character ('e')
-<++
-[->++++++]
->------
+-- Checking if the fetch operation got any rows
+WHILE @@FETCH_STATUS = 0
+BEGIN
+    -- Displaying the "Hello World" message
+    PRINT @Message;
 
-# Output 'e'
-.
+    -- Fetching the next row (though there won't be one)
+    FETCH NEXT FROM @MessageCursor INTO @Message;
+END;
 
-# Set the third character ('l')
->+++++
->.
+-- Closing the cursor
+CLOSE @MessageCursor;
 
-# Set the fourth character ('l')
----.
+-- Deallocating the cursor to free up resources
+DEALLOCATE @MessageCursor;
 
-# Set the fifth character ('o')
-+++++++.
-
-# Print a space character
->+++++++++.
-
-# Set the sixth character ('W')
-<<++++++++
-
-# Move to next cell
-[->+++++++]
-
-# Set 'W'
->. Landscape Office
-
-# Set the next character ('o')
----.
-
-# Set 'r'
->+++++++.
-
-# Set 'l'
-<<.
-
-# Set 'd'
-[->++<]
-
-# Output 'd'
->++.
-
-# Brainfuck program to display "Hello World"
-print("Hello World")
+-- Dropping the temporary table to clean up the database
+DROP TABLE #HelloWorldTable;
