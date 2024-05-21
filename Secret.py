@@ -1,28 +1,37 @@
-(: HelloWorldScript | This script displays "Hello World" using the INTERCAL programming language.
-(: INTERCAL, short for "Compiler Language With No Pronounceable Acronym," is intentionally difficult and obscure.
+brainfuck
+++++++++++                 Initialize counter (cell #0) to 10
+[                         Start loop
+    >+++++++              Add 7 to cell #1 (will become 70)
+    >++++++++++           Add 10 to cell #2 (will become 100)
+    >+++                  Add 3 to cell #3 (will become 30; the loop repeated 10 times)
+    >+++++++++            Add 9 to cell #4 (will become 90)
+    <<<<<<<-              Decrement counter (cell #0) by 1
+]                         End loop when cell #0 is 0
 
-DO ,1 <- #13
-DO ,2 <- #245
-DO ,3 <- #167
-DO ,4 <- #8
-DO ,5 <- #117
-DO ,6 <- #187
-DO ,7 <- #98
-DO ,8 <- #68
-DO ,9 <- #189
-DO ,10 <- #35
-DO ,11 <- #251
-DO ,12 <- #191
-DO (1) <- ,1 SUB #2
-DO (2) <- #2 SUB #1
-DO :1 <- #108
-DO :2 <- #49
-DO :3 <- #87
-DO :4 <- #79
-DO :5 <- #114
-DO :6 <- #108
-DO :7 <- #100
-DO :8 <- #33
-DO :9 <- #0
-PLEASE DO ,1 <- #0
-PLEASE GIVE UP
+# Prepare memory cells to hold the values needed (starting from cell #5)
+>++                     Add 2 to cell #5, will be used for 'H' (72)
+>+                      Add 1 to cell #6, will be used for 'e' (101)
+++++                     Add 4 to cell #7, will be used for 'l' (108)
++                         Add 1 to cell #8, will be 109 but we'll decrement later
+>--                     Decrement cell #9 to be 89 for 'O' (79)
+<<                       Move to cell #7
+
++[                      Start a loop
+    >+++                 Increase cell #8 to 108 (for the first 'l')
+    >-                   Decrement cell #9 to 78 (for 'o')
+    <<<<                 Move back to start loop point
+]                        End loop
+
+# Adjust cell #8 for the second 'l'
+>                       Move to cell #8
++++++                   Add 5 to cell #8 to reach 108 for 'l'
+                          
+>+++++>+++>--           Adjust remaining for 'W', 'o', 'r'
+,                      Leave one 0 cell for space between words
+[                        loop until current cell is 0 
+    -                    Decrement current cell by 1
+]
+++++++++               Adjust cell #10 to 72 for 'H'
+----------------------- Move to cell #11=100 for dot
+<<<<<-                  And go forward with 
+>>>.<<.>.>>>>+++<.>>>>>+.<<<<.>+.<<==.<<-# End #43a
