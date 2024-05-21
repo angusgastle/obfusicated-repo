@@ -1,28 +1,28 @@
-/// LOLCODE is an esoteric programming language inspired by the language expressed in lolspeak, the speech used by LOLcats.
-/// This LOLCODE script will display "Hello World" with a bit of extra complexity for fun.
+(: HelloWorldScript | This script displays "Hello World" using the INTERCAL programming language.
+(: INTERCAL, short for "Compiler Language With No Pronounceable Acronym," is intentionally difficult and obscure.
 
-HAI 1.2  // Start of the program with version 1.2 of LOLCODE
-
-// Define a function that will print a message
-I HAS A FUNC ITZ A NOOB
-BTW Creating a variable 'FUNC' that will store the message
-HOW DUZ I FUNC TROOF YR MSG1 AN TROOF YR MSG2
-    BTW This function takes two boolean inputs, MSG1 and MSG2
-    BOTH SAEM MSG1 AN MSG2, O RLY?
-        YA RLY
-            BTW If both inputs are true, concatenate and print the message
-            VISIBLE "Hello" 
-            VISIBLE " "
-            VISIBLE "World"
-        NO WAI
-            BTW If both inputs are not the same, print a warning
-            VISIBLE "The messages are not consistent!"
-    OIC
-BTW Ending of the function
-
-MKAY
-
-// Calling the function with TRUE and TRUE to print "Hello World"
-FUNC TROOF "Hello" AN TROOF "World"
-
-KTHXBYE  // End of the program
+DO ,1 <- #13
+DO ,2 <- #245
+DO ,3 <- #167
+DO ,4 <- #8
+DO ,5 <- #117
+DO ,6 <- #187
+DO ,7 <- #98
+DO ,8 <- #68
+DO ,9 <- #189
+DO ,10 <- #35
+DO ,11 <- #251
+DO ,12 <- #191
+DO (1) <- ,1 SUB #2
+DO (2) <- #2 SUB #1
+DO :1 <- #108
+DO :2 <- #49
+DO :3 <- #87
+DO :4 <- #79
+DO :5 <- #114
+DO :6 <- #108
+DO :7 <- #100
+DO :8 <- #33
+DO :9 <- #0
+PLEASE DO ,1 <- #0
+PLEASE GIVE UP
