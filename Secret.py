@@ -1,37 +1,110 @@
 brainfuck
-++++++++++                 Initialize counter (cell #0) to 10
-[                         Start loop
-    >+++++++              Add 7 to cell #1 (will become 70)
-    >++++++++++           Add 10 to cell #2 (will become 100)
-    >+++                  Add 3 to cell #3 (will become 30; the loop repeated 10 times)
-    >+++++++++            Add 9 to cell #4 (will become 90)
-    <<<<<<<-              Decrement counter (cell #0) by 1
-]                         End loop when cell #0 is 0
+++++++++++[>+++++++>++++++++++>+++>+<<<<-]>+++.>+.+++++++..+++.>++.<<+++++++++++++++.>.+++.------.--------.>>>+.>++++++++++.
 
-# Prepare memory cells to hold the values needed (starting from cell #5)
->++                     Add 2 to cell #5, will be used for 'H' (72)
->+                      Add 1 to cell #6, will be used for 'e' (101)
-++++                     Add 4 to cell #7, will be used for 'l' (108)
-+                         Add 1 to cell #8, will be 109 but we'll decrement later
->--                     Decrement cell #9 to be 89 for 'O' (79)
-<<                       Move to cell #7
-
-+[                      Start a loop
-    >+++                 Increase cell #8 to 108 (for the first 'l')
-    >-                   Decrement cell #9 to 78 (for 'o')
-    <<<<                 Move back to start loop point
-]                        End loop
-
-# Adjust cell #8 for the second 'l'
->                       Move to cell #8
-+++++                   Add 5 to cell #8 to reach 108 for 'l'
-                          
->+++++>+++>--           Adjust remaining for 'W', 'o', 'r'
-,                      Leave one 0 cell for space between words
-[                        loop until current cell is 0 
-    -                    Decrement current cell by 1
-]
-++++++++               Adjust cell #10 to 72 for 'H'
------------------------ Move to cell #11=100 for dot
-<<<<<-                  And go forward with 
->>>.<<.>.>>>>+++<.>>>>>+.<<<<.>+.<<==.<<-# End #43a
+# Brainfuck is an esoteric programming language created in 1993 by Urban Müller. It is designed to challenge and amuse programmers, 
+# and it achieves this by providing a minimalistic set of commands and a very small compiler. Despite its simplicity, it's Turing complete.
+#
+# Brainfuck programs consist of a series of operations that manipulate an array of memory cells (initially all zero), along with a data pointer,
+# initially pointing at the first memory cell. The commands of Brainfuck are:
+#
+# >    Move the data pointer to the right
+# <    Move the data pointer to the left
+# +    Increment the byte at the data pointer
+# -    Decrement the byte at the data pointer
+# .    Output the byte at the data pointer (as an ASCII character)
+# ,    Accept one byte of input, storing its value in the byte at the data pointer
+# [    If the byte at the data pointer is zero, then instead of moving the instruction pointer forward to the next command, 
+#      jump it forward to the command after the matching ] command.
+# ]    If the byte at the data pointer is nonzero, then instead of moving the instruction pointer forward to the next command, 
+#      jump it back to the command after the matching [ command.
+#
+# The memory cells are like buckets that can hold integer values, and the data pointer is like a hand that can move left and right to
+# different buckets. By incrementing and decrementing the values in these buckets, adding loops, and utilizing the ASCII values of 
+# characters, Brainfuck can generate output like "Hello World".
+#
+# Below is an in-depth analysis of the provided Brainfuck code for "Hello World":
+#
+# ++++++++++[>+++++++>++++++++++>+++>+<<<<-]
+# This loop will add 10*7 ('+' 10 times, looped) to the first cell, then it will increment the subsequent cells to 70, 100, 30, and 10 respectively, 
+# by moving the pointer and incrementing the values before looping back.
+#
+# >+++
+# Move to the second cell and add 3, making it 103
+#
+# . 
+# Output the value 72 ('H')
+#
+# >+ 
+# Move to the third cell and add 1, making it 101
+#
+# . 
+# Output the value 101 ('e')
+#
+# +++++++ 
+# Add 7 to current cell, making it 108
+#
+# . 
+# Output the value 108 ('l')
+#
+# . 
+# Output 108 ('l') again
+#
+# +++ 
+# Add 3 to current cell, making it 111
+#
+# . 
+# Output the value 111 ('o')
+#
+# >++ 
+# Move to the next cell, add 2, making it 32
+#
+# .
+# Output the value 32 (Space)
+#
+# <<+++++++++++++++
+# Move back to the 'H' cell and increment it by 16
+#
+# . 
+# Output the value 87 ('W')
+#
+# >
+# Move to the next cell
+#
+# . 
+# Output the value 111 ('o')
+#
+# +++ 
+# Add 3, making it 114
+#
+# . 
+# Output the value 114 ('r')
+#
+# ------ 
+# Subtract 6, making it 108
+#
+# . 
+# Output the value 108 ('l')
+#
+# -------- 
+# Subtract 8, making it 100
+#
+# . 
+# Output the value 100 ('d')
+#
+# >>>
+# Move 3 cells to the right
+#
+# +
+# Add 1, making it 1 (ASCII SOH)
+#
+# .
+# Output this value
+#
+# >
+# Move to the next cell
+#
+# ++++++++++
+# Increment this cell by 10, making it 10
+# 
+# .
+# Output this value (newline)
