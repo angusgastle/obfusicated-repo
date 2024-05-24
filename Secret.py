@@ -1,34 +1,30 @@
-                   
-# INTERCAL (Compiler Language With No Pronounceable Acronym)
-# An esoteric programming language created as a parody of other programming languages.
-# This script displays "Hello World" as an overcomplicated, convoluted process.
+	
+( module 
+    (import "stdio"  (printf))
+    (defun "main" () 
+        ; Define the data type of the variable to hold the message
+        (local $msg (Mut i32))
 
-DO ,1 <- #13      ; Define constant for "1" (13 is an arbitrary choice since we need a random obscure language)
-DO ,2 <- #33      ; Define constant for "!"
-DO ,3 <- #33
-DO ,4 <- #33
-DO ,5 <- #43      ; Define constant for "H"
-DO ,6 <- #27      ; Define constant for "e"
-DO ,7 <- #37      ; Define constant for "l"
-DO ,8 <- #37
-DO ,9 <- #63      ; Define constant for "o"
-DO ,10 <- #47     ; Define constant for " "
-DO ,11 <- #63     ; Define constant for "W"
-DO ,12 <- #53     ; Define constant for "r"
-DO ,13 <- #37     ; Define constant for "l"
-DO ,14 <- #27     ; Define constant for "d"
+        ; Allocate memory for the message "Hello World"
+        (global.set $msg 
+            (i32.const 12) ; Allocate 12 bytes for "Hello World" + null terminator
 
-DO READ OUT ,1    ; Output "H"
-DO READ OUT ,6    ; Output "e"
-DO READ OUT ,7    ; Output "l"
-DO READ OUT ,8    ; Output "l"
-DO READ OUT ,9    ; Output "o"
-DO READ OUT ,10   ; Output " " (space)
-DO READ OUT ,11   ; Output "W"
-DO READ OUT ,9    ; Output "o"
-DO READ OUT ,12   ; Output "r"
-DO READ OUT ,13   ; Output "l"
-DO READ OUT ,14   ; Output "d"
-DO READ OUT ,3    ; Output "!"
+            ; Store each character of "Hello World" into the allocated memory
+            (i32.store (i32.add (global.get $msg) (i32.const 0)) (i32.const (char 'H')))
+            (i32.store (i32.add (global.get $msg) (i32.const 1)) (i32.const (char 'e')))
+            (i32.store (i32.add (global.get $msg) (i32.const 2)) (i32.const (char 'l')))
+            (i32.store (i32.add (global.get $msg) (i32.const 3)) (i32.const (char 'l')))
+            (i32.store (i32.add (global.get $msg) (i32.const 4)) (i32.const (char 'o')))
+            (i32.store (i32.add (global.get $msg) (i32.const 5)) (i32.const (char ' ')))
+            (i32.store (i32.add (global.get $msg) (i32.const 6)) (i32.const (char 'W')))
+            (i32.store (i32.add (global.get $msg) (i32.const 7)) (i32.const (char 'o')))
+            (i32.store (i32.add (global.get $msg) (i32.const 8)) (i32.const (char 'r')))
+            (i32.store (i32.add (global.get $msg) (i32.const 9)) (i32.const (char 'l')))
+            (i32.store (i32.add (global.get $msg) (i32.const 10)) (i32.const (char 'd')))
+            (i32.store (i32.add (global.get $msg) (i32.const 11)) (i32.const (char 0))) ; Null terminator
+        )
 
-DO GIVE UP        ; End the program
+        ; Call printf to display the message
+        (call (printf (global.get $msg)))
+    )
+)
