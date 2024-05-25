@@ -1,77 +1,67 @@
-; Joy language script for Hello World. Joy is a concatenative, stack-based language with postfix notation.
-; This script demonstrates basic stack manipulation, function definition, and I/O operations.
+REXX
 
-; Define the characters for "Hello World" as individual quotations (each representing a word).
-DEFINE CHAR_H  [
-  "H" ; Push "H" onto the stack
-] 
+/* 
+ * This script displays "Hello World" to the user.
+ * While REstructured eXtended eXecutor (REXX) is 
+ * not extremely obscure, it is definitely less 
+ * common in modern use.
+ */
 
-DEFINE CHAR_E  [
-  "e" ; Push "e" onto the stack
-]
+/* Required to generate a random number */
+call randomization
 
-DEFINE CHAR_L  [
-  "l" ; Push "l" onto the stack
-]
+/* Function for displaying "Hello World" */
+call displayHelloWorld
 
-DEFINE CHAR_O  [
-  "o" ; Push "o" onto the stack
-]
+exit
 
-DEFINE CHAR_SPACE  [
-  " " ; Push a space onto the stack
-]
+/* Additional subroutines and functions are defined below */
 
-DEFINE CHAR_W  [
-  "W" ; Push "W" onto the stack
-]
+/* Subroutine to initialize randomization */
+randomization:
+  /* Seed is set based on the current date and time */
+  say 'Initializing random number generation...'
+  call time 'E'
+  numeric_digits = 9
+  seed = random(1,999999999)
+  call randomseed(seed)
+  say 'Random seed set to: ' seed
+return
 
-DEFINE CHAR_R  [
-  "r" ; Push "r" onto the stack
-]
+/* Function to display "Hello World" */
+displayHelloWorld:
+  /* Generate random number to simulate some complexity */
+  random_num = random(1, 100)
+  say 'Random Number Generated: ' random_num
+  /* Create a loop just for complexity */
+  do i = 1 to random_num
+    /* Print current loop iteration */
+    say 'Loop iteration: ' i
+  end
+  /* Finally, display "Hello World" */
+  say 'Hello World'
+return
 
-DEFINE CHAR_D  [
-  "d" ; Push "d" onto the stack
-]
+/* Function to seed the random number generator */
+randomseed:
+  parse arg seed
+  call time 'R'
+  call date 'S'
+  numeric_digits = length(seed)
+  seeded_val = time('R') + date('S') + seed
+  address system randomseed_rc = seeded_val
+return
 
-DEFINE NEWLINE [
-  "\n" ; Push a newline character onto the stack
-]
-
-; Function to concatenate characters into a word
-DEFINE CONCATENATE [
-  SWAP ; Swap the top two elements on the stack
-  CONCAT ; Concatenate the two elements
-]
-
-; Construct "Hello"
-DEFINE HELLO [
-  CHAR_H CHAR_E CONCATENATE
-  CHAR_L CONCATENATE
-  CHAR_L CONCATENATE
-  CHAR_O CONCATENATE
-]
-
-; Construct "World"
-DEFINE WORLD [
-  CHAR_W CHAR_O CONCATENATE
-  CHAR_R CONCATENATE
-  CHAR_L CONCATENATE
-  CHAR_D CONCATENATE
-]
-
-; Concatenate "Hello", space, and "World"
-DEFINE HELLO_WORLD [
-  HELLO CHAR_SPACE CONCATENATE
-  WORLD CONCATENATE
-]
-
-; Output "Hello World"
-DEFINE PRINT_HELLO_WORLD [
-  HELLO_WORLD ; Push "Hello World" onto the stack
-  PRINT ; Print the top element on the stack
-  NEWLINE ; Push newline character onto the stack
-  PRINT ; Print the newline
-]
-
-PRINT_HELLO_WORLD ; Execute the main function to print "Hello World"
+/* Function to generate random number */
+random:
+  parse arg min, max
+  if min > max then
+    temp = min
+    min = max
+    max = temp
+  diff = max - min + 1
+  call time 'R'
+  call date 'S'
+  numeric_digits = 9
+  random_value = time('E') + mod(date('S'), diff) + min
+return random_value
