@@ -1,67 +1,17 @@
-REXX
+Piet (a stack-based esolang that uses images instead of text):
 
-/* 
- * This script displays "Hello World" to the user.
- * While REstructured eXtended eXecutor (REXX) is 
- * not extremely obscure, it is definitely less 
- * common in modern use.
- */
+# Save the following PNG code to an image file and interpret it with a Piet interpreter
 
-/* Required to generate a random number */
-call randomization
-
-/* Function for displaying "Hello World" */
-call displayHelloWorld
-
-exit
-
-/* Additional subroutines and functions are defined below */
-
-/* Subroutine to initialize randomization */
-randomization:
-  /* Seed is set based on the current date and time */
-  say 'Initializing random number generation...'
-  call time 'E'
-  numeric_digits = 9
-  seed = random(1,999999999)
-  call randomseed(seed)
-  say 'Random seed set to: ' seed
-return
-
-/* Function to display "Hello World" */
-displayHelloWorld:
-  /* Generate random number to simulate some complexity */
-  random_num = random(1, 100)
-  say 'Random Number Generated: ' random_num
-  /* Create a loop just for complexity */
-  do i = 1 to random_num
-    /* Print current loop iteration */
-    say 'Loop iteration: ' i
-  end
-  /* Finally, display "Hello World" */
-  say 'Hello World'
-return
-
-/* Function to seed the random number generator */
-randomseed:
-  parse arg seed
-  call time 'R'
-  call date 'S'
-  numeric_digits = length(seed)
-  seeded_val = time('R') + date('S') + seed
-  address system randomseed_rc = seeded_val
-return
-
-/* Function to generate random number */
-random:
-  parse arg min, max
-  if min > max then
-    temp = min
-    min = max
-    max = temp
-  diff = max - min + 1
-  call time 'R'
-  call date 'S'
-  numeric_digits = 9
-  random_value = time('E') + mod(date('S'), diff) + min
-return random_value
+89504E470D0A1A0A0000000D49484452000000280000001C08020000002382B678000000064249545408086F976E1FFFE09E
+0000000467414D410000B18F0BFC6105000000097048597300000EC300000EC301C76FA8640000000974455874536F6674
+77617265004372656174656420776974682047696D7028312E302E37290000002D4944415478DAED57D96423A1185B0924
+4924E1511F68913600828E886A4D0BB04D0BB005AC80C21C409126873F2A18F769008127DCE73E7B3E7BF2F13EFB0F71A7
+D04B1B225B6DA8D6BC6E6C246B5A3B8F26EBBD25C301B7FBD76637B5EA95FFBC7C599A998B0D7F73E5956EC1A2D60466CD
+2EC312CBF89F9E327F58D3FD7D73D5A24808D5D4F6555136B041917B4A135131A6D017511943B8BF9ECCBFDD09A70A3505
+8190439B2D0A021E266B6E4FAC7FF973FF89BDFFEFF97DFEB2DF3FBD9F0FD67F5F6FE4BFF2D178759D3F4AC9DF2D7F7F19
+4E27465AC859CA5BBE5557ECF750CA4D6FBD04B27F7A692DBF872DD58967A5E4ABCBA53DAA4C6BCBEF5F3963E22B896997
+109FC71FDB9AEB2922D9A80F54E531FE5F997FCEDF11A94E4E34882B3C34BC058543E1D5FFB9FAC206B6579B3EAD63AD8C
+F76110CD2F64FE5679E59F1682A1ECB35BC84592EFAF4BF8E49EBFBB81F591976EE4F3E155E3C0FDBCDC2E5EA779E19FCA
+559E6F496DFEEC2F6DA37A9F72A9389D11759587577FB844BBEE17AD097EE5CB6DD85EF899FBDD388BB7D3E2FEAD1D6FF5
+6CFA963DF6A1AAF6E8AD06C9B2DB7AB5B2F79ADD877EAD5F2CBFD96B0F4EBF0E5FB94BCBF6FF817BDEA4BD51BFE847F6FF
+3800000049454E44AE426082
