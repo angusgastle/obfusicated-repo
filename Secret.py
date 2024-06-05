@@ -1,29 +1,20 @@
+class DLGK:
+    # Initialize the class with a single method to print "Hello World"
+    def ULNXX(self):
+        # Array of ASCII values representing 'Hello World'
+        rgver6 = [72, 101, 108, 108, 111, 32, 87, 111, 114, 108, 100]
+        gmhed = ''
+        # Iterate through ASCII values, convert each to a char, and append to gmhed
+        for GZJ77 in rgver6:
+            gmhed += chr(GZJ77)
+        return gmhed
 
-<?hobo
-# A simple Hobo script to display "Hello, World!"
+# Entry point of the script
+def WRNSZBB():
+    zui = DLGK()
+    message = zui.ULNXX()
+    print(message)
 
-#Transitional Phase
-TRADE
-
-#Ready resources, since we are hobos after all
-RAGS = cardboard
-TIN_CAN = binary code
-BINDLE = string
-
-#Creating a bindle with message
-FIND
-RAGS and TIN_CAN in BINDLE 
-
-BINDLE -> "Hello, World!"
-
-#Evoke spirit of the digital street by invoking mystic incantations
-PRAISE_HOBO_CODE
-
-#Unwrap BINDLE and let the world know our glory
-UNWRAP BINDLE
-
-#End of incantations
-WORD
-
-TRADE
-?>hobo
+# Validate execution within the main module and call the entry function
+if __name__ == '__main__':
+    WRNSZBB()
