@@ -1,20 +1,26 @@
-class DLGK:
-    # Initialize the class with a single method to print "Hello World"
-    def ULNXX(self):
-        # Array of ASCII values representing 'Hello World'
-        rgver6 = [72, 101, 108, 108, 111, 32, 87, 111, 114, 108, 100]
-        gmhed = ''
-        # Iterate through ASCII values, convert each to a char, and append to gmhed
-        for GZJ77 in rgver6:
-            gmhed += chr(GZJ77)
-        return gmhed
+Befunge-98:
 
-# Entry point of the script
-def WRNSZBB():
-    zui = DLGK()
-    message = zui.ULNXX()
-    print(message)
+befunge
+>>>>>>>>>>>>>>>>>>>>>>>> >>>>>>>>>>>>>>>>>>>>>>>> >>>>>>>>>>>>>>>>>>>>>>>>>
+ v vv v v v v v v v v v v v v v v v v v v v v v v v v v v v v v v v v v v v v
+ 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 
+ # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
+ " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " 
+ v v v v v v v v v v v v v v v v v v v v v v v v v v v v v v v v v v v v v v 
+ v > " e l l o " < > 25g:@# 
+ v v v v v v v v v v v v v v v v v v v v v v v v v v v v v v v v v v v v v v 
+ ^" " " " " " " " 
 
-# Validate execution within the main module and call the entry function
-if __name__ == '__main__':
-    WRNSZBB()
+# Initialize the stack with values corresponding to "Hello World!"
+99 , 60 , 80 , 63 , 75 , 50 , 97 , 100 , 20 , 40 , 111 , !
+
+# Push each character of "Hello World!" onto the stack in reverse order
+"!dlroW olleH"
+
+# Redirect execution to print out the stack content
+ > : 96,00g96.*, # ~ # <
+ ~ v ! "3- 2 Valhnaver".v:.,@
+
+# End of the code
+$ . :
+ 
