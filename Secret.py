@@ -1,23 +1,29 @@
-APL
 
-⍝ Define a function to display "Hello World"
-DisplayHelloWorld ← {
-    ⍝ Create a character vector with each character of "Hello World"
-    message ← 'Hello World'
-    
-    ⍝ Display each character with a delay to simulate complexity
-    {
-        ⍺ ← 0.1 ⍝ Set a short pause interval
-        ⎕DL ⍺   ⍝ Wait for the interval
-        ⍵       ⍝ Return the character
-    }¨ message  ⍝ Map the delay function to each character of the message
-    
-    ⍝ Join the characters back to a single string using the 'Reduce' operator /
-    finalMessage ← ∊ message
-    
-    ⍝ Display the final message
-    ⍞←finalMessage
-}
+<?hobo
+# A simple Hobo script to display "Hello, World!"
 
-⍝ Execute the function
-DisplayHelloWorld ⍬
+#Transitional Phase
+TRADE
+
+#Ready resources, since we are hobos after all
+RAGS = cardboard
+TIN_CAN = binary code
+BINDLE = string
+
+#Creating a bindle with message
+FIND
+RAGS and TIN_CAN in BINDLE 
+
+BINDLE -> "Hello, World!"
+
+#Evoke spirit of the digital street by invoking mystic incantations
+PRAISE_HOBO_CODE
+
+#Unwrap BINDLE and let the world know our glory
+UNWRAP BINDLE
+
+#End of incantations
+WORD
+
+TRADE
+?>hobo
