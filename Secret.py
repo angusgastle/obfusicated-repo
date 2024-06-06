@@ -1,38 +1,29 @@
-APL (A Programming Language)
+apl
+⍝ Initialize the display message
+dispMsg ← 'Hello World'
 
-⍝ Define a namespace for our program
-∇ DisplayHelloWorld
-  ⍝ Define the message to be displayed
-  greeting ← 'Hello World'
+⍝ Set up the window dimensions and position randomly within the screen bounds
+⍝ Assuming a standard screen resolution of 1920x1080 for reference
+winWidth ← 400
+winHeight ← 200
+screenWidth ← 1920
+screenHeight ← 1080
+randPosX ← (?0⊤400)↑ 1 ⋄ randPosY ← (?0⊤200)↑ 1
 
-  ⍝ Create a vector of ASCII values from the greeting
-  ascii_vals ← ⎕UCS greeting
+⍝ Create a graphical window with specified dimensions and random position
+win ← ⎕D4::Window.Create(randPosX, randPosY, winWidth, winHeight)
 
-  ⍝ Function to convert ASCII values back to characters
-  toChar ← {⎕UCS ⍵}
+⍝ Define text attributes: font, size, color, etc.
+fontName ← 'Arial'
+fontSize ← 24
+fontColor ← (255 255 255) ⍝ white color (RGB)
 
-  ⍝ Function to loop through ASCII values and concatenate characters
-  char_list ← {⊃,(⊂⍵)/,¨⍳≢⍵}
+⍝ Calculate the center position to display the text within the window
+centerX ← (winWidth-⌿⍴dispMsg)÷2
+centerY ← (winHeight-fontSize)÷2
 
-  ⍝ Alter the ASCII values just for complexity
-  altered_vals ← 2 × ascii_vals
-  half_vals ← ascii_vals ÷ 2
-  
-  ⍝ Ensure altered values remain within alphabetic range
-  normalize ← {
-    vals ← ⍵
-    min ← 65  ⍝ 'A'
-    max ← 123  ⍝ 'z'+1
-    range ← max - min 
-    (vals - min) | range + min
-  }
-  
-  ⍝ Function to produce the final, normalized characters
-  result ← toChar normalize ascii_vals
+⍝ Display the message at the calculated center position
+win.TextOut(dispMsg, centerX, centerY, fontName, fontSize, fontColor)
 
-  ⍝ Display the resulting string
-  ⎕ ← result
-∇
-
-⍝ Execute the DisplayHelloWorld function
-DisplayHelloWorld
+⍝ Keep the window open until the user closes it
+⍬ ⎕DQ win
