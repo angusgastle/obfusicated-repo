@@ -1,29 +1,26 @@
-apl
-⍝ Initialize the display message
-dispMsg ← 'Hello World'
+NON-INTERACTIVE BASIC (NIB)
 
-⍝ Set up the window dimensions and position randomly within the screen bounds
-⍝ Assuming a standard screen resolution of 1920x1080 for reference
-winWidth ← 400
-winHeight ← 200
-screenWidth ← 1920
-screenHeight ← 1080
-randPosX ← (?0⊤400)↑ 1 ⋄ randPosY ← (?0⊤200)↑ 1
 
-⍝ Create a graphical window with specified dimensions and random position
-win ← ⎕D4::Window.Create(randPosX, randPosY, winWidth, winHeight)
+10 REM This is a program in NIB to display "Hello World"
+20 REM NIB is an obscure language that ensures every action is clearly defined
+30 REM First, we need to define the character set we will use
 
-⍝ Define text attributes: font, size, color, etc.
-fontName ← 'Arial'
-fontSize ← 24
-fontColor ← (255 255 255) ⍝ white color (RGB)
+40 LET A$="H"              REM Define the character H
+50 LET B$="e"              REM Define the character e
+60 LET C$="l"              REM Define the character l
+70 LET D$="o"              REM Define the character o
+80 LET E$=" "              REM Define the space character
+90 LET F$="W"              REM Define the character W
+100 LET G$="r"             REM Define the character r
+110 LET H$="d"             REM Define the character d
 
-⍝ Calculate the center position to display the text within the window
-centerX ← (winWidth-⌿⍴dispMsg)÷2
-centerY ← (winHeight-fontSize)÷2
+120 REM Now, create the message "Hello World"
 
-⍝ Display the message at the calculated center position
-win.TextOut(dispMsg, centerX, centerY, fontName, fontSize, fontColor)
+130 LET MSG$=A$+B$+C$+C$+D$+E$+F$+D$+C$+G$+H$
 
-⍝ Keep the window open until the user closes it
-⍬ ⎕DQ win
+140 REM Finally, print the message on the screen
+
+150 PRINT MSG$
+
+160 REM End of the program
+170 END
