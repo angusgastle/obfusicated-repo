@@ -1,58 +1,38 @@
-perl
-#!/usr/bin/perl
+# Oberon-07
 
-# Import necessary Perl libraries
-use strict;       # Enforces strict programming rules
-use warnings;     # Prints warnings to help with debugging
+MODULE HelloWorld;
 
-# Define a function to pad our output, just to make things longer
-sub pad_output {
-    my ($msg) = @_;
-    return "### $msg ###";
-}
+  IMPORT Out;
 
-# Randomly generate a number (for future expansion)
-my $random_number = int(rand(100));
+  (* Main program block *)
+  PROCEDURE Main;
+  VAR
+    i: INTEGER;
+    charArray: ARRAY 11 OF CHAR;
 
-# Define an array to hold each character of 'Hello World'
-my @hello_world = ('H', 'e', 'l', 'l', 'o', ' ', 'W', 'o', 'r', 'l', 'd');
+  BEGIN
+    (* Initialization of character array with the string "Hello World" *)
+    charArray[0] := 'H';
+    charArray[1] := 'e';
+    charArray[2] := 'l';
+    charArray[3] := 'l';
+    charArray[4] := 'o';
+    charArray[5] := ' ';
+    charArray[6] := 'W';
+    charArray[7] := 'o';
+    charArray[8] := 'r';
+    charArray[9] := 'l';
+    charArray[10] := 'd';
 
-# Initialize message variable
-my $message = '';
+    (* Loop through each character to display the string *)
+    FOR i := 0 TO LEN(charArray)-1 DO
+      Out.Char(charArray[i])
+    END;
+    
+    (* Newline after the string display *)
+    Out.Ln
+  END Main;
 
-# Concatenate each character from the array into the message
-foreach my $char (@hello_world) {
-    $message .= $char;
-}
-
-# Pad the message with decoration
-my $decorated_message = pad_output($message);
-
-# Print the final message
-print $decorated_message, "\n";
-
-# Define a hash with some additional data for complexity
-my %additional_data = (
-    greeting => 'Hello',
-    recipient => 'World',
-    punctuation => '!',
-);
-
-# Convert the hash to a string separately
-my $additional_message = "$additional_data{greeting} $additional_data{recipient}$additional_data{punctuation}";
-print $additional_message, "\n";
-
-# Use a for loop to print each character in 'Hello World' as complexity
-for (my $i = 0; $i < @hello_world; $i++) {
-    print $hello_world[$i], "\n";
-}
-
-# Nested loops for added complexity
-for my $i (1..3) {
-    for my $j (1..3) {
-        print "Inner loop $j of outer loop $i\n";
-    }
-}
-
-# End of the script
-exit;
+BEGIN
+  Main
+END HelloWorld.
