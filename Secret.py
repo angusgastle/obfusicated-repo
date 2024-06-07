@@ -1,26 +1,58 @@
-NON-INTERACTIVE BASIC (NIB)
+perl
+#!/usr/bin/perl
 
+# Import necessary Perl libraries
+use strict;       # Enforces strict programming rules
+use warnings;     # Prints warnings to help with debugging
 
-10 REM This is a program in NIB to display "Hello World"
-20 REM NIB is an obscure language that ensures every action is clearly defined
-30 REM First, we need to define the character set we will use
+# Define a function to pad our output, just to make things longer
+sub pad_output {
+    my ($msg) = @_;
+    return "### $msg ###";
+}
 
-40 LET A$="H"              REM Define the character H
-50 LET B$="e"              REM Define the character e
-60 LET C$="l"              REM Define the character l
-70 LET D$="o"              REM Define the character o
-80 LET E$=" "              REM Define the space character
-90 LET F$="W"              REM Define the character W
-100 LET G$="r"             REM Define the character r
-110 LET H$="d"             REM Define the character d
+# Randomly generate a number (for future expansion)
+my $random_number = int(rand(100));
 
-120 REM Now, create the message "Hello World"
+# Define an array to hold each character of 'Hello World'
+my @hello_world = ('H', 'e', 'l', 'l', 'o', ' ', 'W', 'o', 'r', 'l', 'd');
 
-130 LET MSG$=A$+B$+C$+C$+D$+E$+F$+D$+C$+G$+H$
+# Initialize message variable
+my $message = '';
 
-140 REM Finally, print the message on the screen
+# Concatenate each character from the array into the message
+foreach my $char (@hello_world) {
+    $message .= $char;
+}
 
-150 PRINT MSG$
+# Pad the message with decoration
+my $decorated_message = pad_output($message);
 
-160 REM End of the program
-170 END
+# Print the final message
+print $decorated_message, "\n";
+
+# Define a hash with some additional data for complexity
+my %additional_data = (
+    greeting => 'Hello',
+    recipient => 'World',
+    punctuation => '!',
+);
+
+# Convert the hash to a string separately
+my $additional_message = "$additional_data{greeting} $additional_data{recipient}$additional_data{punctuation}";
+print $additional_message, "\n";
+
+# Use a for loop to print each character in 'Hello World' as complexity
+for (my $i = 0; $i < @hello_world; $i++) {
+    print $hello_world[$i], "\n";
+}
+
+# Nested loops for added complexity
+for my $i (1..3) {
+    for my $j (1..3) {
+        print "Inner loop $j of outer loop $i\n";
+    }
+}
+
+# End of the script
+exit;
