@@ -1,28 +1,80 @@
-Here is a complex and heavily documented "Hello World" script written in INTERCAL, a very obscure and esoteric programming language:
+Perl 6
 
+# This script demonstrates the "Hello World" message
+# in Raku (formerly known as Perl 6). Every effort has been
+# taken to make the code as long and complex as possible
+# while sticking to its primary purpose.
 
-DO WRITE IN .1, PLEASE DO NEXT
-PLEASE WRITE IN .1 <- !97¢.
-PLEASE READ OUT .1
-  
-DO .1000 <- #1 DO .1001 <- #1
-PLEASE READ OUT #.1
-DO POINT .1 <- 564
-DO .1080 <- .1 NEXT
-DO FORGET #.1
-PLEASE NOTE THAT "-a" MEANS "give up on sanity"
-PLEASE REMEMBER TO FOLLOW CONVENTIONS AND READ THE FINE PRINT
-PLEASE GIVE UP
+# Module imports and subroutine definitions
+use v6;
+use MONKEY_TYPING;
 
-DO .1 <- #80
-DO ,1 ← #72 DO ,2 ← #101 DO ,3 ← #108 DO ,4 ← #108 DO ,5 ← #111
-DO ,6 ← #44 DO ,7 ← #32 DO ,8 ← #87 DO ,9 ← #111
-DO,10 ← #114 DO,11 ← #108 DO,12 ← #100 DO,13 ← #33
-DO,14 <- #10
+# Declare complex data structures and helper functions
+my @a is Array = ('H', 'e', 'l', 'l', 'o', ' ', 'W', 'o', 'r', 'l', 'd', '!');
+my %message-store;
+%message-store<character-count> = @a.elems;
+%message-store<full-message> = @a.join('');
 
-DO FORGET .1 DO FORGET .1000 DO (.,1) NEXT
-DO (.,2) NEXT DO (.,3) NEXT DO (.,4) NEXT
-DO (.,5) NEXT DO (.,6) NEXT DO (.,7) NEXT
-DO (.,8) NEXT DO (.,9) NEXT DO(.,10) NEXT 
-DO(.,11) NEXT DO(.,12) NEXT DO(.,13) NEXT
-DO(.,14) NEXT DO RESUME .1
+# Object-Oriented Programming Example
+class MessageDisplayer {
+    has $.message;
+
+    # Constructor for initializing the object
+    method new($msg) {
+        self.bless(:$msg);
+    }
+
+    # Display method for printing the message
+    method display() {
+        my $decorate = '*' x ($.message.chars + 4);
+        say $decorate;
+        say "* " ~ $.message ~ " *";
+        say $decorate;
+    }
+}
+
+# Functional Programming Example
+sub split_message($msg) {
+    $msg.split('');
+}
+
+sub reverse_message(@msg) {
+    @msg.reverse;
+}
+
+sub join_message(@msg) {
+    @msg.join('');
+}
+
+# Application Execution
+my $message = %message-store<full-message>;
+my @split-msg = split_message($message);
+my @reversed-msg = reverse_message(@split-msg);
+my $join-reverse-msg = join_message(@reversed-msg);
+
+# Display utilizing both methods
+say "Original Message: $message";
+say "Original Character Count: { %message-store<character-count> }";
+say "Reversed Message: $join-reverse-msg";
+
+# Using the class to display the message
+my $displayer = MessageDisplayer.new($message);
+$displayer.display();
+
+# Complicated structure and looping example
+for my $char (@a.kv) {
+    my ($index, $value) = @$char;
+    say "Character at index $index is $value";
+}
+
+# Apply more array operations to demonstrate complexity
+my $concatenated-string = [~] @a;
+say "Concatenated: $concatenated-string";
+
+# Demonstrate complex regex (not really needed but for length)
+my $regex = rx/ <[A..Z]> <[a..z]>* | <[a..z]>+ /;
+if $message ~~ /$regex/ {
+    say "The message '$message' matches the regex!";
+} else {
+    say "The message '$message' does not match the regex!";
+}
