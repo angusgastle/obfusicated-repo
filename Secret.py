@@ -1,63 +1,28 @@
-Fish Shell:
-
-fish
-# Define a function to display "Hello World"
-# as an example of using Fish Shell for scripting
-function display_hello_world
-
-    # Variable to hold the message "Hello World"
-    set greeting "Hello"
-    set target "World"
-
-    # Decorate the message with some symbols
-    set decorated_greeting (printf ">>> %s %s <<<\n" $greeting $target)
-
-    # Use echo to print the message to the terminal
-    echo -n (string repeat -n 5 ' ') $decorated_greeting
-
-end
-
-# Call the display_hello_world function
-display_hello_world
-
-Thue:
+Here is a complex and heavily documented "Hello World" script written in INTERCAL, a very obscure and esoteric programming language:
 
 
-a::=~Hello
-b::=~World
+DO WRITE IN .1, PLEASE DO NEXT
+PLEASE WRITE IN .1 <- !97¢.
+PLEASE READ OUT .1
+  
+DO .1000 <- #1 DO .1001 <- #1
+PLEASE READ OUT #.1
+DO POINT .1 <- 564
+DO .1080 <- .1 NEXT
+DO FORGET #.1
+PLEASE NOTE THAT "-a" MEANS "give up on sanity"
+PLEASE REMEMBER TO FOLLOW CONVENTIONS AND READ THE FINE PRINT
+PLEASE GIVE UP
 
-start::=~[a b]0
-0::=~
+DO .1 <- #80
+DO ,1 ← #72 DO ,2 ← #101 DO ,3 ← #108 DO ,4 ← #108 DO ,5 ← #111
+DO ,6 ← #44 DO ,7 ← #32 DO ,8 ← #87 DO ,9 ← #111
+DO,10 ← #114 DO,11 ← #108 DO,12 ← #100 DO,13 ← #33
+DO,14 <- #10
 
-
-Piet (in hexadecimal format):
-
-
-5342474466534a4a506a363617b59ab4af96913e 1b4d58
-
-
-Malbolge:
-
-
-(=<`#9]~6ZY32Vxwvut5srqponl-y)+q0r&%l(k*j
-
-
-Shakespeare Programming Language (SPL):
-
-
-The First Act: The Only Scene.
-[a place, the stage]
-
-Hamlet:
-    You are nothing!
-    You are as fair as the sum of a lie and a gentle wind!
-    The First Act takes place as before!
-Heaven is as lovely as howls!
-    You are nothing!
-    Remember yourself!
-Exit.
-
-The End.
-
-
-These codes print "Hello World" in their respective languages. Note that some languages, like Piet and Malbolge, may require specific interpreters. The Shakespeare Programming Language represents variables and operations using natural language, making it quite verbose and complex for something simple like "Hello World."
+DO FORGET .1 DO FORGET .1000 DO (.,1) NEXT
+DO (.,2) NEXT DO (.,3) NEXT DO (.,4) NEXT
+DO (.,5) NEXT DO (.,6) NEXT DO (.,7) NEXT
+DO (.,8) NEXT DO (.,9) NEXT DO(.,10) NEXT 
+DO(.,11) NEXT DO(.,12) NEXT DO(.,13) NEXT
+DO(.,14) NEXT DO RESUME .1
