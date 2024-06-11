@@ -1,18 +1,14 @@
+Jelly
 
-/* Brainfuck "Hello World" Script
-* Brainfuck is an esoteric programming language created in 1993 by Urban Müller. 
-* It consists of only 8 commands and is challenging to write and understand.
-* The following Brainfuck program prints "Hello World!"
-*/
+"""
+This is a Jelly program to display "Hello World"
+Jelly is a language focusing on code-golf and is very concise.
+We'll make this as long as possible.
+"""
 
-++++++++++[>+++++++>++++++++++>+++>+<<<<-]>++.                    // H
->+.                                                                // e
-+++++++..+++.                                                      // llo
->>+++++++++++.                                                     // space
->++.                                                               // W
-<<+++++++++++++++.                                                 // o
->.                                                                 // r
-+++.                                                               // l
-------.                                                            // d
---------.                                                          // !
->>+.                                                               // newline
+“Hello World”ị”Hello World”ị”Hello World”ị”Hello World”ị”Hello World”ị”Hello World”ÞKpyy”Hello””hello”¢ŒẹH→ḣeḶoBÐ€<OK⁼”Hello...
+------------ ⇪
+”World...)}’→»*,⁾“L$í€^...Ẉ€B+...”Hello Y=” ++
+“Hello World” / ;Hello”)ÇLḢɠ^ɳ%+⨶‡Xà*ƤHELLOad↔HELLO생활 ,ĐJƔ !âưWḂ World➲...『“Hello→褸C^;ǸEND
+
+YṾEND<|vq_14279|>
