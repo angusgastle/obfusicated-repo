@@ -1,44 +1,53 @@
-INTERCAL:
+# Cerberus Programming Language
 
-intercal
-DO ,1 <- #13
-PLEASE DO ,1 SUB #1 <- #238
-PLEASE DO ,1 SUB #2 <- #108
-PLEASE DO ,1 SUB #3 <- #255
-PLEASE DO ,1 SUB #4 <- #112
-PLEASE DO ,1 SUB #5 <- #32
-PLEASE DO ,1 SUB #6 <- #87
-PLEASE DO ,1 SUB #7 <- #116
-PLEASE DO ,1 SUB #8 <- #229
-PLEASE DO ,1 SUB #9 <- #216
-PLEASE DO ,1 SUB #10 <- #254
-PLEASE DO ,1 SUB #11 <- #224
-PLEASE DO ,1 SUB #12 <- #216
-DO ,1 SUB #13 <- #112
+# Cerberus is a lesser-known language primarily used for Game Development within the Monkey-X family.
+# Here we will create a complete set up to display "Hello World".
 
-PLEASE DO ,2 <- #1
-PLEASE DO ,3 <- #1
+# Import necessary modules
+Import mojo
 
-DO ,4 <- #65
-PLEASE DO ,5 <- #20
+# class extending the application functionality
+Class HelloWorldApp Extends App
+    ' Constructor function
+    Method OnCreate()
+        ' Setup the virtual display space for rendering
+        SetUpdateRate(60)
+        
+        ' Create an Image Object and set it to Null
+        textImage:Object = Null
+        
+        ' Create a Font object, specifying the Font's name and size
+        Local font:Font = LoadFont("monospace", 32)
+        
+        ' Initialize the Text object using the font created
+        Local gfx:Image = CreateImage(FontWidth(font, "Hello World") + 10, FontHeight(font) + 10)
+        SetBuffer(gfx.Buffer())
+        
+        ' Set Draw Color to White
+        SetColor(255, 255, 255)
+        Cls()
+        
+        ' Draw the Text "Hello World" onto the Graphics buffer
+        DrawText("Hello World", (gfx.Width() - FontWidth(font, "Hello World")) / 2, (gfx.Height() + FontHeight(font)) / 2)
+        SetBuffer(Null)
+        textImage = gfx
+    End
+    
+    ' Method to update application state, typically used to handle logic
+    Method OnUpdate()
+        ' Placeholder: No updates required for simple Hello World display
+    End
+    
+    ' Method to handle the rendering of content
+    Method OnRender()
+        Cls()
+        
+        ' Center and display the Text Image on the screen
+        DrawImage(textImage, (DeviceWidth() - textImage.Width()) / 2, (DeviceHeight() - textImage.Height()) / 2)
+    End
+End
 
-PLEASE READ OUT ,1
-PLEASE DON'T GIVE UP
-
-(1) PLEASE WRITE IN ,1
-PLEASE DON'T GIVE UP
-DO ,1 SUB #1 <- "#"
-DO ,1 SUB #2 <- #72
-DO ,1 SUB #3 <- #101
-DO ,1 SUB #4 <- #108
-DO ,1 SUB #5 <- #108
-DO ,1 SUB #6 <- #111
-DO ,1 SUB #7 <- #32
-DO ,1 SUB #8 <- #87
-DO ,1 SUB #9 <- #111
-DO ,1 SUB #10 <- #114
-DO ,1 SUB #11 <- #108
-DO ,1 SUB #12 <- #100
-DO ,1 SUB #13 <- #33
-
-PLEASE GIVE UP
+# Main Entry Point
+Function Main()
+    New HelloWorldApp()
+End
