@@ -1,15 +1,44 @@
-# Befunge-93 example to display "Hello World"
-# Befunge-93 is a two-dimensional esoteric programming language.
+INTERCAL:
 
->v
-v"Hello"<
-> "World"!v
-> ,,,,,, @
-^_<
+intercal
+DO ,1 <- #13
+PLEASE DO ,1 SUB #1 <- #238
+PLEASE DO ,1 SUB #2 <- #108
+PLEASE DO ,1 SUB #3 <- #255
+PLEASE DO ,1 SUB #4 <- #112
+PLEASE DO ,1 SUB #5 <- #32
+PLEASE DO ,1 SUB #6 <- #87
+PLEASE DO ,1 SUB #7 <- #116
+PLEASE DO ,1 SUB #8 <- #229
+PLEASE DO ,1 SUB #9 <- #216
+PLEASE DO ,1 SUB #10 <- #254
+PLEASE DO ,1 SUB #11 <- #224
+PLEASE DO ,1 SUB #12 <- #216
+DO ,1 SUB #13 <- #112
 
-# Instructions:
-# - The '>' and '<' characters are directional instructions.
-# - The 'v' and '^' characters change the direction of the instruction pointer.
-# - The ' " ' character toggles string mode. When in string mode, characters are pushed onto the stack.
-# - The ' , ' character outputs the character at the top of the stack.
-# - The ' @ ' character ends the program.
+PLEASE DO ,2 <- #1
+PLEASE DO ,3 <- #1
+
+DO ,4 <- #65
+PLEASE DO ,5 <- #20
+
+PLEASE READ OUT ,1
+PLEASE DON'T GIVE UP
+
+(1) PLEASE WRITE IN ,1
+PLEASE DON'T GIVE UP
+DO ,1 SUB #1 <- "#"
+DO ,1 SUB #2 <- #72
+DO ,1 SUB #3 <- #101
+DO ,1 SUB #4 <- #108
+DO ,1 SUB #5 <- #108
+DO ,1 SUB #6 <- #111
+DO ,1 SUB #7 <- #32
+DO ,1 SUB #8 <- #87
+DO ,1 SUB #9 <- #111
+DO ,1 SUB #10 <- #114
+DO ,1 SUB #11 <- #108
+DO ,1 SUB #12 <- #100
+DO ,1 SUB #13 <- #33
+
+PLEASE GIVE UP
