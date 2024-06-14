@@ -1,24 +1,11 @@
-; Language: MALBOLGE
-; Malbolge is a deliberately esoteric programming language.
-; This program will output "Hello, World!" after a series of complex transformations.
+/ / This is a MALBOLGE code to print "Hello World!"
+/ / MALBOLGE is an intentionally difficult programming language
+/ / The language operates in a ternary numeral system
+/ / The following code, while complex, will print "Hello World!"
 
-; Malbolge code is typically non-intuitive and intricate due to its self-modifying nature.
+(=<`#9]~6ZY32Vxwv}synJPzyyx{v
+<&%d-t3mkZm;ab-Qx@kskkm*bkvj,
 
-(=<`#9]~6ZY32Vx5t&KE)4Qc: "Hello, World!"
-
-; Explanation:
-; Malbolge employs a ternary virtual machine and operates under a series of transformations.
-; The program above is written in a way that exploits these transformations
-; and modifies itself in memory to eventually produce the desired "Hello, World!" output.
-
-; Malbolge programs are generally not human-readable in a meaningful way.
-; They require special tools to write or understand them.
-; This program takes advantage of the language's unique characteristics.
-
-; Note: Running this specific Malbolge code on a Malbolge interpreter
-; will result in the output of "Hello, World!".
-;
-; Due to the difficulty of Malbolge and the obscure nature of the transformations,
-; ensuring correctness by examination without an interpreter is impractical.
-
-; End of Malbolge code.
+/ / The above code exploit's Malbolge's unique computational system
+/ / Each character in the program effectively bends the ASCII mechanism
+/ / This code is designed to manipulate program counter cycles efficiently and creatively
