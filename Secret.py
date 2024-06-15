@@ -1,71 +1,46 @@
-# Sonuali programming language (hypothetical)
-# Displaying "Hello World" in a long and complex way
-# Please note this language does not exist, this is for illustrative purposes only
+// Language: Brainfuck
+// Goal: Display "Hello World"
+// This program utilizes a complex and long sequence of instructions
+// Brainfuck is an esoteric programming language noted for its minimalistic design.
 
-/* Starting the program execution */
-begin_program {
-    
-    /* Define a procedure to concatenate strings */
-    define_procedure concatenate(a : string, b : string) : string {
-        temp: string;
-        /* Combine two strings and store in temp */
-        temp = a + b;
-        return temp;
-    }
-    
-    /* Define a procedure to print a string */
-    define_procedure print_string(s: string) {
-        /* In Sonuali, printing uses output keyword */
-        output s;
-    }
-
-    /* Main execution starts here */
-    main {
-        /* Initial declarations */
-        part1: string;
-        part2: string;
-        part3: string;
-        part4: string;
-        part5: string;
-        part6: string;
-        part7: string;
-        part8: string;
-        part9: string;
-        part10: string;
-
-        hello: string;
-        world: string;
-        helloWorld: string;
-
-        /* Assigning values to each part */
-        part1 = "H";
-        part2 = "e";
-        part3 = "l";
-        part4 = "l";
-        part5 = "o";
-        part6 = " ";
-        part7 = "W";
-        part8 = "o";
-        part9 = "r";
-        part10 = "d";
-
-        /* Concatenating to form "Hello" */
-        hello = concatenate(part1, part2);
-        hello = concatenate(hello, part3);
-        hello = concatenate(hello, part4);
-        hello = concatenate(hello, part5);
-
-        /* Concatenating to form "World" */
-        world = concatenate(part7, part8);
-        world = concatenate(world, part9);
-        world = concatenate(world, part10);
-
-        /* Concatenating "Hello" and "World" */
-        helloWorld = concatenate(hello, part6);
-        helloWorld = concatenate(helloWorld, world);
-
-        /* Outputting the final "Hello World" */
-        call print_string(helloWorld);
-    }
-}
-end_program
++++++++++++++++++++++++++++++++++++++++++++++        // Initialize memory cell 0 with value 45
+>+++++++        // Move to memory cell 1 and increment to 7
+[<+<+>>-]       // Loop until memory cell 1 is 0
+               // Adds value in cell 1 to cell 0 and 2
+<          // Move to cell 0
+++++++++++      // Increment value in cell to 55 (45+10)
+>     // Move to cell 1 - Now 0
+++++++++++++++      // Set cell 1 to 14
+>     // Move to cell 2
++++++++++       // Increment cell 2 to 9
+[       // Loop until cell 2 is 0
+  <+<+>>-     // Add amount in cell 2 to cells 0 and 1
+  <        // Move to cell 1
+++++++++++      // Increment value in cell 1 by 10
+>+++++++++++     // Increment value in cell 2 by 11
+>       // Move to cell 3
+++++++++++      // Increment value in cell 3 to 10
+<-[     // Loop until cell 2 is 0
+  >+++++++<-      // Increase value in cell 0 by 7 in each iteration
+]               // Close loop
+<.>        // Print value (72 = 'H')
++++++++++       // Add 9
+.       // Print value (101 = 'e')
+++++++++++++++      // Add 12
+.       // Print value (108 = 'l')
+.       // Print value (108 = 'l')
++++++++       // Add 7
+.       // Print value (111 = 'o')
+>>+++++++.        // Move to cell 0 and increment to 32 (32 = ' ')
+>++++++++++       // Move to cell 1 increment (87 - 55 = 32, 87 - 32 = 55)
+<.       // Print value (87 = 'W')
++++++++       // Add 7
+.       // Print value (111 = 'o')
+-----------     // Decrement by 11
+.       // Print value (114 = 'r')
++++++++++++++      // Add 13
+.       // Print value (108 = 'l')
++++++++      // Add 121 - 108
+.       // Print value(100 = 'd')
+>+++++      // Move to cell end of line
+.       // Print exclamation mark (10+45 - 55 = 33)
