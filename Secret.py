@@ -1,16 +1,6 @@
-brainfuck
-++++++++++[>+++++++>+++++++++>++++++++++>+++<<<<-]>>>++.>+.+++++++..+++.>++.<<-----------.>>>-----.+++++++++++++.-----------.<<+.<+++.------.--------.
+befunge
+>               v
+@               " Hello, world!"<>#                           _
 
 
-intercal
-DO ,1 <- #13
-DO ,1 SUB #1 <- #234
-DO ,1 SUB #2 SAME AS ,1 SUB #1
-DO ,1 SUB #1 <- #112
-PLEASE READ OUT ,1 SUB #2
-DO ,1 SUB #2 <- #170
-DO ,1 SUB #3 <- #129
-DO ,2 <- #5
-DO ,3 <- #2
-DO READ OUT ,2
-DO GIVE UP
+As much as possible for an otherwise simple saying of "Hello, world" and in Befunge.
