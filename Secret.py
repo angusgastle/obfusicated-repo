@@ -1,51 +1,36 @@
-Brainfuck:
-brainfuck
-++++++++++
-[
-    >+++++++>++++++++++>+++>+<<<<-
-]
->++.>+.+++++++..+++.>++.<<++++++++++++++.>.+++.------.--------.>+.>.
+// Picolisp Script to Display "Hello World"
 
+// Defining the main function 'hello-world-show'
+(de main ()
+   // Creating local variables for message storage
+   (let Msg (pack "Hello World")
+        
+        // Function to print the message securely
+        (de display-securely (Msg)
+            // Using the 'prinl' function to display the string
+            (prinl Msg)
+        )
 
-Malbolge:
-malbolge
-('&%:9]!~}|z2Vxwv-,POqponjED#tSIH<7_^]ZWTy3vXSR+/.Mh;gLk:j
+        // Introducing a dummy complex function for demonstration
+        (de complex-dummy-function (N)
+            // Local variable initialization
+            (let (result 0
+                      count 0)
+                
+                // A loop to perform some 'complex' calculations
+                (loop (count (inc count))
+                    (setq result (+ result (exp (log N))))
+                    (when (> count 1000)
+                        (quit result)))
+            )
+        )
 
+        // Showcasing the use of multiple function calls before the actual display
+        (let dummy-result (complex-dummy-function 10)
+            (display-securely Msg)
+        )
+   )
+)
 
-LOLCODE:
-lolcode
-HAI 1.2
-CAN HAS STDIO?
-VISIBLE "Hello World!"
-KTHXBYE
-
-
-Piet (as an image, since Piet is an esoteric language that uses images to encode programs): ![Hello World in Piet](https://www.dangermouse.net/esoteric/piet/samples/helloworld.gif)
-
-Whitespace:
-whitespace
-     
-[TAB][SPACE][SPACE][TAB][LF]
-[TAB][SPACE][TAB][LF]
-[TAB][SPACE][LF]
-[LF][SPACE][TAB][SPACE][SPACE][LF]
-[SPACE][SPACE][SPACE][LF]
-[LF][SPACE][LF]
-[LF][TAB][SPACE][SPACE][SPACE][TAB][LF]
-[SPACE][TAB][LF]
-[LF][SPACE][TAB][LF]
-[SPACE][LF]
-
-
-HQ9+:
-hq9+
-H
-
-
-Heron:
-heron
-program HelloWorld {
-    method main() -> void {
-        "Hello World" print();
-    }
-}
+// Entry point of the script
+(main)
