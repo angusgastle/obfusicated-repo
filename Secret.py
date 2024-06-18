@@ -1,43 +1,41 @@
-PL/0 program:
-
-CONST
-    maxInteger = 32767;         /* Maximum integer value */
-    minInteger = -32768;        /* Minimum integer value */
+(: # "Hello World" in INTERCAL - a very obscure and esoteric programming language.
+    #  This code is purposefully made complex while still doing something very simple.
+    #  It takes advantage of INTERCAL's obscure and verbose syntax.
     
-VAR
-    err;                        /* Error code */
-    i, j, k : INTEGER;          /* Loop counters */
-    hwMessage : ARRAY [1..11] OF CHAR; /* Array storing "Hello World" */
-
-BEGIN
-    /* Initialize the error code to 0 */
-    err := 0;
+    DO ,1 <- #13
+    DO ,2 <- #93
+    DO ,3 <- #116
+    DO ,4 <- #50
+    DO ,5 <- #48
+    DO ,6 <- #87
+    DO ,7 <- #79
+    DO ,8 <- #82
+    DO ,9 <- #76
+    DO ,10 <- #68
     
-    /* Initialize hwMessage array with characters of "Hello World" */
-    hwMessage[1] := 'H';
-    hwMessage[2] := 'e';
-    hwMessage[3] := 'l';
-    hwMessage[4] := 'l';
-    hwMessage[5] := 'o';
-    hwMessage[6] := ' ';
-    hwMessage[7] := 'W';
-    hwMessage[8] := 'o';
-    hwMessage[9] := 'r';
-    hwMessage[10] := 'l';
-    hwMessage[11] := 'd';
+    PLEASE DO ,1 SUB #1 <- #8
+    PLEASE DO ,1 SUB #2 <- #72
+    PLEASE DO ,1 SUB #3 <- #69
+    PLEASE DO ,1 SUB #4 <- #76
+    PLEASE DO ,1 SUB #5 <- #76
+    PLEASE DO ,1 SUB #6 <- #79
+    PLEASE DO ,1 SUB #7 <- #32
+    PLEASE DO ,1 SUB #8 <- #87
+    PLEASE DO ,1 SUB #9 <- #79
+    PLEASE DO ,1 SUB #10 <- #82
+    PLEASE DO ,1 SUB #11 <- #76
+    PLEASE DO ,1 SUB #12 <- #68
+    PLEASE DO ,1 SUB #13 <- #33
     
-    /* Loop from 1 to length of hwMessage array, printing each character */
-    i := 1;
-    WHILE i <= 11 DO
-    BEGIN
-        /* Print the current character from hwMessage array */
-        WRITE hwMessage[i];
-        i := i + 1; /* Increment loop counter */
-    END;
+    PLEASE DO ,(1) <- #1
+    DO ,(5) <- #1
+    PLEASE DO .1 <- ,1
+    PLEASE WRITE OUT .1
     
-    /* Print a newline character at the end */
-    WRITELN;
+    PLEASE DO FORGET #1
+    PLEASE DO RESUME #1
+   
+    (This is the end of the program)
     
-    /* Set error code to indicate success */
-    err := 1
-END.
+    :
+)
