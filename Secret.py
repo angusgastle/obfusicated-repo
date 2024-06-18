@@ -1,41 +1,28 @@
-(: # "Hello World" in INTERCAL - a very obscure and esoteric programming language.
-    #  This code is purposefully made complex while still doing something very simple.
-    #  It takes advantage of INTERCAL's obscure and verbose syntax.
-    
-    DO ,1 <- #13
-    DO ,2 <- #93
-    DO ,3 <- #116
-    DO ,4 <- #50
-    DO ,5 <- #48
-    DO ,6 <- #87
-    DO ,7 <- #79
-    DO ,8 <- #82
-    DO ,9 <- #76
-    DO ,10 <- #68
-    
-    PLEASE DO ,1 SUB #1 <- #8
-    PLEASE DO ,1 SUB #2 <- #72
-    PLEASE DO ,1 SUB #3 <- #69
-    PLEASE DO ,1 SUB #4 <- #76
-    PLEASE DO ,1 SUB #5 <- #76
-    PLEASE DO ,1 SUB #6 <- #79
-    PLEASE DO ,1 SUB #7 <- #32
-    PLEASE DO ,1 SUB #8 <- #87
-    PLEASE DO ,1 SUB #9 <- #79
-    PLEASE DO ,1 SUB #10 <- #82
-    PLEASE DO ,1 SUB #11 <- #76
-    PLEASE DO ,1 SUB #12 <- #68
-    PLEASE DO ,1 SUB #13 <- #33
-    
-    PLEASE DO ,(1) <- #1
-    DO ,(5) <- #1
-    PLEASE DO .1 <- ,1
-    PLEASE WRITE OUT .1
-    
-    PLEASE DO FORGET #1
-    PLEASE DO RESUME #1
-   
-    (This is the end of the program)
-    
-    :
-)
+APL (A Programming Language) - Hello World
+
+⍝ Define the message to be displayed
+message ← 'Hello World'
+
+⍝ Calculate the length of the message
+msgLength ← ≢message
+
+⍝ Create a vector of indices from 1 to the length of the message
+indices ← ⍳msgLength
+
+⍝ Define a function to retrieve characters from a string
+getChar ← {message[indices[⍵]]}
+
+⍝ Create an empty vector to store the characters
+output ← ⍳0
+
+⍝ Loop through each index, get the corresponding character, and store it in the output vector
+output ← output , getChar ⍵ ⍵ :⍪⍨ indices
+
+⍝ Convert the output vector to a string
+finalOutput ← ∊output
+
+⍝ Display the final message
+finalOutput
+
+⍝ Print message to console (specific to some APL systems)
+⎕ ← finalOutput
