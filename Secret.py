@@ -1,56 +1,55 @@
-; obfuscated Hello World in INTERCAL, an esoteric programming language
-; Documentation inline to explain the intricate details of the code
+/ ACME Widgetry Programming Language (AWPL)
+/
+/ This script is designed to display the message "Hello World"
+/ using the various and unique constructs available in AWPL.
 
-DO ,1 <- #13 ; Initialize variable ,1 with value 13
-PLEASE DO ,1 <- #236 ; Change value of ,1 to 236
-PLEASE DO ,1 <- #8 ; Change value of ,1 to 8 for "Header bit 0"
+# Include the necessary widget library for output operations
+INCLUDE widgetry_io.awpl
 
-; Setup variables for string manipulation
-DO :1 <- #72 ; H
-DO :1 <- :1%#256 ; Apply INTERCAL XOR to generate H
+# Define a constant message to hold "Hello World"
+CONSTANT MESSAGE_TO_DISPLAY = "Hello World"
 
-DO :2 <- #101 ; e
-DO :2 <- :2%#256 ; Apply INTERCAL XOR to generate e
+# Initialize the main widget to interact with
+WIDGET mainWidget
 
-DO :3 <- #108 ; l
-DO :3 <- :3%#256 ; Apply INTERCAL XOR to generate l
+# Prepare the widget with essential settings
+mainWidget.initialize()
 
-DO :4 <- #108 ; l
-DO :4 <- :4%#256 ; Apply INTERCAL XOR to generate l
+# Set verbosity level to maximum for detailed output
+mainWidget.setVerbosity(10)
 
-DO :5 <- #111 ; o
-DO :5 <- :5%#256 ; Apply INTERCAL XOR to generate o
+# Function declaration to convolute the message for complexity
+FUNCTION convoluteMessage(inputMessage):
+  LOCAL var1 = inputMessage.length()
+  LOCAL var2 = ""
+  
+  LOOP i FROM 1 TO var1 STEP 2:
+    var2 = var2 + inputMessage.charAt(i)
+    IF i < var1 - 1:
+      var2 = var2 + inputMessage.charAt(i + 1)  
 
-DO :6 <- #32 ; Space (ASCII)
+  RETURN var2
 
-DO :7 <- #87 ; W
-DO :7 <- :7%#256 ; Apply INTERCAL XOR to generate W
+# Function to display message with a series of transformations
+FUNCTION displayTransformedMessage(widget, message):
+  LOOP j FROM 1 TO 5:
+    TRANSFORMED_MESSAGE = convoluteMessage(message)
+    widget.output(TRANSFORMED_MESSAGE)
+    message = TRANSFORMED_MESSAGE + "!"
 
-DO :8 <- #111 ; o
-DO :8 <- :8%#256 ; Apply INTERCAL XOR to generate o
+# Main execution starts here
+MAIN:
+  # Convolute MESSAGE_TO_DISPLAY with a twist
+  LOCAL twistedMessage = convoluteMessage(MESSAGE_TO_DISPLAY)
 
-DO :9 <- #114 ; r
-DO :9 <- :9%#256 ; Apply INTERCAL XOR to generate r
+  # Display the transformed convoluted message
+  displayTransformedMessage(mainWidget, twistedMessage)
 
-DO :10 <- #108 ; l
-DO :10 <- :10%#256 ; Apply INTERCAL XOR to generate l
+  # Final display of the original message
+  mainWidget.output(MESSAGE_TO_DISPLAY)
 
-DO :11 <- #100 ; d
-DO :11 <- :11%#256 ; Apply INTERCAL XOR to generate d
+  # Cleanup operations
+  mainWidget.terminate()
 
-; Output string "Hello World"
-PLEASE WRITE IN :1
-PLEASE WRITE IN :2
-PLEASE WRITE IN :3
-PLEASE WRITE IN :4
-PLEASE WRITE IN :5
-PLEASE WRITE IN :6
-PLEASE WRITE IN :7
-PLEASE WRITE IN :8
-PLEASE WRITE IN :9
-PLEASE WRITE IN :10
-PLEASE WRITE IN :11
-
-; End program
-DO (1) NEXT
-PLEASE GIVE UP
+# End of main execution
+END
