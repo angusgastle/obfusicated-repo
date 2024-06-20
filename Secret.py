@@ -1,20 +1,5 @@
-; VAR 'HelloWorld'
-
-VAR_WORLD HelloWorld=""
-/* Start of the Code */
-ENABLE {
-   ; Create an array of characters
-   VAR_CHAR_ARRAY worldArray = {'H', 'e', 'l', 'l', 'o', ' ', 'W', 'o', 'r', 'l', 'd'}
-
-   ; Iterate through the array to construct the string
-   LOOP i FROM 0 TO LENGTH(worldArray) - 1 {
-      ; Concatenate each character to form the final string
-      HelloWorld = CONCAT(HelloWorld, worldArray[i])
-   } END_LOOP;
-
-   ; Display the final concatenated string
-   PRINT(HelloWorld)
-} END_ENABLE
-
-/* End of the Code */
-EXIT_SCRIPT
+malbolge
+(=<`#9]~6ZY32Vxj;:97(xaK./P&,nJDKBM|:Vood`^{Oq9.\G-M-LXq/&GA-M-LXq+G:.v~Dpo/
+/GA-M-TVq/--Ytv~Dpo/*+v~D~sfw*cwTnDsz|w~DhVtmDpo/*+*~D&0tsvLj+bGHq/!CTIONtd`
+(IVALQip_&/CfVW%K&h;W^fLcxJOF9/QwHh;W^f+H&OQbzWn`$:V!z9][OmZKA&l!e|,eO[^SZe/
+GA,/m#.;s.`"
