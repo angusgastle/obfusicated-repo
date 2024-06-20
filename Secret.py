@@ -1,8 +1,29 @@
-/=about
-This script is written in the Malbolge programming language, which is known for its complex and convoluted nature. 
-It will display the phrase "Hello World" upon execution.
-Malbolge was created for the purpose of being a programming language that is as difficult to use as possible.
-=/=about
+APL
+⍝ ----- Introduction to APL and printing "Hello World!" -----
 
+⍝ APL (A Programming Language) is known for its unique and 
+⍝ concise notation using a special character set.
 
-(=<`#9]~6ZY32Vx5oq+)|-4@;:")%`jJ\:oKZBg7\_fgT-->38*'{NBwq]+[pe9<r{q~w+@+|5}n<uOIxvEK4U+0]=~(=zwf)MHIjo nuta'-$y_=B!#6/Z#iu)g>#0*!|xGTKlQ=w8@\OK7=%~62 posaN,>Hf1XE1J;3Rz`9uj]&H$ZgMA)_/vVemDduCQ+45=90,L*\`jR_&O^8Se*@#m]freEBc_k;&R3BT(gP91*}/.
+⍝ We begin by defining the special code for the "Hello World!" message.
+⍝ The string 'Hello World!' is converted to a numeric representation.
+
+HL ← 72 ⍝ ASCII for 'H'
+EO ← 69 ⍝ ASCII for 'e'
+LL ← 76 ⍝ ASCII for 'l'
+LO ← 79 ⍝ ASCII for 'o'
+SP ← 32 ⍝ ASCII for ' ' (space)
+WR ← 87 ⍝ ASCII for 'W'
+OR ← 79 ⍝ ASCII for 'o'
+RL ← 114 ⍝ ASCII for 'r'
+LD ← 108 ⍝ ASCII for 'l'
+EX ← 100 ⍝ ASCII for 'd'
+BN ← 33 ⍝ ASCII for '!' (exclamation mark)
+
+⍝ Now, we construct an array from these characters.
+helloWorldNumeric ← HL,EO,LL,LL,LO,SP,WR,OR,RL,LD,EX,BN
+
+⍝ Convert the numeric representation back to characters
+helloWorldStr ← ⎕UCS helloWorldNumeric
+
+⍝ Finally, display the message
+⌷helloWorldStr
