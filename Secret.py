@@ -1,5 +1,25 @@
-malbolge
-(=<`#9]~6ZY32Vxj;:97(xaK./P&,nJDKBM|:Vood`^{Oq9.\G-M-LXq/&GA-M-LXq+G:.v~Dpo/
-/GA-M-TVq/--Ytv~Dpo/*+v~D~sfw*cwTnDsz|w~DhVtmDpo/*+*~D&0tsvLj+bGHq/!CTIONtd`
-(IVALQip_&/CfVW%K&h;W^fLcxJOF9/QwHh;W^f+H&OQbzWn`$:V!z9][OmZKA&l!e|,eO[^SZe/
-GA,/m#.;s.`"
+# 'Brainfuck' Program to Print "Hello World"
+
+# Initialize memory for use
+++++++++++[>+++++++>++++++++++>+++<<<-]>
+
+# Set up ASCII value for 'H'
+>>+.>---.+++++++..+++.>++++.
+
+# Set up ASCII value for 'o' (continued)
+<<+++++++++++++.>.
+
+# Set up ASCII value for 'W'
+>.
+
+# Set up ASCII value for 'o'
++.++++++++.+.
+
+# Set up ASCII values for 'r' and 'l'
+>--..>.
+
+# Set up ASCII value for 'd'
+-.+++++++++++++++.
+
+# Add a new line at the end
+>+.
