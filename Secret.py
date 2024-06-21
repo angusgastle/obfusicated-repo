@@ -1,25 +1,9 @@
-# 'Brainfuck' Program to Print "Hello World"
-
-# Initialize memory for use
-++++++++++[>+++++++>++++++++++>+++<<<-]>
-
-# Set up ASCII value for 'H'
->>+.>---.+++++++..+++.>++++.
-
-# Set up ASCII value for 'o' (continued)
-<<+++++++++++++.>.
-
-# Set up ASCII value for 'W'
->.
-
-# Set up ASCII value for 'o'
-+.++++++++.+.
-
-# Set up ASCII values for 'r' and 'l'
->--..>.
-
-# Set up ASCII value for 'd'
--.+++++++++++++++.
-
-# Add a new line at the end
->+.
+brainfuck
+++++++++++[>+++++++>++++++++++>+++>+<<<<-]>++.            # Set Cell #0 to 72 (H)
+>+.                                                    # Set Cell #1 to 101 (e)
++++++++..+++.                                         # Set Cell #2 to 108 (l), repeat twice for "l"
+>>+.                                                  # Set Cell #3 to 111 (o)
+<<-----------.                                        # Set Cell #2 to 32 (space)
+<.                                                   # Set Cell #1 to 87 (W)
++++.------.--------.                                  # Adjust to 111 (o), 114 (r), and 108 (l)
+<+                                                 >. # Set Cell #0 to 100 (d)
