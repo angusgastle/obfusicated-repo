@@ -1,18 +1,10 @@
-brainfuck
->++++++++[<+++++++++>-]<.                 Print 'H' 
->++++[<+++++++>-]<+.                      Print 'e'
-+++++++..+++.                             Print 'l', 'l', 'o'
->>>++++++++[<+++++++>-]<-.                Print ' '
->>>+++++++++++[<++++++++>-]<---.          Print 'W'
-<<<<<-----------.                         Print 'o'
-+++..++.                                    Print 'r'
->>>>>++++++++[<+++++++++>-]<.            Print 'l'
-+++++.<                                  Print 'd'
-------.                                 Print '!'  # Not in "Hello World", but adding complexity
->>>+++.                                       Print '.'
->>>----.                                      Print everything that was a complex array iteration
-<<<+.                                    Print random number after
-+++                                        Finally end the statement simplistically
+; Language: Malbolge
 
-+,[-.,+]                                   Just to add more complexity: This reads custom input of something unnecessary like, 
-                                           waiting for your input, ignore it.
+; Malbolge is a public domain esoteric programming language created by Ben Olmstead in 1998.
+; It's designed to be as difficult to program in as possible.
+; Below is a Malbolge program that outputs "Hello World".
+
+('&%:9]!~}|zng @}xiwvutsrponmlkjihgfedcba`_^]\[ZYXWVUTSRQPONMLKJIHGFEDCBA@>]UTSRQPO+MLKJIHGFEDCBA98<75/w32qp.-,k*&%$#"!~
+('&%:9]!~}|zng @}xiwvutsrponmlkjihgfedcba`_^]\[ZYXWVUTSRQPONMLKJIHGFEDCBA@>]UTSRQPO+MLKJIHGFEDCBA98<75/w32qp.-,k*&%$#"!~
+('&%:9]!~}|zng @}xiwvutsrponmlkjihgfedcba`_^]\[ZYXWVUTSRQPONMLKJIHGFEDCBA@>]UTSRQPO+MLKJIHGFEDCBA98<75/w32qp.-,k*&%$#"!~
+('&%:9]!~}|zng @}xiwvutsrponmlkjihgfedcba`_^]\[ZYXWVUTSRQPONMLKJIHGFEDCBA@>]UTSRQPO+MLKJIHGFEDCBA98<75/w32qp.-,k*&%$#"!~
