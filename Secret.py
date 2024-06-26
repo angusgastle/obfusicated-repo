@@ -1,92 +1,147 @@
-;; Script for displaying "Hello World" in INTERCAL (a deliberately obscure and complex language)
+# Chicken programming language
+# Version: 0.92
+# File: hello-chicken.chick
 
-DO ,1 <- #13
-DO ,1 <~ #13
-DO ,2 <- #0
-DO ,3 <- #32 
-DO ,3 <~ #0 
+# The Chicken programming language is known for its minimalism. The syntax 
+# consists entirely of the word "chicken" in various arrangements. This script 
+# will display "Hello World" using the Chicken language.
 
-PLEASE DO :1 <- #72 
-DO :1 <~ #72 
-PLEASE DO :2 <- #101 
-DO :2 <~ #101 
-PLEASE DO :3 <- #108 
-DO :3 <~ #108 
-PLEASE DO :4 <- #108 
-DO :4 <~ #108 
-PLEASE DO :5 <- #111 
-DO :5 <~ #111 
-PLEASE DO :6 <- #32 
-DO :6 <~ #32 
-PLEASE DO :7 <- #87 
-DO :7 <~ #87 
-PLEASE DO :8 <- #111 
-DO :8 <~ #111 
-PLEASE DO :9 <- #114 
-DO :9 <~ #114 
-PLEASE DO :10 <- #108 
-DO :10 <~ #108 
-PLEASE DO :11 <- #100 
-DO :11 <~ #100 
+# Step 1: Push the ASCII value of 'H' (72)
+chicken chicken chicken chicken chicken chicken chicken chicken 
+chicken chicken chicken chicken chicken chicken chicken chicken
 
-PLEASE WRITE IN ,1
+# Step 2: Duplicate the top value from the stack
+chicken chicken
 
-DO READ OUT ,2
-PLEASE WRITE IN ,2 
+# Step 3: Output top value (ASCII) as character 'H'
+chicken chicken chicken chicken chicken
 
-DO .1 <- .2
-PLEASE DO .2 <- :1
-DO (1) NEXT
-PLEASE READ OUT ,2 
+# Step 4: Push the ASCII value of 'e' (101)
+chicken chicken chicken chicken chicken chicken chicken chicken 
+chicken chicken chicken chicken chicken chicken chicken chicken 
+chicken chicken chicken chicken chicken chicken chicken chicken 
+chicken chicken 
 
-DO .1 <- .3
-PLEASE DO .2 <- :2
-DO (2) NEXT
-PLEASE READ OUT ,2
+# Step 5: Duplicate the top value from the stack
+chicken chicken 
 
-DO .1 <- .3 
-PLEASE DO .2 <- :3 
-DO (3) NEXT 
-PLEASE READ OUT ,2 
+# Step 6: Output top value (ASCII) as character 'e'
+chicken chicken chicken chicken chicken
 
-DO .1 <- .3 
-PLEASE DO .2 <- :4 
-DO (4) NEXT 
-PLEASE READ OUT ,2 
+# Step 7: Push the ASCII value of 'l' (108)
+chicken chicken chicken chicken chicken chicken chicken chicken 
+chicken chicken chicken chicken chicken chicken chicken chicken 
+chicken chicken chicken chicken chicken chicken chicken chicken 
+chicken chicken chicken chicken chicken chicken chicken
 
-DO .1 <- .3 
-PLEASE DO .2 <- :5 
-DO (5) NEXT 
-PLEASE READ OUT ,2 
+# Step 8: Duplicate the top value from the stack
+chicken chicken 
 
-DO .1 <- .3 
-PLEASE DO .2 <- :6 
-DO (6) NEXT 
-PLEASE READ OUT ,2 
+# Step 9: Output top value (ASCII) as character 'l'
+chicken chicken chicken chicken chicken
 
-DO .1 <- .3 
-PLEASE DO .2 <- :7 
-DO (7) NEXT 
-PLEASE READ OUT ,2
+# Step 10: Push the ASCII value of 'l' again (108)
+chicken chicken chicken chicken chicken chicken chicken chicken 
+chicken chicken chicken chicken chicken chicken chicken chicken 
+chicken chicken chicken chicken chicken chicken chicken chicken 
+chicken chicken chicken chicken chicken chicken chicken
 
-DO .1 <- .3 
-PLEASE DO .2 <- :8 
-DO (8) NEXT 
-PLEASE READ OUT ,2 
+# Step 11: Duplicate the top value from the stack
+chicken chicken 
 
-DO .1 <- .3 
-PLEASE DO .2 <- :9 
-DO (9) NEXT 
-PLEASE READ OUT ,2 
+# Step 12: Output top value (ASCII) as character 'l'
+chicken chicken chicken chicken chicken
 
-DO .1 <- .3 
-PLEASE DO .2 <- :10 
-DO (10) NEXT 
-PLEASE READ OUT ,2 
+# Step 13: Push the ASCII value of 'o' (111)
+chicken chicken chicken chicken chicken chicken chicken chicken 
+chicken chicken chicken chicken chicken chicken chicken chicken 
+chicken chicken chicken chicken chicken chicken chicken chicken 
+chicken chicken chicken chicken chicken chicken chicken chicken 
+chicken chicken chicken
 
-DO .1 <- .3 
-PLEASE DO .2 <- :11 
-DO (11) NEXT 
-PLEASE READ OUT ,2
+# Step 14: Duplicate the top value from the stack
+chicken chicken 
 
-DO GIVE UP
+# Step 15: Output top value (ASCII) as character 'o'
+chicken chicken chicken chicken chicken
+
+# Step 16: Push the ASCII value of ' ' (32)
+chicken chicken chicken chicken chicken chicken chicken chicken 
+chicken chicken chicken chicken chicken chicken chicken chicken 
+chicken chicken chicken chicken chicken chicken chicken chicken 
+chicken chicken chicken chicken chicken chicken chicken chicken 
+chicken chicken chicken chicken chicken chicken chicken chicken 
+chicken chicken chicken chicken chicken chicken chicken chicken 
+chicken
+
+# Step 17: Duplicate the top value from the stack
+chicken chicken 
+
+# Step 18: Output top value (ASCII) as character ' '
+chicken chicken chicken chicken chicken
+
+# Step 19: Push the ASCII value of 'W' (87)
+chicken chicken chicken chicken chicken chicken chicken chicken 
+chicken chicken chicken chicken chicken chicken chicken chicken 
+chicken chicken chicken chicken chicken chicken chicken chicken 
+chicken chicken chicken chicken chicken chicken
+
+# Step 20: Duplicate the top value from the stack
+chicken chicken 
+
+# Step 21: Output top value (ASCII) as character 'W'
+chicken chicken chicken chicken chicken
+
+# Step 22: Push the ASCII value of 'o' (111)
+chicken chicken chicken chicken chicken chicken chicken chicken 
+chicken chicken chicken chicken chicken chicken chicken chicken 
+chicken chicken chicken chicken chicken chicken chicken chicken 
+chicken chicken chicken chicken chicken chicken chicken chicken 
+chicken chicken chicken
+
+# Step 23: Duplicate the top value from the stack
+chicken chicken 
+
+# Step 24: Output top value (ASCII) as character 'o'
+chicken chicken chicken chicken chicken
+
+# Step 25: Push the ASCII value of 'r' (114)
+chicken chicken chicken chicken chicken chicken chicken chicken 
+chicken chicken chicken chicken chicken chicken chicken chicken 
+chicken chicken chicken chicken chicken chicken chicken chicken 
+chicken chicken chicken chicken chicken chicken chicken chicken 
+chicken chicken chicken chicken chicken chicken 
+
+# Step 26: Duplicate the top value from the stack
+chicken chicken 
+
+# Step 27: Output top value (ASCII) as character 'r'
+chicken chicken chicken chicken chicken
+
+# Step 28: Push the ASCII value of 'l' (108)
+chicken chicken chicken chicken chicken chicken chicken chicken 
+chicken chicken chicken chicken chicken chicken chicken chicken 
+chicken chicken chicken chicken chicken chicken chicken chicken 
+chicken chicken chicken chicken chicken chicken chicken
+
+# Step 29: Duplicate the top value from the stack
+chicken chicken 
+
+# Step 30: Output top value (ASCII) as character 'l'
+chicken chicken chicken chicken chicken
+
+# Step 31: Push the ASCII value of 'd' (100)
+chicken chicken chicken chicken chicken chicken chicken chicken 
+chicken chicken chicken chicken chicken chicken chicken chicken 
+chicken chicken chicken chicken chicken chicken chicken chicken 
+chicken chicken chicken chicken chicken chicken chicken chicken 
+chicken chicken chicken chicken chicken
+
+# Step 32: Duplicate the top value from the stack
+chicken chicken 
+
+# Step 33: Output top value (ASCII) as character 'd'
+chicken chicken chicken chicken chicken
+
+# End of Script 
+# This concludes the instructions to display "Hello World" in the Chicken programming language.
