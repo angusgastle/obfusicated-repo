@@ -1,28 +1,34 @@
-///// Brainfuck Code to display "Hello World"
+# Befunge-93 Code
 
-// Initialize memory cells
-+++++ +++++ initialize cell 0 to 10 (ASCII 10)
-[ move loop start
-> +++++ +++ initialize cell 1 to 7 (ASCII 7)
-> +++++ +++++ initialize cell 2 to 10 (ASCII 10)
-> +++ initialize cell 3 to 3 (ASCII 3)
-> + initialize cell 4 to 1 (ASCII 1)
-<<<<<- decrement cell 0 (loop control) by 1
-] loop until cell 0 is zero
+# Befunge-93 is a 2D esoteric programming language.
+# The instructions are laid out on a playfield of 80x25 cells.
+# This following script will display "Hello World" in a very
+# convoluted and lengthy manner.
 
-// Sequence established now to store and print
-> ++ . print 'H' (cell 1+2, ASCII 72)
-> + . print 'e' (cell 2+1, ASCII 101)
->> . reset and print 'l' (cell 2+3, set cell 4 to 108)
-. print 'l' again
-> + . print 'o' (cell 3+1, ASCII 111)
-<<<<< . reset cell pointer to start and move to cell 4
-+. print ' ' (cell 0, ASCII 32)
-> +++++ + . print 'W' starting from cell 3, with overflow to next cell (ASCII 87)
-+++++ +++ . print 'o' (cell 3+1, ASCII 111)
-. print 'r' (cell 4-1, ASCII 114)
-<<< . reset and go to initial memory
-. print 'l' again (cell 3+3)
-> . print 'd' (cell 4+1)
-+++ . print '!' (cell 3, ASCII 33)
-++++.+++++ . end (cell 2, newline or chosen end symbol)
+>25*"!dlroW ,olleH":v
+v,,,,,,,,,,,,,,:<
+>  :+70p"
+    "@,,,,,,,,,,:<
+>25*72p:2*,#v_25*72pv_
+:,,,,,,,,,,,,91g1-,!@#
+>  -:71p
+^,,,,5g!v       :
+,,"A25*72g#<@,,"B72*5g2,.<
+
+# Explanation of some Befunge-93 commands used:
+# >          - Start moving right
+# v and ^    - Start moving up or down
+# <          - Start moving left
+# :          - Duplicate the top value on the stack
+# ,          - Output the ASCII value of the top value on the stack
+# !          - Logical NOT (0 becomes 1, others become 0)
+# @          - End the program
+# *          - Multiply the top two values on the stack
+# p          - Put value into playfield
+# g          - Get value from playfield
+# #          - Bridge, skip next instruction
+# 0-9        - Push corresponding value on the stack
+# - and +    - Subtract or add top two stack values
+# "          - Toggle stringmode (push each char as ASCII value)
+
+# Note: Befunge-93 is a fun and weird language to work with!
