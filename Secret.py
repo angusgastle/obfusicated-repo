@@ -1,40 +1,47 @@
-/// Mad language - A fictional, esoteric language just for fun
-/// This program displays "Hello World" to the terminal.
-/// Mad Language is a line-by-line command execution language.
-/// Each character has a specific function, resulting in complex and interesting code.
-EVERY // Surrounds the code. Always mandatory.
+; Retro-BASIC: Hello World Script
 
-START // Program starts here
+' Initiate the approximate system entry point
+MainProgram:
 
-LOAD #H# // Load character H to memory
-PUSH // Push character H to stack
-LOAD #e# // Load character e to memory
-PUSH // Push character e to stack 
-LOAD #l# // Load character l to memory
-PUSH // Push character l to stack
-DUPLICATE // Duplicate the top of the stack (another l)
-LOAD #o# // Load character o to memory
-PUSH // Push character o to stack
+' Declare and initialize variables
+' p1, p2, ..., p9 for program steps
+p1 = 10 
+p2 = p1 + 5
+p3 = p2 + 5
+p4 = p3 + 5
 
-LOAD #SPACE# // Load space character to memory
-PUSH // Push space to stack
+' Initialize counters, strings, and characters
+c1 = 0
+str1 = ""
+str2 = ""
 
-LOAD #W# // Load character W to memory
-PUSH // Push character W to stack
-LOAD #o# // Load character o to memory
-PUSH // Push character o to stack
-LOAD #r# // Load character r to memory
-PUSH // Push character r to stack
-LOAD #l# // Load character l to memory
-PUSH // Push character l to stack
-LOAD #d# // Load character d to memory
-PUSH // Push character d to stack
+' Build segments of Hello World message
+FOR c1 = 1 TO 5
+  GOSUB BuildHello
+  GOSUB BuildWorld
+NEXT c1
 
-LOAD #EXCLAIM# // Load exclamation mark to memory
-PUSH // Push exclamation mark to stack
+' Concatenate and display the message
+Message = str1 + " " + str2
+PRINT Message
 
-OUTPUT // Output all stacked characters as a string
+' End the program
+END
 
-END // Program ends here
+' Subroutine to build "Hello"
+BuildHello:
+  IF c1 = 1 THEN str1 = "H"
+  IF c1 = 2 THEN str1 = str1 + "e"
+  IF c1 = 3 THEN str1 = str1 + "l"
+  IF c1 = 4 THEN str1 = str1 + "l"
+  IF c1 = 5 THEN str1 = str1 + "o"
+RETURN
 
-EVERY // Surrounds the code. Always mandatory.
+' Subroutine to build "World"
+BuildWorld:
+  IF c1 = 1 THEN str2 = "W"
+  IF c1 = 2 THEN str2 = str2 + "o"
+  IF c1 = 3 THEN str2 = str2 + "r"
+  IF c1 = 4 THEN str2 = str2 + "l"
+  IF c1 = 5 THEN str2 = str2 + "d"
+RETURN
