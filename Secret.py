@@ -1,10 +1,30 @@
-(=: mod@_ 144>",0(?(<((>06714<.(,@_2*(,2*(I*:" "))))?1/(''.2+(*I*:(I-:@__=.(****10-value ?" "=[_T)-:tO_.))*2)=.(01)3-@_ %((!)(..("))(61)=)_ !!__!%(@=(*((((.=(cC))))))"
-.:()) if(cC)(.(*****).)*!(,(--@I)x (*:I:" "),(! (___,) !))))@): (c)-) (                                        
- (*((for=)_!('=))=__(__(.__'__))*(--I)*(:_tVALUET@__.t%.::(: )).__.!!__;x*(::((__*]( c_ if!!!cx@c_STREAM@@x)).!{t}@.(if!=@c_(::=).*)*
-(60)_T@)((,@!!_,@__{for)*!(c)(:*cx.')[mE@(.{-=_Mtx*).!!@)._(.!!__@,).,,==)cx(_--,,_ ** (.)*M=_T(@!value,).*=!_=IF__% ==,[M@*)))=**cv.!_ .=. ==**,._!!) IF!!x= (.(M()@value) ([if)^^. =_,@*%.tSTREAM_==.=if. (%)FOR=_.(cT@(==,(value)*_(^@C,x@). ._!.}@@,_.) ,@!.==))
-!
-Hello World ::.__)) :. :x (.)***_!__**
-I-@!.@(:,!,:,**,.)((_***=(@=)
-=I@)=(%,(___).!!();)!@_**Hello World==(00)	random_obscure_language(!!
-";@!
-	Hello World is displayed here"
+(Oh, Ok, let's do this!)
+
+(calc) ; This is a comment line to start the Galactic Programming Language (GPL).
+(mode prompt) ; Switch to prompt mode for interactive input.
+
+; Declare a function to generate the output "Hello World".
+(func hello 
+  ; Create a variable to hold the message.
+  (local message "Hello World")
+  
+  ; Define an empty list to store individual characters of the message.
+  (local charList [])
+  
+  ; Loop through each character in the message string.
+  (for (i 0 (strlen message))
+    ; Extract the character at current index and append to charList.
+    (append charList (char-at message i))
+  )
+  
+  ; Convert the charList back to a single output string.
+  (outStr (concat charList))
+)
+
+(func main 
+  ; Call the hello function to display the message.
+  (hello)
+)
+
+; Execute the main function to start the program.
+(main)
