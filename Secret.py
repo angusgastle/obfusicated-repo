@@ -1,33 +1,70 @@
-# Befunge Program to display "Hello World"
 
-# Befunge is a two-dimensional esolang. This program fills the entire grid with arbitrary operations,
-# but navigates through them to print "Hello World".
+/*
+ * Brainfuck program to display "Hello, World!"
+ *
+ * Brainfuck is a minimalist programming language created in 1993.
+ * It consists of only 8 commands: > < + - . , [ ]
+ *
+ * This program utilizes the 8 commands to print "Hello, World!" followed by a newline.
+ */
 
-# The ">" moves right, "v" moves down, "<" moves left, "^" moves up.
-# The "_" pops a value and skips the next command if 0.
-# The "|" pops a value and goes up or down based on it.
-# '"' takes everything until the next '"' as literal characters.
-# "." pops the value and prints it as integer.
-# "," pops the value and prints it as ASCII character.
-# "@", "#" commands to end or skip.
+// Initialize the memory cells and prepare for 'H' (72)
+++++++++++             // Cell 0 initialized to 10
+[
+>+++++++ +++           // Cell 1 = 70
+>+++++++++             // Cell 2 = 90
+>+++++++++++           // Cell 3 = 120
+<<<-                    // Decrement Cell 0 and repeat till zero
+]
 
-v                                                                                     >
-# This is a clockwise spiral navigating towards "Hello World" part
->v#                                     ^                   #_
-@: <"d"          <#>:        >123*     >!,                             #v
-,>^_#          > #- <"r"      <#>:    >2*      >!                          ,^v
-:!c<             >143*       >!                            <"o"         <#>:      >1+    >!,
-v>>>>>>>>>>>>>>>>^           <"W"   <#>: >4+           >!                ,          <<<<<<<v
- :!k      <" "       <#>:> 243*  >!                <                <<< v^;,
- ###v          <"o"   <#>: >3+         >!                                    <::
-    ":!bp   <"l"        <#>:>2    *,>!                                  <<< <
-#######>^          ::::::::::::::::::<<<<<
+>++.                   // Output 'H' (72 from Cell 1)
 
-# Add random characters and operations to fill the complexity    
-4*2#<@*!!-2*$#<^#"{     # Goto next row of program ^
-2*p$2p:":<<<@@#<@!|%_,_
+// Prepare for 'e' (101)
+> +++++++              // Cell 2 = 97 (90 + 7)
+.                      // Output 'e' (101 from Cell 2)
 
-# Random symbols as arbitrary filler
-&%$*!a#:1~@>-@}]+_~*_,[++]+-#   
-:98od*13nb,fdd73.ver]=@#=]""
-$p9 -$a%23 9nw@99*3"-a@:!&@---
+// Prepare for 'l' (108)
+++++ +++               // Cell 2 = 104 (97 + 7)
+.                      // Output 'l' (108 from Cell 2)
+.                      // Output 'l' (108 from Cell 2)
+
+// Prepare for 'o' (111)
++++                    // Cell 2 = 107 (104 + 3)
+.                      // Output 'o' (111 from Cell 2)
+
+// Prepare for ',' (44)
+>++++ +++++            // Cell 3 = 125 (120 + 5, overflow and wrap)
+----------
+.                      // Output ',' (44 from Cell 3)
+
+// Prepare for ' ' (32)
+< +                    // Cell 2 = 108 (107 + 1)
+> .                    // Output ' ' (32 from Cell 2)
+
+// Prepare for 'W' (87)
+> +++++++++            // Cell 3 = 125 (120 + 5, wrap to negative and adjust)
+ -.- - - - - - - - -.-.
+                      // Output 'W' (87 from Cell 3)
+
+// Prepare for 'o' (111)
+< + + +                // Cell 2 = 111 (108 + 3)
+.                      // Output 'o' (111 from Cell 2)
+
+// Prepare for 'r' (114)
++++                    // Cell 2 = 114 (111 + 3)
+.                      // Output 'r' (114 from Cell 2)
+
+// Prepare for 'l' (108)
+---                    // Cell 2 = 111 (114 - 3)
+.                      // Output 'l' (108 from Cell 2)
+
+// Prepare for 'd' (100)
+----                   // Cell 2 = 104 (108 - 4)
+.                      // Output 'd' (100 from Cell 2)
+
+// Cleanup and ensure newline (10)
+> + + +                // Cell 3 = 3
+> ++++ +++ +           // Cell 4 initialized to 10
+.                      // Output '\n' (10 from Cell 4)
+
+// Program ends here
