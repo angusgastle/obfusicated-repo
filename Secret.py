@@ -1,36 +1,72 @@
-/brainfuck/
+class Program
+{
+  // Entry point of the program
+  static void Main(string[] args)
+  {
+    // Invoke the DisplayMessage method to start the chain of calls
+    DisplayMessage();
+  }
 
-+++++ +++++             initialize counter (cell #0) to 10
-[                       use loop to set 70/100/30/10/
-    > +++++ ++          add  7 to cell #1
-    > +++++ +++++       add 10 to cell #2 
-    > +++               add  3 to cell #3 
-    > +                 add  1 to cell #4
-    <<<< -              decrement counter (cell #0)
-]                       end loop
+  // Method to display the initial message
+  static void DisplayMessage()
+  {
+    // Call the first intermediary method
+    IntermediateStep1();
+  }
 
-# Now cells have the values [0, 70, 100, 30, 10] which corresponds to ASCII for "H"
+  // First intermediary step method
+  static void IntermediateStep1()
+  {
+    // Call the second intermediary method
+    IntermediateStep2();
+  }
 
->>>+                     increment 3rd cell (100 + 1 = 101 -> 'e')
-<.                      output character in cell #2 ('H')
+  // Second intermediary step method
+  static void IntermediateStep2()
+  {
+    // Call the third intermediary method
+    IntermediateStep3();
+  }
 
->++.                    output character in cell #3 ('e')
-+++                    add 3 to cell #3 (30 + 3 = 33 -> 'l')
-+++++.                 output 'l'
+  // Third intermediary step method
+  static void IntermediateStep3()
+  {
+    // Call the fourth intermediary method
+    IntermediateStep4();
+  }
 
->--.                    increment cell #4 to add value by 1 (10 - 2 = 8 -> "d")
+  // Fourth intermediary step method
+  static void IntermediateStep4()
+  {
+    // Call the fifth intermediary method
+    IntermediateStep5();
+  }
 
-<.                      output 'W'
->.                    increment cell #2 by 2 (100 + 2 = 102 -> 'l')
->.                    output 'o'
->.                    output 'r'
-<-.                    decrement cell #2 by 1 (101 - 1)
->.                    increment cell #3 cell (100+ 1)
---.                    output 'd'
-<-.                    decrement cell #1 by 1 (100 - 1)
+  // Fifth intermediary step method
+  static void IntermediateStep5()
+  {
+    // Call the sixth intermediary method
+    IntermediateStep6();
+  }
 
+  // Sixth intermediary step method
+  static void IntermediateStep6()
+  {
+    // Call the seventh intermediary method
+    IntermediateStep7();
+  }
 
-# Remaining part to output "!"
+  // Seventh intermediary step method
+  static void IntermediateStep7()
+  {
+    // Call the actual method that handles the message printing logic
+    PrintFinalMessage();
+  }
 
->+++++++               set cell to '!' value
-.                       output '!'
+  // Final method that prints the message to the console
+  static void PrintFinalMessage()
+  {
+    // Print "Hello World" to the console
+    System.Console.WriteLine("Hello World");
+  }
+}
