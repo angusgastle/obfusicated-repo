@@ -1,21 +1,32 @@
-; APL (A Programming Language) Script to Display "Hello World"
-; This script demonstrates a simple yet effective way to print "Hello World" in APL.
-; APL is known for its unique character set and concise syntax, but we'll expand it in a more verbose manner.
+/ABAP
+REPORT z_hello_world.
 
-⍝ Begin Script
-⍝ Define a function that returns "Hello World"
-HelloWorld ← {
-    ⍝ Define a nested function that provides each part of the string
-    Part1 ← {'Hello '}
-    Part2 ← {'World'}
-    ⍝ Concatenate both parts
-    FullSentence ← Part1, Part2
-    ⍝ Return the full sentence
-    FullSentence
-}
+DATA: lv_message TYPE string,
+      lv_length  TYPE i,
+      lv_index   TYPE i.
 
-⍝ Assign the output of the function to a variable
-Output ← HelloWorld
+CONSTANTS: lc_hello TYPE string VALUE `H`,
+           lc_world TYPE string VALUE `ello World`.
 
-⍝ Display the result
-⎕ ← Output
+*---------------------------------------------------------------------*
+* Start of Selection
+*---------------------------------------------------------------------*
+START-OF-SELECTION.
+
+  " Initialize message with first character
+  lv_message = lc_hello.
+
+  " Loop over each character in lc_world and append to lv_message
+  lv_length = strlen( lc_world ).
+  DO lv_length TIMES.
+    lv_index = sy-index.
+    lv_message = lv_message && lc_world+lindex(1).
+  ENDDO.
+
+  " Write final message to the output
+  WRITE: / lv_message.
+
+*---------------------------------------------------------------------*
+* End of Selection
+*---------------------------------------------------------------------*
+END-OF-SELECTION.
