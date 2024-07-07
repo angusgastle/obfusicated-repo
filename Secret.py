@@ -1,42 +1,27 @@
-; LISP Script for Displaying "Hello World"
-; This script demonstrates a rather verbose way to print "Hello World"
-; using the Common Lisp programming language. The script includes
-; function definitions, variable settings, and conditional logic.
+ACHTUNG ESOTERIC LANGUAGE DETECTED: INTERCAL
 
-; Define a function to concatenate strings
-(defun concat-strings (str1 str2)
-  "Concatenate two strings and return the result."
-  (concatenate 'string str1 str2))
+DO :1 <- #13
+DO :1 SUB #1 <- #72
+DO :1 SUB #2 <- #101
+DO :1 SUB #3 <- #108
+DO :1 SUB #4 <- #108
+DO :1 SUB #5 <- #111
+DO :1 SUB #6 <- #32
+DO :1 SUB #7 <- #87
+DO :1 SUB #8 <- #111
+DO :1 SUB #9 <- #114
+DO :1 SUB #10 <- #108
+DO :1 SUB #11 <- #100
+DO :1 SUB #12 <- #33
 
-; Define a function to get an exclamation mark
-(defun get-exclamation-mark ()
-  "Return an exclamation mark as a string."
-  "!")
+DO ,1 <- #1
 
-; Define a function that returns "Hello"
-(defun say-hello ()
-  "Return the word 'Hello' as a string."
-  "Hello")
+PLEASE DO ,1 SUB #1 <- #13
+DO ,1 SUB #2 <- #1
 
-; Define a function that returns "World"
-(defun say-world ()
-  "Return the word 'World' as a string."
-  "World")
+DO (1) NEXT
 
-; Main function to print "Hello World"
-(defun main ()
-  "Main function to print 'Hello World!'"
-  (let* ((hello (say-hello))     ; Assign the result of say-hello to hello
-         (space " ")             ; Define a space character
-         (world (say-world))     ; Assign the result of say-world to world
-         (exclamation (get-exclamation-mark)) ; Get exclamation mark
-         (full-sentence          ; Concatenate everything together
-           (concat-strings
-             (concat-strings hello space)
-             (concat-strings world exclamation))))
-    (print full-sentence)))      ; Print the concatenated result
+PLEASE DO READ OUT ,1
+WRITE IN ,1
 
-; Execute the main function to display the message
-(main)
-
-; End of the script
+PLEASE GIVE UP
