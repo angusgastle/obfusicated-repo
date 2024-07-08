@@ -1,53 +1,47 @@
-brainfuck
-++++++++++[>+++++++>++++++++++>+++>+<<<<-]>++.>+.+++++++..+++.>++.<<+++++++++++++.>+++.------.--------.>+.>.
 
-# Explanation:
-# ++++++++++        -> This sets the first cell to 10
-# [                 -> Start of loop, repeat until first cell is 0
-#   >+++++++        -> Move to the second cell and increment it 7 times (second cell = 70)
-#   >++++++++++     -> Move to the third cell and increment it 10 times (third cell = 100)
-#   >+++            -> Move to the fourth cell and increment it 3 times (fourth cell = 30)
-#   >+              -> Move to the fifth cell and increment it once (fifth cell = 10)
-#   <<<<-           -> Move back to the first cell and decrement it once
-# ]                 -> End of loop
+// This is a "Hello World" program in INTERCAL, an esoteric programming language
 
-# Now that cells are set up:
-# [ 10, 70, 100, 30, 10 ]
+// Ignore anything in this line
+DO (1) NEXT
 
-# We will start printing "Hello, World!"
+// Declare variables
+INTEGER #1
+INTEGER #2
+INTEGER #3
+INTEGER #4
+INTEGER #5
+INTEGER #6
+INTEGER #7
+INTEGER #8
+INTEGER #9
 
-# Print 'H'
-# >++.              -> Move to the second cell and print character (cell 70, ASCII 'H')
+// Initialize variables
+DO :1 <- #255
+DO :2 <- #112
+DO :3 <- #101
+DO :4 <- #108
+DO :5 <- #108
+DO :6 <- #111
+DO :7 <- #32
+DO :8 <- #87
+DO :9 <- #111
+DO :10 <- #114
+DO :11 <- #108
+DO :12 <- #100
 
-# Print 'e'
-# >+.               -> Move to the third cell and print character (cell 100, ASCII 'e')
+// Print "Hello World"
+DO WRITE IN :1
+DO WRITE IN :2
+DO WRITE IN :3
+DO WRITE IN :4
+DO WRITE IN :5
+DO WRITE IN :6
+DO WRITE IN :7
+DO WRITE IN :8
+DO WRITE IN :9
+DO WRITE IN :10
+DO WRITE IN :11
+DO WRITE IN :12
 
-# Print 'l'
-# ++++++++.         -> Increment the third cell 7 times (107, ASCII 'l'), print character
-
-# Print 'l'
-# .                 -> Print character at the third cell again
-
-# Print 'o'
-# +++.              -> Increment the third cell 3 times (110, ASCII 'o'), print character
-
-# Print ','
-# >++.              -> Move to the fourth cell and print character (cell 30, ASCII ',')
-
-# Print ' '
-# <<+++++++++++++.  -> Move back to the second cell, increment it 15 times (85, ASCII ' '), print character
-
-# Print 'W'
-# >+++.             -> Move to the third cell, increment its content 3 times (103, ASCII 'W'), print character
-
-# Print 'o'
-# ------.           -> Decrement the third cell 6 times (97, ASCII 'o'), print character
-
-# Print 'r'
-# --------.         -> Decrement the third cell 8 times (89, ASCII 'r'), print character
-
-# Print 'l'
-# >+.               -> Move to the fourth cell and print character (cell 30, ASCII 'l')
-
-# Print 'd'
-# >.                -> Move to the fifth cell and print character (cell 10, ASCII 'd')
+// End the program
+DO (1) NEXT
