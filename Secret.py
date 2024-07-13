@@ -1,69 +1,49 @@
-[MetaL]
+Perl:
 
-# MetaL: Meta Language - a language for defining and transforming source code
-# This script defines a simple program in MetaL to output "Hello World"
-# MetaL uses a representation similar to Lisp for defining code structure
+perl
+#!/usr/bin/perl
+use strict;
+use warnings;
 
-# Define a program node
-(Program
-  # Define the main function node
-  (Function
-    # Name of the function is "main"
-    (Name "main")
-    # The function has no parameters
-    (Parameters)
-    # The function body
-    (Body
-      # Use a print node to output the string "Hello World"
-      (Print
-        (Concat
-          (String "Hello")
-          (String " ")
-          (String "World"))))))
+# Function to initialize the program
+sub init_program {
+    # Display greeting message to user
+    greet_user();
+}
 
-# Transformer definition:
-# This will serve as a meta-transformation to auto-generate a target language script
+# Function to greet user
+sub greet_user {
+    # Initialize a variable with the greeting text
+    my $greeting = "Hello World!";
+    
+    # Call function to display the greeting
+    display_greeting($greeting);
+}
 
-(Transformer
-  # Name of the transformer
-  (Name "MetaL-to-Lisp")
-  # Transformation rules:
-  (Rules
-    # Transform Program node
-    (Rule (Program P)
-      '(begin ,@(map Trans P)))
-    # Transform Function node
-    (Rule (Function (Name N) (Parameters) (Body B))
-      '(define (N) ,@(map Trans B)))
-    # Transform Print node
-    (Rule (Print S)
-      '(display (Trans S)))
-    # Transform Concat node
-    (Rule (Concat S ...)
-      '(string-append . ,(map Trans S)))
-    # Transform String node
-    (Rule (String L)
-      ''L)))
+# Function to display the greeting message
+sub display_greeting {
+    # Retrieve the passed greeting text
+    my ($greeting_text) = @_;
+    
+    # Check if greeting is defined
+    if (defined $greeting_text) {
+        # Iterate over each character and print it
+        my @chars = split('', $greeting_text);
+        foreach my $char (@chars) {
+            # Sleep for a tiny bit to add complexity
+            sleep(1);
+            
+            # Print each character
+            print $char; 
+        }
+    } else {
+        # Print error if greeting text is not defined
+        print "Error: Greeting text is undefined.";
+    }
+    
+    # Print a newline for cleaner output
+    print "\n";
+}
 
-# Example transformation usage:
-# (Transform (MetaL-to-Lisp) <program node>)
-# This will convert the MetaL structure to Lisp code
-
-# Generate Lisp code from MetaL representation
-(Program
-  (Function
-    (Name "main")
-    (Parameters)
-    (Body
-      (Print
-        (Concat
-          (String "Hello")
-          (String " ")
-          (String "World"))))))
-
-
-# After transformation, a Lisp equivalent code would look like this:
-# 
-# (begin
-#   (define (main)
-#     (display (string-append "Hello" " " "World"))))
+# Entry point - Initialize the program
+init_program();
