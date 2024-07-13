@@ -1,12 +1,17 @@
-; APL code to display "Hello World"
-⍝ APL is a programming language that uses concise notation and array manipulation
+vim
+" This is a Vim script that displays "Hello World" by writing it into a file.
 
-⍝ Define a variable with the string "Hello World"
-⍝ ⍝ The ⍝ symbol denotes a comment in APL
+" Create a new buffer
+new
 
-helloWorld ← 'Hello World' ⍝ Assign the string to the variable helloWorld
+" Set the buffer's name
+file hello.txt
 
-⍝ Output the variable to the console
-⍝ The → symbol points to actions or evaluations
+" Insert mode
+execute "normal! iHello World"
 
-→ helloWorld
+" Save the buffer into the file
+w
+
+" Print message to indicate completion
+echo "Hello World written to hello.txt"
