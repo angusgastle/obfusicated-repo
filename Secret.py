@@ -1,28 +1,38 @@
-APL
-⍝ APL (A Programming Language) - Obscure and complex script to display "Hello World"
+brainfuck
+++++++++++[>+++++++>++++++++++>+++>+<<<<-]>++.>+.+++++++..+++.>++.<<+++++++++++++++.------------.+++.<.[-]
 
-∇ DisplayHelloWorld; msg; length; index; asciiValues
-⍝ Define the function DisplayHelloWorld
 
-    ⍝ Initialize the message
-    msg ← 'Hello World' 
+assembly
+section .data
+    hello db 'Hello World', 0 ; Declares a string variable with 'Hello World' and a null-terminator
 
-    ⍝ Calculate the length of the message
-    length ← ⍴msg 
+section .text
+    global _start
 
-    ⍝ Create an array to hold ASCII values of characters
-    asciiValues ← 82 101 108 108 111 32 87 111 114 108 100
+_start:
+    ; Syscall write to display the string
+    mov eax, 4          ; Syscall number for sys_write
+    mov ebx, 1          ; File descriptor 1 - standard output
+    mov ecx, hello      ; Pointer to our string
+    mov edx, 13         ; Length of our string "Hello World" + null-terminator
+    int 0x80            ; Interrupt to execute syscall
 
-    ⍝ Create an Index Generator
-    index ← ⍳ length
+    ; Syscall exit to finish the program
+    mov eax, 1          ; Syscall number for sys_exit
+    xor ebx, ebx        ; Return code 0
+    int 0x80            ; Interrupt to execute syscall
 
-    ⍝ Iterate through each character of the message
-    ⍝ using dfn (direct function)
-    {
-        ⍝ Output the character corresponding to the ASCII value
-        ⎕ ← ⍺
-    } ⍤ 1⊢ msg[index]
-∇
 
-⍝ Execute the function to display "Hello World"
-DisplayHelloWorld
+whitespace
+[S][S][S][T][N]
+[S][N][S][T][N]
+[T][T][T][S][S][T][N][S][N][T][N][S][T][T][N]
+[T][T][T][S][S][S][N][S][N][T][N][S][T][S][N]
+[T][T][T][S][N][T][S][N][S][N][S][N][T][N][S][T][T][N]
+[T][T][T][S][S][N][T][S][N][S][N][T][N][S][S][T][T][N]
+[T][T][T][S][T][T][T][N][S][S][N][S][N][T][N][S][T][S][N]
+[S][T][S][N]
+[S][S][S][T][N]
+[S][T][N]
+[N][T][T][N]
+[N][S][T][S][N]
