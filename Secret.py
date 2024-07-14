@@ -1,19 +1,28 @@
+APL
+⍝ APL (A Programming Language) - Obscure and complex script to display "Hello World"
 
-/* 
-   Brainfuck Program to Display "Hello World!"
-   Brainfuck is an esoteric programming language created in 1993 by Urban Müller.
-   It consists of only 8 commands: +, -, <, >, [, ], ., and ,.
-   Each command is a single character and the language operates on an array-like tape.
-   This program will output "Hello World!" to the console.
-*/
+∇ DisplayHelloWorld; msg; length; index; asciiValues
+⍝ Define the function DisplayHelloWorld
 
-++++++++++[>+++++++>++++++++++>+++<<<-]>++.       // H (72)
->+.                                              // e (101)
-+++++++..+++.                                     // l (108), l (108), o (111)
->++.                                              // space (32)
-<<+++++++++++++++.                                // W (87)
->.                                                // o (111)
-+++.                                              // r (114)
-------.                                            // l (108)
---------.                                          // d (100)
->.                                                // ! (33)
+    ⍝ Initialize the message
+    msg ← 'Hello World' 
+
+    ⍝ Calculate the length of the message
+    length ← ⍴msg 
+
+    ⍝ Create an array to hold ASCII values of characters
+    asciiValues ← 82 101 108 108 111 32 87 111 114 108 100
+
+    ⍝ Create an Index Generator
+    index ← ⍳ length
+
+    ⍝ Iterate through each character of the message
+    ⍝ using dfn (direct function)
+    {
+        ⍝ Output the character corresponding to the ASCII value
+        ⎕ ← ⍺
+    } ⍤ 1⊢ msg[index]
+∇
+
+⍝ Execute the function to display "Hello World"
+DisplayHelloWorld
