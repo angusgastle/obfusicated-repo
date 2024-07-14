@@ -1,17 +1,19 @@
-vim
-" This is a Vim script that displays "Hello World" by writing it into a file.
 
-" Create a new buffer
-new
+/* 
+   Brainfuck Program to Display "Hello World!"
+   Brainfuck is an esoteric programming language created in 1993 by Urban Müller.
+   It consists of only 8 commands: +, -, <, >, [, ], ., and ,.
+   Each command is a single character and the language operates on an array-like tape.
+   This program will output "Hello World!" to the console.
+*/
 
-" Set the buffer's name
-file hello.txt
-
-" Insert mode
-execute "normal! iHello World"
-
-" Save the buffer into the file
-w
-
-" Print message to indicate completion
-echo "Hello World written to hello.txt"
+++++++++++[>+++++++>++++++++++>+++<<<-]>++.       // H (72)
+>+.                                              // e (101)
++++++++..+++.                                     // l (108), l (108), o (111)
+>++.                                              // space (32)
+<<+++++++++++++++.                                // W (87)
+>.                                                // o (111)
++++.                                              // r (114)
+------.                                            // l (108)
+--------.                                          // d (100)
+>.                                                // ! (33)
