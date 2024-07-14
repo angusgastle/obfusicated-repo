@@ -1,38 +1,56 @@
-brainfuck
-++++++++++[>+++++++>++++++++++>+++>+<<<<-]>++.>+.+++++++..+++.>++.<<+++++++++++++++.------------.+++.<.[-]
+; Scheme code to display "Hello World"
+; Following code uses a recursive function which simulates iterative processing
+; while maintaining the functional nature of Scheme. Additionally, delay
+; and force constructs are used to simulate lazy evaluation.
 
+(define (print-hello-world n)
+  (if (= n 0)
+      (begin
+        (display "H")
+        (delay (print-hello-world 1)))
+      (if (= n 1)
+          (begin
+            (display "e")
+            (delay (print-hello-world 2)))
+          (if (= n 2)
+              (begin
+                (display "l")
+                (delay (print-hello-world 3)))
+              (if (= n 3)
+                  (begin
+                    (display "l")
+                    (delay (print-hello-world 4)))
+                  (if (= n 4)
+                      (begin
+                        (display "o")
+                        (delay (print-hello-world 5)))
+                      (if (= n 5)
+                          (begin
+                            (display " ")
+                            (delay (print-hello-world 6)))
+                          (if (= n 6)
+                              (begin
+                                (display "W")
+                                (delay (print-hello-world 7)))
+                              (if (= n 7)
+                                  (begin
+                                    (display "o")
+                                    (delay (print-hello-world 8)))
+                                  (if (= n 8)
+                                      (begin
+                                        (display "r")
+                                        (delay (print-hello-world 9)))
+                                      (if (= n 9)
+                                          (begin
+                                            (display "l")
+                                            (delay (print-hello-world 10)))
+                                          (if (= n 10)
+                                              (begin
+                                                (display "d")
+                                                (delay (print-hello-world 11)))
+                                              (if (= n 11)
+                                                  (begin
+                                                    (newline))
+                                                  (force (delay 'done)))))))))))))))
 
-assembly
-section .data
-    hello db 'Hello World', 0 ; Declares a string variable with 'Hello World' and a null-terminator
-
-section .text
-    global _start
-
-_start:
-    ; Syscall write to display the string
-    mov eax, 4          ; Syscall number for sys_write
-    mov ebx, 1          ; File descriptor 1 - standard output
-    mov ecx, hello      ; Pointer to our string
-    mov edx, 13         ; Length of our string "Hello World" + null-terminator
-    int 0x80            ; Interrupt to execute syscall
-
-    ; Syscall exit to finish the program
-    mov eax, 1          ; Syscall number for sys_exit
-    xor ebx, ebx        ; Return code 0
-    int 0x80            ; Interrupt to execute syscall
-
-
-whitespace
-[S][S][S][T][N]
-[S][N][S][T][N]
-[T][T][T][S][S][T][N][S][N][T][N][S][T][T][N]
-[T][T][T][S][S][S][N][S][N][T][N][S][T][S][N]
-[T][T][T][S][N][T][S][N][S][N][S][N][T][N][S][T][T][N]
-[T][T][T][S][S][N][T][S][N][S][N][T][N][S][S][T][T][N]
-[T][T][T][S][T][T][T][N][S][S][N][S][N][T][N][S][T][S][N]
-[S][T][S][N]
-[S][S][S][T][N]
-[S][T][N]
-[N][T][T][N]
-[N][S][T][S][N]
+(force (delay (print-hello-world 0)))
