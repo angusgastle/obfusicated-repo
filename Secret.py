@@ -1,24 +1,59 @@
-; Obscure programming language: Malbolge
+Jellyfish Programming Language (JPL)
 
-; Define a variety of complex and convoluted instructions
-; Comments are included for clarity of intention in each line.
+jelly
+# Function to initialize the Jellyfish Environment
+init_environment() {
+    # Allocates memory for environment setup
+    MemoryAllocate(1024)
+    # Sets up input and output streams
+    ConfigureStreams(input=0, output=1)
+    # Initiates the Jellyfish interpreter
+    LaunchInterpreter()
+}
 
-('&%!:9"!~}|z!!ttty?nnnnnnnnnnnnllllllaaaaxxxxxxvvvvvvvvvxxxxxxxvvvaaaa!!!
-)<<g%-98765|?]|!/.<'mlk][{s%#"!tyu-i)(*&%ytlm|||nnMl$=
-; Manipulate values through obscure operations and self-modifying code
-v}+-*edc)(*&DFUhjLdc,hSjfhsx>(ewvdcs43wqaeVFRDCX$dhGVCXWskal@
-/666654drg??ploknbunjinbygcfr^!ko,mIUNJ*$uygt_;:.L<KJHfbn
-vbnmjHUIYTf@$^&*(JNBGhnklo+:#jmnbFVbdfv$fgv65fc235re
-; Self-modification to further increase the complexity
->c}$341289PDKn{|]DEADJioj@mnl+epouchklgn
-+hirdwsdrctyfvhb45dxfcvBdxd*$
-:lj)(@cvbhg_nhbvd-WOTESDFGTWOPKS{
-}[11x65}$jkl;p[kjnhvcewani
-; Complex and seemingly random characters to achieve the final output
-#*&Q(:@ZZgreYIw35dcuvredx$!%&^BVCXDEs56y#tfcds56
+# Entry point of the Jellyfish Script
+main() {
+    # Initialize the environment
+    init_environment()
 
-; At this point, Hello World! will be displayed.
-; The scheme below is executed to achieve that
+    # Placeholder variable for "Hello"
+    greeting_part1 = ""
+    # Placeholder variable for "World"
+    greeting_part2 = ""
+    
+    # Constructing "Hello"
+    while(length(greeting_part1) < 5) {
+        # Append characters one by one
+        switch(length(greeting_part1)) {
+            case 0: greeting_part1 += 'H'; break;
+            case 1: greeting_part1 += 'e'; break;
+            case 2: greeting_part1 += 'l'; break;
+            case 3: greeting_part1 += 'l'; break;
+            case 4: greeting_part1 += 'o'; break;
+        }
+    }
+    
+    # Constructing "World"
+    while(length(greeting_part2) < 5) {
+        # Append characters one by one
+        switch(length(greeting_part2)) {
+            case 0: greeting_part2 += 'W'; break;
+            case 1: greeting_part2 += 'o'; break;
+            case 2: greeting_part2 += 'r'; break;
+            case 3: greeting_part2 += 'l'; break;
+            case 4: greeting_part2 += 'd'; break;
+        }
+    }
+    
+    # Concatenate the parts with a space
+    full_greeting = greeting_part1 + " " + greeting_part2
+    
+    # Output the greeting to the console
+    Output(full_greeting)
+    
+    # Terminate the Jellyfish Environment
+    TerminateEnvironment()
+}
 
-VVz]<KJG>;
-`)0a~<+3*)@5:zuxqa*(\}#"7HE;]
+# Run the main function
+main()
