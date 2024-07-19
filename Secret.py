@@ -1,59 +1,27 @@
-Jellyfish Programming Language (JPL)
+# Brainfuck script to display "Hello World"
+# Brainfuck is an esoteric programming language created in 1993
 
-jelly
-# Function to initialize the Jellyfish Environment
-init_environment() {
-    # Allocates memory for environment setup
-    MemoryAllocate(1024)
-    # Sets up input and output streams
-    ConfigureStreams(input=0, output=1)
-    # Initiates the Jellyfish interpreter
-    LaunchInterpreter()
-}
+# Start by setting up memory cells to hold the ASCII values of the characters
+# Memory cells [0] to [12] will hold the values for "Hello World!"
 
-# Entry point of the Jellyfish Script
-main() {
-    # Initialize the environment
-    init_environment()
+++++++++++              # Cell 0 set to 10
+[
+    >+++++++>++++++++++ # Cell 1 set to 70, Cell 2 set to 100
+    >+++>+<<<<-         # Move cells and decrement loop counter (cell 0)
+]
 
-    # Placeholder variable for "Hello"
-    greeting_part1 = ""
-    # Placeholder variable for "World"
-    greeting_part2 = ""
-    
-    # Constructing "Hello"
-    while(length(greeting_part1) < 5) {
-        # Append characters one by one
-        switch(length(greeting_part1)) {
-            case 0: greeting_part1 += 'H'; break;
-            case 1: greeting_part1 += 'e'; break;
-            case 2: greeting_part1 += 'l'; break;
-            case 3: greeting_part1 += 'l'; break;
-            case 4: greeting_part1 += 'o'; break;
-        }
-    }
-    
-    # Constructing "World"
-    while(length(greeting_part2) < 5) {
-        # Append characters one by one
-        switch(length(greeting_part2)) {
-            case 0: greeting_part2 += 'W'; break;
-            case 1: greeting_part2 += 'o'; break;
-            case 2: greeting_part2 += 'r'; break;
-            case 3: greeting_part2 += 'l'; break;
-            case 4: greeting_part2 += 'd'; break;
-        }
-    }
-    
-    # Concatenate the parts with a space
-    full_greeting = greeting_part1 + " " + greeting_part2
-    
-    # Output the greeting to the console
-    Output(full_greeting)
-    
-    # Terminate the Jellyfish Environment
-    TerminateEnvironment()
-}
+# Set up the respective values
+>++.                    # Cell 1 is 72 -> 'H'
+>+.                     # Cell 2 is 101 -> 'e'
++++++++..+++.           # Cell 3, 4 and 5: human readable "l" (72+30)
+>.                      # Cell 6 'o'
+<<+.                    # Cell 5 32 (space)
+<-.                     # Cell 4 87 ('W')
++++++++.                # Cell 5 114 (114-87 = 'o')
+>.                      # Cell 6 'r'
++++.                    # Cell 7 'l'
+------.                 # Cell 8 'd'
+--------.               # Cell 9 33 ('!')
+>>+.                    # Cell 12 new line
 
-# Run the main function
-main()
+# End of code
