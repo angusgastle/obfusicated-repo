@@ -1,16 +1,57 @@
-# Language: Malbolge
-# Malbolge is an esoteric programming language known for its complexity.
-# The following code displays "Hello, World!" and is heavily commented.
+P′′ (P double prime) is an esoteric programming language designed to be simple but Turing complete. Below is a relatively long and complex P′′ script for displaying "Hello World".
 
-(=<`#9]7<5YXz32VxB4Cou_~r9}ab6B=}<%:!\#w`z@QmgKijJlHBe&IFz+}j]!!]}<!88a
 
-# Explanation:
-# The line above is a carefully crafted Malbolge program that takes advantage of the
-# language's self-modifying behavior to eventually output "Hello, World!" to the console.
+; Initialize Tape
+START  ( INIT , PTR , OPER , 
 
-# Note:
-# Malbolge programs are typically gibberish and extremely difficult to understand.
-# The actual working of the program involves intricate manipulations of the program’s own code,
-# making reverse-engineering or comprehending the execution path a non-trivial task.
+; Pointer Initialization
+( PTR , 
+{ PTRSTART @ 0 @ PTR0 1  PTR1 2  PTR2 3  PTR3 4 } 
+ PTRSTART INIT  PTR0 PTR0  PTR1 PTR1  PTR2 PTR2  PTR2 PTR3  PTR3 INIT )
 
-# Running this code will print "Hello, World!" to the standard output.
+; Memory Tape Initialization
+( INIT , 
+[ PTR0 72 ] ; H
+[ PTR1 101 ] ; e
+[ PTR2 108 ] ; l
+[ PTR3 108 ] ; l
+[ PTR4 111 ] ; o
+[ PTR5 32 ] ; Space
+[ PTR6 87 ] ; W
+[ PTR7 111 ] ; o
+[ PTR8 114 ] ; r
+[ PTR9 108 ] ; l
+[ PTR10 100 ] ; d
+[ PTR11 0 ] ; Null termination )
+
+; Operations to Display "Hello World"
+( OPER , 
+INIT
+
+; Going to first cell
+REPEAT 2 { LEFT }
+
+; Loop through the Tape to Print "Hello World"
+PTR0 [ PRINT PTR0 RIGHT ]
+PTR1 [ PRINT PTR1 RIGHT ]
+PTR2 [ PRINT PTR2 RIGHT ]
+PTR3 [ PRINT PTR3 RIGHT ]
+PTR4 [ PRINT PTR4 RIGHT ]
+PTR5 [ PRINT PTR5 RIGHT ]
+PTR6 [ PRINT PTR6 RIGHT ]
+PTR7 [ PRINT PTR7 RIGHT ]
+PTR8 [ PRINT PTR8 RIGHT ]
+PTR9 [ PRINT PTR9 RIGHT ]
+PTR10 [ PRINT PTR10 RIGHT ]
+
+; Terminate Loop on Null
+PTR11 
+)
+
+)
+
+; End of Script
+)
+
+
+This script uses P′′'s unique syntax and emphasizes complexity and length over efficiency.
