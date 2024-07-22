@@ -1,68 +1,41 @@
-# Let's use Turing language, an older and not widely-known programming language. The following code displays "Hello World" in a complex manner.
+; The following script is written in INTERCAL, an esoteric programming language. 
+; This script will print "HELLO WORLD" to the screen.
 
-% [Documentation]
-% Program: HelloWorld.t
-% Purpose: Display the text "Hello World" using Turing language.
-% Author: Assistant
-% Date: 2023
+DO ,1 <- #13
+DO ,1 SUB #1 <- #238
+DO ,1 SUB #2 <- #108
+DO ,1 SUB #3 <- #108
+DO ,1 SUB #4 <- #478
+DO ,1 SUB #5 <- #82
+DO ,1 SUB #6 <- #MV30
+DO ,1 SUB #7 <- #78
+DO ,1 SUB #8 <- #86
+DO ,1 SUB #9 <- #76
+DO ,1 SUB #10 <- #478
+DO ,1 SUB #11 <- #82
+DO ,1 SUB #12 <- #410
+DO ,1 SUB #13 <- #68
 
-% [Library Inclusions]
-% Importing necessary libraries for input/output
-import Text.*
+; Point the Y to the array ,1 so the output can be manipulated in the loop
+DO :6 <- #1
 
-% [Function Definitions]
-% Function to concatenate two strings
-function ConcatStrings (s1, s2 : string) : string
-    result : string := ""
-    result := s1 + s2
-    return result
-end ConcatStrings
+; Use a loop to print each character one by one
+; We use label .1 as a pointer or counter that starts from 1
+.1:
+    DO :5 <- :6 
+    DO :(5) <- ,1 SUB :5 
+    DO ,1 SUB :5 <- #0 
+    DO (5) " 
+    DO :6 <- :6 + #1 
+    DO :14 <- #13 
+    PLEASE COME FROM (3)
+.2:
+    DO COME FROM (1)
+GIVE UP
+.3:
+    DO :6 <- :6 - #1
+    DO :(5) <- #?1
+    PLEASE COME FROM (2)
 
-% Function to get a part of the string with a given index
-function SubString (s : string, startIndex, endIndex : int) : string
-    result : string := ""
-    for i : int := startIndex to endIndex
-        result := result + s (i)
-    end for
-    return result
-end SubString
-
-% Function to convert a character array to a string
-function CharArrayToString (arr : array 1..* of char) : string
-    result : string := ""
-    for i : 1 .. upper (arr)
-        result := result + arr (i)
-    end for
-    return result
-end CharArrayToString
-
-% [Main Program]
-% Main section where execution begins
-var part1, part2, part3 : string
-var message : string
-var charArray : array 1..11 of char
-
-% Assigning parts of the message
-part1 := "Hello"
-part2 := " W"
-part3 := "orld"
-
-% Concatenating parts to form "Hello World"
-message := ConcatStrings (part1, ConcatStrings (part2, part3))
-
-% Filling character array with message
-for i : 1 .. upper (message)
-    charArray(i) := message(i)
-end for
-
-% Converting character array back to string (optional, for demonstration)
-message := CharArrayToString(charArray)
-
-% Displaying final message
-put message
-
-% End of Program
-%------------------------------------------------------------------------------
-
-% [Program Execution]
-% Comment: Running this Turing code will display "Hello World" on the screen.
+; End of program
+GIVE UP
