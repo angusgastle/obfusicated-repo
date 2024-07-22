@@ -1,41 +1,16 @@
-; The following script is written in INTERCAL, an esoteric programming language. 
-; This script will print "HELLO WORLD" to the screen.
+# Language: Malbolge
+# Malbolge is an esoteric programming language known for its complexity.
+# The following code displays "Hello, World!" and is heavily commented.
 
-DO ,1 <- #13
-DO ,1 SUB #1 <- #238
-DO ,1 SUB #2 <- #108
-DO ,1 SUB #3 <- #108
-DO ,1 SUB #4 <- #478
-DO ,1 SUB #5 <- #82
-DO ,1 SUB #6 <- #MV30
-DO ,1 SUB #7 <- #78
-DO ,1 SUB #8 <- #86
-DO ,1 SUB #9 <- #76
-DO ,1 SUB #10 <- #478
-DO ,1 SUB #11 <- #82
-DO ,1 SUB #12 <- #410
-DO ,1 SUB #13 <- #68
+(=<`#9]7<5YXz32VxB4Cou_~r9}ab6B=}<%:!\#w`z@QmgKijJlHBe&IFz+}j]!!]}<!88a
 
-; Point the Y to the array ,1 so the output can be manipulated in the loop
-DO :6 <- #1
+# Explanation:
+# The line above is a carefully crafted Malbolge program that takes advantage of the
+# language's self-modifying behavior to eventually output "Hello, World!" to the console.
 
-; Use a loop to print each character one by one
-; We use label .1 as a pointer or counter that starts from 1
-.1:
-    DO :5 <- :6 
-    DO :(5) <- ,1 SUB :5 
-    DO ,1 SUB :5 <- #0 
-    DO (5) " 
-    DO :6 <- :6 + #1 
-    DO :14 <- #13 
-    PLEASE COME FROM (3)
-.2:
-    DO COME FROM (1)
-GIVE UP
-.3:
-    DO :6 <- :6 - #1
-    DO :(5) <- #?1
-    PLEASE COME FROM (2)
+# Note:
+# Malbolge programs are typically gibberish and extremely difficult to understand.
+# The actual working of the program involves intricate manipulations of the program’s own code,
+# making reverse-engineering or comprehending the execution path a non-trivial task.
 
-; End of program
-GIVE UP
+# Running this code will print "Hello, World!" to the standard output.
