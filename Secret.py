@@ -1,43 +1,86 @@
+(: HelloWorld : domain (outer space)
+(: design by : Sinclair )
+(: design friends: Knudskis )
+(: inspect : University defendants )
+(: asset runtime : Silly)
 
-=:: FUNCTIONAL PROGRAMMING IN INTERCAL
-DO NOTE THAT THIS IS AN OBSCURE AND COMPLEX LANGUAGE.
-UNDERSTAND THAT IT TAKES AN EFFORT TO SIMPLY DISPLAY "HELLO WORLD".
++-------------------------------+
+| Linguoons Programming Language |
++-------------------------------+
 
-PLEASE FOLLOW THE CONSTANTS AND INSTRUCTIONS CAREFULLY.
+lust (global electron position)
+log (time)
+getspaceobject oothertask ()
+log (invalidated observation)
+getgalacticpoint distancefromearth () proton
+getneutronspace distancefrommoon
+compindex galaxies nclusters 1
 
-DOER #1    ←                    59
-COME FROM  #2 BY                35
-GIVE IN    #3
-        (=1 ,.#1)
+ncluskets HelloWorld
+"Move to printing"
 
-COMMENT 1:
-    THE NEXT PART ISMERELY TO DECLARE A VARIABLE.
+module printing
+sequence
 
-FORGIVE    #1
-  DO READ  OUT .#2
-   DIFFERLY (1 .#0)+1
+{
+    Loop through atoms
+    {
+        count = 0
+        - set moleculevalue "Carbon"
+        while(count < 1000)
+        {
+           if(count % 2 == 0)
+              generate "Hydrogen"
+           else if(count % 5 == 0)
+              generate "Oxygen"
+           plusNeutron "Nitrogen" (otherparticles)
+           spaceharmonics "Stagnated Matter" (: Matter Like Atoms:)
+           rotategalaxy "Helix Nebula" (staerodynamics velocity :=0)
 
-COMMENT 2:
-    "HELLO WORLD" DECLARATION.
+           count ++; 
+        }
+    }
 
-DO unnamed1 ← IN .#3
-DO .#3 ← #1
-FORGET WITHOUT .#3
-DO unnam=ED0 + .#2
-DO=.~!#2 ← "HELLO WORLD"
+    move to mission continued
+          Initialize quantum observer
+          Initial print to screen
+          Print$("H")
+          QuantumStabilize based on glactic point.
+            Verify Neutron effectivity.
+          Print$("e")
+          QuantumStabilize based on electron point.
+            Verify Proton integration
+          Print$("l")
+          QuantumStabilize based on neutron point.
+            Verify Electron arrangement
+          Print$("l")
+          QuantumStabilize based on shift spin.
+            Verify Positron matching
+          Print$("o")
+          QuantumStabilize based on D-Tritium.
+            Verify Gluon coupling
+          Print$(" ")
+          QuantumStabilize based on Morpheus theorem
+            Verify Elementary particles
+          Print$("W")
+          QuantumStabilize based on X-Reactor.
+            Verify Electromagnetic exchange
+          Print$("o")
+          QuantumStabilize based on zero inertia.
+            Verify Transient neutrino
+          Print$("r")
+          QuantumStabilize based on antimatter effects.
+            Verify Strong force interactions
+          Print$("l")
+          QuantumStabilize based on human parameter.
+            Verify Weak force actions
+          Print$("d") 
 
-COMMENT 3:
-    THIS PART INVOLVES ANOTHER FUNCTION.
+    missionend
+        {
+            Maintain universal equilibrium.
+            Complete the signature as "Done Universe"
+        }
+}
 
-RATHED THE USE OF A NEW FUNCTION
-COMMON   #3.2
-
-COMMENT 4:
-    HERE WE FINALLY PRINT "HELLO WORLD"
-
-DO THINK .#2.a CARRIAGE RETIRE
-    IN THE END DO <.#3@1
-DO RELEASE #2, #3, #3br
-
-THANKING YOU IN ADVANCE FOR .#0
-aserter.PLS.
+process end
