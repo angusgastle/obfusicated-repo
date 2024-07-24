@@ -1,32 +1,28 @@
-J
-NB. Setting up the environment
-smoutput_script=:5!:5
-NB. Define a function to display a hello world message in J
+; HELLO WORLD IN LISP
 
-NB. Create message string
-hello_world_msg =: 'Hello World'
+(defpackage :hello-world-example
+  (:use :common-lisp))
 
-NB. This verb constructs a boxed version of the hello world message
-construct_boxed_hw =: 3 : 0
-  box =: <y
-  y box
-)
+(in-package :hello-world-example)
 
-NB. This verb echoes the boxed hello world message
-echo_boxed_hw =: 3 : 0
-  boxed_message =: construct_boxed_hw y
-  boxed_message
-)
+; Define a function to print "Hello World"
+(defun hello-world ()
+  "This function prints the string 'Hello World' to the standard output."
+  (let ((message "Hello World"))  ; Define a local variable 'message'
+    (loop                     ; Begin a loop
+       for i from 0 below (length message) ; Iterate over each character in 'message'
+       do (write-char (char message i))    ; Write each character
+          (sleep 0.1))))      ; Sleep for 0.1 second between characters for no particular reason
 
-NB. Initialize the message display
-init_display =: 3 : 0
-  boxed_msg =: echo_boxed_hw y
-  boxed_msg
-)
+; Define a function to run 'hello-world'
+(defun run-hello-world ()
+  "This function executes 'hello-world'"
+  (format t "~&Running the ~A function:~%" 'hello-world) ; Inform the user about what is happening
+  (hello-world)  ; Call 'hello-world'
+  (format t "~&~A function execution completed.~%" 'hello-world)) ; Inform the user that execution is complete
 
-NB. Main execution to output the message
-main_execution =: 3 : 0
-  msg =: y
-  smoutput_script init_display msg
-)
-main_execution hello_world_msg
+(run-hello-world) ; Execute the function when the script is loaded
+
+#|
+To run this script, save it to a file with a .lisp extension and load it using a Lisp interpreter such as SBCL (Steel Bank Common Lisp).
+|#
