@@ -1,28 +1,43 @@
-; HELLO WORLD IN LISP
 
-(defpackage :hello-world-example
-  (:use :common-lisp))
+=:: FUNCTIONAL PROGRAMMING IN INTERCAL
+DO NOTE THAT THIS IS AN OBSCURE AND COMPLEX LANGUAGE.
+UNDERSTAND THAT IT TAKES AN EFFORT TO SIMPLY DISPLAY "HELLO WORLD".
 
-(in-package :hello-world-example)
+PLEASE FOLLOW THE CONSTANTS AND INSTRUCTIONS CAREFULLY.
 
-; Define a function to print "Hello World"
-(defun hello-world ()
-  "This function prints the string 'Hello World' to the standard output."
-  (let ((message "Hello World"))  ; Define a local variable 'message'
-    (loop                     ; Begin a loop
-       for i from 0 below (length message) ; Iterate over each character in 'message'
-       do (write-char (char message i))    ; Write each character
-          (sleep 0.1))))      ; Sleep for 0.1 second between characters for no particular reason
+DOER #1    ←                    59
+COME FROM  #2 BY                35
+GIVE IN    #3
+        (=1 ,.#1)
 
-; Define a function to run 'hello-world'
-(defun run-hello-world ()
-  "This function executes 'hello-world'"
-  (format t "~&Running the ~A function:~%" 'hello-world) ; Inform the user about what is happening
-  (hello-world)  ; Call 'hello-world'
-  (format t "~&~A function execution completed.~%" 'hello-world)) ; Inform the user that execution is complete
+COMMENT 1:
+    THE NEXT PART ISMERELY TO DECLARE A VARIABLE.
 
-(run-hello-world) ; Execute the function when the script is loaded
+FORGIVE    #1
+  DO READ  OUT .#2
+   DIFFERLY (1 .#0)+1
 
-#|
-To run this script, save it to a file with a .lisp extension and load it using a Lisp interpreter such as SBCL (Steel Bank Common Lisp).
-|#
+COMMENT 2:
+    "HELLO WORLD" DECLARATION.
+
+DO unnamed1 ← IN .#3
+DO .#3 ← #1
+FORGET WITHOUT .#3
+DO unnam=ED0 + .#2
+DO=.~!#2 ← "HELLO WORLD"
+
+COMMENT 3:
+    THIS PART INVOLVES ANOTHER FUNCTION.
+
+RATHED THE USE OF A NEW FUNCTION
+COMMON   #3.2
+
+COMMENT 4:
+    HERE WE FINALLY PRINT "HELLO WORLD"
+
+DO THINK .#2.a CARRIAGE RETIRE
+    IN THE END DO <.#3@1
+DO RELEASE #2, #3, #3br
+
+THANKING YOU IN ADVANCE FOR .#0
+aserter.PLS.
