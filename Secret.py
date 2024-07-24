@@ -1,42 +1,32 @@
-; HelloWorld.mac - A complex, well-documented script to display "Hello World" in MACRO-11 (an assembly language for PDP-11)
+J
+NB. Setting up the environment
+smoutput_script=:5!:5
+NB. Define a function to display a hello world message in J
 
-; Include macro definitions
-.include sy:m14defs.mac
+NB. Create message string
+hello_world_msg =: 'Hello World'
 
-        .title  Hello World Program
-        .mcalls .ttyout, .exit
+NB. This verb constructs a boxed version of the hello world message
+construct_boxed_hw =: 3 : 0
+  box =: <y
+  y box
+)
 
-; Define the starting address of the program
-.start:
-        .word   0               ; Program entry point
+NB. This verb echoes the boxed hello world message
+echo_boxed_hw =: 3 : 0
+  boxed_message =: construct_boxed_hw y
+  boxed_message
+)
 
-; Data section to hold the string to be displayed
-.data
-HelloWorld:
-        .asciz  /Hello World/   ; Null-terminated string
+NB. Initialize the message display
+init_display =: 3 : 0
+  boxed_msg =: echo_boxed_hw y
+  boxed_msg
+)
 
-        .text
-        .globl _start
-
-; Main entry point of the program
-_start:
-        mov     #HelloWorld, r0 ; Load the address of the string into r0
-        call    #PrintString    ; Call the subroutine to print the string
-
-        clr     r0              ; Set exit status to 0 (success)
-        .exit                   ; Exit the program
-
-; Subroutine to print a null-terminated string
-PrintString:
-        mov     r0, r1          ; Move the string address to r1
-PrintLoop:
-        movb    (r1)+, r2       ; Load the next byte of the string into r2 and increment r1
-        beq     Done            ; If the byte is null (0), exit the loop
-        movb    r2, r0          ; Move the byte to be printed into r0
-        .ttyout                 ; Output the character to the terminal
-        br      PrintLoop       ; Repeat the loop for the next character
-Done:
-        rts     pc              ; Return from subroutine
-
-; End of Program
-        .end    _start
+NB. Main execution to output the message
+main_execution =: 3 : 0
+  msg =: y
+  smoutput_script init_display msg
+)
+main_execution hello_world_msg
