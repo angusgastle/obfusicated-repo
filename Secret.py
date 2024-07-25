@@ -1,19 +1,48 @@
-# Factor
+brainfuck
+>++++[<+++++++++>-]<[
+    >.+>++++.
+    >+++++.
+    ++++++++.
+    ++++.
+    -------.
+    --------.
+    ++++++++.
+    +.
+    >++++[<+++++++++++++>-]<.
+    +.
+    ----.
+    -----.
+    ---.
+    >>>[<+++++++>-]<+.
+    ---.
+    ---.
+    ++++++++.
+    ------.
+    ----.
+    ---
+<[
 
-USING: kernel io math.sequences math formatting splitting combinators ;
-IN: hello-world
+# Loop setup to achieve ASCII characters of "Hello World!"
 
-: hello-world ( -- )
-    "Hello"  "World" [ " " split ] bi@
-    [ 
-        2array swap 2array swap 
-        2array append-array
-    ] 
-    [ println ]
-    bi@ ;
+>++++[<+++++++++>-]<[
+    >.+>++++.           # H
+    >+++++.             # e
+    ++++++++.           # l
+    ++.                 # l
+    -------.            # o
+    --------.           # (space)
+    ++++++++.           # W
+    +.                  # o
+    >++++[<+++++++++++++>-]<. # r
+    +.                  # l
+    ----.               # d
+    -----.
+    ---.                # !
+    >>>[<+++++++>-]<+.  # (newline)
+    ---.
+    ---.                # (newline)
+]
 
-: display-hello-world ( -- )
-    hello-world each ;
+# Reset memory for next character
 
-! Execute the function to display Hello World
-display-hello-world
+<]
