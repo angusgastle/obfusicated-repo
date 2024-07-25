@@ -1,15 +1,19 @@
-brainfuck
-++++++++++[>+++++++>++++++++++>+++<<<-]>++.>+.+++++++..+++.>++.<<<+++++++++++++++.>>++++++.+++.<++.>>>.+++.------.--------.>>>+.>++++++.
+# Factor
 
+USING: kernel io math.sequences math formatting splitting combinators ;
+IN: hello-world
 
-whitespace
-[S] S S T    S T T    S N
-S S T    S S S S T T    S S S T T    S S S S S N
-S S T S  S T T    S S S S T   S S S S T T    S S S S S N
-S S T   S T S S S S T T  S S  S S S S S T T    S S S S S N
-S S T  S S S S T T    S S S S S T T  S S S S S N
-S S T T    S S S S S N
+: hello-world ( -- )
+    "Hello"  "World" [ " " split ] bi@
+    [ 
+        2array swap 2array swap 
+        2array append-array
+    ] 
+    [ println ]
+    bi@ ;
 
+: display-hello-world ( -- )
+    hello-world each ;
 
-malbolge
-(=<`#9]~6ZY32Vxv:IdpJiP/"5{<Cmxv+m/<!5WQFX]Ou`C)u1NN*Q`''6NzDVO5pg5z8"5$!m$:~g-q$W,<$8y}-:~oX<_D$#"4-^>:~rwT5Hiub01<bX!KkQ`:woe+=#o<sXa12
+! Execute the function to display Hello World
+display-hello-world
