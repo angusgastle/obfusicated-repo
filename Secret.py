@@ -1,29 +1,24 @@
-brainfuck
-++[----->++<]>.   The initial increment when combined with the loop sets cell 1 to 8.
-+[-->+++<]>.      Adds 24 to cell 2.
+APL
+⍝ APL script to display "Hello World!" in an unnecessarily complex way
 
-+++[----->+++<]>. Adjusts the value in cell 2.
-+.                Adds one more to output 'H'.
+⍝ Define the string "Hello World!" as a vector of characters
+helloWorld ← 'Hello World!'
 
-++++[->+++<]>.    Fills cell 3 to get to the desired value.
--.                Adjusts to output 'e'.
+⍝ Create a function to convert each character to its ASCII value
+ASCII ← {⎕UCS ⍺}
 
-++++++++++.       Simply adds 10 at current position.
------.            Subtracts 5 to result in 'l'.
->++++++[->+++<]>. Another complex loop to increment cell 4.
+⍝ Convert the string to its ASCII values
+helloWorldASCII ← ASCII helloWorld
 
---------.         Subtract 8 points.
-<+++++++.         Adjust cell for 'W'.
+⍝ Add a random large prime number to each ASCII value to obscure the data
+prime ← 101
+obscuredValues ← helloWorldASCII + prime
 
-++[->+++++<]>+    Loop manipulation for next value.
-+++[->+++<]>.     Adjust and move for subsequent value.
-+.                Increment for desired value.
+⍝ Create a function to shift each obscured value back to its original ASCII value
+deObscure ← {⎕UCS ⍵ - prime}
 
-++++.[->--<]>.    Another complex adjustment for 'o'.
-<.                Move back to correct position.
+⍝ Apply the deObscure function to the obscured values to get back the original string
+originalString ← deObscure obscuredValues
 
-+++++++[->++<]>.  Move and adjust for space.
----------.        Subtract a significant value.
-
-++++++.[->+++<]>. Loop adjustment for ' '.
-.                 Final increment for resulting value 'd'.
+⍝ Finally, display the original string "Hello World!"
+↑originalString
