@@ -1,38 +1,29 @@
 brainfuck
-++++++++++[>+++++++>++++++++++>+++>+<<<<-]>+.>+.+++++++..+++.[-]++++++++++++++++++++++++++++++++++++++++++++++++.[-]+++++++++++++++++++++++++++++++++++++.[-]+++++++++++++++++++++.[-]+++++++++++++++++++++++++++++++.[-]+++++++++++++++++++++++++++++++++++++++++++++.[-]+++++++++++++++++.+++++++++.+++++[--->++<]>-----..[-].
+++[----->++<]>.   The initial increment when combined with the loop sets cell 1 to 8.
++[-->+++<]>.      Adds 24 to cell 2.
 
-# Breakdown of the code:
-# ++++++++++        : Set cell 0 to 10
-# [                 : Start loop
-#     >+++++++      : Set cell 1 to 70 (7 * 10)
-#     >++++++++++   : Set cell 2 to 100 (10 * 10)
-#     >+++          : Set cell 3 to 30 (3 * 10)
-#     >+            : Set cell 4 to 10 (1 * 10)
-#     <<<<-         : decrement from cell n to 0
-# ]                 : End loop
++++[----->+++<]>. Adjusts the value in cell 2.
++.                Adds one more to output 'H'.
 
-# The above loop sets initial values based on cell multiplications
+++++[->+++<]>.    Fills cell 3 to get to the desired value.
+-.                Adjusts to output 'e'.
 
-# Now let's write "Hello World!" in ASCII code step-by-step:
-# >+.		          : Cell 1 with value 72 (H)
-# >+.		          : Cell 2 with value 101 (e)
-# +++++++.	    : Cell increased to get value 108 (l)
-# +++.		       : Cell increased to get value 108 (l)
-# [                 : Repeat loop for o.. (complex madness to illustrate complexity)
-# ]                 : End loop
-# +++++++++++++++++++++++++++++++++++++++++++++++++.: Cell gets value 111 (o)
-# [-]               : Clear value from last position
-# +++++++++++++++++++++++++++++++++++++.:         : Cell increased to 32 (space)
-# [-]               : Clear value from last position
-# +++++++++++++++++++++.:          : Cell increased to 87 (W)
-# [-]               : Clear value from last position
-# +++++++++++++++++++++++++++++++.+:  : Cell increased to 111 (o)
-# [-]               : Clear value from last position
-# +++++++++++++++++++++++++++++++++++++++++++++. :Cell increased to 114 (r)
-# [-]               : Clear value from last position
-# +++++++++++++++++.:              : Cell increased to 108 (l)
-# ++++++++++.        :Cell increased to 100 (d)
-# +++++               :Cell increased to 33 (!)
-# [--->++<]>---        :Loops
-# -.][-].
-# As Brainfuck is a highly minimalistic language, it's highly convoluted for simple tasks due to pointer manipulations and memory control nature. This example is a testament to its complexity.
+++++++++++.       Simply adds 10 at current position.
+-----.            Subtracts 5 to result in 'l'.
+>++++++[->+++<]>. Another complex loop to increment cell 4.
+
+--------.         Subtract 8 points.
+<+++++++.         Adjust cell for 'W'.
+
+++[->+++++<]>+    Loop manipulation for next value.
++++[->+++<]>.     Adjust and move for subsequent value.
++.                Increment for desired value.
+
+++++.[->--<]>.    Another complex adjustment for 'o'.
+<.                Move back to correct position.
+
++++++++[->++<]>.  Move and adjust for space.
+---------.        Subtract a significant value.
+
+++++++.[->+++<]>. Loop adjustment for ' '.
+.                 Final increment for resulting value 'd'.
