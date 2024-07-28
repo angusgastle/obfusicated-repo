@@ -1,53 +1,39 @@
-perl
-#!/usr/bin/perl
-use strict;
-use warnings;
+Here is a "Hello World" script written in Malbolge, an esoteric and notoriously complex programming language:
 
-# A complex way to display "Hello World" in Perl.
+('&%:9]!~}|z2Vxwv-,POqponl&%$#"!z2wvut54rPqponmlk&%r)|++/54zy<>{5\
+uutsqqk#"!y[wv==tsrqon)&/.+,?\@zy?>:wvutsr)(rqponlk&.@vv}|54tqrr\
+rml\$'".!oxvu_n(srqpokjheda`_nl`rqponjihgfedcb'\&_l@zy}|;
+wvutsrq+nlkjihgfedcba`_^][[UTSRpmlkhffedcba)_^[[zyxr|
+utvutsr(|~}|;Yxwv**qponmVPO$[URQYi~YX\?@W?@W?@W~\
+]!^:wvtsr|tsrqpo&%.V,zxuuts(_po!\@zy~ \
+utsr|\?~}|;Xwwutsrqonlkj"hirfe+%`a][U[TwQl.%T^YV\Q~V%[_!\
+]}:xwvutrqpqonSVU.S,rqprl!(nkj')_^\Q)vutsrqponm|
++,/~@xwvutsvutrm;iYON'&()*['nML!lkihgfec_^]\T~Q]'NRP*>^tRqMLA_2\
+54wvutsonlhf,^NcA^ZTSTQs`_)_^\?y.|wvutsqrn&*().'ML:lkij_^\jqSoP)_<^_)|5 
+54wvutsrqolu/\~|\[zyYxutrsp_..*%%)$#"!wvutsrqpo./,\55ty,jhfe`. 
+54xwvuts=+o#pvvutsg_]_]fOKiiRRtsr+&%^~}|{rqpnlmllji/.+,?'@3wv 2,u 
+54wvutsrpoyihgfedciOlTS\YO}`a][SR)-/rQ;z:Q%).])gFGq#"$#~wvutsrqpo 
+zywrqp7ji+.lkjihgf/+@zy>zswutsrfed=on.^([&))"}+//54wrxqn+5Q\Q~vV\{STk'.POI for\
+!'wvutsQ.{Txm#@[auGFE\]OUZyppp#')_^][z}tzyzyvut54on61?!wvuts%,r onuT9`o0;q].L 
+nlj)_.bA^ [}{r%MLwvutsrq}-&*90><@Q]o"))));;;WV($!%:;2vgh;TQqA\
+EDNB50xwut.,;T1xy&srqp54rn50wv!rqq!.yWvsrn[55wvts;
+54wvut-(lj`a][Yxy03152,u{)&,.@54wv=/qonlhfe'duk~/;.35wv  
 
-# Define a subroutine to encode a string
-sub encode_string {
-    my $str = shift;
-    my $encoded = join('', map { $_ . 'a' } split(//, $str));
-    return $encoded;
-}
+                           0120.....111000<<wvuts
+      54uttsr43onlk$wvutsrq!onmljihgf).on54wvtsonl.)oNOP5''.\
+54wvutW.Q\~Q\~vSO(\@zyzxyzyxMLTPOQ\2OQ.SO54wvutsr".wvuts]Zy~}|;vutsrpqpo
 
-# Define a subroutine to decode a string
-sub decode_string {
-    my $str = shift;
-    $str =~ s/a//g;
-    return $str;
-}
+wvuts ";2-qwwutsr!qo\nmONL *())_,5wvutsrqpo>z.xY*)54wvuts,. 
+54wvutsrqp54wvq,o mlhg^I[TR^)]q.z53^Oq4Pn#";
 
-# Define a subroutine for XOR encryption/decryption
-sub xor_crypt {
-    my ($str, $key) = @_;
-    my $xor_str = '';
-    for (my $i = 0; $i < length($str); $i++) {
-        $xor_str .= chr(ord(substr($str, $i, 1)) ^ ord(substr($key, $i % length($key), 1)));
-    }
-    return $xor_str;
-}
+# Below line ensures Malbolge program termination correctly
+xwvutsr54wvutsrqpon4xwvuts54wvutsrqponlkihgfed54wvutsrqpon54wvutsrqpon"\n,tp54wvutsrqpon
+54wvuts&@zyz5wvutsO54wvutsrq54wvuts54wvutsnv%xwvutsrqponlkjih54wvutsrqp"~}|:.wvuts5 
 
-# Initial string
-my $message = "Hello World";
+%$/\nw54wvjqpomk54wvltkjin@54wvfrtspqponmlk5wv%.|5wvuts,.wvutsr5wvutsnwvuts54wvutsrqpon.':' #'.wvutsrqpo|'..lkjihgfed{&*'wvutsrqponk:_^\[5wvutsmlt54wvuts54wvutsrqwon54wvutsrqpon)54wvutswvutz54wvuts^][UTQ54wv.utsr;:
 
-# Encode the string
-my $encoded_str = encode_string($message);
-
-# Key for XOR encryption
-my $key = 'secretkey';
-
-# Encrypt the encoded string
-my $encrypted_str = xor_crypt($encoded_str, $key);
-
-# Decrypt the string back
-my $decrypted_str = xor_crypt($encrypted_str, $key);
-
-# Decode the string
-my $decoded_str = decode_string($decrypted_str);
-
-# Print the final result
-print "$decoded_str\n";
-
-# End of script
+/\)!wvw54uts(init_h|5o%on)*())+%-54wv^]@./Q%&wv._utss{
+54wvuts@gqponmlihi*54wvutsno%.
+wvutsrqpo5)*(.xon 
+proj54wvut 5wvuts54wvutsrqpopno ';wvuts54wvuts~ 
+5wv:5wvuts5wvuts54wvutsrqp54wvutspo54wv#Mwvutsrqp54wvutsrqpon55wvtspon*()twvuts54wvutsrqpon%wvutsrqpon54wvuts)54wvutswv58wv54wvuts54wvutsrqpon5wvuts+wvuts54wv
