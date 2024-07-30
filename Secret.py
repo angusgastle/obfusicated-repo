@@ -1,80 +1,45 @@
-brainfuck
-++++++++++[>+++++++>++++++++++>+++>+<<<<-]>++.>+.+++++++..+++.>++.
+// Brainfuck program to display "Hello World"
+++++++++++[>+++++++>++++++++++>+++>+<<<<-]>++.>+.+++++++..+++.
+>++.<<+++++++++++++.>++++.<<.+++.------.--------.>+.>. 
 
+/*
+Brainfuck is a minimalistic programming language consisting of only eight commands and is known for its obscurity. Here's a breakdown of each line:
 
-malbolge
-(=<`#9]~6ZY32VwCi'd
+++++++++++        : Set cell #0 to 10
+[                 : Loop start
+    >+++++++      : Add  7 to  cell #1
+    >++++++++++   : Add 10 to  cell #2
+    >+++          : Add  3 to  cell #3
+    >+            : Add  1 to  cell #4
+    <<<<-         : Decrement  cell #0 (loop until cell #0 is 0)
+]                 : Loop end (brackets matching)
+>++               : Move to cell #1 and increment 2 (add 7*10 times)
+.                 : Output cell #1 (H)
+>+                : Move to cell #2 and increment (add 70 times)
+.                 : Output cell #2 (e)
++++++++           : Increment cell #2 by 7 (add 111 times)
+.                 : Output cell #2 (l)
+.                 : Output cell #2 (l)
++++               : Increment cell #2 by 3 (add 114 times)
+.                 : Output cell #2 (o)
+>++               : Move to cell #3 and increment (add 3 times)
+.                 : Output cell #3 (space)
+<<+++++++++++++   : Move to cell #1 and add 11 times (add 108 times)
+.                 : Output cell #1 (W)
+>++++             : Move to cell #2 and increment 4 (add 118 times)
+.                 : Output cell #2 (o)
+<<                : Move to cell #0
+.                 : Output cell #0 (r)
++++               : Increment cell #0 by 3 (add 111 times)
+.                 : Output cell #0 (l)
+------            : Decrement cell #0 by 6 (add 105 times)
+.                 : Output cell #0 (d)
+--------          : Decrement cell #0 by 8 (add 97 times)
+.                 : Output cell #0 (newline)
+>+                : Move to cell #3
+.                 : Output cell #3 (Hello)
+>                 : Move to cell #4
+.                 : Output cell #4 (World)
 
-
-whitespace
-[Space][Space][Tab][Linefeed]
-[Space][Space][Space][Tab]
-[Space][Tab][Space][Linefeed]
-[Space][Tab][Tab][Linefeed]
-[Tab][Space][Tab][Space][Linefeed]
-[Space][Space][Space][Linefeed]
-[Space][Space][Space][Linefeed]
-[Linefeed]
-
-[Tab][Linefeed][Tab][Linefeed]
-[Space][Space][Tab][Linefeed]
-[Space][Space][Tab][Linefeed][Space][Space][Space]
-[Linefeed]
-
-
-INTERCAL
-DO ,1 <- #13
-DO ,2 <- #240
-DO ,3 <- #45
-DO ,4 <- #250
-DO ,5 <- #260
-DO ,1 SUB #1 <- #72
-DO ,1 SUB #2 <- #101
-DO ,1 SUB #3 <- #108
-DO ,1 SUB #4 <- #108
-DO ,1 SUB #5 <- #111
-DO ,1 SUB #6 <- #32
-DO ,1 SUB #7 <- #87
-DO ,1 SUB #8 <- #111
-DO ,1 SUB #9 <- #114
-DO ,1 SUB #10 <- #108
-DO ,1 SUB #11 <- #100
-DO ,3 <- #1
-DO ,4 <- #45
-DO ,4 <- #4 <,#1
-DO ,5 <- #4 <,#1
-PLEASE DO ,5 <- #4
-DO ,2 <- ,1
-DO ,2 <- #4
-PLEASE WRITE OUT ,2
-DO ,1 <- #360
-PLEASE FORGET #1
-
-
-Piet
-72,22,119,0,108,32,0,119,0,101,0,108,0,108,0,111,0,32,0,87,0,111,0,114,0,108,0,100,0
-
-
-LOLCODE
-HAI 1.2
-CAN HAS STDIO?
-VISIBLE "HAI WORLD!"
-KTHXBYE
-
-
-Befunge
-"dlroW olleH",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,.@ 
-
-
-Ook!
-Ook. Ook. Ook. Ook? Ook. Ook. Ook. Ook? Ook. Ook! Ook! Ook. Ook! Ook. Ook. Ook? Ook! Ook. Ook! Ook. Ook! Ook.Ook?
-Ook. Ook. Ook. Ook? Ook. Ook! Ook.Ook. Ook.Ook! Ook. Ook. Ook? Ook! Ook. Ook?
-Ook. Ook.Ook. Ook. Ook.Ook! Ook. Ook. Ook? Ook? Ook! Ook?
-Ook. Ook. Ook. Ook? Ook? Ook? Ook! Ook? Ook! Ook?
-Ook. Ook. Ook. Ook? Ook! Ook. Ook. Ook? Ook? Ook! Ook?
-Ook. Ook. Ook. Ook? Ook! Ook! 
-Ook! Ook. Ook? Ook?
-
-
-Velato
-C# D E B A# G# F# A G# E D# B# A C# E G# A# G# F# E A E# D C# C E E F# D C# B# G# G# F E G F# D# B# G# E E F# B A# C# D G#
+Total: 105 bytes of code from 8 different commands.
+*/
