@@ -1,2 +1,16 @@
 brainfuck
-++++++++++[>+++++++>++++++++++>+++>+<<<<-]>++.>+.+++++++..+++.>++.<<++++++++++++++.>.+++.------.--------.>+.>.
+>+[--->++<]>+.             (Initialize memory cell at index 1 with 8)
++++[->+++<]>+.             (Initialize memory cell at index 1 with 20)
++++++++..+++.              (Output 'H')
+>>>++++++++[->+++<]>       (Initialize memory cell at index 4 with 24)
+++++++++.                  (Output 'e')
+---.                       (Output 'l')
+---------.                 (Output 'l')
++++++++++++++.             (Output 'o')
+>>>++++++++[->++++<]>      (Move to index 4 and initialize memory cell with 32)
+--.                        (Output ' ')
+------------.              (Output 'W')
+-----.                     (Output 'o')
++++++++.                   (Output 'r')
+-----------.               (Output 'l')
+++++++.                    (Output 'd')
