@@ -1,50 +1,26 @@
-brainfuck
-++++++++++[>+++++++>++++++++++>+++<<<-]>++.>+.+++++++..+++.>++.<<+++++++++++++++.>.+++.------.--------.>>>+.>.++.
+# Brainfuck code to display "Hello World!" 
+# This program is intentionally complex to demonstrate the working of Brainfuck
 
+++++++++++[>+++++++>++++++++++>+++>+<<<<-]>+.>++.+++++++..+++.
+>-.------------.<++++++++.--------.+++.------.--------.>+.>.
 
-malbolge
-(=<`#9]9<;;;{!#=_@!>6YXaKzq_xZz2VOGz5J_y2<&WZE5]4K|ab}$~/=s*Px>$XEqL4V8P9mn9nD.DnP|}Otegz718~aRMYg{1+6D^
-Kmfj!.0fL9hiTC]!..+/2Q><V=H^*YREJ>BD#y9N$Ls}8D<>mzUwsHBzRf;qDLvytt3Nki2}7xt!oTCCq6B!}+1*|kWpQ9cRh2v$4z
+# Explanation:
+# Initialize memory cell 0 to 10 (++++++++++).
+# Loop 1: multiply it to set other memory cells
+# Cell 0: [10 ]
+# Cell 1: [70 ]
+# Cell 2: [100]
+# Loop increment:
+# Cell 0: [10] > Cell 1: [70] > Cell 2: [100] > Cell 3: [30] > Cell 4: [10]
+# Set cell values and print characters
+# Characters: H (72), e (101), l (108), l (108), o (111), W (87),
+#             o (111), r (114), l (108), d (100), ! (33)
 
-
-intercal
-DO ,1 <- #72
-DO ,1 SUB #1 <- #32
-DO ,1 SUB #2 <- #72
-DO ,1 SUB #3 <- #101
-DO ,1 SUB #4 <- #108
-DO ,1 SUB #5 <- #108
-DO ,1 SUB #6 <- #111
-DO ,1 SUB #7 <- #32
-DO ,1 SUB #8 <- #87
-DO ,1 SUB #9 <- #111
-DO ,1 SUB #10 <- #114
-DO ,1 SUB #11 <- #108
-DO ,1 SUB #12 <- #100
-DO ,1 SUB #13 <- #33
-DO ,1 SUB #14 <- #32
-DO ,1 SUB #15 <- #64
-PLEASE DO ,1 <- #1
-DO ,1 SUB #16 <- #10
-DO ,1 SUB #17 <- #13
-DO ,1 SUB #18 <- #0
-PLEASE WRITE OUT ,1
-
-
-whitespace
-[S S S T S S S S S S T S N
-T T T   S S S T S N   N
-S S S T S S T N   T N
-S S S T S S N T N
-S S S T S S T S N   T S
-S S S T S S T T N   T S
-S S S T S S T S N   T N
-S S S T S S T S S T   T S
-S S S T S S N T S S T   T S
-S S S T S T S N T S
-S S S T S S N T T N   T T
-S S S T S S T S N   T N
-S S S T S S T S N
-S S S T S S T S S T   T S
-S S S T S S T S T N   T T
-]
+# Additional Characters:
+# . prints character in memory cell
+# > moves pointer to next cell
+# < moves pointer to previous cell
+# + increases memory cell value by 1
+# - decreases memory cell value by 1
+# [ starts loop
+# ] ends loop
