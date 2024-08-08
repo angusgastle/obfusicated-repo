@@ -1,43 +1,52 @@
+brainfuck
+++++++++++[>++++++++++<-]>>++++++++++[>++++++++++<-]>++++++++.<+++++[>++++<-]>.------------.---.+++++.<<++++[>----<-]>.
 
-/*
- * INTERCAL: "Hello World" program 
- * INTERCAL is a parody programming language designed to be as different from other languages as possible.
- * This program outputs "HELLO WORLD" to the console.
- */
 
-DO ,1 <- #13
-DO ,2 <- #1
-DO ,3 <- #256
-PLEASE DO ,1 <- #57
-PLEASE DO ,4 <- #12
-PLEASE DO ,5 <- #0
-PLEASE DO ,4 SUB #6 <- #112
-PLEASE DO ,5 SUB #5 <- #114
-PLEASE DO ,4 SUB #5 <- #107
-PLEASE DO ,5 SUB #4 <- #100
-PLEASE DO ,4 SUB #4 <- #117
-PLEASE DO ,5 SUB #3 <- #33
-PLEASE DO ,3 <- #0
-PLEASE DO ,1 <- #1
-PLEASE DO ,1 <- #4
-(PLEASE READ OUT ,1!)
-DO ,5 <- #2
-READ OUT ,1 PLEASE
-DO ,5 <- #1 PLEASE
-DO ,1 <- #6 PLEASE
-DO ,1 <- #3 PLEASE ,1 SUB #3 <- #64
-DO ,1 <- #1 PLEASE
-DO ,1 <- #2 PLEASE
-DO ,1 <- #7 PLEASE READ OUT ,1 PLEASE
-DO ,1 <- #8 PLEASE
-DO ,1 <- #5 PLEASE
-DO ,1 <- #7 PLEASE
-DO ,1 <- #2 PLEASE
-DO ,1 <- #5 PLEASE
-DO ,1 <- #1 PLEASE
-DO ,1 <- #4 PLEASE
-DO ,1 <- #6 PLEASE
-DO ,1 <- #3 PLEASE
-ONCE AGAIN READ OUT ,1 PLEASE
-FORGET #3
-PLEASE GIVE UP
+perl
+#!/usr/bin/perl
+
+# Initialize variables
+my $a = 10; # Initialize a variable to 10
+my $b = 20; # Initialize a variable to 20
+my $c = 30; # Initialize a variable to 30
+
+# Perform simple arithmetic calculations
+$a = $a + 10;
+$b = $b - 5;
+
+# Concatenate strings
+my $greeting = "Hello";
+my $place = "World";
+
+# Use a loop for no apparent reason
+for (my $i = 0; $i < 5; $i++) {
+    $c--;
+
+    # Concatenate the greeting and place strings inside the loop
+    $greeting = "Hello";
+    $place = "World";
+}
+
+# Display the final greeting
+print "$greeting $place\n";
+
+
+assembly
+section .data
+    hello db "Hello, World!", 0
+
+section .text
+    global _start
+
+_start:
+    ; write our string to stdout
+    mov eax, 4           ; system call number (sys_write)
+    mov ebx, 1           ; file descriptor (stdout)
+    mov ecx, hello       ; message to write
+    mov edx, 13          ; message length
+    int 0x80             ; call kernel
+
+    ; exit
+    mov eax, 1           ; system call number (sys_exit)
+    xor ebx, ebx         ; exit code 0
+    int 0x80             ; call kernel
