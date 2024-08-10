@@ -1,28 +1,36 @@
-brainfuck
-++++++++++[>+++++++>++++++++++>+++>+<<<<-]>+.>---.+++++++..+++.>++.<<+++++++++++++++.+.>++++.<++++.------.--------.>>>+.>++++++++++.
+(HP-41C User Code)
 
-# Brainfuck is an esoteric programming language created in 1993 by Urban Müller. 
-# The primary aim of Brainfuck is to achieve Turing-completeness in the smallest possible compiler. 
-# The language uses a memory array each initialized to zero, an instruction pointer that starts at the first command in the program,
-# and a memory pointer (which starts at the first memory cell).
+00 LBL "HELLO"
+01 CLX         // Clear X register
+02 FIX 4       // Set display to Fixed-point with 4 decimal places
+03 56.2337     // Load ASCII for 'H'
+04 XEQ 45      // Convert to Character and Display
+05 61.4002     // Load ASCII for 'e'
+06 XEQ 45      // Convert to Character and Display
+07 66.4861     // Load ASCII for 'l'
+08 XEQ 45      // Convert to Character and Display
+09 XEQ 45      // Convert to Character and Display (Again for 'l')
+10 6F.5659     // Load ASCII for 'o'
+11 XEQ 45      // Convert to Character and Display
+12 33.4844     // Load ASCII for ' '
+13 XEQ 45      // Convert to Character and Display
+14 57.4038     // Load ASCII for 'W'
+15 XEQ 45      // Convert to Character and Display
+16 6F.5659     // Load ASCII for 'o'
+17 XEQ 45      // Convert to Character and Display
+18 72.4842     // Load ASCII for 'r'
+19 XEQ 45      // Convert to Character and Display
+20 6C.4784     // Load ASCII for 'l'
+21 XEQ 45      // Convert to Character and Display
+22 64.4861     // Load ASCII for 'd'
+23 XEQ 45      // Convert to Character and Display
+24 END         // End Program
 
-# Explanation:
-# 1. Start with 10 (++++++++++) on the first cell.
-# 2. Move to the second cell, add 70 (10 * 7): [0, 70, 0, 0]
-# 3. Move to the third cell, add 100: [0, 70, 100, 0]
-# 4. Move to the fourth cell, add 30: [0, 70, 100, 30]
-# 5. Move to the fifth cell, add 10: [0, 70, 100, 30, 10]
-# 6. Go back to the first cell and decrement the first cell by 1: [9, 70, 100, 30, 10]
-# 7. Move to the second cell, print the ASCII value which is 72: H
-# 8. Move to the third cell, subtract 3 (---): [9, 67, 100, 30, 10], print G (71): e
-# 9. Increment, then print S (83): l
-# 10. Print another S (83+1): l
-# 11. Print Y (89): o
-# 12. Print Z (90): space
-# 13. Move to next cell, decrement by 1: [9, 67, 100, 30, 10, 9]
-# 14. Print Z (90): W
-# 15. Print o (111): o
-# 16. Move to previous cell, print l (108 - 1): r
-# 17. Print d (100): d
-# 18. Move ahead and print ! (33): !
-# 19. And done.
+(HP-41C Microcode for ASCII to Character Conversion)
+
+45 LBL 45      
+46 ACO         // Converts number in X to ASCII Character
+47 PSE         // Pause for a short duration
+48 RTN         // Return from subroutine
+
+// Program effectively uses HP-41C's numeric input and ASCII conversion to display "Hello World"
