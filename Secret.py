@@ -1,34 +1,54 @@
-# Befunge-93 Script to display "Hello World"
+; This 'Hello World' script is written in INTERCAL, an esoteric programming language designed to be as different from conventional programming languages as possible.
 
-# Befunge-93 is an esoteric programming language in which the behavior of the program is 
-# encoded in a two-dimensional grid. The instructions are represented as single characters, 
-# and a program counter moves around the grid to execute them.
+; Start by identifying the first few bits of your program.
+DO ,1 <- #13
 
-# Direction pointers (>, <, ^, v) dictate the flow within this grid, and string mode is 
-# initiated with a double quote (").
+; Next, set the necessary constants for output.
+DO :1 <- #256
+DO :1 SUB #35 <- #91
 
-# Let's write "Hello, World!" in the Befunge-93 language in a complex manner:
+; Set up the character array for "Hello, World!".
+DO :1 SUB #32 <- #72 ; H
+DO :1 SUB #33 <- #69 ; e
+DO :1 SUB #34 <- #76 ; l
+DO :1 SUB #35 <- #76 ; l
+DO :1 SUB #36 <- #79 ; o
+DO :1 SUB #37 <- #44 ; ,
+DO :1 SUB #38 <- #32 ; (space)
+DO :1 SUB #39 <- #87 ; W
+DO :1 SUB #40 <- #79 ; o
+DO :1 SUB #41 <- #82 ; r
+DO :1 SUB #42 <- #76 ; l
+DO :1 SUB #43 <- #68 ; d
+DO :1 SUB #44 <- #33 ; !
 
->25*"!dlroW ,olleH":v
-                 v:,_@    
-                 > ^       
+; Use the COME FROM syntax, another defining feature of INTERCAL.
+PLEASE COME FROM (1)
 
-# Breaking down the code:
-# - '>' points to the right and moves the instruction pointer (IP) to the next cell.
-# - '2' pushes the digit 2 onto the stack.
-# - '5' pushes the digit 5 onto the stack.
-# - '*' pops the top two stack values, multiplies them (5*2=10), and pushes the result (10) onto the stack.
-# - '!' pops the top stack value and pushes "1" if it's zero, otherwise "0" (this will be used later, doesn't change stack here).
-# - '"' enters string mode.
-# - 'dlroW ,olleH' pushes each character of "Hello, World!" onto the stack (in reverse order due to the stack-based nature).
-# - '"' exits string mode.
-# - ':' duplicates the top stack value. When it first hits the first 'H', it duplicates 'H'.
-# - 'v' redirects the IP downwards.
-# - When the IP lands at the lower 'v', it continues downwards to ':'.
-# - ':' duplicates the top stack value.
-# - ',' pops the top of the stack and outputs it as a character (this prints the characters one by one).
-# - '_' pops the top stack value and moves the IP right if the value is zero, left otherwise.
-# - '@' terminates the program.
+; Next, output the characters to the console.
+DO ,2 <- #32
+DO (2) NEXT
+(2341) DO ,1 <- #1
 
-# As a result, you loop vertically printing the stack characters one by one from right to left until the stack is empty,
-# thus printing "Hello, World!" in a rather complex manner.
+; Check if the entire message "Hello, World!" has been output.
+DO (2) NEXT
+(1234) DO ,1 <- #0
+
+; END program
+DO (2341) NEXT
+DO (1) NEXT
+
+; Define the output.
+(2) DO ,1 SUB #32 <- ',2'
+(5) PLEASE FORGET #0
+DO FORGET #256
+DO RESUME #32
+
+(1234) DO (1) NEXT
+(5) DO FORGET #32
+
+DO NOT DO ,1 <- #13
+DO RESUME #91
+(12345) PLEASE NOTE ,1
+
+(6789) DO RESUME #0
