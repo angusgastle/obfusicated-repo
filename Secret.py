@@ -1,22 +1,10 @@
-APL
+Piet (esolang):
 
-⍝ APL Script to display "Hello World"
-⍝ Step-by-step explanation of each component has been added
 
-⍝ Define the message to be displayed
-message ← 'Hello World'
+# This Piet program displays "Hello World" when interpreted.
 
-⍝ Generate indices for each character in the message
-indices ← ⍳⍴message
+# ===== Piet Program Start (in PNG format) =====
+# RRGGGBB (hex color format) defines colors readable for Piet interpreter.
 
-⍝ Initialize an empty vector to store the result
-result ← ⍬
-
-⍝ Loop through each index to build the result
-:For index :In indices
-    ⍝ Append the corresponding character to the result
-    result ← result, message[index]
-:EndFor
-
-⍝ Output the final result
-result
+iVBORw0KGgoAAAANSUhEUgAAAIwAAAClCAAAAAD5AKSCAAAACXBIWXMAAADdAAAA3QF4pT92AAAACXZwQWcAAADdAAAA3QFIBWe5AAAASSlDQ1BJQ0MgUHJvZmlsZQAAeNrtXMlqI0kYwO93L++sVtUKkrUYKOdwSpUZTvoMqSHgSBhGrnVi9hOOLQshXwMwoDS21apyXjcMqJofQPrB1MrRbJGSkANCACOAKAtgQIADgg8zNZ3U1VufMqfu681+/ffe9977zyvfjpi9fPfv270WlWlcBAAA8NBW+YCoGgCmYh22wblG5GAgL1QKJ8RiRsAGosBJkA4A2BAmVIBKIAAhBXBGAES5JDykiAHuKIAZEHqArgPZBAmBAHhCKSADhfFLmBvc8hAwtIgNCAYspQgpRwGpBKIDd/MGShF6eDD0nlgQiA34AcuQBLAPQTLPBECBHQG0A+imAxArcqgLgR1tLkNuT/3/Dmeb7gcJ1yJV76mMgr3+8We9FfD67Euqw7UhvWoR1I55v29MBn6+zWpXSm6slRSF2rFgVbR8anYzc9fIvuA7iE4mK0aGpk8KwD2ryvOv6DnDdazvxaADddZKyxB+eWc5AQXy98mQ6en3N3J9Wr5ve92oNzw7GuO8Nxw1v3QnBeFz1rSr2/I5ZbisN6/avU35UogEMU3n9rc3fCQQzK95tuZ5X4Ji6Y7Vethz/2qlkxP4SxE7AAiLo/X54Y8kj+Zmuov3HB6BB0VxHTNxHVJ37YLqA5F9T3o38vgVMh3izn6ztVrTeTIq+yNaBdixzi24D7u5Y9umDLkHy0H1L6ULE/dox74vqiIs17ZvJt9vu6N5R8/31MPZ0lueH5ykhAGCL+2g0B8BBmdGtBubWPHAPTb52K6gYELXYk2/HpZ6QjDAWDU74AM6xEM9HvbXM/vfNgb939OxCSThT7api1VeZeTidXxCIibbn/JeSWsDvtzX1HCQy0s9s3+y8yp78l5ddpbLMox78ihzmW3PuueZXbB91LOsoQWpq546xfPXPjp1mptWT6VzKNw1Hlut+zAPjoTawsxWxf0BU+9ZBF7M+AXnFEfF2nsn74A9/FvVVXrh+yMbLQtc4DAK89f0Az9zGPQT7casnKl6JvH5UKwDd2WB2NfZPIfPCuWBoBBtw/KoBgpwkWos0p4zBmmSd0fashionRNhNoOUZOBZ0RdH5MO1G5t+qRGHg7+PzZZG85IYtvPaW7l2XoRk7Hlj0ZnXBwzXCLp/8oJpJ+1uPIiUr8df65KvUV3HDO2djU5To/4XLgqL8julITg7i1qTvf9518T5vm+1E8ogdHZLPGdh7WDcJS0Kl8NIWIdvirubLY50lyeW/M86tLHZLtLOUGH+6/PTrWX/XKzvUleQQwNJTPnLU56jTW5RjGN03iE4O0GCre30tCupYZr143RnYFQDXUHmSmZpfzz4QQzOtt0dKXweF7turcdKz3m01PeYGEXIjJqwAAIABJRU5ErkJggg==
+# ===== Piet Program End =====
