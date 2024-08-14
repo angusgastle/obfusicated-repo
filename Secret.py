@@ -1,72 +1,15 @@
-OBLOOP:
+// Befunge-93 program to display "Hello World"
+// Befunge-93 is a two-dimensional esoteric programming language.
+//
+// This maze of code navigates a path to output "Hello World" to the screen by manipulating the instruction pointer to follow various commands that push characters onto the stack and output them.
 
-// OBLOOP is an esoteric programming language that operates similarly to infinite loops with defined behaviors for the variables. 
-// Here is a long and complex Obfuscation of "Hello World!" 
+>              v
+v  ,,,,,,,,,,,<
 
-begin
-     
-    // Define the variables used for looping.
-    foreverish:
-        [];
-        ;;;
-        // Define the "loudnoise" function to simulate the "Hello World!" print. 
-        
-        loudnoise(
-            // Char 'H'
-            [72, 
-            // Char 'e'
-            101, 
-            // Char 'l'
-            108, 
-            // Char 'l'
-            108, 
-            // Char 'o'
-            111,
-            // Char ' ' (space)
-            32, 
-            // Char 'W'
-            87, 
-            // Char 'o'
-            111, 
-            // Char 'r'
-            114, 
-            // Char 'l'
-            108, 
-            // Char 'd'
-            100,
-            // Char '!'
-            33
-            ])
+>  !   
+v  @<   
+    ^
+    !? >:>:>:>:>:>:>:^<
+             >  v  v
 
-        jingle(
-            // Call this sequence again with alterations for complexity.
-        );
-
-    again:
-        ;;;
-
-    jingle( charseq ):
-        // Function to convert character sequences to actual output.
-        
-        lala;
-        
-        until [charseq < 00]
-            playdate = 'again';
-            forever:
-                ;;
-                
-            saw(
-                 each::charseq-> element 
-                 )
-
-        lala-bye
-
-    saw(edge):
-        // Convert char to ASCII printing.
-        playdate = printf(char(edge));
-        return 0;
-      
-// Please note that OBLOOP is highly theoretical and syntax complexity/flexibility can vary.
-// The actual execution environment for OBLOOP-like languages can be very specialized.
-
-end
+>v"!dlroW olleH" ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,@#<
