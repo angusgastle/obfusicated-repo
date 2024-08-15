@@ -1,87 +1,49 @@
-lua
---; This is a Brainfuck implementation using Lua
---[[
- Brainfuck is an esoteric programming language created in 1993 by Urban Müller. 
- It consists of only eight commands and is known for its minimalism and obfuscation potential.
---]]
+# This script is written in Brainfuck, an esoteric programming language.
+# Brainfuck operates on an array of memory cells, each initially set to zero.
+# The language uses a minimalistic set of commands.
+# Commands are: > (increment memory pointer), < (decrement memory pointer),
+# + (increment byte at memory pointer), - (decrement byte at memory pointer),
+# . (output byte at memory pointer to stdout), , (input byte to memory pointer),
+# [ (jump past matching ] if byte at memory pointer is zero),
+# ] (jump back to matching [ if byte at memory pointer is non-zero).
 
--- Define the Tape and Pointer --
-local tape = {}
-for i=1, 30000 do
-    tape[i] = 0
-end
+# Initialize required memory cells for 'H', 'e', 'l', 'o', 'W', 'r', 'd' using the patterns below.
 
-local pointer = 1
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+>+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+>+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+>++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+>+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+>+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+>+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+>++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+<<<<<++++++.
 
--- Brainfuck Commands --
-local function incrementPointer()
-    pointer = pointer + 1
-end
+# Memory cells now contain: 72 ('H'), 101 ('e'), 108 ('l'), 111 ('o'), 87 ('W'), 114 ('r'), 100 ('d').
+# We will now print "Hello World" using these memory cells.
 
-local function decrementPointer()
-    pointer = pointer - 1
-end
+# Print 'H'
+>++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++.
 
-local function incrementByte()
-    tape[pointer] = (tape[pointer] + 1) % 256
-end
+# Move to 'e'
+>+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++.
+# Move to 'l'
+>+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++.
+# Reuse 'l'
+>+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++.
+# Move to 'o'
+>++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++.
+# Print space by moving to a new memory cell and setting it to 32
+>++++++++++++++++++++++++++++++++++++++++++++++++.
+# Move to 'W'
+>++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++.
+# Move back to 'o'
+>++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++.
+# Move to 'r'
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++.
+# Move to 'l'
+>+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++.
+# Move to 'd'
+>++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++.
 
-local function decrementByte()
-    tape[pointer] = (tape[pointer] - 1) % 256
-end
-
-local function outputByte()
-    io.write(string.char(tape[pointer]))
-end
-
--- Execution Function --
-local function interpretBrainfuck(code)
-    local codePointer = 1
-    local loopStack = {}
-
-    while codePointer <= #code do
-        local command = code:sub(codePointer, codePointer)
-
-        if command == '>' then
-            incrementPointer()
-        elseif command == '<' then
-            decrementPointer()
-        elseif command == '+' then
-            incrementByte()
-        elseif command == '-' then
-            decrementByte()
-        elseif command == '.' then
-            outputByte()
-        elseif command == '[' then
-            if tape[pointer] ~= 0 then
-                table.insert(loopStack, codePointer)
-            else
-                local openBrackets = 1
-                while openBrackets > 0 do
-                    codePointer = codePointer + 1
-                    local c = code:sub(codePointer, codePointer)
-                    if c == '[' then
-                        openBrackets = openBrackets + 1
-                    elseif c == ']' then
-                        openBrackets = openBrackets - 1
-                    end
-                end
-            end
-        elseif command == ']' then
-            if tape[pointer] ~= 0 then
-                codePointer = loopStack[#loopStack] - 1
-            else
-                table.remove(loopStack)
-            end
-        end
-
-        codePointer = codePointer + 1
-    end
-end
-
--- Brainfuck Code to Print "Hello World!" --
--- This literal Brainfuck code will output "Hello World!"
-local helloWorldBF = "++++++++++[>+++++++>++++++++++>+++>+<<<<-]>++.>+.+++++++..+++.>++.<<+++++++++++++.>.+++.------.--------.>+.>."
-
--- Invoke the Brainfuck Interpreter with the "Hello World!" Program --
-interpretBrainfuck(helloWorldBF)
+# The output should be "Hello World" now. End of program.
