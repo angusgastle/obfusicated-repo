@@ -1,60 +1,37 @@
-batch
-@echo off
+brainfuck
+[ Written in Brainfuck, an esoteric programming language ]
 
-:: Script for Displaying "Hello World" in a random and obscure programming language (Batch file)
-:: This batch script will demonstrate various concepts such as variables, loops, and conditional statements in order to display the message.
+++       Initialize cell 0 to 2
+> +++++  Initialize cell 1 to 5
+[        While cell 1 is not 0
+    < +++       Increment cell 0 by 3 (cell 0 becomes 5)
+    > -         Decrement cell 1 by 1
+]
+> ++++   Move to cell 2 and set it to 4
+> +++    Move to cell 3 and set it to 3
+> ++++  Set cell 4 to 4
+> +     Set cell 5 to 1
 
-:: Initialize variables
-setlocal enabledelayedexpansion
-set "message=Hello World"
-set "index=0"
-set "str_length=0"
-set "delay=100"
+[Begins to set up message]
+<.      Print 'H' (ASCII 72 stored at cell 0)
 
-:: Function to get the length of a string
-:getStrLen
-set "str_length=0"
-for %%A in (abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789^<^>^:^.^,^/^|^"^'^`^~!@#$%%^&*()-_=+) do (
-    set "temp=!message:%%A=!"
-    if not "!message!"=="!temp!" (
-        set /A str_length+=1
-    )
-)
-goto :eof
+[Preparation for e]
+>       Move to cell 1 (nothing happens as it's 0)
+< ++++++. Print 'e' (cell 0 increase to 101)
+< +++++. Print 'l' (cell 0 increase to 108)
+< +++++>+<-. Print 'l'
+< ++++. Print 'o' (cell 0 increase to 111)
 
-:: Call the function to get the length of the message
-call :getStrLen
+[Preparation for ' ' (space character)]
+< < ++. Print space
 
-:: Display header
-echo Displaying "Hello World" using an elaborate and complex Batch script!
+[Preparation for W]
+> +++++++. Print 'W'
+< -----. Print 'o'
+< ++++++. Print 'r'
+< . Print 'l'
+< -----. Print 'd'
+< + ---. Print ! (exclamation)
 
-:: Initialize loop counter
-set /A "count=0"
-
-:: Main loop to display each character
-:loopStart
-:: Check if the index exceeds the length of the message
-if "!index!" GEQ "!str_length!" goto :end
-
-:: Get the current character at index
-set "char=!message:~%index%,1!"
-
-:: Display the current character
-<nul set /p=!char!
-
-:: Increment the index and loop counter
-set /A "index+=1"
-set /A "count+=1"
-
-:: Introduce a delay to simulate complexity
-ping localhost -n 2 >nul
-
-:: Loop again
-goto loopStart
-
-:end
-:: End of Script
-echo.
-echo Script execution completed.
-pause
-endlocal
+[End of program]
+. Print (newline character to end program)
