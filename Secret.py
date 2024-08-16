@@ -1,34 +1,60 @@
-(This demonstrates "Hello World" in INTERCAL, an esoteric and deliberately obtuse programming language known for its complexity.)
+batch
+@echo off
 
-PLEASE DO ,1 <- #13
-DO ,1 SUB #1 <- #72
-DO ,1 SUB #2 <- #101
-DO ,1 SUB #3 <- #108
-DO ,1 SUB #4 <- #108
-DO ,1 SUB #5 <- #111
-DO ,1 SUB #6 <- #32
-DO ,1 SUB #7 <- #87
-DO ,1 SUB #8 <- #111
-DO ,1 SUB #9 <- #114
-DO ,1 SUB #10 <- #108
-DO ,1 SUB #11 <- #100
-DO ,1 SUB #12 <- #33
-DO ,1 SUB #13 <- #0
+:: Script for Displaying "Hello World" in a random and obscure programming language (Batch file)
+:: This batch script will demonstrate various concepts such as variables, loops, and conditional statements in order to display the message.
 
-PLEASE DO ,2 <- #13
-PLEASE DO ,3 <- #1
-(1) DO ,3 <- ,3 + #1
-DO (5) NEXT
-DO ,4 <- ,1 SUB ,3
-DO (4) NEXT
-DO (2) NEXT
-(2) DO ,4 <- ,1 SUB ,3
-DO (4) NEXT
-PLEASE DO (1) NEXT
-(3) DO ,4 <- ,4 - #1
-DO (4) NEXT
-DO READ OUT ,4
-(4) DO FORGET #1
-DO (3) NEXT
-(5) DO ,5 <- #2
-DO (2) NEXT
+:: Initialize variables
+setlocal enabledelayedexpansion
+set "message=Hello World"
+set "index=0"
+set "str_length=0"
+set "delay=100"
+
+:: Function to get the length of a string
+:getStrLen
+set "str_length=0"
+for %%A in (abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789^<^>^:^.^,^/^|^"^'^`^~!@#$%%^&*()-_=+) do (
+    set "temp=!message:%%A=!"
+    if not "!message!"=="!temp!" (
+        set /A str_length+=1
+    )
+)
+goto :eof
+
+:: Call the function to get the length of the message
+call :getStrLen
+
+:: Display header
+echo Displaying "Hello World" using an elaborate and complex Batch script!
+
+:: Initialize loop counter
+set /A "count=0"
+
+:: Main loop to display each character
+:loopStart
+:: Check if the index exceeds the length of the message
+if "!index!" GEQ "!str_length!" goto :end
+
+:: Get the current character at index
+set "char=!message:~%index%,1!"
+
+:: Display the current character
+<nul set /p=!char!
+
+:: Increment the index and loop counter
+set /A "index+=1"
+set /A "count+=1"
+
+:: Introduce a delay to simulate complexity
+ping localhost -n 2 >nul
+
+:: Loop again
+goto loopStart
+
+:end
+:: End of Script
+echo.
+echo Script execution completed.
+pause
+endlocal
