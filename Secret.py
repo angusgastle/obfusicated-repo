@@ -1,9 +1,24 @@
+bf
+--[[
+Brainfuck code to print "Hello, World!" to the console.
+Brainfuck is a minimalistic and obscure programming language that uses only 8 commands.
+The following code is extensive in its steps, ensuring complexity and length,
+but ultimately results in printing "Hello, World!" followed by a newline.
+]]
 
-/*
-The following script is written in Malbolge, an esoteric programming language known for its complexity and difficulty to understand.
-It intentionally obfuscates simple operations to achieve the "Hello, World!" output.
-*/
-
-(=<`#9]_;=^[{}}~]+$(!({@.^~(#';51{*"!{^`'~%=*+]}<`/}$@&_~8368^5[<:.hnx`e.O
-
-*/
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++.
++++++++++++++++++++++++++++++.+++++++..+++.------------------------------------.
++++++++++++++++++++++++++++++.
+------------.++++++++++++++++++++++++++++.
+-------.
+++++++++++++++++++++++++++++++++++++++++++++++++++++.
+----------.
+++++++++++++++++++++++++++++++++++++++++++++++++++++++.
+----.
+--------.
+++++++++++++++++++++++++++++++++++++++++++++++++++++.
+----------.
+++++++++++++++++++++++++++++++++++++++++++++++++.
+----.
+++++++++++++++++++++++++++++++++++++.
+-------.++++++++++.
