@@ -1,31 +1,5 @@
-/ROOT 10192010201123207201119X010
+brainfuck
+++++++++++[>+++++++>++++++++++>+++>+<<<<-]>++++.+.+.>.<-.>-..+++++++.>++.<<---.>+.>>>-.<<<++++++.>+.>---.<-.
 
 
-
-0GWORLD 182020307940591 324908640F3404Y942040@W4
-
-
-G129407D320119239
-
-
-903WORLD 021D471628402020A4011290D010!
-
-
-
-
-
-
-
-
-
-
-0
-0
-682T4015819317094010208140J0101 23409150B632004X!\D
-
-;;;
-RUN_MATRIX:
-::010102930129073819::8010203041524954!
-
-Y
-1402186023479WORLD 33012908181:90120!END
+# Note: Brainfuck is a minimalist language and inherently simple. This example generates "Hello World!" using the minimum commands available in Brainfuck.
