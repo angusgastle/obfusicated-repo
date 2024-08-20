@@ -1,25 +1,27 @@
 
-/*
- * This program prints "Hello World" to the console using Malbolge,
- * an esoteric programming language created by Ben Olmstead in 1998.
- * The program is intentionally made verbose and complex.
- */
+; Klong (array language) Script for Displaying "Hello World"
 
-('&%:9]!~}|z2Vxwv-,POqponlBji(ewpl&%$IHGFED`cbA@#"?=<;7654321/.vuts!r                                   
- zyxw@zA,<QPdlk9wvutsLk>on-VvutsrqponmlkJf]cb`aZYXWVUTjR4)!~}|nmlKjief.a `{@zy
- xwvu*=,+)#>'=C;fJd51"xw`nmlkjihgfedcba`ZYX'a21*/.-xvtsrqpnmlkj!~}|onm+Qvutsr
- qxwvutsBnmQwvqp-poqvrythm!wvnm'xyJihgfYm 'zywvutsrqponmjiVwvutsrtsRqponmlkj
- i!8wvutsrqpome zyxwvupeLk9wvutsrqponmjihgfedcba`ZYXWVUT>edcba.@zzwv fedcb`ZYWV
+; Function to Display a String (complexity added by step-by-step array manipulation)
+: dispString {[*' '.^ x 0:]}
 
-8wvutsrqponmlkihg0o>)eEcbZY><Vba`Ywvutlmh fkc}|yxwvutsrqponmlkjihgfY'ZYX'. 2 
-wfiHwvutsrqponmlkjihgfedcba`ZdcbaRwv-utsrqmKj0wvutsrqponmfew ugfedcba`Zyxwvutsr
- qppewvutsrfsSb a`ZYXWVUTSRQ0'\zywvutse5t)*qJihgfedcRa@wdovvutsrqponmlkihgfMash
-19wvutsqrTpZdc'value':=!'xwvutsrqponmlkihgfYhgfedcba.o 5wvutsrqponmlkvutnm!"
+; Multidimensional array with ASCII values for "Hello World"
+:string [72 101 108 108 111 32 87 111 114 108 100]
 
- .wvutsrqponmlihgfedcb8^eQwvDCBA2wvutsrqponmkjihnwvutsrqpomb edcbaZwvutsrqpsonij
- hgfedcb a`XWVUTSR8wiredc8pqrAb`ZYX/MCQFedbalkonwvtsrqpon'zyhLwvutsnmlkjihgfRwv
- utshgfe2`wvutsrqponmlkehgfedcbkZYXwvuts'<*&wvutsrqponmlkihgCbaIwvutsedcbaLlwv
-nmlonhgfedc@ZYXweds &qponwv'=>yxwvutsqxuvwxyztsrqp!/)utnmlkjih'dcbZYXwvjwvlyRk)
-"wvutsrqponmlkjihg9.cba`KwvutsrqponmlkihwvJwvutsRt{ut!]wvutsrqjwuts!dcba`ZYXWVV
+; Convert ASCII values to Characters and Append to Output Array
+:output []
 
-T(Ycwvutsrqponml(result)!`
+; Iterate over each ASCII Value
+:[output :output :char,[char = _] = ': [;reset] reduce [string 0:]
+ '[char]|output -> ;reset
+  `(reset =  :output)
+  {;convert each ASCII to character
+   _ =  _ ![\`
+    :x carry y
+    ;; Append Converted Character to Output Array
+    :output ,[x = dispString [x]][output] . y carry = reset 
+   
+  wend y.[carry , 0[]] :output 
+  ;; Finalized Appended Array
+   [output carry].; next
+ ![output parse trim [reduce 0]] 
+
