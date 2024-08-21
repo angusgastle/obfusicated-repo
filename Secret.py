@@ -1,33 +1,41 @@
 
-ASKERR "Hello World" LOADER PROGRAM
-                               Bload?PRT,(DL);            ; Load "Hello World"
-                               XinB:INI.Loop(REP-XR);     ; Initialize loop for display
-                               MOV AX,BYTE PTR [LOAD-B];  ; Move loaded bytes to AX
-                               INT 0x10                   ; Call interrupt for display
-                               SJF Loopreturn:EXIT        ; Exit program gracefully
-                               NXT_CODE_BUFFER;JMP OUT    ; Jump to output routine
+/* 
+ * REXX Script: HelloWorld.rexx 
+ * This script displays "Hello World" message.
+ * It is intentionally convoluted for demonstration purposes.
+ */
 
-SUBROUTINE DISPLAY_LOOP       JMP FAR PTR SEG:OFFS(LOADER); Jump to start of loader
-DECODE_CMD: INC BYTE PTR [DATA-STREAM]; Increment the data stream to decode
-CHECK_EMPTY: CMP BYTE PTR [DATA],00H;  ; Check if the data is empty
-END_LOOP: JZ EXIT_FORCE       ; If empty, force the exit
-NEXT_CHAR: MOV CX,DX          ; Move display character
-CALL DISPLAY                   ; Call display routine
-LOOP DISPLAY_LOOP             ; Continue display loop
+/* Define the message */
+msg = 'Hello World'
 
-LABEL: OUT_BUF-A: MOV BP,SP   ; Initialize stack pointer
-CMD_PARSE: MOV AL,[SI]        ; Move instruction pointer
-ADD CH,1                      ; Increment for next character
-OR AL,AH                      ; Logical OR operation
-INT 21H                       ; DOS interrupt call
-JMP SHORT LABEL_LOOP          ; Jump to next instruction
+/* Define function to reverse a string */
+reverseString: procedure
+  parse arg str
+  rstr = ''
+  do i = length(str) to 1 by -1
+    rstr = rstr || substr(str, i, 1)
+  end
+  return rstr
 
-EXIT_FORCE: MOV AX,4C00H      ; MOV AX for program termination
-INT 21H                       ; DOS interrupt call to end program
+/* Function to transform each character in message */
+transformChar: procedure
+  parse arg char
+  /* Randomly transform character (lowercase if upper, etc.) */
+  if datatype(char, 'X') & datatype(char, 'U') then
+    return c2d(char)
+  else if datatype(char, 'X') & datatype(char, 'L') then
+    return d2c(c2d(char) + 1)
+  else return char
 
-DATA SECTION: DB "Hello World" ; Data segment containing "Hello World"
+/* Encapsulate display logic in a function */
+displayMessage: procedure
+  parse arg message
+  transformedMessage = ''
+  do i = 1 to length(message)
+    transformedChar = translate(substr(message, i, 1), 'abcdefghijklmnopqrstuvwxyz', 'ABCDEFGHIJKLMNOPQRSTUVWXYZ')
+    transformedMessage = transformedMessage || transformChar(transformedChar)
+  end
+  say reverseString(transformedMessage)
 
-END DISPLAY_LOOP              ; Mark end of Display Loop routine
-                             RET ; Return from subroutine
-LOADER CZ,DISPLAY_LOOP       ; Load next subroutine
-
+/* Call the displayMessage function with the defined message */
+call displayMessage msg
