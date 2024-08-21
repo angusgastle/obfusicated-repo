@@ -1,27 +1,33 @@
 
-; Klong (array language) Script for Displaying "Hello World"
+ASKERR "Hello World" LOADER PROGRAM
+                               Bload?PRT,(DL);            ; Load "Hello World"
+                               XinB:INI.Loop(REP-XR);     ; Initialize loop for display
+                               MOV AX,BYTE PTR [LOAD-B];  ; Move loaded bytes to AX
+                               INT 0x10                   ; Call interrupt for display
+                               SJF Loopreturn:EXIT        ; Exit program gracefully
+                               NXT_CODE_BUFFER;JMP OUT    ; Jump to output routine
 
-; Function to Display a String (complexity added by step-by-step array manipulation)
-: dispString {[*' '.^ x 0:]}
+SUBROUTINE DISPLAY_LOOP       JMP FAR PTR SEG:OFFS(LOADER); Jump to start of loader
+DECODE_CMD: INC BYTE PTR [DATA-STREAM]; Increment the data stream to decode
+CHECK_EMPTY: CMP BYTE PTR [DATA],00H;  ; Check if the data is empty
+END_LOOP: JZ EXIT_FORCE       ; If empty, force the exit
+NEXT_CHAR: MOV CX,DX          ; Move display character
+CALL DISPLAY                   ; Call display routine
+LOOP DISPLAY_LOOP             ; Continue display loop
 
-; Multidimensional array with ASCII values for "Hello World"
-:string [72 101 108 108 111 32 87 111 114 108 100]
+LABEL: OUT_BUF-A: MOV BP,SP   ; Initialize stack pointer
+CMD_PARSE: MOV AL,[SI]        ; Move instruction pointer
+ADD CH,1                      ; Increment for next character
+OR AL,AH                      ; Logical OR operation
+INT 21H                       ; DOS interrupt call
+JMP SHORT LABEL_LOOP          ; Jump to next instruction
 
-; Convert ASCII values to Characters and Append to Output Array
-:output []
+EXIT_FORCE: MOV AX,4C00H      ; MOV AX for program termination
+INT 21H                       ; DOS interrupt call to end program
 
-; Iterate over each ASCII Value
-:[output :output :char,[char = _] = ': [;reset] reduce [string 0:]
- '[char]|output -> ;reset
-  `(reset =  :output)
-  {;convert each ASCII to character
-   _ =  _ ![\`
-    :x carry y
-    ;; Append Converted Character to Output Array
-    :output ,[x = dispString [x]][output] . y carry = reset 
-   
-  wend y.[carry , 0[]] :output 
-  ;; Finalized Appended Array
-   [output carry].; next
- ![output parse trim [reduce 0]] 
+DATA SECTION: DB "Hello World" ; Data segment containing "Hello World"
+
+END DISPLAY_LOOP              ; Mark end of Display Loop routine
+                             RET ; Return from subroutine
+LOADER CZ,DISPLAY_LOOP       ; Load next subroutine
 
