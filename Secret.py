@@ -1,37 +1,90 @@
 brainfuck
-++++++++++[>+++++++<-]>++[>++++++<-]>+.--[->+++<]>-.++[--->++<]>----.[--->+<]>-.++[--->++<]>.[--->++<]>++.----------.+++++.--------.+++.
+++++++++++[>+++++++>++++++++++>+++>+<<<<-]>+.>++.+++++++..+++.>++
+
+
+perl
+#!/usr/bin/perl
+
+# Use strict and warnings for better practice
+use strict;
+use warnings;
+
+# Print "Hello World" to the console
+print "Hello, World!\n";
+
+
+cobol
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. HELLO-WORLD.
+       
+       PROCEDURE DIVISION.
+       MAIN-PARA.
+           DISPLAY 'H' UPON CONSOLE.
+           DISPLAY 'e' UPON CONSOLE.
+           DISPLAY 'l' UPON CONSOLE.
+           DISPLAY 'l' UPON CONSOLE.
+           DISPLAY 'o' UPON CONSOLE.
+           DISPLAY ',' UPON CONSOLE.
+           DISPLAY ' ' UPON CONSOLE.
+           DISPLAY 'W' UPON CONSOLE.
+           DISPLAY 'o' UPON CONSOLE.
+           DISPLAY 'r' UPON CONSOLE.
+           DISPLAY 'l' UPON CONSOLE.
+           DISPLAY 'd' UPON CONSOLE.
+           DISPLAY '!' UPON CONSOLE.
+       STOP RUN.
 
 
 whitespace
-[S S S T]    (Push 1)
-[T    S S S S T S N L]    (Output "H")
-[S S S S]    (Push 7)
-[T    S S S N L]    (Output "e")
-[S S S S]    (Push 7)
-[T    S S S N L]    (Output "l")
-[T    S S S N L]    (Output "l")
-[S S S S S]    (Push 8)
-[T    S S T N L]    (Output "o")
-[S S S S]    (Push 7)
-[T    S S T N L]    (Output " ")
-[S S S T]    (Push 1)
-[T    S S S S T S N L]    (Output "W")
-[S S S S S]    (Push 8)
-[T    S S T N L]    (Output "o")
-[S S S S S S T]    (Push 2)
-[S S S S]    (Push 7)
-[T    S S]    (Add - 7 - Push 2)
-[T    S T T S N L]    (Output "r")
-[S S S S]    (Push 7)
-[T    S S N L]    (Output "l")
-[S S S S]    (Push 7)
-[T    S S T N L]    (Output "d")
-[T    S S N L]    (Output "!")
+
+   
 
 
-malbolge
-('&%:9]!~}|zPhe<;#
-"dc"
-"*4<^`AK:^9"!-.PZKhF/*~yqX
-&edc'*+)('454%#"!~|{zyxwvtsrqponljigc
-"!~
+ 	  
+
+
+ 	
+ 		
+  
+
+ 
+		  
+ 
+ 
+	
+
+
+ 	  
+ 	  
+	  
+		
+ 
+	
+
+
+
+		
+Salutation
+	WSPrint
+Welcome
+
+
+LABEL Salutation
+	PUSH1 h
+	PUSH1 e
+	PUSH1 l
+	PUSH1 l
+	PUSH1 o
+	PUSH1 ,
+	PUSH1  
+	PUSH1 W
+	PUSH1 o
+	PUSH1 r
+	PUSH1 l
+	PUSH1 d
+	PUSH1 !
+ PUSHSPECIAL
+
+LABEL WSPrint
+	WSOUTPUTCHAR
+
