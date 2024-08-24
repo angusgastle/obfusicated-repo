@@ -1,26 +1,17 @@
-# INTERCAL (a very esoteric programming language)
 
-DO :1 <- #13
-DO :2 <- #190
-DO :3 <- #167
-DO READ OUT :1
-DO :1 SUB #1 <- #72
-DO :1 SUB #2 <- #101
-DO :1 SUB #3 <- #108
-DO :1 SUB #4 <- #108
-DO :1 SUB #5 <- #111
-DO :1 SUB #6 <- #32
-DO :1 SUB #7 <- #87
-DO :1 SUB #8 <- #111
-DO :1 SUB #9 <- #114
-DO :1 SUB #10 <- #108
-DO :1 SUB #11 <- #100
-DO :1 SUB #12 <- #33
-DO .1 <- #1
-DO (1) NEXT
-(1) DO :3 <- :3 - 1
-DO :2 <- :2 + 1
-PLEASE DO :1 SUB #1 <- #72
-DO .1 <- .1 + 1
-DO (1) NEXT
-(1) PLEASE GIVE UP
+; Esolang: Brainfuck
+; Brainfuck is an esoteric programming language created in 1993 by Urban Müller and notable for its extreme minimalism. This program prints "Hello, World!"
+
+; [                 jump past matching ] if cell under current pointer is 0
+; ]                 jump back to matching [ if cell under current pointer is nonzero
+; +                 increment the byte at the data pointer
+; -                 decrement the byte at the data pointer
+; >                 increment the data pointer (move right)
+; <                 decrement the data pointer (move left)
+; .                 output the byte at the data pointer (ASCII value)
+; ,                 accept one byte of input, storing its value in the byte at the data pointer
+
+++++++++++[>+++++++>++++++++++>+++>+<<<<-]>++.>+.+++++++..+++.>++.<<+++++++++++++.>++++.--------------
+
+>+++++++++++.<+++.<+++.------.--------.>+.>.
+
