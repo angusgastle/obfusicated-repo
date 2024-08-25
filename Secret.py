@@ -1,40 +1,39 @@
-// Piet program (uses colors to represent instructions)
-// The following Piet code will display "Hello World"
-110101 110101 110101 110101 110101 110101 110101 000101 100100 111000 111000 110100 
-111100 111100 110010 001000 100011 101011 110000 110100 101010 100010 000001 
-120011 100011 110010 011010 110011 000001 010101 010011 001101 110101 101101 
 
-// Explanation: (We use Piet's color blocks to increment numbers and perform operations; 
-// each color change represents a different command based on Piet's specification table)
+# This script is written in Intercal, an esoteric programming language designed to be as different from conventional programming languages as possible.
+# The purpose of this script is to display the string "Hello World" to the screen, making it complex and verbose in Intercal.
+# However, Intercal's complexity often comes from the unique shuffling and mangling of more simple operations.
 
-// Set dp to 0 (right), cc to 0 (left to right)
-// Push "H" (72) from 8 blocks (72 mod 18)
-// Output character (H)
-// Push "e" (101) from 13 blocks (101 mod 18)
-// Output character (e)
-// Push "l" (108) from 12 blocks (108 mod 18)
-// Output character (l)
-// Repeat "l"
-// Push "o" (111) from 15 blocks (111 mod 18)
-// Output character (o)
+PLEASE DO ,1 <- #13
+PLEASE DO ,1 SUB #1 <- #203	; Extension for character 'H'
+PLEASE DO ,1 SUB #2 <- #140	; Extension for character 'e'
+PLEASE DO ,1 SUB #3 <- #108	; Extension for character 'l'
+PLEASE DO ,1 SUB #4 <- #111 ; Extension for character 'o'
+PLEASE DO ,1 SUB #5 <- #32  ; Extension for space character ' '
+PLEASE DO ,1 SUB #6 <- #87  ; Extension for character 'W'
+PLEASE DO ,1 SUB #7 <- #114 ; Extension for character 'o'
+PLEASE DO ,1 SUB #8 <- #100	; Extension for character 'r'
+PLEASE DO ,1 SUB #9 <- #108	; Extension for character 'l'
+PLEASE DO ,1 SUB #10 <- #100; Extension for character 'd'
 
-// Push space (32) from 9 blocks (32 mod 18)
-// Output character (space)
-// Push "W" (87) from 6 blocks (87 mod 18)
-// Output character (W)
-// Push "o" (111) from 15 blocks (111 mod 18)
-// Output character (o)
-// Push "r" (114) from 18 blocks (114 mod 18)
-// Output character (r)
-// Push "l" (108) from 12 blocks (108 mod 18)
-// Output character (l)
-// Push "d" (100) from 11 blocks (100 mod 18)
-// Output character (d)
+PLEASE DO ,2 <- #1
+PLEASE READ OUT ,1 SUB #1
+PLEASE DO ,2 <- #1$#2
+PLEASE READ OUT ,1 SUB #2
+PLEASE DO ,2 <- #1$#3
+PLEASE READ OUT ,1 SUB #3
+PLEASE DO ,2 <- #1$#4
+PLEASE READ OUT ,1 SUB #4
+PLEASE DO ,2 <- #1$#5
+PLEASE READ OUT ,1 SUB #5
+PLEASE DO ,2 <- #1$#6
+PLEASE READ OUT ,1 SUB #6
+PLEASE DO ,2 <- #1$#7
+PLEASE READ OUT ,1 SUB #7
+PLEASE DO ,2 <- #1$#8
+PLEASE READ OUT ,1 SUB #8
+PLEASE DO ,2 <- #1$#9
+PLEASE READ OUT ,1 SUB #9
+PLEASE DO ,2 <- #1$#10
+PLEASE READ OUT ,1 SUB #10
 
-// Push "!" (33) from 1 block (33 mod 18)
-// Output character (!)
-// End of program without any more command to be executed
-
-// Note: The program's length and complexity is increased through redundant blocks and 
-// unnecessary steps to artificially increase its complexity. The above sequence is specifically
-// tailored based on Piet's allowed set of operations and color transitions.
+PLEASE GIVE UP
