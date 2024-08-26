@@ -1,10 +1,9 @@
 
-# In Malbolge, an esoteric programming language designed to be as difficult to program in as possible.
+; This is a Malbolge program
+; Malbolge is an esoteric programming language designed to be difficult to program in
+; Here, we will display "Hello World" using complex and obfuscated instructions
 
-('&%:9]!~}|zVxwvutsrponm<kjih64dcba`_^]432YWVWTPQONLKJGA_^^]%$"!xwvutsronmlk*ih^e[ZXYTSRPONMLLKJJHGDCB@?>=[ZYXWWVUROQNML?)'e\#"!~
-
-# Explanation:
-# Malbolge is a language that intentionally creates very confusing and lengthy code for a simple task.
-# In this script, the char at each position is used to map new operations based on a 'crazy' function.
-# The complexity and obscurity of the code are intrinsic to Malbolge's design.
-# This script will display "Hello World" when executed in an appropriate Malbolge interpreter.
+(=<`#9]~6ZY32VxN*D.Qe&4c):"u~~~d=BpR3:_84N59pN&%<ILmyxw/;}|.
+\$@:ZY97)xQ<!^K5a"$|.tzrLHG}2k9w17h_x{=Akq/-Jb}f(%X6Vv-qfgw*)~
+#6:30<&pO-Y7cPN*!]{s[Pp/<vDd5-;/tKdA>xcw/OJ-8_Aj5|~9YEhDFaRqG
+tCoL|jGBZG4NYKz1M<D7KY#u,<2cu^-;Ug/zK}6_XZ|$8Uz"bpJeyl}^lNAQOdL
