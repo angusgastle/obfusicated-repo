@@ -1,16 +1,23 @@
-(* OCaml program to output "Hello World" in a roundabout way *)
+# Brainfuck script to display "Hello World!"
 
-(* Define a recursive function to generate the characters of "Hello World" one by one *)
-let rec generate_string idx acc =
-    let obscure_string = "H,e,l,l,o, ,W,o,r,l,d" in
-    if idx = String.length obscure_string then acc
-    else
-        let char_added = if obscure_string.[idx] = ',' then "" else String.make 1 obscure_string.[idx] in
-        generate_string (idx + 1) (acc ^ char_added)
+# Initialize cells to store ASCII values
+++++++++++  # Cell 0 (initial value 10)
+[
+  >+++++++ +++++       # Cell 1 (value 70)
+  >++++++++++ +       # Cell 2 (value 10)
+  >+++                # Cell 3 (value 3)
+  >+                  # Cell 4 (value 1)
+  <<<<-               # Move back and decrement loop
+]
 
-(* Wrapper function to start the generation process *)
-let get_hello_world () =
-    generate_string 0 ""
+# Move to cell 1 and prepare the values for "Hello World!"
+>++.                  # H (72)
+>+.                   # e (101)
++++++++..+++.         # l (108), l (108), o (111)
+>++.                  # Space (32)
+<<++++++++++++++.     # W (87)
+>.                    # o (111)
++++.------.--------.  # r (114), l (108), d (100)
+<<+<+.                # ! (33) and move to start
 
-(* Print the resulting string *)
-let () = print_endline (get_hello_world ())
+# Result: "Hello World!"
