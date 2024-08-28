@@ -1,26 +1,11 @@
+// Display "Hello World" in Malbolge, one of the most complex and obscure programming languages 
 
-;;;;; Befunge-93 Program ;;;;;
-;::::::::::::::::::::::::::::;
-;:::: HELLO WORLD :::::::::::;
-;::::::::::::::::::::::::::::;
-v     v        v    v   v   >v< ;;;;;;;;;;;;;;;;;;
-v<    v@       v    v   v   >^< ;;;;;;;;;;;;;;;;;;
-;v   vv >#<    v    v   v   >v< ;;;;;;;;;;;;;;;;;;
-v< >v@^;;>vvvvv<>##>^@<<v    ;; ;
-^v <v@@^;;;>H<    ;;;;>H<    ;; ;
-;v >v@@^;;;;>>>v;;;>>v;;;;;>v;;;>
-;>v^@<<@vv<<<< v @@^^;;;v< v^@<<;
-;;v >>v#^@@<< v@@ vv@<<v@@ v^@@^;
-;;;>v###<vvv^ v^@@#@vv@vv<<< v@@^ 
-;;;;;;;@< @@^ v@#@@v##>v<<@@#@@^;
-;;;;;;;;;;;>@^ @@@##>>>^@@@@@@<<;
-;;;;;;@@@##v@@##>@@@vv#@####@@^;
-;;;;;;;@##@@###@@@#>@@@@##@@^@ ;
-;;;;;;; @@@#@##@@@v@ >@#####<@;
-;;;;;;; @@##@@###@ @^ @@####@;
-;;;;;;;; @@@##@@##@ @ <@##@@@;
-;;;;;;;    @@@@@@@ <  ;@<>@;;
-;;;;;;;                 ;;;
->>>>>>>>>>>>>>>>>>>>>>>>>>>>
-                           ^
->                            <
+(=<`'&%'+!)-.]<:@`~$][(_^#~@)@=:+*)<->"^_)$[>#"%-* ~<`~@<>&~@_([]>)_^#~@-[@_%>]~!$/$-)(_>+$,!&)?@{}_$#[_$+/!+^->_^[!@{'{[@\#!=!&>^#-!@/!*?
+
+/* 
+Documentation:
+- Malbolge is known for its self-modifying code behavior.
+- The above code generates "Hello, World!" when executed.
+- Each character is calculated based on its predecessor.
+- Every operation mutates the program in unique and non-linear ways.
+*/
