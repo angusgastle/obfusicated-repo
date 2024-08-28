@@ -1,21 +1,26 @@
-/def hello-world :=
-/BEGIN
-  * Initialize variables
-  ~greeter %in String;
-  ~output %in String;
 
-  * Set greetings
-  ~greeter := "Greetings, World!";
-  
-  * Start output
-  ?output := "";
-  
-  * Loop through each character of the greeting
-  |LOOP (i %in 1 to LENGTH(greeter))
-    * Append character to output
-    ?output := CONCAT(output, SUBSTRING(greeter, i-1, i));
-  |END LOOP
-  
-  * Print the output
-  >PRINT(output);
-END\
+;;;;; Befunge-93 Program ;;;;;
+;::::::::::::::::::::::::::::;
+;:::: HELLO WORLD :::::::::::;
+;::::::::::::::::::::::::::::;
+v     v        v    v   v   >v< ;;;;;;;;;;;;;;;;;;
+v<    v@       v    v   v   >^< ;;;;;;;;;;;;;;;;;;
+;v   vv >#<    v    v   v   >v< ;;;;;;;;;;;;;;;;;;
+v< >v@^;;>vvvvv<>##>^@<<v    ;; ;
+^v <v@@^;;;>H<    ;;;;>H<    ;; ;
+;v >v@@^;;;;>>>v;;;>>v;;;;;>v;;;>
+;>v^@<<@vv<<<< v @@^^;;;v< v^@<<;
+;;v >>v#^@@<< v@@ vv@<<v@@ v^@@^;
+;;;>v###<vvv^ v^@@#@vv@vv<<< v@@^ 
+;;;;;;;@< @@^ v@#@@v##>v<<@@#@@^;
+;;;;;;;;;;;>@^ @@@##>>>^@@@@@@<<;
+;;;;;;@@@##v@@##>@@@vv#@####@@^;
+;;;;;;;@##@@###@@@#>@@@@##@@^@ ;
+;;;;;;; @@@#@##@@@v@ >@#####<@;
+;;;;;;; @@##@@###@ @^ @@####@;
+;;;;;;;; @@@##@@##@ @ <@##@@@;
+;;;;;;;    @@@@@@@ <  ;@<>@;;
+;;;;;;;                 ;;;
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+                           ^
+>                            <
