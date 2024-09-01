@@ -1,35 +1,22 @@
-; Hello World in INTERCAL
-; This is an esoteric programming language designed to be confusing.
-
-DO ,1 <- #13
-DO ,2 <- #110
-DO ,3 <- #0
-DO ,4 <- #67
-DO ,5 <- #68
-DO ,6 <- #87
-DO ,7 <- #56
-DO ,8 <- #15
-DO ,9 <- #9
-DO ,9 <- #2745
-DO ,5 <- #2525
-DO READ OUT , 9 <- #0
-DO RESUME
-PLEASE DO ,9 <- #2586
-PLEASE RESUME #4
-PLEASE DO ,9 <- #2633
-DO RESUME
-DO FORGET #2
-DO FORGET #7
-PLEASE DO ,4 <- #87
-DO ,1 SUB #1 <- #160
-DO :3 <-- #92
-PLEASE DO (5) <- #32
-DO (1) NEXT 1
-
-$50
-PLEASE DO (1) NEXT 1
-DO ,1 <- $5
-DO ,9 <- #129
-READ OUT , (4) <- #15
-
-PLEASE GIVE UP
+brainfuck
+> ++++++++ # Initialize cell 1 with value 8
+[
+    >++++ # Increment cell 2 by 4, starting loop
+    >++++++++ # Increment cell 3 by 8
+    >++++++++ # Increment cell 4 by 8
+    >++++++++ # Increment cell 5 by 8
+    >+++++++++ # Increment cell 6 by 9
+    >+++++++++++++    # Increment cell 7 by 13
+    <<<<<<<<- # Decrement cell 1 by 1, resetting for next loop iteration
+] # End of initialization loop
+>+. # Output "H" (cell 2 value 72)
+>+. # Output "e" (cell 3 value 101)
++++++. # Increment to "l" (cell 4 value 108)
+. # Output "l"
++. # Increment to "o" (cell 5 value 111)
+>-. # Decrement to ' ' (space, cell 6 value 32)
+------. # Decrement to 'W' (cell 7 value 87)
+<+. # Increment to 'o' (cell 5 value 111)
+<-. # Decrement to 'r' (cell 4 value 114)
+----. # Decrement to 'l' (cell 3 value 108)
+<<+. # Increment to 'd' (cell 2 value 100)
