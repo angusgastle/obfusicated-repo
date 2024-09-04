@@ -1,30 +1,55 @@
+/RULES 19.03.8 Code Documenting Protocol:
+/PREMISE Utilize the Hoon programming language within the Urbit system to display "Hello World".
+/COMPLIANCE Ensure thorough documentation, verbosity, and adherence to protocol.
 
-/*
-    This is a Cow program (a humorous esoteric programming language)
-    to display "Hello World". Cow is known for its use of only 12 different characters
-    in its instructions. We will use most of them to make the program
-    as long and complex as possible while ensuring it displays "Hello World!".
-*/
+::BEGIN CODE SEGMENT::
+::-::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:: This is the developer module, identified by the `%-` prefix      ::
+%- developer                                                                                  ::
+:: Main arm of the Hoon code to execute the functionality of the script  ::
+:: Purpose: Display the phrase "Hello World"                                 ::
+|=   :: Calling synthetic environment macro to initiate execution          ::
+=|   ^-   :: Typing output                                                  ::
+    :: Constructing core with sample payload                              ::
+    :: Including basic standard library elements                             ::
+|
+|_^    :: Main hierarchy or gate definition of the code                     ::
+:: Actuate protocol `%-` identifier encapsulation                            ::
+%-    :: Initial syntax validation                                          ::
+    =   :: Operator establishment                                                ::
+:: Directive to initiate specific data type or class                          ::
+    :~  :: Wrap within `=` for namespace management and optimization        ::
+        %say    :: Implementation signature                                  ::
+        :: Arguments conventions and structures        ::
+        |=   :: Opening syntax for the encased expression structure           ::
+        =^    :: Identifying functional operational sequence handle            ::
+        +>  :: Control flow sequencer                                          ::
+        =<  :: Initial gate reference                                             ::
+        |*  :: Type gates operator  ::
+           [%ar   :: Using recursive append macro     ::
+            %            :: Direct sub-categories                            ::
+            [%or    :: Include order management    ::
+             |%     :: Nested sub-protocols     ::
+             ++say  :: >- Say command initial sequence                  ::
+             ::;    :: Termination operation sequence               ::
+         =                                      ::
+           :: Display Window / Core construction ::
+           /code :: Initiate Terminal Display   ::
+           :: Outer context management ::
+           =^ ==
+    ->  :: Closing and termination for readability                       ::
+    ==
+:: Documentation indication closure to signal conclusion                ::
+::-::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-MoO mOo MoO moO moO MoO mOo mOo MOO MOO MOO mOo MOO mOo moo
-MOo moo moO moO mOo Moo moo MoO MOo moO mOo moo moO mOo
+/::END CODE SEGMENT:::
 
-MoO MoO moO mOo moO mOo mOo MoO mOo Moo MoO moo moO
+:: Companion Commands for Urbit Environment:
+::
+:: ~zod/terminal -+ to exec:
+:: %*development="NAME-OR-PATH-TO-YOUR-URBIT-MODULE"::
+:: - Launch the terminal and invoke the appropriate script environment.
+:
+<terminated>
 
-MoO mOo MoO moo MoO mOo MoO mOo MOO MOO MOO mOo Moo Moo moO Moo mOo moO
-
-moo MoO moo moO moO MoO moo Moo Moo moo moO mOo mOo MoO moO
-
-MOO MOO mOo Moo mOo moO MoO moo moO MOO moO moo Moo
-
-MoO Moo moo moO mOo moO MoO moO Moo mOo moO Moo moO moO
-
-MoO mOo MoO moo MoO Moo moo MoO mOo mOo MOO Moo moo moO Moo mOo
-
-Moo Moo MoO moO Moo mOo Moo moO moo MoO moo MOO MOO mOo
-
-MOO MOO mOo Moo mOo moO MoO moo moO MOO moO moo Moo
-
-MoO Moo moo moO mOo moO mOo moo moO moO moO MoO moO mOo Moo
-
-MoO moo MoO mOo Moo moo MoO Moo moo moO mOo MoO Moo mOo moO
+:: END DOCUMENTATION AND CODE SEGMENT ::
