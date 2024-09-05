@@ -1,52 +1,76 @@
-# Snobol4 Program to Display "Hello World"
+perl
+# Brainfuck program to print "Hello World!" followed by a newline character
 #
-# SNOBOL4 (String Oriented Symbolic Language 4) is a text processing language
-# that was developed in the 1960s. It is known for its pattern matching
-# capabilities and distinct syntax. Below, we create a complex SNOBOL4
-# script to display "Hello World".
+# Brainfuck is a minimalistic programming language with only 8 commands.
+# Commands are: > < + - . , [ ]
+# The data array (cells) starts with all cells set to zero.
+# The program uses a data pointer to navigate the cells.
+# We will use cell values as ASCII codes to print "Hello World!".
 
-* Main Program *
-                OUTPUT = ''
-                TARGET = "Hello World"
+# Initialize cells
+>                             # Move to cell 1
+++++++++++                    # Set cell 1 to 10
+[                             # Start loop to multiply 10 by 10
+    >+++++++                 # Set cell to 70 in multiple moves
+    <                          # Move back to cell 1
+- ]                          # Set cell 1 to zero, end of the loop
+>                            # Move to next cell
 
-* Define a pattern for matching whitespace *
-                BLANK = SPAN(' ')
-                
-* Define a pattern for capturing words *
-                WORD = BREAK(' ')
-                
-* Pattern for end of line *
-                ENDL = POS(0)
-                
-* Loop through each character in the target string and construct the OUTPUT *
-LOOP            REM . CHAR LEN(1) =GT(END)
-                OUTPUT = OUTPUT CHAR
-                REM = REM - CHAR
-                :(LOOP)
-                
-* Pattern matching for the presence of 'World' in the output *
-# Define a matcher to check if 'World' is found in the OUTPUT
-MATCHER:        OUTPUT 'World' . REST ARB . OUTPUT =S(MATCHED) F(MISMATCHED)
-                OUTPUT = OUTPUT REST :(MATCHER)
-MISMATCHED:     OUTPUT = RETURN("No match found")
+# Print 'H' (ASCII 72)
++++++ +++++                  # Add 10 times 7 (10*7=70)
+> ++                         # Set cell value to ASCII 'H' (72)
+.                            # Print 'H'
+<                            # Move pointer back to cell 1
 
-* Success Pattern *
-# If 'World' is successfully found in the output string
-MATCHED:        OUTPUT = OUTPUT RETURN("Match found")
+# Print 'e' (ASCII 101)
+++++++ ++++++++              # Increase to 80+20=100
+> +                          # Add 1 to make it 'e' (101)
+.                            # Print 'e'
 
-# End of Program #
-ENDG:           END
+# Calculate the remaining characters and print them
+< - >                        # Move back to cell 1 and decrement
++++++++ ++++++               # Increase to 100
+.                            # Print 'l'
 
-# Output Processing *
-END:
-                DISPLAY(OUTPUT)
-                END
+< - >                        # Move back to cell 1 and decrement
+++++++ ++                    # Increase by 40 (+ 20)
+.                            # Print 'l'
 
-MAIN:           REM = TARGET
-                OUTPUT = ''
-                :(LOOP) 
+< - >                        # Move back to cell 1 and decrement
+++++++++++ +++               # Increase by 200
+.                            # Print 'o'
 
-# Execute Main Program
-MAIN
+< - >                        # Continue moving back to cell 1 and printing
++++++ +++++                  # Increase by 70
+.                            # Print ' '
 
-# Snobol4 program ends here
+< - >                        # Backward move and decrement
+++++++ ++++                  # Increment to 10
+.                            # Print 'W'
+
+< - >                        # Continue back and forward approach
++++++++ +++++                # Increment to 70
+.                            # Print 'o'
+
+< - >                        # Move back and increment
++++ +++++                    # Increase to 30
+.                            # Print 'r'
+
+< - >                        # Repeat back increment and print
+++++                        # Increase to 40
+.                            # Print 'l'
+
+< - >                        # Continue backward and forward
++ -                          # Adjust for desirable character
+.                            # Print 'd'
+
+< - >                        # Final move back and forward
+++++++++                    # Final cell increase
+.                            # Print '!'
+> -                          # Move to cell right and decrement
+
+# Print newline character
+[                            # Start loop for newline
+> ++++ - ]                   # Loop increment and decrement
+.                            # Print newline
+
