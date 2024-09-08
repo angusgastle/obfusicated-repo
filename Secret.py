@@ -1,16 +1,47 @@
-bc
-/* This is a Brainfuck program to display "Hello World!"
-   Brainfuck is an esoteric programming language created in 1993
-   by Urban Müller. It only consists of eight commands.
-*/
+## INTERCAL (an esoteric programming language)
 
-/* Initialize memory cells for storing character codes */
->++++++++[<+++++++++>-]<.                      /* H */
->++++[<+++++++>-]<+.                           /* e */
-+++++++..+++.                                  /* llo */
->>>++++++++[<+++++++>-]<.                      /* W */
->>++[<+++++++>-]<+.                            /* o */
---[--<+++++++>]<-.                             /* r */
->>.[-]>---.                                    /* l! */
-++++++++++++++++++++++++++++++++++++++++.      /* d */
-/* End of Brainfuck code for displaying "Hello World!" */
+DO ,1 <- #13
+PLEASE DO ,1 <- #238
+PLEASE DO ,1 <- #1820
+PLEASE DO ,1 <- #9999
+
+PLEASE READ OUT ,1
+
+DO ,1 <- #12
+DO ,1 <- "#13"
+
+PLEASE WRITE IN ,1
+
+## Variables and constants
+# :1 is a data statement assigning #12.
+
+PLEASE ABSTAIN FROM ABSTAINING
+DO :1 <- #12
+DO :1 <- #13
+DO :1 <- #238
+DO :1 <- #1820
+
+PLEASE RESUME THIS CONNECTION ON SPOT
+
+DO <#12>$#12 <- #13  # Printing string
+
+PLEASE ABSTAIN FROM "WAITING"
+DO (30) NEXT
+PLEASE ABSTAIN FROM "WAITING"
+DO (30) NEXT
+PLEASE ABSTAIN FROM "WAITING"
+DO (30) NEXT
+
+DO :1 <- #12
+DO (10) NEXT
+PLEASE REINSTATE #12 <- DO :1 <- #13
+
+PLEASE REINSTATE #238 <- DO ,1 <- #1820
+PLEASE REINSTATE (DO ,1 <- #9999)
+
+PLEASE GIVE OUT ,1
+
+DO (TO OUTPUT) NEXT
+DO (TO OUTPUT) NEXT
+
+PLEASE FORGET #12
