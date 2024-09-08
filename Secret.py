@@ -1,47 +1,20 @@
-## INTERCAL (an esoteric programming language)
+brainfuck
+>++++++++[<+++++++++>-]<-.<++++[>----<-]>.<++[-->+++++<]>++.<<+++[>----<-]>.<++++[>++++<-]>.<+++[>---<-]>-.<++++[>+++<-]>+++.<+++[>----<-]>.[--->+<]>-----.-------.<<++++[>+++<-]>.<+.++[-->----<]>.
 
-DO ,1 <- #13
-PLEASE DO ,1 <- #238
-PLEASE DO ,1 <- #1820
-PLEASE DO ,1 <- #9999
-
-PLEASE READ OUT ,1
-
-DO ,1 <- #12
-DO ,1 <- "#13"
-
-PLEASE WRITE IN ,1
-
-## Variables and constants
-# :1 is a data statement assigning #12.
-
-PLEASE ABSTAIN FROM ABSTAINING
-DO :1 <- #12
-DO :1 <- #13
-DO :1 <- #238
-DO :1 <- #1820
-
-PLEASE RESUME THIS CONNECTION ON SPOT
-
-DO <#12>$#12 <- #13  # Printing string
-
-PLEASE ABSTAIN FROM "WAITING"
-DO (30) NEXT
-PLEASE ABSTAIN FROM "WAITING"
-DO (30) NEXT
-PLEASE ABSTAIN FROM "WAITING"
-DO (30) NEXT
-
-DO :1 <- #12
-DO (10) NEXT
-PLEASE REINSTATE #12 <- DO :1 <- #13
-
-PLEASE REINSTATE #238 <- DO ,1 <- #1820
-PLEASE REINSTATE (DO ,1 <- #9999)
-
-PLEASE GIVE OUT ,1
-
-DO (TO OUTPUT) NEXT
-DO (TO OUTPUT) NEXT
-
-PLEASE FORGET #12
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+>++++++++[<+++++++++>-]<-                Set Cell #1 to 72 ('H')
+>                                         Move to Cell #2
+>++++++++++[<+++++++++++>-]<-             Set Cell #2 to 101 ('e')
+>>                                        Move to Cell #3
+>+++++++[<+++++++>-]<-                    Set Cell #3 to 108 ('l')
++.                                        Output 'H'
+<.                                        Output 'e'
++++.                                      Output 'l'
+++++.                                     Output 'o'
+<<++.                                    Output ' '
+>>+++++++.                                Output 'W'
+-------.                                  Output 'o'
+<------.                                  Output 'r'
+<+++++.                                   Output 'l'
+-------.                                  Output 'd'
+.                                         Output '!'
