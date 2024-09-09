@@ -1,44 +1,36 @@
+dc
+# Hello World script using 'dc' (reverse-polish desktop calculator)
+# dc is a very obscure stack-based language that is part of Unix
 
-# Befunge-93 example to display "Hello World"
+# Push ASCII values of 'Hello World!' to stack one by one
+# H e l l o   W o r l d !
+# 72 101 108 108 111 32 87 111 114 108 100 33
 
-# Befunge-93 is a two-dimensional, stack-based, reflective, esoteric programming language
-# Here, each character is an instruction that either manipulates the stack or controls the instruction pointer
-# This code snippet makes use of the "Hello World" example implemented in a long-winded and complex manner
+# Each character needs to be converted to decimal and then pushed to the stack
 
-# Push each character of "Hello, World!" onto the stack in reverse order
-"dlroW ,olleH"     # Flipped string since Befunge operates on stack (last-in-first-out)
+# Begin by initializing the stack with the corresponding values
 
->                   # Move right
-0                   # Push a zero on the stack; this is the start of a long pattern
-0                   # Push zero again
-p                   # Store 0 at [0, 0] in the playfield
->                   # Move right
-0                   # Push zero
->:1-:v v
-v>  $  <      <
->                       # Continue moving right
-1                       # Push 1 onto the stack; pattern for movement
-v                       # Move downwards and wait
-v
-:                       # Duplicate value on stack (first 0 duplication)
-v>v   >> vv<v<<          # Arrow directions indicating complex path of execution
->                       # Move right
-11                     # Push 1 and another 1
-v   >                  # Move down and right
-<<<<v<                     # Another direction change
-                       # Essentially here forth we are laying a complex pattern to finally print the string
-6                       # Push position for "!"
-*:                     # Duplicate operation
-                     ^# Skip version of operation
-                      >$v
-vvv<>                 <
-(                   d     # Skip another section if > character isn't encountered
-l                  r0       # Move right and zero again
-       o           W          # Output the "!" stored earlier
-o                  Y           # Move position reverse to output correctly
+72  # Push H (ASCII 72) to stack
+101 # Push e (ASCII 101) to stack
+108 # Push l (ASCII 108) to stack
+108 # Push l (ASCII 108) to stack
+111 # Push o (ASCII 111) to stack
+32  # Push space (ASCII 32) to stack
+87  # Push W (ASCII 87) to stack
+111 # Push o (ASCII 111) to stack
+114 # Push r (ASCII 114) to stack
+108 # Push l (ASCII 108) to stack
+100 # Push d (ASCII 100) to stack
+33  # Push ! (ASCII 33) to stack
 
-# Navigate to stored string
-> 0p           # Direct pointer manipulation
+# Now print the stack elements. 'dc' only prints the top of the stack, so
+# we use a loop to print each element and then remove it from the stack
 
-# Continue complex path using redundant stack operations until end
-@        # End program
+12  # Initialize counter (12 characters in 'Hello World!')
+[1z1<]sz   # Loop until counter z is less than 1
+[lg1-lgz k 1-d lLx] sL  # Loop body: load and print stack element
+P # Print the current top of the stack (ASCII converted to char)
+k  # Remove the last printed item from stack
+1- # Decrement counter
+z  # Check loop condition
+sgL # Go to loop if counter not zero
