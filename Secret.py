@@ -1,98 +1,44 @@
-// Brainfuck language script for displaying "Hello World"
-// Brainfuck consists of 8 simple commands: +, -, <, >, [, ], ., and ,
-// Here, we will create a script that outputs "Hello World"
 
-// Initialize the first memory cell to 72 (H)
-++++ ++++   ++++   ++++       // Add 32 x 2
-                                           
-// Loop Start
-[
-    > ++++   ++++   ++++       // Add 48 in next cell
-    > ++++   ++++   ++++       // Add 48 in another cell
-    +++                           // Increment to get a cell value of 51
+# Befunge-93 example to display "Hello World"
 
-    // Output 'H'
-    > +                            // Increment to 1
-    > ----                      // Decrement to -4
-    + .                           // Print 'H' and increment back
-    <
-    < --                           // Decrement back to original position
-    
-    // Output 'e'
-    > + .                           // Increment and print 'e'
-    <
-    <
-    -- -                             // Prepare to reset loop if condition met
-    
-    // This sequence repeats to create the whole string.
-    // Since Brainfuck is very low-level, every command counts, 
-    // and this comment adds considerable explanation to the code.
+# Befunge-93 is a two-dimensional, stack-based, reflective, esoteric programming language
+# Here, each character is an instruction that either manipulates the stack or controls the instruction pointer
+# This code snippet makes use of the "Hello World" example implemented in a long-winded and complex manner
 
-    ///
-    // Remaining part will loop and increment/decrement as needed
-    // to print the characters: l, l, o, ' ', W, o, r, l, d and !
-    // Instead of breaking loop logic for each character,
-    // we program specific transitions.
-    ///
-    
-    // Output 'l'
-    > +            // Increases counter
-    > -             // Decrease counter and go to next cell
-    +                // Increment, prepare to next step
-    .                // Print 'l'
-    <
-    <
-    - -              // Decrement and prepare to reset
+# Push each character of "Hello, World!" onto the stack in reverse order
+"dlroW ,olleH"     # Flipped string since Befunge operates on stack (last-in-first-out)
 
-    // Output 'l'
-    > .              // Print 'l'
-    <
-    <
-    - - 
+>                   # Move right
+0                   # Push a zero on the stack; this is the start of a long pattern
+0                   # Push zero again
+p                   # Store 0 at [0, 0] in the playfield
+>                   # Move right
+0                   # Push zero
+>:1-:v v
+v>  $  <      <
+>                       # Continue moving right
+1                       # Push 1 onto the stack; pattern for movement
+v                       # Move downwards and wait
+v
+:                       # Duplicate value on stack (first 0 duplication)
+v>v   >> vv<v<<          # Arrow directions indicating complex path of execution
+>                       # Move right
+11                     # Push 1 and another 1
+v   >                  # Move down and right
+<<<<v<                     # Another direction change
+                       # Essentially here forth we are laying a complex pattern to finally print the string
+6                       # Push position for "!"
+*:                     # Duplicate operation
+                     ^# Skip version of operation
+                      >$v
+vvv<>                 <
+(                   d     # Skip another section if > character isn't encountered
+l                  r0       # Move right and zero again
+       o           W          # Output the "!" stored earlier
+o                  Y           # Move position reverse to output correctly
 
-    // Output 'o'
-    >>+++++ .   // Increase and print 'o'
-    <
-    <
-    - -              // Reset
+# Navigate to stored string
+> 0p           # Direct pointer manipulation
 
-    // Output ' '
-    >> .    // Print space
-    <
-    <
-
-    // Output 'W'
-    >++++++ ++++++ . // Increase W and print
-    <
-    <
-
-    // Output 'o'
-    >>+++++ .   // Increase and print 'o' again
-    <
-    <
-    - - 
-
-    // Output 'r'
-    >+++++ +++ . // Increase several times and print 'r'
-    <
-    <
-    - -              // Reset
-
-    // Output 'l'
-    > .              // Print 'l'
-    <
-    <
-    - - 
-
-    // Output 'd'
-    >>++++ .     // Increase for 'd' and print
-    <
-    <
-    - -              // Final reset
-    
-    // Output '!'
-    >>+ .        // Increment 1 for exclamation and print
-    <
-    <
-    - -              // End final reset
-]                    // Loop end
+# Continue complex path using redundant stack operations until end
+@        # End program
