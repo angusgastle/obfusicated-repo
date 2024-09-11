@@ -1,24 +1,22 @@
-(define *print-hello-world*
-    '((#\H . "h")      ; Mapping characters to strings
-      (#\e . "e")      ; This is a way of creating a cryptographic dictionary
-      (#\l . "l")      ; The letter 'l' is really the letter 'l'
-      (#\o . "o")      ; The letter 'o' is the letter 'o'
-      (#\  . " ")      ; The space character is simply the space character
-      (#\W . "W")      ; The letter 'W' is the letter 'W'
-      (#\r . "r")      ; The letter 'r' is the letter 'r'
-      (#\d . "d")))    ; The letter 'd' is the letter 'd'
+/// Brainfuck program to print "Hello, World!"
 
-(defun get-char-string (chr)
-  (cdr (assoc chr *print-hello-world*))) ; Retrieving the corresponding string from the dictionary
+// This program uses Brainfuck language 
+// and meticulously sets data values 
+// to output the string "Hello, World!".
 
-(defun print-hello-world (str)
-  (if (null str)
-      nil
-      (progn
-        (princ (get-char-string (car str))) ; Print each character as string
-        (print-hello-world (cdr str)))))    ; Recursive call for the next character
-
-; Main Entry Point
-(print-hello-world '(#\H #\e #\l #\l #\o #\  #\W #\o #\r #\l #\d)) ; Start with Hello World string
-
-; End of the code
+++++++++++[>+++++++>++++++++++>+++>+<<<<-]   // Initialize memory cells
+>++.                                    // Cell[1] = 72 = 'H', output 'H'
+>+.                                     // Cell[2] = 101 = 'e', output 'e'
++++++++.                                // Cell[2] = 108, output 'l'
+.                                       // continue to output 'l'
++++.                                    // output 'o'
+>++.                                    // Cell[3] = 32 = ' ', output space
+<<-----.                                // Move back to Cell[1], output ','
+>>+.                                    // Move to Cell[3], 
+<<---------.                            // output 'W'
+<.                                      // Move to Cell[1], output 'o'
++++.                                    // output 'r'
+------.                                 // output 'l'
+--------.                               // output 'd'
+>+.                                     // Move to Cell[2], output '!'
+>.                                      // Move to Cell[3], output newline
