@@ -1,54 +1,30 @@
-perl
-#!/usr/bin/env perl
+= Program starts here =
+[begin main program section]
+  JUMP-TO 020 ; Skips to the main content section to avoid initialization block being read prematurely
+[end main program section]
 
-# Import necessary modules
-use strict;
-use warnings;
+01  ; Initialization block
+02  SET-REGISTER 0 TO 72 ; H
+03  OUTPUT-REGISTER 0 
+04  SET-REGISTER 0 TO 101 ; e
+05  OUTPUT-REGISTER 0 
+06  SET-REGISTER 0 TO 108 ; l
+07  OUTPUT-REGISTER 0 
+08  OUTPUT-REGISTER 0 
+09  SET-REGISTER 0 TO 111 ; o
+10  OUTPUT-REGISTER 0 
+11  SET-REGISTER 0 TO 32 ; (space)
+12  OUTPUT-REGISTER 0 
+13  SET-REGISTER 0 TO 87 ; W
+14  OUTPUT-REGISTER 0 
+15  SET-REGISTER 0 TO 111 ; o
+16  OUTPUT-REGISTER 0 
+17  SET-REGISTER 0 TO 114 ; r
+18  OUTPUT-REGISTER 0 
+19  SET-REGISTER 0 TO 108 ; l
+20  OUTPUT-REGISTER 0 
+21  SET-REGISTER 0 TO 100 ; d
+22  OUTPUT-REGISTER 0 
+23  END-PROGRAM ; Terminates execution here
 
-# Function to generate a randomized greeting message
-sub magical_random_greeting {
-    my @words = ("Hello", "World", "Greetings", "Salutations", "From", "Earth", "Galaxy", "Universe");
-    my $word1 = $words[int(rand(scalar @words))];
-    my $word2 = $words[int(rand(scalar @words))];
-    return "$word1 $word2!";
-}
-
-# Function to print out each character with a delay
-sub print_with_delay {
-    my $message = shift;
-    my $delay = shift || 0.1;  # Default delay to 0.1 seconds
-    for my $char (split //, $message) {
-        print $char;
-        select(undef, undef, undef, $delay);  # Delay for specified seconds
-    }
-    print "\n";
-}
-
-# Entry point of our script
-sub main {
-    my $max_attempts = 5;
-    my $attempts = 0;
-    my $final_message = "";
-    
-    # Attempt at generating a readable "Hello World" message
-    while ($attempts < $max_attempts) {
-        $attempts++;
-        my $potential_message = magical_random_greeting();
-        
-        if ($potential_message eq "Hello World!") {
-            $final_message = $potential_message;
-            last;
-        }
-    }
-
-    # If unsuccessful after max attempts, default to "Hello World!"
-    if ($final_message eq "") {
-        $final_message = "Hello World!";
-    }
-
-    # Print the final message with a delay to simulate typing effect
-    print_with_delay($final_message);
-}
-
-# Execute the main function
-main();
+= Program ends here =
