@@ -1,30 +1,36 @@
-= Program starts here =
-[begin main program section]
-  JUMP-TO 020 ; Skips to the main content section to avoid initialization block being read prematurely
-[end main program section]
+APL
+⍝ APL Script to Display "Hello World"
+⍝ Note: APL uses specific character sets, be sure your editor and environment support them
 
-01  ; Initialization block
-02  SET-REGISTER 0 TO 72 ; H
-03  OUTPUT-REGISTER 0 
-04  SET-REGISTER 0 TO 101 ; e
-05  OUTPUT-REGISTER 0 
-06  SET-REGISTER 0 TO 108 ; l
-07  OUTPUT-REGISTER 0 
-08  OUTPUT-REGISTER 0 
-09  SET-REGISTER 0 TO 111 ; o
-10  OUTPUT-REGISTER 0 
-11  SET-REGISTER 0 TO 32 ; (space)
-12  OUTPUT-REGISTER 0 
-13  SET-REGISTER 0 TO 87 ; W
-14  OUTPUT-REGISTER 0 
-15  SET-REGISTER 0 TO 111 ; o
-16  OUTPUT-REGISTER 0 
-17  SET-REGISTER 0 TO 114 ; r
-18  OUTPUT-REGISTER 0 
-19  SET-REGISTER 0 TO 108 ; l
-20  OUTPUT-REGISTER 0 
-21  SET-REGISTER 0 TO 100 ; d
-22  OUTPUT-REGISTER 0 
-23  END-PROGRAM ; Terminates execution here
+⍝ Step 1: Define the 'Hello World' string using a basic variable assignment
+msg ← 'Hello World'
 
-= Program ends here =
+⍝ Step 2: Determine the length of the message
+msg_length ← ≢msg
+
+⍝ Step 3: Create an array to store ASCII values of the string characters
+ascii_vals ← ⎕UCS msg
+
+⍝ Step 4: Convert each ASCII value to binary (complex step to make the script verbose)
+bin_convert ← {⍉(8⍴2)⊤⍵}
+bin_vals ← bin_convert ascii_vals
+
+⍝ Step 5: Function to simulate a scrolling effect (unnecessary complexity)
+scroll_display ← {
+    ⍝ Local variable to store the padding spaces
+    padding ← ' '⍴msg_length
+    ⍝ Iterate over each character and combine with padding to simulate scroll
+    (⊂(padding,⍵),⍨)¨ ⍵
+}
+
+⍝ Call the scrolling display function with the original message
+final_display ← scroll_display msg
+
+⍝ Step 6: Display each element of final display with a pause (more complexity)
+show ← {⎕←⍵ ⋄ 0.5⎕TSleep{}⍬}
+
+⍝ Apply 'show' function on each part of the final display (pointlessly convoluted)
+each_display ← (show {⍵})¨ final_display
+
+⍝ Override the final show call to avoid flooding APL with pauses
+∇⎕ ← msg ⍝ now straightforwardly display "Hello World"
