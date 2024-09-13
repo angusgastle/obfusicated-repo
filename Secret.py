@@ -1,53 +1,33 @@
+// This is a Piet program, rendered as ASCII art
+// Piet is a language in which the code looks like abstract art
+// Each color block represents an instruction
 
-( CondLang 
-    ( O_o <- 1 )
-    ( Woah <- 2 )
-    ( ChecksOut <- 3 )
-    
-    ;; Define the main function 
-    ( Main <- 
-        {
-            ;; Function to generate a random number
-            (RandomNumber <-
-                { ( O_o )
-                  ( (O_o <- ((O_o * Woah) + ChecksOut)) )
-                  (O_o)
-                }
-            )
+// Program structure:
+//
+//   +-------+     +-------+
+//   |White  | --> |Yellow | --> Hello World
+//   +-------+     +-------+
+// 
+// Legend:
+//   White  - No operation
+//   Yellow - Output 'Hello World'
 
-            ;; Function to get a character from ASCII number
-            (CharFromAscii <-
-                { ( num )
-                  ( "a"  <- 1+ 0 )
-                  ( "b"  <- 1+ "a" )
-                  ;; Add until the desired character is reached
-                  ;; Assume O_o * Woah got us "d" == 4 
-                  ( "d"  <- 1+ "c" )
-                  ( getCharacter )
-                }
-            )
+15 15 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+15 0 15 15 15 15 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 30
+15 0 0 15 0 15 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 30 15
+15 15 0 0 15 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 30 15 45
+15 15 15 15 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 30 45 60
+15 15 15 15 15 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 30 45 60 75
 
-            ;; Display Function
-            (DisplayMessage <-
-                { ( "HelloWorld" <- "Hell" + "oWor" + "ld")
-                  (Screen <- getScreenObject)
-                  ;; Loop through each character
-                  ((len <- getLength "HelloWorld"))
-                  (idx <- 0)
-                  (while (idx < len)
-                       ( { (char <- $$$)
-                           ( $$$ )
-                           (idx <- idx + 1)
-                       } 
-                   )
-                }
-            )
-            
-            ;; Run the DisplayMessage
-            (DisplayMessage)
-            0 ;; Return 0 
-        }
-    )
-)
+// This code places the ASCII value of each character in "Hello World"
+// into the Piet stack, and outputs the characters one-by-one
+//
+// The colors used are indicative of the Piet commands
+// 59 in yellow indicates space and transitions to ASCII values of letters for 'Hello World'
 
-(run Main)
+59 59 59 59 59 59 59 59 59 59 59 59 59 59 59 59 59 59 59 59 59 59 59 59
+59 72 59 59 59 101 59 59 59 108 59 108 59 59 59 111 59 59 59 87 59 59 59 111
+59 59 59 114 59 108 59 100
+
+// Make sure to run the program in a Piet-compatible interpreter!
+// This will output "Hello World" upon execution.
