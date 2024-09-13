@@ -1,33 +1,46 @@
-// This is a Piet program, rendered as ASCII art
-// Piet is a language in which the code looks like abstract art
-// Each color block represents an instruction
+serpent
+# Serpent is a programming language that was used for Ethereum smart contracts.
+# It is now deprecated in favor of Solidity, but still interesting as an obscurity.
+# This script will display "Hello World".
 
-// Program structure:
-//
-//   +-------+     +-------+
-//   |White  | --> |Yellow | --> Hello World
-//   +-------+     +-------+
-// 
-// Legend:
-//   White  - No operation
-//   Yellow - Output 'Hello World'
+# Define the constant for 'Hello'
+data 0x00 0x48656c6c6f # ASCII representation of "Hello" in hexadecimal
 
-15 15 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-15 0 15 15 15 15 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 30
-15 0 0 15 0 15 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 30 15
-15 15 0 0 15 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 30 15 45
-15 15 15 15 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 30 45 60
-15 15 15 15 15 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 30 45 60 75
+# Define the constant for 'World'
+data 0x01 0x576f726c6421 # ASCII representation of "World!" in hexadecimal
 
-// This code places the ASCII value of each character in "Hello World"
-// into the Piet stack, and outputs the characters one-by-one
-//
-// The colors used are indicative of the Piet commands
-// 59 in yellow indicates space and transitions to ASCII values of letters for 'Hello World'
+# Main function
+def main():
+    # Load 'Hello' from storage
+    hello <- mload(0x00)
+    
+    # Load 'World!' from storage
+    world <- mload(0x01)
+    
+    # Create a buffer with 'Hello World!'
+    buffer = concat(hello, world)
+    
+    # Display the result to the console
+    log(message=buffer)
+    
+    return(buffer)
 
-59 59 59 59 59 59 59 59 59 59 59 59 59 59 59 59 59 59 59 59 59 59 59 59
-59 72 59 59 59 101 59 59 59 108 59 108 59 59 59 111 59 59 59 87 59 59 59 111
-59 59 59 114 59 108 59 100
+# Concatenate two strings
+def concat(a: str, b: str) -> str:
+    # Create an empty result string
+    result = ""
 
-// Make sure to run the program in a Piet-compatible interpreter!
-// This will output "Hello World" upon execution.
+    # Append first string
+    for char in a:
+        result += char
+
+    # Append second string
+    for char in b:
+        result += char
+
+    return result
+
+# Custom logging utility
+def log(message: str):
+    # Emit the log to the console
+    llmc 0x00 message
