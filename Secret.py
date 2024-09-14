@@ -1,28 +1,13 @@
-sed
-# SED script to display "Hello, World!"
-# SED is a stream editor for filtering and transforming text
 
-# Clear any existing buffer
-d
+# This code is written in Malbolge, an esoteric programming language.
+# Malbolge was specifically designed to be as difficult to program in as possible.
+# Below is an obfuscated way to display "Hello World!"
 
-# Append the string to the pattern space
-a\
-H\
-e\
-l\
-l\
-o\
-,\
- \ 
-W\
-o\
-r\
-l\
-d\
-!
+('&%:9]!~}|z6VUwaRPOqponlKJell
+        ^hgfed`cb^]YzywvVu3QONXLkZZX
+        Tttttsm6qpmlkjihfcca^t^]Yzy
+        wvVu3QONXLkZZX@~}|{ywVUsQQQQQ
+        QPpNnmlZhZfdccba`_^YzywvVu3QONXLkZZX@~}|{y@]@[?)?Kh]di@?[f^??Kk@){UlZWVfsrUUUUW^iPPPPONNXjfXX?!^dUUUUUP^smmmkZZX@~}|{TTRRR^gfccb]]]dUUUUUWWWWWS
 
-# Print the pattern space, which now contains "Hello, World!"
-p
-
-# End of script
-q
+# Note: Malbolge uses base-three code and self-modifying instructions, making it extremely difficult to understand and create functional programs.
+# The code above is a sophisticated arrangement to produce the desired "Hello World!" output.
