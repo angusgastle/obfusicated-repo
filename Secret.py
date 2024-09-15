@@ -1,21 +1,287 @@
-perl
-# Befunge Code for Printing "Hello World"
-# Befunge is an esoteric programming language which uses a 2D playfield with instructions.
+whitespace
+                                                  
+  
+	  
+  
+  
+            
+  
+	  
+  
+    		
+	
+ 
+  
+	
+ 
+   
+ 
+  
+	  
+  
+		
+ 
+  
+   
+ 
+  
+	  
+  
+	  
+  
+		
+               
+           
+     
+	
+ 
+  
+	 
+  
+		
+ 
+  
+	
+ 
+   
+ 
+  
+	
+ 
+ 
+   
+     
+  
+	  
+  
+		
+ 
+  
+	  
+  
+  
+	 
+    
+	
+ 
+  
+   
+ 
+  
+		
+  
+   
+	
+ 
+   
+ 
+  
+	
+ 
+ 
+   
+     
+  
+	  
+  
+		
+	
+ 
+  
+	  
+  
+  
+	 
+    
+  
+		
+  
+		
+  
+		
+  
+		
+  
+ 
+	
+ 
+    
+    
+ 
+  
+        
+        
+   
+     
+	
+ 
+	
+ 
+   
+  
+		
+  
+		
+  
+		
+  
+		
+  
+ 
+		
+   
+ 
+    
+ 
+    
+   
+     
+	
+ 
+    
+    
+        
+                     
+  
+        
+    
+ 
+        
+    
+        
+    
+        
+    
+	
+        
+    
+        
+    
+        
+    
+        
+    
+	
+        
+    
+        
+    
+        
+    
+        
+    
+	
+        
+    
+        
+    
+        
+    
+        
+    
+	
+        
+    
+        
+    
+        
+    
+        
+    
+	
+        
+    
+        
+    
+        
+    
+	
+        
+    
+        
+        
+    
+        
+    
+	
+    
+    
+        
+      
+	
+    
+		
+    
+      
+        
+    
+	
+		
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+        
+      
+		  
 
-# Befunge 93 interpreter typically processes a program in this 2D space, moving
-# The instruction pointer in various directions based on the commands it encounters.
-
->              v
-# Initialize arrow pointing down to start vertical motion
-v 12345 <
-# Loop set up: Program enters here, preps Hello World
->987654321 v
-             ^
-# This is our String: Bottom row of instructions, using assembler style Daa & ASCII equivalents
-",olleH ">!dlroW-OlleH@ "^
-# Additional settings routing ASCII codes into the printing directive.
-
-# GOTO
-,.>
-# R : Pop top of the stack and interpret.
-.@ #
+	
+		Hello World Program in Whitespace
+		by Displaying "Hello World" with explanation
+   
+   
+   
+		Beginning the Program_space
+   
+	StackManipulation_Push_Character_Code_72 
+ 
+ 
+	StackManipulation_Push_Character_Code_101 
+ 
+ 
+	StackManipulation_Push_Character_Code_108 
+ 
+ 
+	StackManipulation_Push_Character_Code_108 
+ 
+ 
+	StackManipulation_Push_Character_Code_111  
+ 
+ 
+	StackManipulation_Push_Character_Code_32  
+ 
+ 
+	StackManipulation_Push_Character_Code_87  
+ 
+ 
+	StackManipulation_Push_Character_Code_111  
+ 
+ 
+	StackManipulation_Push_Character_Code_114 
+ 
+ 
+	StackManipulation_Push_Character_Code_108  
+ 
+ 
+	StackManipulation_Push_Character_Code_100  
+ 
+ 
+ 
+		Execution_Flow_Fetch from stack
+   Outputing_Characters_From_Stack
+ 
+ 
+		Program Completion
+	FlowControl_End_Program
