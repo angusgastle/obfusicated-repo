@@ -1,26 +1,15 @@
-quad
-Befunge-93
+; OBSCURE LANGUAGE: MALBOLGE
+; Malbolge is a public domain esolang. This is one of the most complex
+; Hello World programs in this language. The complexity stems from the 
+; language's intricate and confusing set of behaviors and operations.
 
-# The Hello World program in Befunge-93.
-# Befunge-93 is a stack-based, reflective, esoteric programming language.
-# This version overwrites itself several times to display "Hello World".
+(=<`#9]1v9#9]~6ZY32Vx5ijI$=AK@#I6qHiji]nq?<5~6zy32Vx55VT::VtsU#.v)|oP4}):mo%&N]+vW-o]}-nJ)&n?"@o<\\+;t{]}B#/
 
->              v
-v  v           0 < The vertical loop that jumps to 0 on top
->1v>6*"!dlroW ,olleH">_ @
-^           : < The horizontal loop that prints "Hello World"
- "!
- dlroW,
- olleH< < Each character stored in the Befunge grid
-v_                            : Set up the movement of the instruction pointer
-  
+; O U T P U T :
+; "Hello, World!"
 
-# Explanation of each part in this Befunge code
-# The '>' and '<' move the instruction pointer right and left
-# The 'v' and '^' move the instruction pointer down and up
-# The "_" reflects the instruction pointer depending on the top of the stack value
-# The "0", "1", "6", "*", and "!" are stack operations
-# '0' pushes zero onto the stack, '1' pushes one, '6*' multiplies the top of the stack by 6
-# The '"' toggles stringmode which pushes ASCII values of each character onto the stack until end quote
-# The '@' ends the program
-
+; Explanation (not part of the code, but helps in understanding):
+; The above string is a carefully crafted sequence of characters that performs a series of operations
+; defining behavior in Malbolge. This includes self-modifying code and cryptic functions that eventually
+; output "Hello, World!" The language's design ensures that even this simple program results in 
+; maximum complexity.
