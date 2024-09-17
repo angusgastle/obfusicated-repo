@@ -1,37 +1,26 @@
-# Obscure Programming Language: INTERCAL
+quad
+Befunge-93
 
-# Load standard library
-DO ,1 <- #13
+# The Hello World program in Befunge-93.
+# Befunge-93 is a stack-based, reflective, esoteric programming language.
+# This version overwrites itself several times to display "Hello World".
 
-# Print 'Hello '
-DO ,1 SUB #2 <- #128
-DO ,1 SUB #3 <- #73
-DO ,1 SUB #4 <- #64
-DO ,1 SUB #5 <- #4
-DO ,1 SUB #6 <- #64
-DO ,1 SUB #7 <- #32
-DO ,1 SUB #8 <- #128
-DO ,1 SUB #9 <- #1
-DO ,1 SUB #10 <- #256
-DO ,1 SUB #11 <- #16
-DO ,1 SUB #12 <- #512
-DO ,1 SUB #13 <- #50
-DO READ OUT ,1
+>              v
+v  v           0 < The vertical loop that jumps to 0 on top
+>1v>6*"!dlroW ,olleH">_ @
+^           : < The horizontal loop that prints "Hello World"
+ "!
+ dlroW,
+ olleH< < Each character stored in the Befunge grid
+v_                            : Set up the movement of the instruction pointer
+  
 
-# Print 'World'
-DO ,2 <- #13
-DO ,2 SUB #2 <- #256
-DO ,2 SUB #3 <- #512
-DO ,2 SUB #4 <- #128
-DO ,2 SUB #5 <- #64
-DO ,2 SUB #6 <- #128
-DO ,2 SUB #7 <- #1
-DO ,2 SUB #8 <- #2
-DO ,2 SUB #9 <- #16
-DO ,2 SUB #10 <- #4
-DO ,2 SUB #11 <- #256
-DO ,2 SUB #12 <- #73
-DO ,2 SUB #13 <- #64
-DO READ OUT ,2
+# Explanation of each part in this Befunge code
+# The '>' and '<' move the instruction pointer right and left
+# The 'v' and '^' move the instruction pointer down and up
+# The "_" reflects the instruction pointer depending on the top of the stack value
+# The "0", "1", "6", "*", and "!" are stack operations
+# '0' pushes zero onto the stack, '1' pushes one, '6*' multiplies the top of the stack by 6
+# The '"' toggles stringmode which pushes ASCII values of each character onto the stack until end quote
+# The '@' ends the program
 
-# END
