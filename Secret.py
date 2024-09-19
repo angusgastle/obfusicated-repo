@@ -1,25 +1,44 @@
-brainfuck
-++++++[>+++++++<-]>.<++++++[>--------<-]>.<+++++[>++++++<-]>.-[--->+<]>---.-[--->++<]>-.
-+++++++++++.-----.--------.--[--->+++<]>--.-[--->++++<]>+.----------.-------.
 
-[
-    "++++++": Increment the current cell value by 6.
-    "[>+++++++<-]>": Loop that moves the pointer to the next cell and increments it by 7, then goes back and decrements the initial cell by 1 until the initial cell is 0.
-    ".": Print the ASCII character of the current cell value.
-    "<++++++[>--------<-]>": Move back and increment the previous cell by 6, loop to move to the next cell and decrement by 8.
-    ".": Print the next character.
-    "<+++++[>++++++<-]>": Move back and increment by 5, loop to move to the next cell and increment it by 6.
-    ".": Print the next character.
-    "-[--->+<]>---": Move current cell and its neighbors by shifting all values to the right and decrementing the first 3 cells.
-    ".": Print the next character.
-    "-[--->++<]>-": Similar shifting but with additional increments of 2 and final decrements.
-    ".": Print the next character.
-    "+++++++++++.": Add 10 to the current cell and print the ASCII character.
-    "-----.": Subtract 5 and print the next character.
-    "--------.": Subtract 8 and print the next character.
-    "--[--->+++<]>--.": Move and alter cell values by shifting 3 positions and incrementing by 3, then print the character.
-    "-[--->++++<]>+.": Similar shifting but with additional increments of 4 and final increments.
-    "----------.-------.": Subsequent decrementations by 10 and 7 then print characters.
-]
+#!/usr/bin/env whitespace
+# This script writes "Hello, World!" to the standard output using Whitespace.
 
-# The result of this Brainfuck script is "Hello World".
+# First, we need to push the ASCII values of "Hello, World!" onto the stack.
+# Whitespace uses spaces, tabs, and linefeeds as its only characters.
+# A space (S) is used for stack manipulation, a tab (T) for arithmetic,
+# heap access, and input/output, and a linefeed (L) denotes the end of a command.
+
+# Trusty converter for Whitespace (Friends don't let friends code Whitespace by hand)
+# Space = 'S', Tab = 'T', Linefeed = 'L'
+
+# Push the ASCII value of each character in "Hello, World!" to the stack manually.
+SSS SLS  # Push 33 ('!')
+SSS STSTSTTL  # Push 100 ('d')
+SSS STTTTSTL  # Push 108 ('l')
+SSS STTTTSTL  # Push 108 ('l')
+SSS STSTTSTTL  # Push 111 ('o')
+SSS SLS  # Push 44 (',')
+SSS L  # Push 32 (space)
+SSS STTTTTL  # Push 87 ('W')
+SSS STSTSTTL  # Push 111 ('o')
+SSS STTTTSTL  # Push 114 ('r')
+SSS STTTTSTL  # Push 108 ('l')
+SSS STSTTSSTL  # Push 100 ('d')
+SSS SDLSST  # Push 72 ('H')
+
+# Print each character using the output instruction TLL
+TLL  # Output char: '!'
+TLL  # Output char: 'd'
+TLL  # Output char: 'l'
+TLL  # Output char: 'l'
+TLL  # Output char: 'o'
+TLL  # Output char: ','
+TLL  # Output char: ' '
+TLL  # Output char: 'W'
+TLL  # Output char: 'o'
+TLL  # Output char: 'r'
+TLL  # Output char: 'l'
+TLL  # Output char: 'd'
+TLL  # Output char: 'H'
+
+# End the program with a linefeed to obey Whitespace syntax (S -> Space, L -> Linefeed)
+        L
