@@ -1,44 +1,59 @@
+'''
+# Title: Complex "Hello World" Script in an Obscure Programming Language (Brainfuck)
 
-#!/usr/bin/env whitespace
-# This script writes "Hello, World!" to the standard output using Whitespace.
+# This Brainfuck script will display "Hello World" on the console.
+# Brainfuck consists of eight commands, each a single character:
+# > : increment the data pointer (to point to the next cell to the right).
+# < : decrement the data pointer (to point to the next cell to the left).
+# + : increment (increase by one) the byte at the data pointer.
+# - : decrement (decrease by one) the byte at the data pointer.
+# . : output the byte at the data pointer.
+# , : accept one byte of input, storing its value in the byte at the data pointer.
+# [ : if the byte at the data pointer is zero, then instead of moving the instruction pointer forward to the next command,
+#     jump it forward to the command after the matching ] command.
+# ] : if the byte at the data pointer is nonzero, then instead of moving the instruction pointer forward to the next command,
+#     jump it back to the command after the matching [ command.
 
-# First, we need to push the ASCII values of "Hello, World!" onto the stack.
-# Whitespace uses spaces, tabs, and linefeeds as its only characters.
-# A space (S) is used for stack manipulation, a tab (T) for arithmetic,
-# heap access, and input/output, and a linefeed (L) denotes the end of a command.
+# Initialize memory cells and pointers
+# Create first cell containing 72 ('H')
+++++++++++       # Initialize 10
+[                # Loop starts (will run 10 times)
+>+++++++         # Increment next cell by 7 (total: 10 * 7 = 70)
+>++++++++++      # Increment next cell by 10 (total: 10 * 10 = 100)
+>+++             # Increment next cell by 3  (total: 10 * 3 = 30)
+>+               # Increment next cell by 1  (total: 10 * 1 = 10)
+<<<<-            # Decrement looping cell by 1
+]                # Loop ends
 
-# Trusty converter for Whitespace (Friends don't let friends code Whitespace by hand)
-# Space = 'S', Tab = 'T', Linefeed = 'L'
+>+.              # Move to second cell (72), output 'H'
+# Create cell containing 101 ('e')
+>++++.           # Advance to third cell, increment by 4, output 'e'
 
-# Push the ASCII value of each character in "Hello, World!" to the stack manually.
-SSS SLS  # Push 33 ('!')
-SSS STSTSTTL  # Push 100 ('d')
-SSS STTTTSTL  # Push 108 ('l')
-SSS STTTTSTL  # Push 108 ('l')
-SSS STSTTSTTL  # Push 111 ('o')
-SSS SLS  # Push 44 (',')
-SSS L  # Push 32 (space)
-SSS STTTTTL  # Push 87 ('W')
-SSS STSTSTTL  # Push 111 ('o')
-SSS STTTTSTL  # Push 114 ('r')
-SSS STTTTSTL  # Push 108 ('l')
-SSS STSTTSSTL  # Push 100 ('d')
-SSS SDLSST  # Push 72 ('H')
+# Create cell containing 108 ('l')
+>>.              # Print first 'l' (loop prep done earlier as 100)
+>>>---.          # Move to next cell, decrease by 3 (additional incremented makes +8), output 'l'
 
-# Print each character using the output instruction TLL
-TLL  # Output char: '!'
-TLL  # Output char: 'd'
-TLL  # Output char: 'l'
-TLL  # Output char: 'l'
-TLL  # Output char: 'o'
-TLL  # Output char: ','
-TLL  # Output char: ' '
-TLL  # Output char: 'W'
-TLL  # Output char: 'o'
-TLL  # Output char: 'r'
-TLL  # Output char: 'l'
-TLL  # Output char: 'd'
-TLL  # Output char: 'H'
+# Create cell containing 111 ('o')
+<+.              # Move back to previous cell, increment by 1, output 'o'
 
-# End the program with a linefeed to obey Whitespace syntax (S -> Space, L -> Linefeed)
-        L
+# We have 'Hello', let's output the space
+-------.         # Decrement by 7 (now 32, ASCII index of space), output space
+
+# Create cell containing 87 ('W')
+<++++++++++.     # Move back to the second cell and set to 10, advance to next cell and increment by 2, output 'W'
+
+# Create cell containing 111 ('o')
+>+.              # Move to third cell, increment by 1, output 'o'
+
+# Create cell containing 114 ('r')
+<+++++.          # Move to first cell, increment by 5, output 'r'
+
+# Create cell containing 108 ('l')
+-----.           # Decrement by 5, output 'l'
+
+# Create cell containing 100 ('d')
+---.             # Decrement by 3, output 'd'
+
+# Finally, add exclamation mark
+>+.              # Move to next cell (10 needs 23 more steps), output '!'
+'''
