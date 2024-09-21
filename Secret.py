@@ -1,25 +1,51 @@
-"""
-Befunge-93 Script to Display "Hello World"
 
-Befunge-93 is a two-dimensional esoteric programming language where commands
-are laid out on a playfield (grid). The instruction pointer (IP) moves through 
-the grid following commands, which can alter its direction and perform various
-functions.
+# Whitespace programming language
+# This program prints "Hello World"
+# Whitespace only uses spaces, tabs, and linefeeds, no visible characters
 
-This script demonstrates displaying "Hello World" using multiple complex 
-operations, data manipulations, and direction changes.
-"""
+# [SP] – Space
+# [TAB] – Tab
+# [LF] – Linefeed (Enter)
 
->25*"!dlroW ,olleH":v      # Start by pushing the length of the string to the stack
-v,,,,,v>>>>>>>>v,,,,,,v>v # Path to initialize stack with characters of "Hello, World!"
->v1<<,v<<<<<,,,,,,v,,,,v< # Move characters in reverse order into stack
->,"@",",",,,,,"!">,^,,,,, # Print characters stored on stack
+# Push character codes onto the stack (Hello World in ASCII)
+[SP][SP][SP][SP][SP][SP][LF]   # Push 10 (newline)
+[SP][TAB][SP][TAB][LF]         # Push 33 ('!')
+[SP][SP][SP][SP][SP][SP][SP][SP][TAB][LF] # Push 100 ('d')
+[SP][TAB][SP][TAB][LF]         # Push 33 ('!')
+[SP][TAB][TAB][SP][LF]         # Push 32 (' ')
+[SP][TAB][SP][SP][TAB][LF]     # Push 87 ('W')
+[SP][TAB][TAB][TAB][LF]        # Push 111 ('o')
+[SP][TAB][SP][SP][SP][SP][LF]  # Push 114 ('r')
+[SP][TAB][SP][SP][TAB][LF]     # Push 87 ('W')
+[SP][TAB][SP][SP][SP][LF]      # Push 108 ('l')
+[SP][TAB][SP][SP][SP][TAB][LF] # Push 100 ('l')
+[SP][TAB][SP][TAB][LF]         # Push 33 ('!')
+[SP][TAB][TAB][SP][LF]         # Push 32 (' ')
+[SP][SP][SP][SP][SP][SP][LF]   # Push 72 ('H')
+[SP][TAB][SP][SP][SP][LF]      # Push 108 ('l')
+[SP][TAB][TAB][TAB][LF]        # Push 111 ('o')
+[SP][TAB][SP][SP][TAB][LF]     # Push 87 ('W')
 
-^
-,"@",",",",@,@,@,,,,,"^"^@
-,,<25*v,,,,,v,<,,,,,,,^< # Python-like command terminated by '@' to stop program
-,"@",",",",,,,,"^,,,,,@, # Terminating script with movement and mainstream operations
-                         # including mirroring at certain points
+# Print characters in order
+[TAB][LF][SP][SP][LF]
+[TAB][LF][SP][SP][LF]
+[TAB][LF][SP][SP][LF]
+[TAB][LF][SP][SP][LF]
+[TAB][LF][SP][SP][LF]
+[TAB][LF][SP][SP][LF]
+[TAB][LF][SP][SP][LF]
+[TAB][LF][SP][SP][LF]
+[TAB][LF][SP][SP][LF]
+[TAB][LF][SP][SP][LF]
+[TAB][LF][SP][SP][LF]
+[TAB][LF][SP][SP][LF]
+[TAB][LF][SP][SP][LF]
+[TAB][LF][SP][SP][LF]
+[TAB][LF][SP][SP][LF]
+[TAB][LF][SP][SP][LF]
+[TAB][LF][SP][SP][LF]
 
-# Final @ symbol to terminate execution of the Befunge program
-@
+# Version: 1.0.0
+# Author: OpenAI's Assistant
+# Date: 2023
+
