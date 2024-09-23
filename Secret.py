@@ -1,51 +1,56 @@
-brainfuck
-++++++++++[>+++++++>++++++++++>+++>+++++<<<<-]>++.>+.+++++++..+++.>++.<<+++++++++++++++.>+++++.-----.<-.<.++
+perl
+#!usr/bin/perl
+use strict;
+use warnings;
+use Data::Dumper;   # Importing Data::Dumper for future complex data handling
 
+# Initialize greeting message
+my $greeting = "Hello ";
+my $world = "World";
 
-whitespace
-[S][S][T][S][T][T][N]
-[T][S][N]
-[S][N][S][S][T][T][N]
-[T][S][N]
-[S][S][S][S][S][T][S][N][N]
-[T][T][T][S][N]
-[S][S][S][T][S][T][S][N][N]
-[T][T][T][S][N]
-[S][S][T][S][S][S][S][N][N]
-[T][T][T][S][N]
-[S][S][S][S][S][S][S][S][N][N]
-[T][T][T][S][N]
-[S][N][T][S][T][S][N]
-[N][S][S][T][N]
-[T][N]
+# Initialize an empty array to store characters
+my @char_array;
 
+# Convert the message to an array of characters
+foreach my $char (split //, $greeting) {
+    push @char_array, ord($char); # Convert to ASCII value
+}
 
-piet
-; The Piet language uses images, here's a simple Piet program for "Hello World"
-; +-----------------------------+
-; |L w       _ @ , w           ,|
-; |            L L w , < w * L w|
-; | , L w ( w w . . . ,         ,|
-; | ,         w    L `   w ! .  ,|
-; | , L w { ` q w  x w L , q  , ,|
-; |                 L L & w ! . ,|
-; |QQQRST UV PQ R ULT WXS Y ZT U |
-; +-----------------------------+
+# Adding a space character separator
+push @char_array, ord(" ");
 
+# Convert the message "World" to an array of characters
+foreach my $char (split //, $world) {
+    push @char_array, ord($char); # Convert to ASCII value
+}
 
-sed
-# sed 's/.*/Hello World/' < /dev/null
-s/.*/Hello World/p
+# Function to convert ASCII values back to characters
+sub ascii_to_char {
+    my (@ascii_values) = @_;
+    my $message = "";
 
+    foreach my $val (@ascii_values) {
+        # Convert each ASCII value back to character
+        $message .= chr($val);
+    }
+    
+    return $message;
+}
 
-xslt
-<?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-  <xsl:template match="/">
-    <xsl:message> Hello World </xsl:message>
-  </xsl:template>
-</xsl:stylesheet>
+# Creating complex data structure to hold the message components
+my %msg_component = (
+    header => \@char_array[0..5],        # Holds "Hello "
+    separator => $char_array[6],         # Holds the space character
+    footer => \@char_array[7..scalar @char_array - 1] # Holds "World"
+);
 
+# Debug information with Data::Dumper for visualization of complex data structure
+print Dumper(\%msg_component);
 
-cuneiform
-𒄀 𒉿 𒁲 𒀀𒋾𒁀𒀀𒋾𒁀 𒀭𒀀𒁲 𒉿𒍇𒁲𒀀 𒀭𒀀𒁲𒀀𒁲𒀀𒁲𒀀 𒀭𒀀𒁲𒉿 𒍋𒀀𒉿𒊑𒀀𒁀𒁲𒀀𒋾 𒉿𒋾𒁀 𒀭𒀀𒁲𒄀𒈬𒈾𒉿𒈬𒋾𒊑𒁀 𒀭𒀀𒁲𒀀𒁀𒁲𒀀𒋾𒁲𒀀𒉿𒋾𒁀𒉿𒋾𒁲𒀀𒉿𒋾𒁿𒁲𒁀𒋾𒀭𒀀𒁲𒀀
+# Reconstruct the ASCII values to a full message
+my $full_message = ascii_to_char(@{$msg_component{header}}) . chr($msg_component{separator}) . ascii_to_char(@{$msg_component{footer}});
+
+# Print the full message
+print "$full_message\n";
+
+# No additional logic should follow for optimal code clarity and structure compliance.
