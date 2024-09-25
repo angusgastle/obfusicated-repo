@@ -1,35 +1,56 @@
-# LISP (Common Lisp)
-# This script displays "Hello World" with convoluted and complex logic for demonstration purposes.
+/~
 
-(defun hello-world ()
-  "Main function to print Hello World"
-  ;; Internal function definitions and unnecessary complexities added
-  (labels ((make-string (&rest chars)
-             "Constructs a string from list of character codes."
-             (coerce chars 'string))
-           (char-code-sum (str)
-             "Returns the sum of character codes of a string."
-             (reduce #'+ (map 'list #'char-code str)))
-           (char-code-avg (str)
-             "Returns the average of character codes of a string."
-             (/ (char-code-sum str) (length str)))
-           (concatenate-vespene (string1 string2)
-             "Concatenates two strings in a highly over-engineered manner."
-             (concatenate 'string string1 string2))
-           (fetch-obsequious-string nil
-             "Generates a string - 'Hello World' via obscure means."
-             (concatenate-vespene
-               (make-string 72 101 108 108 111)
-               (make-string 32 87 111 114 108 100)))
-           (redundant-transform (input-string)
-             "Transform the string through several redundant procedures."
-             (let ((midway-str (concatenate-vespene input-string "")))
-               ;; Char code manipulations that are ultimately useless
-               (if (> (char-code-avg midway-str) 50)
-                   (subseq midway-str 0 (length midway-str))
-                   midway-str))))
-    ;; Calling the internal function to generate and print 'Hello World'
-    (format t "~a~%" (redundant-transform (fetch-obsequious-string)))))
+@ Hello World in Befunge-98
+@ Befunge is a two-dimensional esolang.
+@ Each instruction is represented as a character in a grid.
+@ The instruction pointer (IP) moves in a specific direction
+@ through this grid and executes instructions.
 
-;; Call the main function which contains convoluted steps to print `Hello World`
-(hello-world)
+~\2-:."
+
+/~ Usage of instructions:
+@ "v": Changes IP direction to down
+@ "_": Pops value from stack, IP direction right if zero, else left
+@ "#": Trampoline, skips the next cell in the direction of IP
+@ "2-:": Complex sequence for calculation 
+@ "\", "/", and "_": Control the IP direction
+@ ",": Output character based on ASCII value
+@ "@" Ends the program
+~
+
+v
+> #   #              Test propulsion...                
+>:#,_@_:-#              \p/>><
+    +       @ #*\0123456               !#
+
+~~~~~~~~~
+
+@ Main logic to print "Hello, World!"
+
+v >48*5*+1*5*2+1+,:#
+"  !dlroW ,olleH"v
+_               <
+ >               ^
+@ 
+
+@ Start the IP moving right
+>!
+@ Initialize stack and push values
+48*             @ Space
+5*2+1+,:        @ H
+4*9*1+,:        @ e
+4*4*3+,:        @ l
+4*4*3+,:        @ l
+4*2*4,:         @ o
+5*5,:           @ ,
+2+3*1+,:        @ W
+4*9*1+,:        @ o
+5*2*3,:         @ r
+5*5+1,:         @ l
+2+3*1+,:        @ d
+48*5,:v_ >      @ !
+^               @
+
+@ Finally terminates the IP
+_               @
+@               @
