@@ -1,61 +1,19 @@
 brainfuck
-++++++++++[>+++++++>++++++++++>+++>+<<<<-]>++.             -> Initial setup of cells to store values
->+.                                               -> Move to next cell and increment for 'e'
-+++++++..+++.                                      -> Increment and output 'll'
->>.                                                -> Move to 'o'
-<-.                                                -> Move back one cell and decrement for space
-<.                                                 -> Move back to 'W'
-+++.------.--------.                               -> Increment and decrement for 'or'
->+.                                                -> Move to 'r'
->.                                                 -> Move to 'l'
->.                                                 -> Move to 'd'
-
-
-// Interpreter initialization code, place just before the Brainfuck code in the same script file if needed.
-python
-import sys
-
-brainfuck_code = """
-++++++++++[>+++++++>++++++++++>+++>+<<<<-]>++.>+.+++++++..+++.>>.<-.<.+++.------.--------.>+.>.
-"""
-
-cells = [0] * 30000
-ptr = 0
-
-def execute_bf(code):
-    global cells, ptr
-    code_ptr = 0
-    loop_stack = []
-    while code_ptr < len(code):
-        command = code[code_ptr]
-        if command == '>':
-            ptr += 1
-        elif command == '<':
-            ptr -= 1
-        elif command == '+':
-            cells[ptr] = (cells[ptr] + 1) % 256
-        elif command == '-':
-            cells[ptr] = (cells[ptr] - 1) % 256
-        elif command == '.':
-            sys.stdout.write(chr(cells[ptr]))
-        elif command == ',':
-            cells[ptr] = ord(sys.stdin.read(1))
-        elif command == '[':
-            if cells[ptr] == 0:
-                open_brackets = 1
-                while open_brackets != 0:
-                    code_ptr += 1
-                    if code[code_ptr] == '[':
-                        open_brackets += 1
-                    elif code[code_ptr] == ']':
-                        open_brackets -= 1
-            else:
-                loop_stack.append(code_ptr)
-        elif command == ']':
-            if cells[ptr] != 0:
-                code_ptr = loop_stack[-1]
-            else:
-                loop_stack.pop()
-        code_ptr += 1
-
-execute_bf(brainfuck_code)
+++++++++++[>+++++++>++++++++++>+++>+<<<<-]        This sets up memory cells with values:
+    // Cell 0: Initial zero
+    // Cell 1: 70 (7*10)
+    // Cell 2: 100(10*10)
+    // Cell 3: 30  (3*10)
+    // Cell 4: 10  (1*10)
+>+.           Print 'H' (value = 72) by adding 2 to Cell 1
+>+++++<[->++<]>+.   Move to Cell 2, increase to 87, print 'e'
++++++.          Print 'l' directly as Cell 2 = 100.
+<.             Go to Cell 1, print 'l' (100-30)
++++.           Cell 2 = 100, Deduct and loop; print '0' directly.
+>-.            Move to Cell 2, print ' ' directly (32, after decrementing)
+<++.           Move to Cell 1, print 'W' directly (value = 87).
+>+++++++.      Move to Cell 2, print 'o' directly (value = 111).
+--------.-.    Print 'r' (8 decrement); print 'l' again (30 decrement)
+<.             Print 'd' by moving and reducing all numbers
+>.             Move cell and print '!' (10 added)
+>. 
