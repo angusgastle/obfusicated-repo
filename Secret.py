@@ -1,34 +1,14 @@
-hercules
-#!/usr/herc/hercules
-stdopdocs
+perl
+# OBfuscated Perl Code for "Hello World"
+# This code snippet is intentionally complex and unconventional
+$;=$]==$:=$[=!$^F;$]=pop||($*[pop]||pop)->pop;@;="$]".$$;x::y:::q{print+x+eval('`"'.("@;"/=((map{ord-9+@;--$[,map/./g&&eval$]+$*.($_-3)/$_,split(//,@;+chr--$#_)}ref("")).hex).oct.cap||($+=.01)((do{$,>15x 0})))'}).++$[++$;-=$*],$:+++($---($,-$))+--$$::-+--$|+q\xCFcd+i>>$_&-++$*--;
 
-# Hercules Program
-# This script displays "Hello World" in Hercules language.
-# Hercules is an esoteric programming language created by David Gerzof in 2017.
-# It was designed to be intentionally complex and difficult to code in.
+BEGIN{
+    # Encoded message
+    @="2222222 333 \334\321J==";$*?{print++$:=$]=~y,CELv99::'Jy\\f&,${}=$@}}]$[[q}0xx+'%|:"*X%"=,=($===)/xB-\x22>?a[221].q:aX'\J~{^|@=240;
+}
+for(@){($,-=((sort{length$+@(=())})/(qx[->(@@,\+`))(($_)=>><]).(/.=`'"\x5ET?.<etc,/.,.*),);($):++1x"23pgj\160"+"1d+M234";$
 
-main;
-push 72     # H
-printchar   # Print 'H'
-push 101    # e
-printchar   # Print 'e'
-push 108    # l
-printchar   # Print 'l'
-push 108    # l
-printchar   # Print 'l'
-push 111    # o
-printchar   # Print 'o'
-push 32     #  
-printchar   # Print ' '
-push 87     # W
-printchar   # Print 'W'
-push 111    # o
-printchar   # Print 'o'
-push 114    # r
-printchar   # Print 'r'
-push 108    # l
-printchar   # Print 'l'
-push 100    # d
-printchar   # Print 'd'
-halt        # End program
-end program;
+# Execute encoded message
+(tr/222333422233344223334//)x(25)}
+qx !! @ };
